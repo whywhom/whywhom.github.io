@@ -37,13 +37,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/404</loc>
-    
-    <lastmod>2018-01-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/README</loc>
     
     <lastmod>2018-01-26</lastmod>
@@ -51,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/</loc>
+    <loc>http://example.com/404</loc>
     
     <lastmod>2018-01-26</lastmod>
     
@@ -59,6 +52,13 @@
   
   <url>
     <loc>http://example.com/archives/</loc>
+    
+    <lastmod>2018-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/</loc>
     
     <lastmod>2018-01-26</lastmod>
     
