@@ -251,26 +251,27 @@ var a = new Donate({
             
       
         
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
+  <!-- Gitment START! Deploy by Z4HD -->
+	<div id="comments"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script>
+	var gitment = new Gitment({
+		id: 'http://example.com/2021/01/31/%E6%B0%91%E5%9B%BD%E5%A4%A7%E5%B8%88%E5%91%A8%E4%BD%9C%E4%BA%BA%E4%BD%9C%E5%93%81%E5%A4%A7%E5%85%A8%E9%9B%86/',
+		owner: 'whywhom',
+		repo: 'https://api.github.com/users/whywhom/repos',
+		oauth: {
+			client_id: '2726bae0a1ffad9cc69a',
+			client_secret: '43cb4737b98a2a77275acb90bdb55ab283015a12',
+		},
+	})
+	gitment.render('comments')
+	</script>
+	<!-- Gitment 自定义样式表 -->
+	
+<link rel="stylesheet" href="../../../../css/comment-gitment.css">
 
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
+	<!-- Gitment END! -->
 
 
       
