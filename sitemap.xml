@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://whyread.top/2021/02/08/MysteriesAtoZ%E7%A5%9E%E7%A7%98%E6%A1%88%E4%BB%B626%E5%86%8C/</loc>
+    
+    <lastmod>2021-02-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://whyread.top/2019/12/06/191206-Best-Movies-of-2019/</loc>
     
     <lastmod>2021-02-07</lastmod>
@@ -215,6 +222,20 @@
   
   <url>
     <loc>http://whyread.top/tags/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2021-02-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://whyread.top/tags/%E5%84%BF%E7%AB%A5/</loc>
+    <lastmod>2021-02-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://whyread.top/tags/%E6%95%85%E4%BA%8B/</loc>
     <lastmod>2021-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
