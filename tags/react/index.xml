@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on 悦读</title>
+    <link>https://whyread.top/tags/react/</link>
+    <description>Recent content in React on 悦读</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 03 Apr 2019 23:36:43 +0000</lastBuildDate><atom:link href="https://whyread.top/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native如何构建具有实时搜索能力的FlatList</title>
+      <link>https://whyread.top/it/howtobuildrnflatlist/</link>
+      <pubDate>Wed, 03 Apr 2019 23:36:43 +0000</pubDate>
+      
+      <guid>https://whyread.top/it/howtobuildrnflatlist/</guid>
+      <description>&lt;p&gt;原文地址：&lt;a href=&#34;https://medium.freecodecamp.org/how-to-build-a-react-native-flatlist-with-realtime-searching-ability-81ad100f6699&#34;&gt;How to build a React Native FlatList with realtime searching ability
+&lt;/a&gt;
+作者：Vikrant Negi&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;list1.gif&#34; alt=&#34;React Native Searchable Flatlist&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果您曾经使用过移动应用程序或构建移动Apps，那么您一定遇到过某种列表 - 无论是一长串联系人，产品，国家/地区还是其他内容。&lt;/p&gt;
+&lt;p&gt;它们对最终用户来说似乎很简单。但是对于开发人员来说，显示一长串数据一直是性能长列表的一个难点。在使用React Native构建的Apps中尤其如此。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>React Native项目构建结构和静态资源管理</title>
+      <link>https://whyread.top/it/structureproandresreactnative/</link>
+      <pubDate>Mon, 25 Mar 2019 10:01:42 +0000</pubDate>
+      
+      <guid>https://whyread.top/it/structureproandresreactnative/</guid>
+      <description>&lt;p&gt;原文地址：&lt;a href=&#34;https://medium.freecodecamp.org/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92&#34;&gt;How to structure your project and manage static resources in React Native&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下为个人翻译部分：&lt;/p&gt;
+&lt;p&gt;React和React Native仅仅是框架，并没有规定我们应该如何构建我们的项目。这一切都取决于您的个人品味和您正在进行的项目。&lt;/p&gt;
+&lt;p&gt;在这篇文章中，我们将介绍如何构建项目以及如何管理本地资产。这当然不是一成不变的，你可以自由地选择适合您的部分。希望能对您有所帮助。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

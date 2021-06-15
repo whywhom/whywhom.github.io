@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>React Native项目构建结构和静态资源管理 - 悦读</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="React Native项目构建结构和静态资源管理" />
+<meta property="og:description" content="原文地址：How to structure your project and manage static resources in React Native
+以下为个人翻译部分：
+React和React Native仅仅是框架，并没有规定我们应该如何构建我们的项目。这一切都取决于您的个人品味和您正在进行的项目。
+在这篇文章中，我们将介绍如何构建项目以及如何管理本地资产。这当然不是一成不变的，你可以自由地选择适合您的部分。希望能对您有所帮助。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://whyread.top/it/structureproandresreactnative/" /><meta property="article:section" content="it" />
+<meta property="article:published_time" content="2019-03-25T10:01:42&#43;00:00" />
+<meta property="article:modified_time" content="2019-03-25T10:01:42&#43;00:00" />
+
+
+		<meta itemprop="name" content="React Native项目构建结构和静态资源管理">
+<meta itemprop="description" content="原文地址：How to structure your project and manage static resources in React Native
+以下为个人翻译部分：
+React和React Native仅仅是框架，并没有规定我们应该如何构建我们的项目。这一切都取决于您的个人品味和您正在进行的项目。
+在这篇文章中，我们将介绍如何构建项目以及如何管理本地资产。这当然不是一成不变的，你可以自由地选择适合您的部分。希望能对您有所帮助。"><meta itemprop="datePublished" content="2019-03-25T10:01:42&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-25T10:01:42&#43;00:00" />
+<meta itemprop="wordCount" content="961">
+<meta itemprop="keywords" content="React,React Native," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React Native项目构建结构和静态资源管理"/>
+<meta name="twitter:description" content="原文地址：How to structure your project and manage static resources in React Native
+以下为个人翻译部分：
+React和React Native仅仅是框架，并没有规定我们应该如何构建我们的项目。这一切都取决于您的个人品味和您正在进行的项目。
+在这篇文章中，我们将介绍如何构建项目以及如何管理本地资产。这当然不是一成不变的，你可以自由地选择适合您的部分。希望能对您有所帮助。"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPTWXGGM9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RGPTWXGGM9', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="悦读" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">悦读</div>
+					<div class="logo__tagline">如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">英语悦读客</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/it/">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">程序猿</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/books/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Books</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/nz/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">新西兰</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/about/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">React Native项目构建结构和静态资源管理</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">悦读</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-03-25T10:01:42Z">25253-42-257</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E5%89%8D%E7%AB%AF/" rel="category">前端</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#type-vs-feature">type vs feature</a></li>
+        <li><a href="#尽可能少的依赖">尽可能少的依赖</a></li>
+        <li><a href="#src">src</a></li>
+        <li><a href="#screen">Screen</a></li>
+        <li><a href="#indexjs-or-not">index.js or not?</a></li>
+        <li><a href="#navigator">Navigator</a></li>
+        <li><a href="#库">库</a></li>
+        <li><a href="#res">res</a></li>
+        <li><a href="#用调色板分组颜色图像字体">用调色板分组颜色，图像，字体</a></li>
+        <li><a href="#生成图像">生成图像</a></li>
+        <li><a href="#自定义字体怎么样">自定义字体怎么样？</a></li>
+        <li><a href="#r-命名空间">R 命名空间</a></li>
+        <li><a href="#延伸阅读">延伸阅读</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>原文地址：<a href="https://medium.freecodecamp.org/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92">How to structure your project and manage static resources in React Native</a></p>
+<p>以下为个人翻译部分：</p>
+<p>React和React Native仅仅是框架，并没有规定我们应该如何构建我们的项目。这一切都取决于您的个人品味和您正在进行的项目。</p>
+<p>在这篇文章中，我们将介绍如何构建项目以及如何管理本地资产。这当然不是一成不变的，你可以自由地选择适合您的部分。希望能对您有所帮助。</p>
+<p>对于一个通过react-native init创建的项目，我们只得到基本的结构。</p>
+<p>包括Xcode项目的ios文件夹和Android项目的android文件夹，以及作为React Native入口点的index.js文件和App.js文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">ios</span><span style="color:#f92672">/</span>
+<span style="color:#a6e22e">android</span><span style="color:#f92672">/</span>
+<span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">js</span>
+<span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">js</span>
+</code></pre></div><p>在Windows Phone，iOS和Android上使用native，我发现构建项目都归结为按类型或功能组织文件。</p>
+<h3 id="type-vs-feature">type vs feature</h3>
+<p>按类型分隔意味着我们按类型组织文件。如果它是一个组件，则有容器&quot;container&quot;和表示文件。如果是Redux，则有action，reducer和store文件。如果是view，则有JavaScript，HTML和CSS文件。</p>
+<h4 id="group-by-type">Group by type</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">redux</span>
+  <span style="color:#a6e22e">actions</span>
+  <span style="color:#a6e22e">store</span>
+  <span style="color:#a6e22e">reducers</span>
+<span style="color:#a6e22e">components</span>
+  <span style="color:#a6e22e">container</span>
+  <span style="color:#a6e22e">presentational</span>
+<span style="color:#a6e22e">view</span>
+  <span style="color:#a6e22e">javascript</span>
+  <span style="color:#a6e22e">html</span>
+  <span style="color:#a6e22e">css</span>
+</code></pre></div><p>这样，我们可以看到每个文件的类型，并轻松地向某个文件类型运行脚本。这对所有项目来说都是通用的，但它没有回答“这个项目是关于什么的?&ldquo;问题。这是新闻App吗？它是一个忠诚度App吗？它是关于营养追踪的吗？</p>
+<p>按类型组织文件适用于机器，而不适用于人。很多时候我们处理一个功能，在多个目录中找到要修复的文件是一件麻烦事。如果我们计划从项目中创建一个框架，那也是一种痛苦，因为文件遍布很多地方。</p>
+<h4 id="group-by-feature">Group by feature</h4>
+<p>更合理的解决方案是按功能组织文件。与某项功能相关的文件应放在一起。测试文件应贴近源文件。查看<a href="https://medium.com/@JeffLombardJr/organizing-tests-in-jest-17fc431ff850">此文章</a>以了解更多信息。</p>
+<p>功能可以与登录，注册，用户引导或用户的个人资料相关。功能可以包含子功能，只要它们属于同一个流程。如果我们想要移动子功能，那将很容易，因为所有相关文件已经组合在一起。</p>
+<p>我基于功能的典型项目结构如下所示：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">index</span>.<span style="color:#a6e22e">js</span>
+<span style="color:#a6e22e">App</span>.<span style="color:#a6e22e">js</span>
+<span style="color:#a6e22e">ios</span><span style="color:#f92672">/</span>
+<span style="color:#a6e22e">android</span><span style="color:#f92672">/</span>
+<span style="color:#a6e22e">src</span>
+  <span style="color:#a6e22e">screens</span>
+    <span style="color:#a6e22e">login</span>
+      <span style="color:#a6e22e">LoginScreen</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">LoginNavigator</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">onboarding</span>
+      <span style="color:#a6e22e">OnboardingNavigator</span>    
+      <span style="color:#a6e22e">welcome</span> 
+        <span style="color:#a6e22e">WelcomeScreen</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">term</span>
+        <span style="color:#a6e22e">TermScreen</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">notification</span>
+        <span style="color:#a6e22e">NotificationScreen</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">main</span>
+      <span style="color:#a6e22e">MainNavigator</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">news</span>
+        <span style="color:#a6e22e">NewsScreen</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">profile</span>
+        <span style="color:#a6e22e">ProfileScreen</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">search</span>
+        <span style="color:#a6e22e">SearchScreen</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#a6e22e">library</span>
+    <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span>
+    <span style="color:#a6e22e">components</span>
+      <span style="color:#a6e22e">ImageButton</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">RoundImage</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">utils</span>
+      <span style="color:#a6e22e">moveToBottom</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">safeArea</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">networking</span>
+      <span style="color:#a6e22e">API</span>.<span style="color:#a6e22e">js</span>
+      <span style="color:#a6e22e">Auth</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#a6e22e">res</span>
+    <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span>
+    <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">colors</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">fonts</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">js</span>
+    <span style="color:#a6e22e">images</span>
+      <span style="color:#a6e22e">logo</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">2</span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">png</span>
+      <span style="color:#a6e22e">logo</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">png</span>
+      <span style="color:#a6e22e">button</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">2</span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">png</span>
+      <span style="color:#a6e22e">button</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">png</span>
+<span style="color:#a6e22e">scripts</span>
+  <span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">js</span>
+  <span style="color:#a6e22e">clear</span>.<span style="color:#a6e22e">js</span>
+</code></pre></div><p>除了传统的App.js文件，index.js文件，ios文件夹和android文件夹，我把所有的源文件都放在src文件夹里面。在src内部有res文件夹存放资源文件，library文件夹存放跨功能使用的公共文件，以及screens文件夹存放和屏幕相关的文件。</p>
+<h3 id="尽可能少的依赖">尽可能少的依赖</h3>
+<p>由于React Native严重依赖于大量的依赖项，因此在添加更多依赖项时我会非常清楚。在我的项目中，我只用react-navigation做导航。而且我不喜欢redux，因为它增加了不必要的复杂性。只有在你真正需要它时才添加一个依赖项，否则你只是为了让自己陷入更多麻烦而不是价值。</p>
+<p>React中我喜欢的是组件。组件是我们定义视图，样式和行为的地方。React具有内联样式 - 就像使用JavaScript来定义脚本，HTML和CSS一样。这符合我们的目标特征。这就是我不使用样式组件的原因。由于样式只是JavaScript对象，我们可以在library中共享样式组件。</p>
+<h3 id="src">src</h3>
+<p>我非常喜欢Android，所以我命名src和res匹配其文件夹约定。
+react-native init为我们设置了babel。但对于典型的JavaScript项目，最好在src文件夹中组织文件。在我的electron.js应用程序IconGenerator中，我将源文件放在src文件夹中。这不仅有助于组织，还有助于babel立即转换整个文件夹。只是一个命令，瞬间我将文件src转换为dist。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">babel</span> .<span style="color:#f92672">/</span><span style="color:#a6e22e">src</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">out</span><span style="color:#f92672">-</span><span style="color:#a6e22e">dir</span> .<span style="color:#f92672">/</span><span style="color:#a6e22e">dist</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">-</span><span style="color:#a6e22e">files</span>
+</code></pre></div><h3 id="screen">Screen</h3>
+<p>React基于组件，有容器和表示组件，但我们可以组成组件来构建更复杂的组件。它们通常以全屏显示结束。它在Windows Phone被称为Page，在iOS中被称为ViewController，在Android中被称为Activity。React Native文档经常提到屏幕覆盖整个空间：</p>
+<blockquote>
+<p>移动应用很少由单个屏幕组成。管理多个屏幕的呈现和转换通常由所谓的导航器来处理。</p>
+</blockquote>
+<h3 id="indexjs-or-not">index.js or not?</h3>
+<p>每个屏幕都被视为每个功能的入口点。您可以利用Node模块功能重命名LoginScreen.js为index.js：</p>
+<blockquote>
+<p>模块不必是文件。我们还可以在node_modules下创建一个find-me文件夹并在其中放置index.js文件。require(&lsquo;find-me&rsquo;)行将使用该文件夹下的index.js文件</p>
+</blockquote>
+<p>因此我们可以用import LoginScreen from &lsquo;./screens&rsquo;来代替import LoginScreen from &lsquo;./screens/LoginScreen&rsquo;。</p>
+<p>使用index.js封装并为该功能提供公共接口。这都是个人习惯。我自己更喜欢为文件准确命名，这就是LoginScreen.js的由来。</p>
+<h3 id="navigator">Navigator</h3>
+<p>react-navigation似乎是在React Native应用程序中处理导航的最受欢迎的选择。对于像用户引导这样的功能，可能有很多屏幕由堆栈导航管理，所以有OnboardingNavigator 。</p>
+<p>您可以将Navigator视为对子屏幕或功能进行分组的内容。由于我们按功能分组，因此将Navigator放在功能文件夹中是合理的。它基本上看起来像这样：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createStackNavigator</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-navigation&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Welcome</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Welcome&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Term</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Term&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">routeConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">Welcome</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">screen</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Welcome</span>
+  },
+  <span style="color:#a6e22e">Term</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">screen</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Term</span>
+  }
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">navigatorConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">navigationOptions</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">header</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>
+  }
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">OnboardingNavigator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createStackNavigator</span>(<span style="color:#a6e22e">routeConfig</span>, <span style="color:#a6e22e">navigatorConfig</span>)
+</code></pre></div><h3 id="库">库</h3>
+<p>这是构建项目中最具争议的部分。如果你不喜欢这个名字library，你可以将其命名utilities，common，citadel ，whatever&hellip;</p>
+<p>这不适用于无家可归文件，但它是我们放置常用功能和组件的地方。诸如原子组件，包装器，快速修复功能，网络内容和登录信息之类的东西被大量使用，并且很难将它们移动到特定的功能文件夹。有时我们只需要务实并完成工作。</p>
+<p>在React Native中，我们经常需要在许多屏幕中实现带有图像背景的按钮。这是一个在里面library/components/ImageButton.js里的简单的功能。该components文件夹用于可重用组件，有时称为原子组件。根据React命名约定，第一个字母应该是大写的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TouchableOpacity</span>, <span style="color:#a6e22e">View</span>, <span style="color:#a6e22e">Image</span>, <span style="color:#a6e22e">Text</span>, <span style="color:#a6e22e">StyleSheet</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-native&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">images</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/images&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">colors</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/colors&#39;</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ImageButton</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">TouchableOpacity</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">touchable</span>} <span style="color:#a6e22e">onPress</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">onPress</span>}<span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">View</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">view</span>}<span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Text</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">text</span>}<span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">title</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Text&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/View&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Image</span>
+          <span style="color:#a6e22e">source</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">button</span>}
+          <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">image</span>} <span style="color:#f92672">/&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/TouchableOpacity&gt;</span>
+    )
+  }
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StyleSheet</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">view</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">position</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;absolute&#39;</span>,
+    <span style="color:#a6e22e">backgroundColor</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;transparent&#39;</span>
+  },
+  <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> {
+},
+  <span style="color:#a6e22e">touchable</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">alignItems</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>,
+    <span style="color:#a6e22e">justifyContent</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  },
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">colors</span>.<span style="color:#a6e22e">button</span>,
+    <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>,
+    <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  }
+})
+</code></pre></div><p>如果我们想将按钮放在底部，我们使用utility function来防止代码重复。例如可以放在library/utils/moveToBottom.js：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">View</span>, <span style="color:#a6e22e">StyleSheet</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-native&#39;</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">moveToBottom</span>(<span style="color:#a6e22e">component</span>) {
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">View</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">container</span>}<span style="color:#f92672">&gt;</span>
+      {<span style="color:#a6e22e">component</span>}
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/View&gt;</span>
+  )
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StyleSheet</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">flex</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">justifyContent</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;flex-end&#39;</span>,
+    <span style="color:#a6e22e">marginBottom</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">36</span>
+  }
+})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">moveToBottom</span>
+</code></pre></div><h4 id="使用packagejson来避免相对路径">使用package.json来避免相对路径</h4>
+<p>在js文件中，例如src/screens/onboarding/term/Term.js ，我们可以使用相对路径导入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">moveToBottom</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../../../../library/utils/move&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ImageButton</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../../../../library/components/ImageButton&#39;</span>
+</code></pre></div><p>这是我眼中的一个大大的警告。这很容易出错，因为我们需要计算很多我们需要执行的..数量。如果我们移动了feature，则需要重新计算所有路径。</p>
+<p>由于库的意图是用于许多地方，因此将其作为绝对路径引用是很好的。在JavaScript中，单个问题通常有1000个库。在Google上快速搜索可以发现大量的库来解决这个问题。但是我们不需要另外的依赖，因为这非常容易修复。</p>
+<p>解决的办法是把library变成module，这样node可以找到它。添加package.json到任何文件夹使其成为节点module 。使用以下简单内容package.json在library文件夹中添加：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;library&#34;</span>,
+  <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.0.1&#34;</span>
+}
+</code></pre></div><p>现在，在Term.js文件中我们可以很容易地导入library，因为它现在是module：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">View</span>, <span style="color:#a6e22e">StyleSheet</span>, <span style="color:#a6e22e">Image</span>, <span style="color:#a6e22e">Text</span>, <span style="color:#a6e22e">Button</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-native&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">strings</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/strings&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">palette</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/palette&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">images</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/images&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ImageButton</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;library/components/ImageButton&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">moveToBottom</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;library/utils/moveToBottom&#39;</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Term</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">View</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">container</span>}<span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Text</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">heading</span>}<span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">onboarding</span>.<span style="color:#a6e22e">term</span>.<span style="color:#a6e22e">heading</span>.<span style="color:#a6e22e">toUpperCase</span>()}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Text&gt;</span>
+        {
+          <span style="color:#a6e22e">moveToBottom</span>(
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ImageButton</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">button</span>} <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">onboarding</span>.<span style="color:#a6e22e">term</span>.<span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">toUpperCase</span>()} <span style="color:#f92672">/&gt;</span>
+          )
+        }
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/View&gt;</span>
+    )
+  }
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StyleSheet</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">flex</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">alignItems</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  },
+  <span style="color:#a6e22e">heading</span><span style="color:#f92672">:</span> {...<span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">heading</span>, ...{
+    <span style="color:#a6e22e">marginTop</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>
+  }}
+})
+</code></pre></div><h3 id="res">res</h3>
+<p>你可能不知道在上面的例子中的res/colors，res/strings ，res/images和res/fonts。好吧，对于前端项目，我们通常使用字体，本地化字符串，颜色，图像和样式来组件和样式。JavaScript是一种非常动态的语言，并且很容易在任何地方使用字符串类型。我们可以在许多文件中定义颜色#00B75D，或者在许多Text组件使用Fira字体作为fontFamily。这很容易出错并且难以重构。</p>
+<p>让我们在res中用更安全的对象封装资源。它们看起来像下面的例子：</p>
+<ul>
+<li>res/colors</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">colors</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#00B75D&#39;</span>,
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#0C222B&#39;</span>,
+  <span style="color:#a6e22e">button</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#036675&#39;</span>
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">colors</span>
+</code></pre></div><ul>
+<li>res/strings</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">strings</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">onboarding</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">welcome</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">heading</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Welcome&#39;</span>,
+      <span style="color:#a6e22e">text1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;What you don&#39;t know is what you haven&#39;t learn&#34;</span>,
+      <span style="color:#a6e22e">text2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Visit my GitHub at https://github.com/onmyway133&#39;</span>,
+      <span style="color:#a6e22e">button</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Log in&#39;</span>
+    },
+    <span style="color:#a6e22e">term</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">heading</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Terms and conditions&#39;</span>,
+      <span style="color:#a6e22e">button</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Read&#39;</span>
+    }
+  }
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">strings</span>
+</code></pre></div><ul>
+<li>res/fonts</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fonts</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Arial&#39;</span>,
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SanFrancisco&#39;</span>,
+  <span style="color:#a6e22e">code</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Fira&#39;</span>
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">fonts</span>
+<span style="color:#a6e22e">res</span><span style="color:#f92672">/</span><span style="color:#a6e22e">images</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">images</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">button</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/button.png&#39;</span>),
+  <span style="color:#a6e22e">logo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/logo.png&#39;</span>),
+  <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/placeholder.png&#39;</span>)
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">images</span>
+</code></pre></div><p>和library一样，res文件可以从任何地方访问，所以通过以下代码让它成为一个module 。</p>
+<p>添加package.json到res文件夹：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;res&#34;</span>,
+  <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.0.1&#34;</span>
+}
+</code></pre></div><p>所以我们可以像普通模块那样访问资源文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">strings</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/strings&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">palette</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/palette&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">images</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/images&#39;</span>
+</code></pre></div><h3 id="用调色板分组颜色图像字体">用调色板分组颜色，图像，字体</h3>
+<p>应用程序的设计应该是一致的。某些元素应该具有相同的外观和感觉，因此它们不会混淆用户。例如，标题Text应使用一种颜色，字体和字体大小。Image组件应使用相同的占位符图像。在React Native中，我们已经使用了名称styles，const styles = StyleSheet.create({})
+所以让我们使用名称palette。</p>
+<p>下面是我简单的调色板。它定义了标题的常用样式和Text：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">res</span><span style="color:#f92672">/</span><span style="color:#a6e22e">palette</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">colors</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./colors&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">palette</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">heading</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">colors</span>.<span style="color:#a6e22e">title</span>,
+    <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+    <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  },
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">colors</span>.<span style="color:#a6e22e">text</span>,
+    <span style="color:#a6e22e">fontSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">17</span>,
+    <span style="color:#a6e22e">textAlign</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  }
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">palette</span>
+</code></pre></div><p>然后我们可以在屏幕上使用它们：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StyleSheet</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">flex</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">alignItems</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;center&#39;</span>
+  },
+  <span style="color:#a6e22e">heading</span><span style="color:#f92672">:</span> {...<span style="color:#a6e22e">palette</span>.<span style="color:#a6e22e">heading</span>, ...{
+    <span style="color:#a6e22e">marginTop</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>
+  }}
+})
+</code></pre></div><p>这里我们使用对象扩展运算符来合并palette.heading和我们的自定义样式对象。这意味着我们使用了palette.heading中的样式，但也指定了更多属性。</p>
+<p>如果我们要为多个品牌重新设置应用程序，我们可能会有多个调色板。这是一个非常强大的模式。</p>
+<h3 id="生成图像">生成图像</h3>
+<p>你可以看到在/src/res/images.js中的每个图像都有属性：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">images</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">button</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/button.png&#39;</span>),
+  <span style="color:#a6e22e">logo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/logo.png&#39;</span>),
+  <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./images/placeholder.png&#39;</span>)
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">images</span>
+</code></pre></div><p>这是手动执行的繁琐工作，如果图像命名约定发生变化，我们必须更新。相反，我们可以添加一个脚本来根据我们的图像生成images.js。 在项目/scripts/images.js的根目录添加一个文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">imageFileNames</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>
+    .<span style="color:#a6e22e">readdirSync</span>(<span style="color:#e6db74">&#39;src/res/images&#39;</span>)
+    .<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">file</span>) =&gt; {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">endsWith</span>(<span style="color:#e6db74">&#39;.png&#39;</span>)
+    })
+    .<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">file</span>) =&gt; {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;@2x.png&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;@3x.png&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+    })
+<span style="color:#66d9ef">return</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">array</span>))
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">generate</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">properties</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">imageFileNames</span>()
+    .<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">name</span>) =&gt; {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: require(&#39;./images/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png&#39;)`</span>
+    })
+    .<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;,\n  &#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`const images = {
+</span><span style="color:#e6db74">  </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">properties</span><span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">export default images
+</span><span style="color:#e6db74">`</span>
+<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#e6db74">&#39;src/res/images.js&#39;</span>, <span style="color:#a6e22e">string</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>)
+}
+<span style="color:#a6e22e">generate</span>()
+</code></pre></div><p>关于Node的一个很酷的事情是我们可以访问fs模块，它非常擅长文件处理。在这里，我们只是遍历图像，并相应地更新/src/res/images.js。</p>
+<p>每当我们添加或更改图像时，我们都可以运行：</p>
+<pre><code>node scripts/images.js
+</code></pre><p>我们也可以在main中声明脚本package.json ：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
+  <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;node node_modules/react-native/local-cli/cli.js start&#34;</span>,
+  <span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jest&#34;</span>,
+  <span style="color:#e6db74">&#34;lint&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;eslint *.js **/*.js&#34;</span>,
+  <span style="color:#e6db74">&#34;images&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;node scripts/images.js&#34;</span>
+}
+</code></pre></div><p>现在我们可以运行npm run images并获得最新的images.js 资源文件。</p>
+<h3 id="自定义字体怎么样">自定义字体怎么样？</h3>
+<p>React Native有一些自定义字体可能对你的项目来说足够好。您也可以使用自定义字体。</p>
+<p>需要注意的一点是，Android使用字体文件的名称，但iOS使用全名。您可以在Font Book应用程序中查看全名，也可以在正在运行的应用程序中查看</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">NSString</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">family</span> <span style="color:#66d9ef">in</span> [<span style="color:#a6e22e">UIFont</span> <span style="color:#a6e22e">familyNames</span>]) {
+  <span style="color:#a6e22e">NSLog</span>(<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#e6db74">&#34;%@&#34;</span>, <span style="color:#a6e22e">family</span>);
+<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">NSString</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">in</span> [<span style="color:#a6e22e">UIFont</span> <span style="color:#a6e22e">fontNamesForFamilyName</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">family</span>]) {
+    <span style="color:#a6e22e">NSLog</span>(<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#e6db74">&#34;Family name:  %@&#34;</span>, <span style="color:#a6e22e">name</span>);
+  }
+}
+</code></pre></div><p>对于要在iOS的注册自定义字体，我们需要声明UIAppFonts中Info.plist使用的字体的文件名，在Android开发中，需要的字体被放置在app/src/main/assets/fonts。</p>
+<p>最好将字体文件命名为全名。据说React Native会动态加载自定义字体，但是如果你得到“无法识别的字体系列”，那么只需将这些字体添加到Xcode中的目标。</p>
+<p>手工完成这项工作需要时间，幸运的是我们有rnpm可以提供帮助。首先添加res/fonts文件夹中的所有字体。然后简单地声明rnpm中package.json并运行react-native link 。这应该在iOS中声明UIAppFonts，在Android中将所有字体移动到app/src/main/assets/fonts。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#34;rnpm&#34;</span><span style="color:#f92672">:</span> {
+  <span style="color:#e6db74">&#34;assets&#34;</span><span style="color:#f92672">:</span> [
+    <span style="color:#e6db74">&#34;./src/res/fonts/&#34;</span>
+  ]
+}
+</code></pre></div><p>按名称访问字体容易出错，我们可以创建一个类似于我们对图像所做的脚本来生成更安全的加入。添加fonts.js到我们的scripts文件夹</p>
+<pre><code>const fs = require('fs')
+const fontFileNames = () =&gt; {
+  const array = fs
+    .readdirSync('src/res/fonts')
+    .map((file) =&gt; {
+      return file.replace('.ttf', '')
+    })
+return Array.from(new Set(array))
+}
+const generate = () =&gt; {
+  const properties = fontFileNames()
+    .map((name) =&gt; {
+      const key = name.replace(/\s/g, '')
+      return `${key}: '${name}'`
+    })
+    .join(',\n  ')
+const string = `const fonts = {
+  ${properties}
+}
+export default fonts
+
+fs.writeFileSync('src/res/fonts.js', string, 'utf8')
+}
+
+generate()
+</code></pre><p>现在您可以通过R名称空间使用自定义字体</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">R</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;res/R&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StyleSheet</span>.<span style="color:#a6e22e">create</span>({
+  <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">fontFamily</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">R</span>.<span style="color:#a6e22e">fonts</span>.<span style="color:#a6e22e">FireCodeNormal</span>
+  }
+})
+</code></pre></div><h3 id="r-命名空间">R 命名空间</h3>
+<p>这一步取决于个人品味，但如果我们引入R命名空间，我发现它更有条理，就像Android对生成的R类的assets所做的那样。</p>
+<blockquote>
+<p>外部化应用程序资源后，可以使用项目R类中生成的资源ID访问它们。本文档介绍如何在Android项目中对资源进行分组，并为特定设备配置提供备用资源，然后从应用程序代码或其他XML文件中访问它们。</p>
+</blockquote>
+<p>通过这种方式，让我们在src/res中生成一个名为R.js的文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">strings</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./strings&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">images</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./images&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">colors</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./colors&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">palette</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./palette&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">strings</span>,
+  <span style="color:#a6e22e">images</span>,
+  <span style="color:#a6e22e">colors</span>,
+  <span style="color:#a6e22e">palette</span>
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">R</span>
+</code></pre></div><p>并在屏幕上访问它：</p>
+<pre><code>import R from 'res/R'
+render() {
+  return (
+    &lt;SafeAreaView style={styles.container}&gt;
+      &lt;Image
+        style={styles.logo}
+        source={R.images.logo} /&gt;
+      &lt;Image
+        style={styles.image}
+        source={R.images.placeholder} /&gt;
+      &lt;Text style={styles.title}&gt;{R.strings.onboarding.welcome.title.toUpperCase()}&lt;/Text&gt;
+  )
+}
+</code></pre><p>strings替换为R.strings，colors 替换为R.colors，images替换为R.images。使用R注释，很明显我们正在从应用程序包中访问静态资产。</p>
+<p>这也符合Airbnb对singleton的约定，因为我们的R现在就像一个全球常数。</p>
+<p>23.8导出构造函数/类/单例/函数库/对象时使用PascalCase。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AirbnbStyleGuide</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">es6</span><span style="color:#f92672">:</span> {
+  },
+}
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">AirbnbStyleGuide</span>
+</code></pre></div><h3 id="延伸阅读">延伸阅读</h3>
+<p>在这篇文章中，我向您展示了我认为您应该如何在React Native项目中构建文件夹和文件。我们还学习了如何以更安全的方式管理资源和访问资源。我希望你发现它很有用。以下是一些可供进一步探索的资源：</p>
+<p><a href="https://medium.com/the-react-native-log/organizing-a-react-native-project-9514dfadaa0">Organizing a React Native Project</a></p>
+<p><a href="https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76">Structuring projects and naming components in React</a></p>
+<p><a href="https://alligator.io/react/index-js-public-interfaces/">Using index.js for Fun and Public Interfaces</a></p>
+<p>既然你在这里，你可能会喜欢我的其他文章</p>
+<p><a href="https://medium.com/react-native-training/fixing-react-native-issues-and-happy-deploy-to-bitrise-fabric-circleci-44da4ab1487b">Deploying React Native to Bitrise, Fabric, CircleCI</a></p>
+<p><a href="https://medium.com/react-native-training/position-element-at-the-bottom-of-the-screen-using-flexbox-in-react-native-a00b3790ca42">Position element at the bottom of the screen using Flexbox in React Native</a></p>
+<p><a href="https://codeburst.io/setting-up-eslint-and-editorconfig-in-react-native-projects-31b4d9ddd0f6">Setting up ESLint and EditorConfig in React Native projects</a></p>
+<p><a href="https://medium.com/react-native-training/firebase-sdk-with-firestore-for-react-native-apps-in-2018-aa89a67d6934">Firebase SDK with Firestore for React Native apps in 2018</a></p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/react/" rel="tag">React</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/react-native/" rel="tag">React Native</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="悦读 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 悦读</span>
+	</div>
+	<div class="authorbox__description">
+		如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/it/tenalgorithmsbooks/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">数据结构算法书籍推荐</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/it/howtobuildrnflatlist/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">React Native如何构建具有实时搜索能力的FlatList</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "whywhom-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 悦读.
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

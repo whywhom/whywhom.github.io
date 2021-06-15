@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>十大经典排序算法 (6)快速排序 - 悦读</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="十大经典排序算法 (6)快速排序" />
+<meta property="og:description" content="快速排序
+快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要 Ο(nlogn) 次比较。在最坏状况下则需要 Ο(n2) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他 Ο(nlogn) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
+快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://whyread.top/it/6.quicksort/" /><meta property="article:section" content="it" />
+<meta property="article:published_time" content="2018-08-18T22:59:04&#43;00:00" />
+<meta property="article:modified_time" content="2018-08-18T22:59:04&#43;00:00" />
+
+
+		<meta itemprop="name" content="十大经典排序算法 (6)快速排序">
+<meta itemprop="description" content="快速排序
+快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要 Ο(nlogn) 次比较。在最坏状况下则需要 Ο(n2) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他 Ο(nlogn) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
+快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。"><meta itemprop="datePublished" content="2018-08-18T22:59:04&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-18T22:59:04&#43;00:00" />
+<meta itemprop="wordCount" content="699">
+<meta itemprop="keywords" content="算法,数据结构," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="十大经典排序算法 (6)快速排序"/>
+<meta name="twitter:description" content="快速排序
+快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要 Ο(nlogn) 次比较。在最坏状况下则需要 Ο(n2) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他 Ο(nlogn) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。
+快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPTWXGGM9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RGPTWXGGM9', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="悦读" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">悦读</div>
+					<div class="logo__tagline">如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">英语悦读客</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/it/">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">程序猿</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/books/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Books</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/nz/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">新西兰</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/about/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">十大经典排序算法 (6)快速排序</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">悦读</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-08-18T22:59:04Z">18188-04-187</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-算法步骤">1. 算法步骤</a></li>
+    <li><a href="#2-动图演示">2. 动图演示</a></li>
+    <li><a href="#3-javascript-代码实现">3. JavaScript 代码实现</a></li>
+    <li><a href="#4-python-代码实现">4. Python 代码实现</a></li>
+    <li><a href="#5-go-代码实现">5. Go 代码实现</a></li>
+    <li><a href="#6-c版">6. C++版</a></li>
+    <li><a href="#7-java-代码实现">7. Java 代码实现</a></li>
+    <li><a href="#8-php-代码实现">8. PHP 代码实现</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h1 id="快速排序">快速排序</h1>
+<p>快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要 Ο(nlogn) 次比较。在最坏状况下则需要 Ο(n2) 次比较，但这种状况并不常见。事实上，快速排序通常明显比其他 Ο(nlogn) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。</p>
+<p>快速排序使用分治法（Divide and conquer）策略来把一个串行（list）分为两个子串行（sub-lists）。</p>
+<p>快速排序又是一种分而治之思想在排序算法上的典型应用。本质上来看，快速排序应该算是在冒泡排序基础上的递归分治法。</p>
+<p>快速排序的名字起的是简单粗暴，因为一听到这个名字你就知道它存在的意义，就是快，而且效率高！它是处理大数据最快的排序算法之一了。虽然 Worst Case 的时间复杂度达到了 O(n²)，但是人家就是优秀，在大多数情况下都比平均时间复杂度为 O(n logn) 的排序算法表现要更好，可是这是为什么呢，我也不知道。好在我的强迫症又犯了，查了 N 多资料终于在《算法艺术与信息学竞赛》上找到了满意的答案：</p>
+<blockquote>
+<p>快速排序的最坏运行情况是 O(n²)，比如说顺序数列的快排。但它的平摊期望时间是 O(nlogn)，且 O(nlogn) 记号中隐含的常数因子很小，比复杂度稳定等于 O(nlogn) 的归并排序要小很多。所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。</p>
+</blockquote>
+<h2 id="1-算法步骤">1. 算法步骤</h2>
+<ol>
+<li>
+<p>从数列中挑出一个元素，称为 “基准”（pivot）;</p>
+</li>
+<li>
+<p>重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；</p>
+</li>
+<li>
+<p>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；</p>
+</li>
+</ol>
+<p>递归的最底部情形，是数列的大小是零或一，也就是永远都已经被排序好了。虽然一直递归下去，但是这个算法总会退出，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。</p>
+<h2 id="2-动图演示">2. 动图演示</h2>
+<p><img src="quickSort.gif" alt="动图演示"></p>
+<h2 id="3-javascript-代码实现">3. JavaScript 代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>,
+        <span style="color:#a6e22e">partitionIndex</span>,
+        <span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;number&#39;</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">left</span>,
+        <span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;number&#39;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">len</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">right</span>;
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">left</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">right</span>) {
+        <span style="color:#a6e22e">partitionIndex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">partition</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>);
+        <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">partitionIndex</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+        <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">partitionIndex</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">right</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">partition</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span> ,<span style="color:#a6e22e">right</span>) {     <span style="color:#75715e">// 分区操作
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">left</span>,                      <span style="color:#75715e">// 设定基准值（pivot）
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">index</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">right</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">pivot</span>]) {
+            <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">index</span>);
+            <span style="color:#a6e22e">index</span><span style="color:#f92672">++</span>;
+        }        
+    }
+    <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">pivot</span>, <span style="color:#a6e22e">index</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">index</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>];
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>];
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>;
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">partition2</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">low</span>, <span style="color:#a6e22e">high</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">low</span>];
+  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">low</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">high</span>) {
+    <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">low</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">high</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">high</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">pivot</span>) {
+      <span style="color:#f92672">--</span><span style="color:#a6e22e">high</span>;
+    }
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">low</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">high</span>];
+    <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">low</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">high</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">low</span>] <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">pivot</span>) {
+      <span style="color:#f92672">++</span><span style="color:#a6e22e">low</span>;
+    }
+    <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">high</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">low</span>];
+  }
+  <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">low</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">pivot</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">low</span>;
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">quickSort2</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">low</span>, <span style="color:#a6e22e">high</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">low</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">high</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">partition2</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">low</span>, <span style="color:#a6e22e">high</span>);
+    <span style="color:#a6e22e">quickSort2</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">low</span>, <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">quickSort2</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">high</span>);
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;
+}
+
+</code></pre></div><h2 id="4-python-代码实现">4. Python 代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quickSort</span>(arr, left<span style="color:#f92672">=</span>None, right<span style="color:#f92672">=</span>None):
+    left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(left,(int, float)) <span style="color:#66d9ef">else</span> left
+    right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isinstance(right,(int, float)) <span style="color:#66d9ef">else</span> right
+    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&lt;</span> right:
+        partitionIndex <span style="color:#f92672">=</span> partition(arr, left, right)
+        quickSort(arr, left, partitionIndex<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        quickSort(arr, partitionIndex<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right)
+    <span style="color:#66d9ef">return</span> arr
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(arr, left, right):
+    pivot <span style="color:#f92672">=</span> left
+    index <span style="color:#f92672">=</span> pivot<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+    i <span style="color:#f92672">=</span> index
+    <span style="color:#66d9ef">while</span>  i <span style="color:#f92672">&lt;=</span> right:
+        <span style="color:#66d9ef">if</span> arr[i] <span style="color:#f92672">&lt;</span> arr[pivot]:
+            swap(arr, i, index)
+            index<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+        i<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+    swap(arr,pivot,index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">return</span> index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(arr, i, j):
+    arr[i], arr[j] <span style="color:#f92672">=</span> arr[j], arr[i]
+</code></pre></div><h2 id="5-go-代码实现">5. Go 代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">quickSort</span>(<span style="color:#a6e22e">arr</span> []<span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">_quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#ae81ff">0</span>, len(<span style="color:#a6e22e">arr</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_quickSort</span>(<span style="color:#a6e22e">arr</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span> <span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">left</span> &lt; <span style="color:#a6e22e">right</span> {
+		<span style="color:#a6e22e">partitionIndex</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">partition</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span>)
+		<span style="color:#a6e22e">_quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">partitionIndex</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+		<span style="color:#a6e22e">_quickSort</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">partitionIndex</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">right</span>)
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">partition</span>(<span style="color:#a6e22e">arr</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">left</span>, <span style="color:#a6e22e">right</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+	<span style="color:#a6e22e">pivot</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">left</span>
+	<span style="color:#a6e22e">index</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">pivot</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">index</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">right</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] &lt; <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">pivot</span>] {
+			<span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">index</span>)
+			<span style="color:#a6e22e">index</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+		}
+	}
+	<span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">pivot</span>, <span style="color:#a6e22e">index</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">arr</span> []<span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#66d9ef">int</span>) {
+	<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>], <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]
+}
+</code></pre></div><h2 id="6-c版">6. C++版</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"> <span style="color:#75715e">//严蔚敏《数据结构》标准分割函数
+</span><span style="color:#75715e"></span> Paritition1(<span style="color:#66d9ef">int</span> A[], <span style="color:#66d9ef">int</span> low, <span style="color:#66d9ef">int</span> high) {
+   <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> A[low];
+   <span style="color:#66d9ef">while</span> (low <span style="color:#f92672">&lt;</span> high) {
+     <span style="color:#66d9ef">while</span> (low <span style="color:#f92672">&lt;</span> high <span style="color:#f92672">&amp;&amp;</span> A[high] <span style="color:#f92672">&gt;=</span> pivot) {
+       <span style="color:#f92672">--</span>high;
+     }
+     A[low] <span style="color:#f92672">=</span> A[high];
+     <span style="color:#66d9ef">while</span> (low <span style="color:#f92672">&lt;</span> high <span style="color:#f92672">&amp;&amp;</span> A[low] <span style="color:#f92672">&lt;=</span> pivot) {
+       <span style="color:#f92672">++</span>low;
+     }
+     A[high] <span style="color:#f92672">=</span> A[low];
+   }
+   A[low] <span style="color:#f92672">=</span> pivot;
+   <span style="color:#66d9ef">return</span> low;
+ }
+
+ <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">QuickSort</span>(<span style="color:#66d9ef">int</span> A[], <span style="color:#66d9ef">int</span> low, <span style="color:#66d9ef">int</span> high) <span style="color:#75715e">//快排母函数
+</span><span style="color:#75715e"></span> {
+   <span style="color:#66d9ef">if</span> (low <span style="color:#f92672">&lt;</span> high) {
+     <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> Paritition1(A, low, high);
+     QuickSort(A, low, pivot <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+     QuickSort(A, pivot <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, high);
+   }
+ }
+</code></pre></div><h2 id="7-java-代码实现">7. Java 代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuickSort</span> <span style="color:#66d9ef">implements</span> IArraySort <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> sourceArray<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 对 arr 进行拷贝，不改变参数内容
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">copyOf</span><span style="color:#f92672">(</span>sourceArray<span style="color:#f92672">,</span> sourceArray<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">return</span> quickSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">quickSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> left<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&lt;</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> partitionIndex <span style="color:#f92672">=</span> partition<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> left<span style="color:#f92672">,</span> right<span style="color:#f92672">);</span>
+            quickSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> left<span style="color:#f92672">,</span> partitionIndex <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+            quickSort<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> partitionIndex <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> right<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> arr<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">partition</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> left<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 设定基准值（pivot）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> left<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> index <span style="color:#f92672">=</span> pivot <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> index<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> right<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">[</span>pivot<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                swap<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> index<span style="color:#f92672">);</span>
+                index<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        swap<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> pivot<span style="color:#f92672">,</span> index <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> index <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+        arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+        arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="8-php-代码实现">8. PHP 代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">quickSort</span>($arr)
+{
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($arr) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>)
+        <span style="color:#66d9ef">return</span> $arr;
+    $middle <span style="color:#f92672">=</span> $arr[<span style="color:#ae81ff">0</span>];
+    $leftArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+    $rightArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+
+    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($arr); $i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span> ($arr[$i] <span style="color:#f92672">&gt;</span> $middle)
+            $rightArray[] <span style="color:#f92672">=</span> $arr[$i];
+        <span style="color:#66d9ef">else</span>
+            $leftArray[] <span style="color:#f92672">=</span> $arr[$i];
+    }
+    $leftArray <span style="color:#f92672">=</span> <span style="color:#a6e22e">quickSort</span>($leftArray);
+    $leftArray[] <span style="color:#f92672">=</span> $middle;
+
+    $rightArray <span style="color:#f92672">=</span> <span style="color:#a6e22e">quickSort</span>($rightArray);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">array_merge</span>($leftArray, $rightArray);
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="悦读 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 悦读</span>
+	</div>
+	<div class="authorbox__description">
+		如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/it/5.mergesort/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">十大经典排序算法 (5)归并排序</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/it/7.heapsort/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">十大经典排序算法 (7)堆排序</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "whywhom-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 悦读.
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

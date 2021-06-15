@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT on 悦读</title>
+    <link>https://whyread.top/categories/it/</link>
+    <description>Recent content in IT on 悦读</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Apr 2019 15:33:01 +0000</lastBuildDate><atom:link href="https://whyread.top/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2019年码农普查报告</title>
+      <link>https://whyread.top/it/190420it2019overview/</link>
+      <pubDate>Sat, 20 Apr 2019 15:33:01 +0000</pubDate>
+      
+      <guid>https://whyread.top/it/190420it2019overview/</guid>
+      <description>&lt;h2 id=&#34;developer-survey-results-2019&#34;&gt;Developer Survey Results 2019&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://insights.stackoverflow.com/survey/2019#overview&#34;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作者：宋欣仪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一年一度的程序员人口普查报告又来了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

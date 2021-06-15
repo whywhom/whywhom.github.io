@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R language on 悦读</title>
+    <link>https://whyread.top/tags/r-language/</link>
+    <description>Recent content in R language on 悦读</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Nov 2018 11:01:38 +0000</lastBuildDate><atom:link href="https://whyread.top/tags/r-language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Analytics and Visualisation</title>
+      <link>https://whyread.top/it/12.datavisual/</link>
+      <pubDate>Tue, 13 Nov 2018 11:01:38 +0000</pubDate>
+      
+      <guid>https://whyread.top/it/12.datavisual/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Data Analytics and Visualisation.&lt;/p&gt;
+&lt;p&gt;The purpose of this course is to develop advanced knowledge and skills in data analytics and data wrangling for effective data-driven decision making and data visualisation.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

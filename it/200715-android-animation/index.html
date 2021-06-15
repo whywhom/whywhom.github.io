@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Android Animations - 悦读</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Android Animations" />
+<meta property="og:description" content="Reasonable use of animation in the App can get a friendly and pleasant user experience. These animations are more commonly used in normal development, so it is necessary to make a complete summary." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://whyread.top/it/200715-android-animation/" /><meta property="article:section" content="it" />
+<meta property="article:published_time" content="2020-07-15T20:22:57&#43;00:00" />
+<meta property="article:modified_time" content="2020-07-15T20:22:57&#43;00:00" />
+
+
+		<meta itemprop="name" content="Android Animations">
+<meta itemprop="description" content="Reasonable use of animation in the App can get a friendly and pleasant user experience. These animations are more commonly used in normal development, so it is necessary to make a complete summary."><meta itemprop="datePublished" content="2020-07-15T20:22:57&#43;00:00" />
+<meta itemprop="dateModified" content="2020-07-15T20:22:57&#43;00:00" />
+<meta itemprop="wordCount" content="1833">
+<meta itemprop="keywords" content="Android," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android Animations"/>
+<meta name="twitter:description" content="Reasonable use of animation in the App can get a friendly and pleasant user experience. These animations are more commonly used in normal development, so it is necessary to make a complete summary."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPTWXGGM9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RGPTWXGGM9', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="悦读" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">悦读</div>
+					<div class="logo__tagline">如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">英语悦读客</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/it/">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">程序猿</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/books/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Books</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/nz/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">新西兰</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/about/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Android Animations</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">悦读</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-07-15T20:22:57Z">15157-57-157</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/mobile-development/" rel="category">Mobile Development</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#xml">Xml</a></li>
+    <li><a href="#using-code-to-implement-view-animation">Using Code to implement View animation</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#value-animator">Value Animator</a></li>
+    <li><a href="#object-animator">Object Animator</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#animated-vector-drawable">Animated Vector Drawable</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>Reasonable use of animation in the App can get a friendly and pleasant user experience. These animations are more commonly used in normal development, so it is necessary to make a complete summary.</p>
+<h1 id="animation-types">Animation Types</h1>
+<p>There are three main types of animations available on Android:</p>
+<ul>
+<li>View Animation</li>
+</ul>
+<blockquote>
+<p>used to do simple animations like changing size, position, rotation, control transparency. They are easy to build and are very fast but have their own constraints.
+View animation defines four basic animations: Alpha, Rotate, Scale, and Translate, and through the combined use of these four basic animations, a variety of interactive effects can be achieved.
+View animation is very simple to use. Not only can the animation be defined through an XML file, but also the animation process can be realized through code.</p>
+</blockquote>
+<ul>
+<li>Property Animation</li>
+</ul>
+<blockquote>
+<p>The property animation system is a robust framework that allows you to animate almost anything. You can define an animation to change any object property over time, regardless of whether it draws to the screen or not. A property animation changes a property&rsquo;s (a field in an object) value over a specified length of time. To animate something, you specify the object property that you want to animate, such as an object&rsquo;s position on the screen, how long you want to animate it for, and what values you want to animate between.</p>
+</blockquote>
+<ul>
+<li>Drawable Animation.</li>
+</ul>
+<blockquote>
+<p>This is used to do animation using drawables. An XML file specifying various list of drawables is made which are run one by one just like a roll of a film.</p>
+</blockquote>
+<p>Android 5.0 introduced various other animations — Reveal Effect, Activity/Fragment transitions, Click <a href="https://developer.android.com/training/animation">here</a> to learn more about this.</p>
+<h1 id="animation-usage">Animation usage</h1>
+<ul>
+<li>Animate bitmaps</li>
+<li>Animate UI visibility and motion</li>
+<li>Animate layout changes</li>
+<li>Animate between activities</li>
+</ul>
+<h1 id="view-animation">View Animation</h1>
+<p>Related class: AlphaAnimation, RotateAnimation, ScaleAnimation, and TranslateAnimation.</p>
+<h2 id="xml">Xml</h2>
+<p>The definition of View animation through XML involves some public attributes (not prompted on AndroidStudio):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">android:duration <span style="color:#75715e">//animation duration
+</span><span style="color:#75715e"></span>android:fillAfter <span style="color:#75715e">//is true When the animation ends, the View will maintain the state at the end of the animation
+</span><span style="color:#75715e"></span>android:fillBefore <span style="color:#75715e">//is true When the animation ends, the View will revert to the state at the beginning
+</span><span style="color:#75715e"></span>android:repeatCount <span style="color:#75715e">//The number of times the animation is repeatedly executed
+</span><span style="color:#75715e"></span>android:repeatMode <span style="color:#75715e">//Animation repeat mode, this attribute needs to be used together with android:repeatCount
+</span><span style="color:#75715e"></span>android:interpolator <span style="color:#75715e">//Interpolator, equivalent to a transmission, changes the execution speed of different stages of animation
+</span></code></pre></div><p>These attributes are inherited from Animation and can be used directly in the alpha, rotate, scale, translate tags.
+To define View animation using xml file, you need to create anim folder under the res directory of the project, and all View animation defined by xml must be placed under the anim directory.</p>
+<p>Alpha view_anim_alpha.xml:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>alpha xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+       android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+       android<span style="color:#f92672">:</span>fromAlpha<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+       android<span style="color:#f92672">:</span>toAlpha<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/</span>alpha<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Rotate view_anim_rotate.xml：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>rotate xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+        android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+        android<span style="color:#f92672">:</span>fillAfter<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>
+        android<span style="color:#f92672">:</span>fromDegrees<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+        android<span style="color:#f92672">:</span>pivotX<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50%&#34;</span>
+        android<span style="color:#f92672">:</span>pivotY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50%&#34;</span>
+        android<span style="color:#f92672">:</span>toDegrees<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;360&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/</span>rotate<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Scale view_anim_scale.xml：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>scale xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+       android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+       android<span style="color:#f92672">:</span>fromXScale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+       android<span style="color:#f92672">:</span>fromYScale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>
+       android<span style="color:#f92672">:</span>pivotX<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50%&#34;</span>
+       android<span style="color:#f92672">:</span>pivotY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50%&#34;</span>
+       android<span style="color:#f92672">:</span>toXScale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5&#34;</span>
+       android<span style="color:#f92672">:</span>toYScale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/</span>scale<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Translate view_anim_translate.xml：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>translate xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+           android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+           android<span style="color:#f92672">:</span>fromXDelta<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+           android<span style="color:#f92672">:</span>fromYDelta<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+           android<span style="color:#f92672">:</span>toXDelta<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span>
+           android<span style="color:#f92672">:</span>toYDelta<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/</span>translate<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Used in Activity</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToAlpha</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Animation alphaAnim <span style="color:#f92672">=</span> AnimationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimation</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">anim</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view_anim_alpha</span><span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>alphaAnim<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToRotate</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Animation rotateAnim <span style="color:#f92672">=</span> AnimationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimation</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">anim</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view_anim_rotate</span><span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>rotateAnim<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToScale</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Animation scaleAnim <span style="color:#f92672">=</span> AnimationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimation</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">anim</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view_anim_scale</span><span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>scaleAnim<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToTranslate</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Animation translateAnim <span style="color:#f92672">=</span> AnimationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimation</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">anim</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view_anim_translate</span><span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>translateAnim<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToSet</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Animation setAnim <span style="color:#f92672">=</span> AnimationUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimation</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">anim</span><span style="color:#f92672">.</span><span style="color:#a6e22e">view_anim_set</span><span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>setAnim<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="using-code-to-implement-view-animation">Using Code to implement View animation</h2>
+<p>Java code can also be used to directly implement Veiw animations. The Android system provides us with four animation classes, Alpha Animation, Rotate Animation, Scale Animation, and Translate Animation, to realize the gradual change, rotation, scaling, and translating of the view.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToAlpha</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    AlphaAnimation alphaAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AlphaAnimation<span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+    alphaAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>alphaAnimation<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToRotate</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    RotateAnimation rotateAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RotateAnimation<span style="color:#f92672">(</span>
+            0<span style="color:#f92672">,</span> 360<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    rotateAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>rotateAnimation<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//3
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToScale</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    ScaleAnimation scaleAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ScaleAnimation<span style="color:#f92672">(</span>
+            1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    scaleAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>scaleAnimation<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToTranslate</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    TranslateAnimation translateAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TranslateAnimation<span style="color:#f92672">(</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+    translateAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>translateAnimation<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//5 combination
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clickToSet</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    AlphaAnimation alphaAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AlphaAnimation<span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+    alphaAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+
+    RotateAnimation rotateAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RotateAnimation<span style="color:#f92672">(</span>
+            0<span style="color:#f92672">,</span> 360<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    rotateAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+
+    ScaleAnimation scaleAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ScaleAnimation<span style="color:#f92672">(</span>
+            1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    scaleAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+
+    TranslateAnimation translateAnimation <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TranslateAnimation<span style="color:#f92672">(</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span>
+            Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">RELATIVE_TO_SELF</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+    translateAnimation<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+
+    AnimationSet animationSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AnimationSet<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+    animationSet<span style="color:#f92672">.</span><span style="color:#a6e22e">addAnimation</span><span style="color:#f92672">(</span>alphaAnimation<span style="color:#f92672">);</span>
+    animationSet<span style="color:#f92672">.</span><span style="color:#a6e22e">addAnimation</span><span style="color:#f92672">(</span>rotateAnimation<span style="color:#f92672">);</span>
+    animationSet<span style="color:#f92672">.</span><span style="color:#a6e22e">addAnimation</span><span style="color:#f92672">(</span>scaleAnimation<span style="color:#f92672">);</span>
+    animationSet<span style="color:#f92672">.</span><span style="color:#a6e22e">addAnimation</span><span style="color:#f92672">(</span>translateAnimation<span style="color:#f92672">);</span>
+
+    mTargetView<span style="color:#f92672">.</span><span style="color:#a6e22e">startAnimation</span><span style="color:#f92672">(</span>animationSet<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>View animation can set a listener for animation execution. By setting the listener, you can do some other business logic at the beginning, end, and repetition of animation execution.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">animation<span style="color:#f92672">.</span><span style="color:#a6e22e">setAnimationListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Animation<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimationListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationStart</span><span style="color:#f92672">(</span>Animation animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// start
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationEnd</span><span style="color:#f92672">(</span>Animation animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// end
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationRepeat</span><span style="color:#f92672">(</span>Animation animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//repeats
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
+</code></pre></div><p>The problem with View Animations is that, though the View state changes, its property still remains at the original position. That means, if a ImageButton is moved from 0 to 100 pixels to the right, though it will animate to right, the touch(property) of image button will still be at 0th position.</p>
+<p>View Animations can be used in Splash screens. When using View Animations, use XML instead of doing it programmatically. Using XML files, it is more readable and can be shared among other views.</p>
+<p>If you want to handle touch, click after the animation, use Property Animation as they change the state as well as behaviour.</p>
+<h1 id="property-animation">Property Animation</h1>
+<p>The so-called property animation is to change the properties of the object to achieve the animation process. Property animation is an extension to the animation of View, through which you can achieve more beautiful animation effects. At the same time, the object of property animation is not only View, but any object.</p>
+<p>The effect of property animation is to dynamically change the value of one property of an object to another value within a specified period of time.</p>
+<h2 id="value-animator">Value Animator</h2>
+<p>The ValueAnimator class lets you animate values of some type for the duration of an animation by specifying a set of int, float, or color values to animate through. You obtain a ValueAnimator by calling one of its factory methods: ofInt(), ofFloat(), or ofObject().</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> TextView animateTextView <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>TextView<span style="color:#f92672">)</span>findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tv_animate</span><span style="color:#f92672">);</span>
+
+ValueAnimator valueAnimator <span style="color:#f92672">=</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>0f<span style="color:#f92672">,</span> 500f<span style="color:#f92672">);</span>
+valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setInterpolator</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> AccelerateDecelerateInterpolator<span style="color:#f92672">());</span> <span style="color:#75715e">// increase the speed first and then decrease
+</span><span style="color:#75715e"></span>valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">addUpdateListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimatorUpdateListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationUpdate</span><span style="color:#f92672">(</span>ValueAnimator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">float</span> progress <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span> animation<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnimatedValue</span><span style="color:#f92672">();</span>
+        animateTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTranslationY</span><span style="color:#f92672">(</span>progress<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// no need to use invalidate() as it is already present in             //the text view.
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
+valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><p>xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>animator xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+android:duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+android:interpolator<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@android:anim/accelerate_decelerate_interpolator&#34;</span>
+android:valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0f&#34;</span>
+android:valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;500f&#34;</span>
+android:valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span> <span style="color:#f92672">/&gt;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ValueAnimator valueAnimator <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ValueAnimator<span style="color:#f92672">)</span> AnimatorInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimator</span><span style="color:#f92672">(</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> R<span style="color:#f92672">.</span><span style="color:#a6e22e">animator</span><span style="color:#f92672">.</span><span style="color:#a6e22e">value_animator_ex</span><span style="color:#f92672">);</span>
+
+valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">addUpdateListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimatorUpdateListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationUpdate</span><span style="color:#f92672">(</span>ValueAnimator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">float</span> progress <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span> animation<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnimatedValue</span><span style="color:#f92672">();</span>
+        animateTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTranslationY</span><span style="color:#f92672">(</span>progress<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
+
+valueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><p>The use of ValueAnimator is generally combined with the update listener AnimatorUpdateListener, most of the time when it is used in custom control.
+The following is the use of ValueAnimator custom controls to achieve animation opening and closing effects.</p>
+<p>expanded_veiw.xml：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>LinearLayout xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+              android<span style="color:#f92672">:</span>layout_width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+              android<span style="color:#f92672">:</span>layout_height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+              android<span style="color:#f92672">:</span>background<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@android:color/white&#34;</span>
+              android<span style="color:#f92672">:</span>divider<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@drawable/divider&#34;</span>
+              android<span style="color:#f92672">:</span>orientation<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vertical&#34;</span>
+              android<span style="color:#f92672">:</span>showDividers<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middle&#34;</span><span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;</span>LinearLayout
+        android<span style="color:#f92672">:</span>id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@+id/ll_expanded_question&#34;</span>
+        android<span style="color:#f92672">:</span>layout_width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+        android<span style="color:#f92672">:</span>layout_height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;48dp&#34;</span>
+        android<span style="color:#f92672">:</span>gravity<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center_vertical&#34;</span><span style="color:#f92672">&gt;</span>
+
+        <span style="color:#f92672">&lt;</span>TextView
+            android<span style="color:#f92672">:</span>id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@+id/tv_expanded_question&#34;</span>
+            android<span style="color:#f92672">:</span>layout_width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0dp&#34;</span>
+            android<span style="color:#f92672">:</span>layout_height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;48dp&#34;</span>
+            android<span style="color:#f92672">:</span>layout_weight<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+            android<span style="color:#f92672">:</span>gravity<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center_vertical&#34;</span>
+            android<span style="color:#f92672">:</span>padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8dp&#34;</span>
+            android<span style="color:#f92672">:</span>text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;如何把一本很难的书看懂？&#34;</span>
+            android<span style="color:#f92672">:</span>textColor<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#999999&#34;</span>
+            android<span style="color:#f92672">:</span>textSize<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16sp&#34;</span><span style="color:#f92672">/&gt;</span>
+
+        <span style="color:#f92672">&lt;</span>ImageView
+            android<span style="color:#f92672">:</span>id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@+id/iv_expanded_indicator&#34;</span>
+            android<span style="color:#f92672">:</span>layout_width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16dp&#34;</span>
+            android<span style="color:#f92672">:</span>layout_height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16dp&#34;</span>
+            android<span style="color:#f92672">:</span>layout_marginRight<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16dp&#34;</span>
+            android<span style="color:#f92672">:</span>src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@drawable/img_up&#34;</span><span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;/</span>LinearLayout<span style="color:#f92672">&gt;</span>
+
+
+    <span style="color:#f92672">&lt;</span>TextView
+        android<span style="color:#f92672">:</span>id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@+id/tv_expanded_answer&#34;</span>
+        android<span style="color:#f92672">:</span>layout_width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+        android<span style="color:#f92672">:</span>layout_height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        android<span style="color:#f92672">:</span>padding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8dp&#34;</span>
+        android<span style="color:#f92672">:</span>text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;《大秦帝国》是一部多卷本的长篇历史小说，凡六部十一册，作家孙皓晖毕十六年之功，创作了煌煌五百万言。这部作品，与坊间流行的历史小说在艺术品质上是大异其趣的。&#34;</span>
+        android<span style="color:#f92672">:</span>textColor<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#999999&#34;</span>
+        android<span style="color:#f92672">:</span>textSize<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16sp&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/</span>LinearLayout<span style="color:#f92672">&gt;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExpandedView</span> <span style="color:#66d9ef">extends</span> FrameLayout <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">private</span> TextView mTvAnswer<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> isClosed<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> ImageView mIvIndicator<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ExpandedView</span><span style="color:#f92672">(</span>Context context<span style="color:#f92672">,</span> AttributeSet attrs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>context<span style="color:#f92672">,</span> attrs<span style="color:#f92672">);</span>
+        init<span style="color:#f92672">(</span>context<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>Context context<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        View view <span style="color:#f92672">=</span> LayoutInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">from</span><span style="color:#f92672">(</span>context<span style="color:#f92672">).</span><span style="color:#a6e22e">inflate</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">expanded_view</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+        LinearLayout llQuestion <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>LinearLayout<span style="color:#f92672">)</span> view<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ll_expanded_question</span><span style="color:#f92672">);</span>
+        llQuestion<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> OnClickListener<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>View v<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                anim<span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">});</span>
+        mTvAnswer <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>TextView<span style="color:#f92672">)</span> view<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tv_expanded_answer</span><span style="color:#f92672">);</span>
+        mIvIndicator <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ImageView<span style="color:#f92672">)</span> view<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">iv_expanded_indicator</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">anim</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 指示器旋转
+</span><span style="color:#75715e"></span>        ValueAnimator valueAnimator1 <span style="color:#f92672">=</span> isClosed
+                <span style="color:#f92672">?</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>180<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span>
+                <span style="color:#f92672">:</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 180<span style="color:#f92672">);</span>
+        valueAnimator1<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>500<span style="color:#f92672">);</span>
+        valueAnimator1<span style="color:#f92672">.</span><span style="color:#a6e22e">addUpdateListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimatorUpdateListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationUpdate</span><span style="color:#f92672">(</span>ValueAnimator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">float</span> value <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span> animation<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnimatedValue</span><span style="color:#f92672">();</span>
+                mIvIndicator<span style="color:#f92672">.</span><span style="color:#a6e22e">setRotation</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">});</span>
+        valueAnimator1<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+
+        <span style="color:#75715e">// 打开开关闭操作
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> answerHeight <span style="color:#f92672">=</span> mTvAnswer<span style="color:#f92672">.</span><span style="color:#a6e22e">getMeasuredHeight</span><span style="color:#f92672">();</span>
+        ValueAnimator valueAnimator2 <span style="color:#f92672">=</span> isClosed
+                <span style="color:#f92672">?</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofInt</span><span style="color:#f92672">(-</span>answerHeight<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span>
+                <span style="color:#f92672">:</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofInt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>answerHeight<span style="color:#f92672">);</span>
+        valueAnimator2<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>500<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">final</span> MarginLayoutParams params <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>MarginLayoutParams<span style="color:#f92672">)</span> mTvAnswer<span style="color:#f92672">.</span><span style="color:#a6e22e">getLayoutParams</span><span style="color:#f92672">();</span>
+        valueAnimator2<span style="color:#f92672">.</span><span style="color:#a6e22e">addUpdateListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ValueAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimatorUpdateListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationUpdate</span><span style="color:#f92672">(</span>ValueAnimator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span> animation<span style="color:#f92672">.</span><span style="color:#a6e22e">getAnimatedValue</span><span style="color:#f92672">();</span>
+                params<span style="color:#f92672">.</span><span style="color:#a6e22e">bottomMargin</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+                mTvAnswer<span style="color:#f92672">.</span><span style="color:#a6e22e">setLayoutParams</span><span style="color:#f92672">(</span>params<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">});</span>
+        valueAnimator2<span style="color:#f92672">.</span><span style="color:#a6e22e">addListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Animator<span style="color:#f92672">.</span><span style="color:#a6e22e">AnimatorListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationStart</span><span style="color:#f92672">(</span>Animator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationEnd</span><span style="color:#f92672">(</span>Animator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                isClosed <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>isClosed<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationCancel</span><span style="color:#f92672">(</span>Animator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAnimationRepeat</span><span style="color:#f92672">(</span>Animator animation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">});</span>
+        valueAnimator2<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="object-animator">Object Animator</h2>
+<p>The ObjectAnimator is the most commonly used attribute animation execution class. It is a subclass of the ValueAnimator.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">startJavaPropertyAnimator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+     ObjectAnimator
+             <span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;rotationY&#34;</span><span style="color:#f92672">,</span> 0f<span style="color:#f92672">,</span> 360f<span style="color:#f92672">)</span>
+             <span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">)</span>
+             <span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The above code is to change the property value of the rotationY of mImageView from 0f to 360f through ObjectAnimator in 2000ms.</p>
+<p>The ObjectAnimator can also be defined through the xml file, and the animator folder is also created in the res directory of the project, and the objectAnimator animation defined in the xml file should be placed in this folder.</p>
+<p>property_animator.xml:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>objectAnimator xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+                android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+                android<span style="color:#f92672">:</span>propertyName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rotationY&#34;</span>
+                android<span style="color:#f92672">:</span>valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+                android<span style="color:#f92672">:</span>valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;360&#34;</span>
+                android<span style="color:#f92672">:</span>valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/</span>objectAnimator<span style="color:#f92672">&gt;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">startXmlPropertyAnimator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    Animator animator <span style="color:#f92672">=</span> AnimatorInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimator</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> 
+    R<span style="color:#f92672">.</span><span style="color:#a6e22e">animator</span><span style="color:#f92672">.</span><span style="color:#a6e22e">property_animator</span><span style="color:#f92672">);</span>
+    animator<span style="color:#f92672">.</span><span style="color:#a6e22e">setTarget</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">);</span>
+    animator<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Doing Multiple Animations at a time</p>
+<p>We can have multiple ObjectAnimators start at same time and for the same duration to do multiple animations, but it is not efficient as no view knows about any other view. To do the same we can use AnimatorSet class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">startJavaPropertyAnimatorSet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    Animator scaleXAnimator <span style="color:#f92672">=</span> ObjectAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;scaleX&#34;</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    scaleXAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    Animator scaleYAnimator <span style="color:#f92672">=</span> ObjectAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;scaleY&#34;</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">5f</span><span style="color:#f92672">);</span>
+    scaleYAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    Animator rotationXAnimator <span style="color:#f92672">=</span> ObjectAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;rotationX&#34;</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 360<span style="color:#f92672">);</span>
+    rotationXAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    Animator rotationYAnimator <span style="color:#f92672">=</span> ObjectAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">ofFloat</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;rotationY&#34;</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 360<span style="color:#f92672">);</span>
+    rotationYAnimator<span style="color:#f92672">.</span><span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>2000<span style="color:#f92672">);</span>
+    AnimatorSet animatorSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AnimatorSet<span style="color:#f92672">();</span>
+    animatorSet<span style="color:#f92672">.</span><span style="color:#a6e22e">play</span><span style="color:#f92672">(</span>scaleXAnimator<span style="color:#f92672">)</span>
+            <span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>scaleYAnimator<span style="color:#f92672">)</span>
+            <span style="color:#f92672">.</span><span style="color:#a6e22e">before</span><span style="color:#f92672">(</span>rotationXAnimator<span style="color:#f92672">)</span>
+            <span style="color:#f92672">.</span><span style="color:#a6e22e">after</span><span style="color:#f92672">(</span>rotationYAnimator<span style="color:#f92672">);</span>
+    animatorSet<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Define the property animation set through the xml file:
+property_animator_set.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span>xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span> encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;</span>set xmlns<span style="color:#f92672">:</span>android<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span>objectAnimator
+        android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+        android<span style="color:#f92672">:</span>propertyName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;scaleX&#34;</span>
+        android<span style="color:#f92672">:</span>valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+        android<span style="color:#f92672">:</span>valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5&#34;</span>
+        android<span style="color:#f92672">:</span>valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;</span>objectAnimator
+        android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+        android<span style="color:#f92672">:</span>propertyName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;scaleY&#34;</span>
+        android<span style="color:#f92672">:</span>valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+        android<span style="color:#f92672">:</span>valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5&#34;</span>
+        android<span style="color:#f92672">:</span>valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;</span>objectAnimator
+        android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2000&#34;</span>
+        android<span style="color:#f92672">:</span>propertyName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alpha&#34;</span>
+        android<span style="color:#f92672">:</span>valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+        android<span style="color:#f92672">:</span>valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5&#34;</span>
+        android<span style="color:#f92672">:</span>valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/</span>set<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Call the property animation set in Java code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">startxmlPropertyAnimatorSet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    Animator animator <span style="color:#f92672">=</span> AnimatorInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">loadAnimator</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span> 
+    R<span style="color:#f92672">.</span><span style="color:#a6e22e">animator</span><span style="color:#f92672">.</span><span style="color:#a6e22e">property_animator_set</span><span style="color:#f92672">);</span>
+    animator<span style="color:#f92672">.</span><span style="color:#a6e22e">setTarget</span><span style="color:#f92672">(</span>mImageView<span style="color:#f92672">);</span>
+    animator<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h1 id="drawable-animation">Drawable Animation</h1>
+<p>In addition to those above we have Drawable Animation. AnimationDrawable is more like 2D game development. Because it’s frame drawable animation. For example, we have PNG’s of running hero, for each frame we set its duration, put into list and set in to any view.</p>
+<p>Here I have sonic.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>animation<span style="color:#f92672">-</span>list android<span style="color:#f92672">:</span>oneshot<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span>item android<span style="color:#f92672">:</span>drawable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@drawable/frame_1&#34;</span> android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;</span>item android<span style="color:#f92672">:</span>drawable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@drawable/frame_2&#34;</span> android<span style="color:#f92672">:</span>duration<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">...</span>
+<span style="color:#f92672">&lt;/</span>animation<span style="color:#f92672">-</span>list<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Set this drawable as src of an ImageView and start animation in Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">AnimationDrawable d <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>AnimationDrawable<span style="color:#f92672">)</span> sonic<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span><span style="color:#f92672">();</span>
+d<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><h2 id="animated-vector-drawable">Animated Vector Drawable</h2>
+<p>How about one more way to fade out views? Sure we can do that!</p>
+<p>vector_square.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>vector
+    android<span style="color:#f92672">:</span>width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;24dp&#34;</span>
+    android<span style="color:#f92672">:</span>height<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;24dp&#34;</span>
+    android<span style="color:#f92672">:</span>viewportHeight<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;24.0&#34;</span>
+    android<span style="color:#f92672">:</span>viewportWidth<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;24.0&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span>path
+        android<span style="color:#f92672">:</span>name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;square&#34;</span>
+        android<span style="color:#f92672">:</span>fillColor<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#ffd740&#34;</span>
+        android<span style="color:#f92672">:</span>pathData<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;M0,0 L0,24 L24,24 L24, 0Z&#34;</span> <span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/</span>vector<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>fill_fade_out.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>objectAnimator 
+    android<span style="color:#f92672">:</span>propertyName<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fillAlpha&#34;</span>
+    android<span style="color:#f92672">:</span>valueType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;floatType&#34;</span>
+    android<span style="color:#f92672">:</span>valueTo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+    android<span style="color:#f92672">:</span>valueFrom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">/&gt;</span>
+</code></pre></div><p>avd_square.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>animated<span style="color:#f92672">-</span>vector android<span style="color:#f92672">:</span>drawable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@drawable/vector_square&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span>target
+        android<span style="color:#f92672">:</span>animation<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@animator/fill_fade_out&#34;</span>
+        android<span style="color:#f92672">:</span>name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;square&#34;</span> <span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/</span>animated<span style="color:#f92672">-</span>vector<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>Set avd_square.xml as src of an ImageView and</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">AnimatedVectorDrawable avd <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>AnimatedVectorDrawable<span style="color:#f92672">)</span> vectorSquare<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span><span style="color:#f92672">();</span>
+avd<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><h1 id="is-there-any-overhead-on-the-performance">Is there any overhead on the performance？</h1>
+<p>You can find out if your animations impact the performance of your app by enabling Profile GPU Rendering and monitoring the animation stage.</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">Android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="悦读 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 悦读</span>
+	</div>
+	<div class="authorbox__description">
+		如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/it/200626-life-cycle-ios-vs-android/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Lifecycle for Android and iOS</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/it/200721-okhttp/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">OkHttp网络库代码阅读笔记 01</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "whywhom-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 悦读.
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

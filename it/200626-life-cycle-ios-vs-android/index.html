@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lifecycle for Android and iOS - 悦读</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Lifecycle for Android and iOS" />
+<meta property="og:description" content="Understand the Activity Lifecycle (From Android Doc)
+As a user navigates through, out of, and back to your app, the Activity instances in your app transition through different states in their lifecycle. The Activity class provides a number of callbacks that allow the activity to know that a state has changed: that the system is creating, stopping, or resuming an activity, or destroying the process in which the activity resides." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://whyread.top/it/200626-life-cycle-ios-vs-android/" /><meta property="article:section" content="it" />
+<meta property="article:published_time" content="2020-06-26T13:36:33&#43;00:00" />
+<meta property="article:modified_time" content="2020-06-26T13:36:33&#43;00:00" />
+
+
+		<meta itemprop="name" content="Lifecycle for Android and iOS">
+<meta itemprop="description" content="Understand the Activity Lifecycle (From Android Doc)
+As a user navigates through, out of, and back to your app, the Activity instances in your app transition through different states in their lifecycle. The Activity class provides a number of callbacks that allow the activity to know that a state has changed: that the system is creating, stopping, or resuming an activity, or destroying the process in which the activity resides."><meta itemprop="datePublished" content="2020-06-26T13:36:33&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-26T13:36:33&#43;00:00" />
+<meta itemprop="wordCount" content="949">
+<meta itemprop="keywords" content="Android,iOS," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Lifecycle for Android and iOS"/>
+<meta name="twitter:description" content="Understand the Activity Lifecycle (From Android Doc)
+As a user navigates through, out of, and back to your app, the Activity instances in your app transition through different states in their lifecycle. The Activity class provides a number of callbacks that allow the activity to know that a state has changed: that the system is creating, stopping, or resuming an activity, or destroying the process in which the activity resides."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPTWXGGM9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RGPTWXGGM9', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="悦读" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">悦读</div>
+					<div class="logo__tagline">如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">英语悦读客</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/it/">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">程序猿</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/books/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Books</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/nz/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">新西兰</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/about/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Lifecycle for Android and iOS</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">悦读</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-06-26T13:36:33Z">26266-33-267</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/mobile-development/" rel="category">Mobile Development</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#understand-the-activity-lifecycle-from-android-doc">Understand the Activity Lifecycle (From Android Doc)</a></li>
+    <li><a href="#managing-your-apps-life-cycle-ios">Managing Your App&rsquo;s Life Cycle (iOS)</a>
+      <ul>
+        <li><a href="#application-lifecycle">Application Lifecycle</a></li>
+        <li><a href="#uiviewcontroller">UIViewController</a></li>
+      </ul>
+    </li>
+    <li><a href="#lifecycle-for-android-and-ios">Lifecycle for Android and iOS</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="understand-the-activity-lifecycle-from-android-doc">Understand the Activity Lifecycle (From Android Doc)</h2>
+<p>As a user navigates through, out of, and back to your app, the Activity instances in your app transition through different states in their lifecycle. The Activity class provides a number of callbacks that allow the activity to know that a state has changed: that the system is creating, stopping, or resuming an activity, or destroying the process in which the activity resides.</p>
+<p>Within the lifecycle callback methods, you can declare how your activity behaves when the user leaves and re-enters the activity. For example, if you&rsquo;re building a streaming video player, you might pause the video and terminate the network connection when the user switches to another app. When the user returns, you can reconnect to the network and allow the user to resume the video from the same spot. In other words, each callback allows you to perform specific work that&rsquo;s appropriate to a given change of state. Doing the right work at the right time and handling transitions properly make your app more robust and performant. For example, good implementation of the lifecycle callbacks can help ensure that your app avoids:</p>
+<ul>
+<li>
+<p>Crashing if the user receives a phone call or switches to another app while using your app.</p>
+</li>
+<li>
+<p>Consuming valuable system resources when the user is not actively using it.</p>
+</li>
+<li>
+<p>Losing the user&rsquo;s progress if they leave your app and return to it at a later time.</p>
+</li>
+<li>
+<p>Crashing or losing the user&rsquo;s progress when the screen rotates between landscape and portrait orientation.</p>
+</li>
+</ul>
+<p>To navigate transitions between stages of the activity lifecycle, the Activity class provides a core set of six callbacks: onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy(). The system invokes each of these callbacks as an activity enters a new state.</p>
+<p><img src="android_activity_lifecycle.png" alt="android LC">
+A simplified illustration of the activity lifecycle.</p>
+<h2 id="managing-your-apps-life-cycle-ios">Managing Your App&rsquo;s Life Cycle (iOS)</h2>
+<p>The current state of your app determines what it can and cannot do at any time. For example, a foreground app has the user’s attention, so it has priority over system resources, including the CPU. By contrast, a background app must do as little work as possible, and preferably nothing, because it is offscreen. As your app changes from state to state, you must adjust its behavior accordingly.</p>
+<h3 id="application-lifecycle">Application Lifecycle</h3>
+<p>When an iOS app is launched the first thing called is</p>
+<p>application: willFinishLaunchingWithOptions:-&gt; Bool. This method is intended for initial application setup. Storyboards have already been loaded at this point but state restoration hasn’t occurred yet.</p>
+<blockquote>
+<p>Launch</p>
+</blockquote>
+<ul>
+<li>
+<p>application: didFinishLaunchingWithOptions: -&gt; Bool is called next. This callback method is called when the application has finished launching and restored state and can do final initialization such as creating UI.</p>
+</li>
+<li>
+<p>applicationWillEnterForeground: is called after application: didFinishLaunchingWithOptions: or if your app becomes active again after receiving a phone call or other system interruption.</p>
+</li>
+<li>
+<p>applicationDidBecomeActive: is called after applicationWillEnterForeground: to finish up the transition to the foreground.</p>
+</li>
+</ul>
+<blockquote>
+<p>Termination</p>
+</blockquote>
+<ul>
+<li>
+<p>applicationWillResignActive: is called when the app is about to become inactive (for example, when the phone receives a call or the user hits the Home button).</p>
+</li>
+<li>
+<p>applicationDidEnterBackground: is called when your app enters a background state after becoming inactive. You have approximately five seconds to run any tasks you need to back things up in case the app gets terminated later or right after that.</p>
+</li>
+<li>
+<p>applicationWillTerminate: is called when your app is about to be purged from memory. Call any final cleanups here.</p>
+</li>
+</ul>
+<p>Both application: willFinishLaunchingWithOptions: and application: didFinishLaunchingWithOptions: can potentially be launched with options identifying that the app was called to handle a push notification or url or something else. You need to return true if your app can handle the given activity or url.</p>
+<p>Knowing your app’s lifecycle is important to properly initialize and set up your app and objects. You don’t have to run everything in application: didFinishLaunchingWithOptions, which often becomes a kitchen sink of setups and initializations of some sort.</p>
+<p><img src="applicationLC.png" alt="the state transitions for scenes">
+the state transitions for scenes</p>
+<p><img src="applicationLC2.png" alt="don&rsquo;t support scenes">
+In iOS 12 and earlier, and in apps that don&rsquo;t support scenes</p>
+<h3 id="uiviewcontroller">UIViewController</h3>
+<p>Followings are view lifecycle methods :</p>
+<ul>
+<li>loadView()</li>
+<li>loadViewIfNeeded()</li>
+<li>viewDidLoad()</li>
+<li>viewWillAppear(_ animated: Bool)</li>
+<li>viewWillLayoutSubviews()</li>
+<li>viewDidLayoutSubviews()</li>
+<li>viewDidAppear(_ animated: Bool)</li>
+<li>viewWillDisappear(_ animated: Bool)</li>
+<li>viewDidDisappear(_ animated: Bool)</li>
+</ul>
+<p><img src="ctrlLC.png" alt="UIViewController Lifecycle"></p>
+<p>loadView()
+This event creates the view that the controller manages. It is only called when the view controller is created programmatically.
+You can override this method in order to create your views manually. If you are working with storyboards or nib files, then you do not have to anything with this method and you can ignore it.</p>
+<p>loadViewIfNeeded()
+Loads the view controller’s view if it has not already been set.
+available from iOS &gt;=9.0</p>
+<p>viewDidLoad()
+Called after the view has been loaded.
+For view controllers created in code, this is after -loadView.
+For view controllers unarchived from a nib, this is after the view is set.
+Use this method to initialize setup of the interface</p>
+<p>viewWillAppear(_ animated: Bool)
+This method will get called every time the view is about to appear, whether or not the view is already in memory.</p>
+<p>viewWillLayoutSubviews()
+Called just before the view controller’s view’s layoutSubviews method is invoked.
+This is the first step in the lifecycle where the bounds are finalised. If you are not using constraints or Auto Layout you probably want to update the subviews here.</p>
+<p>viewDidLayoutSubviews()
+Called just after the view controller’s view’s layoutSubviews method is invoked.
+This event notifies the view controller that the subviews have been setup.</p>
+<p>viewDidAppear(_ animated: Bool)
+Called when the view has been fully transitioned onto the screen.</p>
+<p>viewWillDisappear(_ animated: Bool)
+This method will get called when the view controller’s view is about to be removed from the view hierarchy.</p>
+<p>viewDidDisappear(_ animated: Bool)
+This method will get called when the view controller’s view was removed from the view hierarchy.</p>
+<h2 id="lifecycle-for-android-and-ios">Lifecycle for Android and iOS</h2>
+<p><img src="01.png" alt="01"></p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">Android</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/ios/" rel="tag">iOS</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="悦读 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 悦读</span>
+	</div>
+	<div class="authorbox__description">
+		如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/it/190912-some-really-common-memory-leak-scenarios/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Some Really Common Memory Leak Scenarios And How to Fix Them</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/it/200715-android-animation/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Android Animations</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "whywhom-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 悦读.
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
