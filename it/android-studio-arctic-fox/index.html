@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Android Studio Arctic Fox 大版本更新 - 悦读</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Android Studio Arctic Fox 大版本更新" />
+<meta property="og:description" content="原本链接：https://developer.android.com/studio/releases
+Android Studio Arctic Fox 是属于大版本更新，其中包含各种新功能和改进，其中主要有：「版本号规则变更，支持新的测试模式，更高级的调试跟踪，更方便的导出数据库，支持 Compose 等等」
+新版本号 更新了 Android Studio 的版本号 本次更改了 Android Studio 的版本号规则，与 IntelliJ IDEA（Android Studio 所基于的 IDE）更加一致。
+在之前的版本号中，版本的编号规则为 Android Studio 4.3 或版本 4.3.0.1 ，而有了新的版本编号规则后，以后会是 Android Studio - Arctic Fox | 2020.3.1 或 2020.3.1 版本。
+以下是未来确定 Android Studio 版本号的方式：
+「...&lt;Studio minor/patch version&gt;」
+前两个数字组代表特定 Android Studio 所基于的 IntellIj 平台的版本，此次的版本为 2020.3。
+第三个数字组代表 Studio 的主要版本，从 1 开始， 每个主要版本递增 1。
+第四组数字代表 Studio 次要/补丁版本，从 1 开始，每个次要版本递增 1。
+此次还为每个主要版本提供了一个版本名称，根据动物名称从 A 到 Z 递增，此版本名为 「Arctic Fox」 。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://whyread.top/it/android-studio-arctic-fox/" /><meta property="article:section" content="it" />
+<meta property="article:published_time" content="2021-07-30T09:21:28&#43;12:00" />
+<meta property="article:modified_time" content="2021-07-30T09:21:28&#43;12:00" />
+
+
+		<meta itemprop="name" content="Android Studio Arctic Fox 大版本更新">
+<meta itemprop="description" content="原本链接：https://developer.android.com/studio/releases
+Android Studio Arctic Fox 是属于大版本更新，其中包含各种新功能和改进，其中主要有：「版本号规则变更，支持新的测试模式，更高级的调试跟踪，更方便的导出数据库，支持 Compose 等等」
+新版本号 更新了 Android Studio 的版本号 本次更改了 Android Studio 的版本号规则，与 IntelliJ IDEA（Android Studio 所基于的 IDE）更加一致。
+在之前的版本号中，版本的编号规则为 Android Studio 4.3 或版本 4.3.0.1 ，而有了新的版本编号规则后，以后会是 Android Studio - Arctic Fox | 2020.3.1 或 2020.3.1 版本。
+以下是未来确定 Android Studio 版本号的方式：
+「...&lt;Studio minor/patch version&gt;」
+前两个数字组代表特定 Android Studio 所基于的 IntellIj 平台的版本，此次的版本为 2020.3。
+第三个数字组代表 Studio 的主要版本，从 1 开始， 每个主要版本递增 1。
+第四组数字代表 Studio 次要/补丁版本，从 1 开始，每个次要版本递增 1。
+此次还为每个主要版本提供了一个版本名称，根据动物名称从 A 到 Z 递增，此版本名为 「Arctic Fox」 。"><meta itemprop="datePublished" content="2021-07-30T09:21:28&#43;12:00" />
+<meta itemprop="dateModified" content="2021-07-30T09:21:28&#43;12:00" />
+<meta itemprop="wordCount" content="547">
+<meta itemprop="keywords" content="Android," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android Studio Arctic Fox 大版本更新"/>
+<meta name="twitter:description" content="原本链接：https://developer.android.com/studio/releases
+Android Studio Arctic Fox 是属于大版本更新，其中包含各种新功能和改进，其中主要有：「版本号规则变更，支持新的测试模式，更高级的调试跟踪，更方便的导出数据库，支持 Compose 等等」
+新版本号 更新了 Android Studio 的版本号 本次更改了 Android Studio 的版本号规则，与 IntelliJ IDEA（Android Studio 所基于的 IDE）更加一致。
+在之前的版本号中，版本的编号规则为 Android Studio 4.3 或版本 4.3.0.1 ，而有了新的版本编号规则后，以后会是 Android Studio - Arctic Fox | 2020.3.1 或 2020.3.1 版本。
+以下是未来确定 Android Studio 版本号的方式：
+「...&lt;Studio minor/patch version&gt;」
+前两个数字组代表特定 Android Studio 所基于的 IntellIj 平台的版本，此次的版本为 2020.3。
+第三个数字组代表 Studio 的主要版本，从 1 开始， 每个主要版本递增 1。
+第四组数字代表 Studio 次要/补丁版本，从 1 开始，每个次要版本递增 1。
+此次还为每个主要版本提供了一个版本名称，根据动物名称从 A 到 Z 递增，此版本名为 「Arctic Fox」 。"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPTWXGGM9"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RGPTWXGGM9', { 'anonymize_ip': false });
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="悦读" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">悦读</div>
+					<div class="logo__tagline">如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">菜单</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">英语悦读客</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/it/">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">程序猿</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/books/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Books</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/nz/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">新西兰</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/about/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">about</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<script data-ad-client="ca-pub-2289950984199962" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Android Studio Arctic Fox 大版本更新</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">悦读</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-30T09:21:28&#43;12:00">2021-07-30</time></div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">目录</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#新版本号">新版本号</a></li>
+        <li><a href="#android-gradle-插件-700">Android Gradle 插件 7.0.0</a></li>
+        <li><a href="#新的后台任务检查器">新的后台任务检查器</a></li>
+        <li><a href="#从数据库检查器导出数据">从数据库检查器导出数据</a></li>
+        <li><a href="#updated-ui-for-recording-in-memory-profiler">Updated UI for recording in Memory Profiler</a></li>
+        <li><a href="#更新链接的-c-项目">更新链接的 C++ 项目</a></li>
+        <li><a href="#用于多设备测试的新测试矩阵">用于多设备测试的新测试矩阵</a></li>
+        <li><a href="#stateflow支持数据绑定">StateFlow支持数据绑定</a></li>
+        <li><a href="#改进了建议的导入">改进了建议的导入</a></li>
+        <li><a href="#支持构建分析器中的配置缓存">支持构建分析器中的配置缓存</a></li>
+        <li><a href="#改进的-agp-升级助手">改进的 AGP 升级助手</a></li>
+        <li><a href="#非传递性-r-类的重构">非传递性 R 类的重构</a></li>
+        <li><a href="#支持-jetpack-compose-工具">支持 Jetpack Compose 工具</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>原本链接：https://developer.android.com/studio/releases</p>
+<p>Android Studio Arctic Fox 是属于大版本更新，其中包含各种新功能和改进，其中主要有：「版本号规则变更，支持新的测试模式，更高级的调试跟踪，更方便的导出数据库，支持 Compose 等等」</p>
+<h3 id="新版本号">新版本号</h3>
+<h4 id="更新了-android-studio-的版本号">更新了 Android Studio 的版本号</h4>
+<p>本次更改了 Android Studio 的版本号规则，与 IntelliJ IDEA（Android Studio 所基于的 IDE）更加一致。</p>
+<p>在之前的版本号中，版本的编号规则为 Android Studio 4.3 或版本 4.3.0.1 ，而有了新的版本编号规则后，以后会是 Android Studio - Arctic Fox | 2020.3.1 或 2020.3.1 版本。</p>
+<p>以下是未来确定 Android Studio 版本号的方式：</p>
+<p>「<!-- raw HTML omitted -->.<!-- raw HTML omitted -->.<!-- raw HTML omitted -->.&lt;Studio minor/patch version&gt;」</p>
+<p>前两个数字组代表特定 Android Studio 所基于的 IntellIj 平台的版本，此次的版本为 2020.3。<br>
+第三个数字组代表 Studio 的主要版本，从 1 开始， 每个主要版本递增 1。<br>
+第四组数字代表 Studio 次要/补丁版本，从 1 开始，每个次要版本递增 1。<br>
+此次还为每个主要版本提供了一个版本名称，根据动物名称从 A 到 Z 递增，此版本名为 「Arctic Fox」 。</p>
+<h4 id="更新了-android-gradle-插件的版本编号">更新了 Android Gradle 插件的版本编号</h4>
+<p>此次更改 Android Gradle 插件 (AGP) 的版本号，以更紧密地匹配底层 Gradle 构建工具，因此 AGP 4.2 之后的下一个版本是 AGP 7.0 。</p>
+<p>❝有关更多详细信息，请参阅 AGP 中的 版本控制更改❞</p>
+<h3 id="android-gradle-插件-700">Android Gradle 插件 7.0.0</h3>
+<h4 id="单元测试现在使用-gradle-测试运行器">单元测试现在使用 Gradle 测试运行器</h4>
+<p>为了提高测试执行的整体一致性，Android Studio 现在默认使用 Gradle 运行所有单元测试，当然在一般情况下，此更改不会影响在 IDE 中的测试工作流。</p>
+<p>例如，当单击上下文菜单中的「Run」命令（在右键单击某个测试类时可见）或其对应的 gutter action 时，Android Studio 将默认使用 Gradle 运行配置来运行单元测试。</p>
+<p>但是 Android Studio 不再识别现有的 Android JUnit 运行配置，因此需要将项目文件的 Android JUnit 运行配置迁移到 Gradle 运行配置。</p>
+<p>要创建 Gradle 测试配置，请按照创建新的运行/调试配置中的说明选择 Gradle 模板，创建新配置后它将出现在 Gradle 部分的 「Edit Configurations」 对话框中：</p>
+<p>如果要检查不再被识别的 Android JUnit 配置，有以下两种选择：</p>
+<p>在文本编辑器中打开手动保存的配置，这些文件的位置由用户指定，但文件通常出现在 <!-- raw HTML omitted -->/.idea/runConfigurations/ 。
+在 <!-- raw HTML omitted -->/.idea/workspace.xml临时配置和在 &lt;component name=&ldquo;RunManager&rdquo; &hellip;&gt; 节点中查找</p>
+<h3 id="新的后台任务检查器">新的后台任务检查器</h3>
+<p>可以使用新的 「后台任务检查器」 来可视化、监控和调试应用程序的后台「工作人员」 。</p>
+<p>首先将应用程序部署到运行 WorkManager Library 2.5.0 或更高版本的设备，然后从菜单栏中选择「View」 &gt; 「Tool Windows」 &gt; 「App Inspection」。</p>
+<p>你可以通过单击 worker 查看更多详细信息，例如可以看到 worker 的描述，它是如何执行的，它的 worker 链的细节，以及执行的结果。</p>
+<p>你还可以通过从表中选择一个 worker 并单击工具栏中的 「Show Graph View」 来 「查看」 worker 链的可视化，然后可以选择链中的任何工作程序以查看其详细信息，或者如果它当前正在排队或正在运行，你也可以选择停止它。</p>
+<p>如果要返回表格，请单击 「Show List View」 。</p>
+<p>为了帮助调查执行失败的工作线程问题，开发者可以通过从表中选择并单击工具栏中的 「Cancel Selected Worker」 线程来停止当前正在运行或排队的工作线程，还可以使用 「All tags」 下拉菜单，通过标签过滤来选择表中的 workers。</p>
+<h3 id="从数据库检查器导出数据">从数据库检查器导出数据</h3>
+<p>现在开发者可以轻松地从 「Database Inspector」 导出数据库、表和查询结果，以在本地保存、共享或重新创建。</p>
+<p>当你在 Android Studio 中打开一个应用程序项目并在 「Database Inspector 中检查」 该项目的应用程序时，你可以通过以下方式之一开始导出数据：</p>
+<p>在 「Databases」 面板中选择一个数据库或表，然后单击面板顶部附近的 「Export to file」 。<br>
+右键单击 「Databases」 面板中的数据库或表，然后从上下文菜单中选择 「Export to file」。<br>
+在选项卡中检查表或查询结果时，单击表或查询结果上方的 「Export to file」。<br>
+选择导出操作后，可以使用 「Export」 对话框来帮助完成最后的步骤，如下所示，你可以选择以下列一种或多种格式导出数据：DB、SQL 或 CSV。</p>
+<h3 id="updated-ui-for-recording-in-memory-profiler">Updated UI for recording in Memory Profiler</h3>
+<p>我们为不同的记录活动整合了 Memory Profiler 用户界面 (UI)，例如捕获堆转储和记录 Java、Kotlin 和本机内存分配。</p>
+<p>该 Memory Profiler 提供了以下选项：</p>
+<p>「Capture heap dump」：查看应用程序中在特定时间点使用内存的对象。<br>
+「Record native allocations」：查看每个 C/C++ 对象在一段时间内是如何分配的。<br>
+「Record Java/Kotlin allocations」：查看每个 Java/Kotlin 对象在一段时间内是如何分配的。</p>
+<p>以下是如何使用这三个选项：</p>
+<ul>
+<li>
+<p>要捕获堆转储，请选择 「Capture heap dump」，然后选择 「Record」 ，在分析器完成对堆转储的捕获后，内存分析器 UI 将转换到显示堆转储的单独页面。</p>
+</li>
+<li>
+<p>要在运行 Android 10 及更高版本的设备上使用 「Record native allocations」，请选择 「Record native allocations」 ，然后选择 「Record」 ，而后记录将保持到单击 「Stop」 为止，之后 Memory Profiler UI 将转换为显示 native 记录的单独页面。</p>
+</li>
+<li>
+<p>要记录 Java 和 Kotlin 分配，请选择 「Record Java / Kotlin allocations」，然后选择 「Record」。如果设备运行的是 Android 8 或更高版本，Memory Profiler UI 将转换为显示正在进行的记录的单独页面，开发者可以与记录上方的迷你时间线进行交互（例如，更改选择范围），而如果要完成录制，可以选择 「Stop」 。</p>
+</li>
+</ul>
+<p>❝在 Android 7.1 及更低版本上，内存分析器使用传统分配记录，它会在时间线上显示记录，直到单击 「Stop」 。❞</p>
+<h3 id="更新链接的-c-项目">更新链接的 C++ 项目</h3>
+<p>新版本已将与配置无关的 .cxx/ 文件从文件夹移动到 build/ 文件夹中。</p>
+<p>CMake C++ 构建需要一个在配置阶段用于执行编译和链接步骤的 Ninja 项目，通过 CMake 生成的项目成本比较高，所以有望在 gradle clean 中不被清理。</p>
+<p>因此，它们存储在文件夹.cxx/ 旁边的一个名为的 build/ 文件夹中，通常 Android Gradle 插件会注意到配置更改并自动重新生成 Ninja 项目。但是并非所有情况都可以检测到，发生这种情况时，可以使用 “Refresh Linked C++ Project” 选项手动重新生成 Ninja 项目。</p>
+<h3 id="用于多设备测试的新测试矩阵">用于多设备测试的新测试矩阵</h3>
+<p>Instrumentation tests 现在可以在多个设备上并行运行，并且可以使用专门的 Instrumentation tests 结果面板进行调查。使用此面板可以确定测试是否由于 API 级别或硬件属性而失败。</p>
+<p>在各种 API 级别和形式因素上测试应用程序，是确保所有用户在使用您的应用程序时获得出色体验的最佳方法之一。</p>
+<p>要利用此功能：</p>
+<p>1、在 IDE 顶部中心的目标设备下拉菜单中选择 「Select Multiple Devices」 。<br>
+2、选择目标设备并单击「OK」。<br>
+3、运行测试。</p>
+<p>要在 「Run」 面板中查看测试结果，请转到 「View &gt; Tool Windows &gt; Run」 。</p>
+<p>新的测试结果面板允许按状态、设备和 API 级别过滤测试结果。此外可以通过单击标题对每列进行排序，通过单击单个测试单独查看每个设备的日志和设备信息。</p>
+<h3 id="stateflow支持数据绑定">StateFlow支持数据绑定</h3>
+<p>对于使用协程的 Kotlin 应用程序，现在可以使用 StateFlow 对象作为数据绑定源来自动通知 UI 数据的变化。数据绑定将具有生命周期感知能力，并且只会在 UI 在屏幕上可见时触发。</p>
+<p>要在 StateFlow 绑定类中使用对象，需要指定生命周期所有者来定义 StateFlow 对象的范围，并在布局中 ViewModel 使用绑定表达式将组件的属性和方法分配给相应的视图，如下所示例子：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViewModel</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+   val username<span style="color:#f92672">:</span> StateFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;TextView</span>
+    <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/name&#34;</span>
+    <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@{viewmodel.username}&#34;</span> <span style="color:#f92672">/&gt;</span>
+</code></pre></div><p>如果在使用 AndroidX 的 Kotlin 应用程序中 StateFlow，数据绑定的功能中会自动包含支持，包括协程依赖项。</p>
+<p>要了解更多信息，请参阅使用可观察数据对象。</p>
+<h3 id="改进了建议的导入">改进了建议的导入</h3>
+<p>改进了建议导入功能支持的库数量，并更频繁地更新索引。</p>
+<p>建议导入可帮助开发者快速轻松地将某些 Google Maven 工件导入类和 Gradle 项目，当 Android Studio 从某些 Google 库中检测到未解析的符号时，IDE 会建议将库导入到类和项目中。</p>
+<h3 id="支持构建分析器中的配置缓存">支持构建分析器中的配置缓存</h3>
+<p>Build Analyzer现在可识别项目何时未启用配置缓存，并将其作为优化提供。Build Analyzer 运行兼容性评估，以在启用之前通知项目中的配置缓存是否存在任何问题。</p>
+<h3 id="改进的-agp-升级助手">改进的 AGP 升级助手</h3>
+<p>Android Gradle 插件的 升级助手 现在有一个持久的工具窗口，其中包含将要完成的步骤列表。</p>
+<p>附加信息也显示在工具窗口的右侧，如果需要还可以选择不同版本的 AGP 进行升级，单击「Refresh」 按钮更新相应的更新步骤。</p>
+<h3 id="非传递性-r-类的重构">非传递性 R 类的重构</h3>
+<p>可以将非传递性 R 类与 Android Gradle 插件结合使用，为具有多个模块的应用程序实现更快的构建。</p>
+<p>这样做有助于防止资源重复，确保每个模块的 R 类只包含对其自身资源的引用，而不从其依赖项中提取引用。这会带来更多最新的构建以及避免编译的相应好处。</p>
+<p>可以通过转到 「Refactor &gt; Migrate to Non-transitive R Classes」 来访问此功能。</p>
+<h3 id="支持-jetpack-compose-工具">支持 Jetpack Compose 工具</h3>
+<p>我们现在为预览和测试使用Jetpack Compose 的 应用程序提供额外支持。</p>
+<p>为了获得使用 Jetpack Compose 开发的最佳体验，应该使用最新版本的 Android Studio Arctic Fox 以开发者可以体验 smart editor features，例如新项目模板和立即预览 Compose UI 的能力。</p>
+<h4 id="compose-preview">Compose preview</h4>
+<p>@Preview 方法 的以下参数现在可用：</p>
+<p>「showBackground」：打开和关闭预览的背景。<br>
+「backgroundColor」：设置仅在预览表面中使用的颜色。<br>
+「uiMode」：这个新参数可以采用任何 Configuration.UI_* 常量，并允许您更改预览的行为，例如将其设置为夜间模式以查看主题的反应。</p>
+<h4 id="interactive-preview">Interactive preview</h4>
+<p>可以使用此功能与你的 UI 组件交互，单击它们，然后查看状态如何更改，这是获取有关 UI 反应和预览动画的反馈的快速方法。启用它可单击 「Interactive」 图标预览将切换模式。</p>
+<p>要停止时单击顶部工具栏中的 「Stop Interactive Preview」。</p>
+<h4 id="deploy-to-device">Deploy to device</h4>
+<p>可以使用此功能将 UI 片段部署到设备，这有助于测试设备中代码的一小部分而无需启动整个应用程序。</p>
+<p>单击 @Preview 注释旁边或预览顶部的 「Deploy to Device」 图标 ，Android Studio 会部署到连接的设备或模拟器。</p>
+<h4 id="live-edit-of-literals">Live Edit of literals</h4>
+<p>我们添加了文字的实时编辑预览，以帮助使用 Compose 的开发人员快速编辑其代码中的文字（字符串、数字、布尔值）并立即查看结果而无需等待编译。</p>
+<p>此功能的目标是通过在预览、模拟器或物理设备中近乎即时地显示代码更改来帮助提高开发者的工作效率。</p>
+
+			
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">Android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="悦读 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">关于 悦读</span>
+	</div>
+	<div class="authorbox__description">
+		如果有闲暇，我心怡的放松方式是窝在家里，闷上一大杯浓茶，听音乐、上网、看书、看电影——只要别让我出门就好。
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/it/how-does-computer-time-come-from/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;上一篇</span>
+			<p class="pager__title">计算机时间到底是怎么来的？程序员必看的时间知识！</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "whywhom-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 悦读 Theme by mainroad
+			<span class="footer__copyright-credits"></span>
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

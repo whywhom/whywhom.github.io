@@ -6,7 +6,25 @@
     <description>Recent content in Android on 悦读</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 23 Jul 2020 14:29:53 +0000</lastBuildDate><atom:link href="https://whyread.top/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 09:21:28 +1200</lastBuildDate><atom:link href="https://whyread.top/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Studio Arctic Fox 大版本更新</title>
+      <link>https://whyread.top/it/android-studio-arctic-fox/</link>
+      <pubDate>Fri, 30 Jul 2021 09:21:28 +1200</pubDate>
+      
+      <guid>https://whyread.top/it/android-studio-arctic-fox/</guid>
+      <description>原本链接：https://developer.android.com/studio/releases
+Android Studio Arctic Fox 是属于大版本更新，其中包含各种新功能和改进，其中主要有：「版本号规则变更，支持新的测试模式，更高级的调试跟踪，更方便的导出数据库，支持 Compose 等等」
+新版本号 更新了 Android Studio 的版本号 本次更改了 Android Studio 的版本号规则，与 IntelliJ IDEA（Android Studio 所基于的 IDE）更加一致。
+在之前的版本号中，版本的编号规则为 Android Studio 4.3 或版本 4.3.0.1 ，而有了新的版本编号规则后，以后会是 Android Studio - Arctic Fox | 2020.3.1 或 2020.3.1 版本。
+以下是未来确定 Android Studio 版本号的方式：
+「...&amp;lt;Studio minor/patch version&amp;gt;」
+前两个数字组代表特定 Android Studio 所基于的 IntellIj 平台的版本，此次的版本为 2020.3。
+第三个数字组代表 Studio 的主要版本，从 1 开始， 每个主要版本递增 1。
+第四组数字代表 Studio 次要/补丁版本，从 1 开始，每个次要版本递增 1。
+此次还为每个主要版本提供了一个版本名称，根据动物名称从 A 到 Z 递增，此版本名为 「Arctic Fox」 。</description>
+    </item>
+    
     <item>
       <title>OkHttp网络库代码阅读笔记 02</title>
       <link>https://whyread.top/it/200723-okhttp2/</link>
