@@ -6,20 +6,11 @@
     <description>Recent content in Tags on 悦读</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Jul 2021 09:21:28 +1200</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android</title>
-      <link>https://whyread.top/tags/android/</link>
-      <pubDate>Fri, 30 Jul 2021 09:21:28 +1200</pubDate>
-      
-      <guid>https://whyread.top/tags/android/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 07 Aug 2021 14:36:50 +1200</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>精读</title>
       <link>https://whyread.top/tags/%E7%B2%BE%E8%AF%BB/</link>
-      <pubDate>Tue, 27 Jul 2021 10:16:24 +1200</pubDate>
+      <pubDate>Sat, 07 Aug 2021 14:36:50 +1200</pubDate>
       
       <guid>https://whyread.top/tags/%E7%B2%BE%E8%AF%BB/</guid>
       <description></description>
@@ -28,9 +19,18 @@
     <item>
       <title>英语</title>
       <link>https://whyread.top/tags/%E8%8B%B1%E8%AF%AD/</link>
-      <pubDate>Tue, 27 Jul 2021 10:16:24 +1200</pubDate>
+      <pubDate>Sat, 07 Aug 2021 14:36:50 +1200</pubDate>
       
       <guid>https://whyread.top/tags/%E8%8B%B1%E8%AF%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://whyread.top/tags/android/</link>
+      <pubDate>Fri, 30 Jul 2021 09:21:28 +1200</pubDate>
+      
+      <guid>https://whyread.top/tags/android/</guid>
       <description></description>
     </item>
     
