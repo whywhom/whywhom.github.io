@@ -1,0 +1,12 @@
+[
+  {
+    "title": "古诗十九首",
+    "key": "gushishijiushou",
+    "path": "assets/files/gushishijiushou/gushishijiushou.json"
+  },
+  {
+    "title": "诗经",
+    "key": "shijing",
+    "path": "assets/files/shijing/shijing.json"
+  }
+]
