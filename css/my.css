@@ -3,3 +3,23 @@ type your custom css here
 在本文件键入您的自定义CSS
 升级主题文件时请注意保护本文件，防止意外覆盖。
 */
+
+.main {
+	max-width: 45em;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.main .category {
+	margin-top: 2em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.main .category .category-item {
+	flex: 0 0 calc(25% - 1.5em);
+	max-width: calc(25% - 1.5em);
+	margin: 0;
+	margin-right: 2em;
+	margin-bottom: 2em;
+}
