@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contact on 悦读书馆</title>
-    <link>https://whywhom.github.io/contact/</link>
+    <link>https://whyread.top/contact/</link>
     <description>Recent content in Contact on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Mon, 23 Dec 2019 20:17:01 +0600</lastBuildDate><atom:link href="https://whywhom.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2019 20:17:01 +0600</lastBuildDate><atom:link href="https://whyread.top/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
