@@ -2,22 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://whyread.top/blog/</loc>
-    <lastmod>2023-08-24T12:11:24+12:00</lastmod>
+    <loc>https://whyread.top/article/</loc>
+    <lastmod>2023-08-24T13:56:10+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/categories/books/</loc>
-    <lastmod>2023-08-24T12:11:24+12:00</lastmod>
-  </url><url>
-    <loc>https://whyread.top/categories/</loc>
-    <lastmod>2023-08-24T12:11:24+12:00</lastmod>
-  </url><url>
-    <loc>https://whyread.top/tags/</loc>
-    <lastmod>2023-08-24T12:11:24+12:00</lastmod>
-  </url><url>
-    <loc>https://whyread.top/tags/%E5%BF%83%E7%90%86/</loc>
-    <lastmod>2023-08-24T12:11:24+12:00</lastmod>
+    <loc>https://whyread.top/article/test/</loc>
+    <lastmod>2023-08-24T13:56:10+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/</loc>
+    <lastmod>2023-08-24T13:56:10+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/blog/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/categories/books/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/categories/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/blog/yuedu/%E8%99%9A%E6%9E%84%E5%AE%B6%E6%97%8F/</loc>
+    <lastmod>2023-08-24T12:50:24+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/%E5%BF%83%E7%90%86/</loc>
     <lastmod>2023-08-24T12:11:24+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/tags/%E6%83%85%E7%BB%AA/</loc>
@@ -680,7 +698,9 @@
     <loc>https://whyread.top/static/</loc>
     <lastmod>2018-10-07T11:12:00+02:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/about/</loc>
+    <loc>https://whyread.top/static/about/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/static/donate/</loc>
   </url>
 </urlset>

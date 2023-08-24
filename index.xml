@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Thu, 24 Aug 2023 12:11:24 +1200</lastBuildDate><atom:link href="https://whyread.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 13:56:10 +1200</lastBuildDate><atom:link href="https://whyread.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://whyread.top/article/test/</link>
+      <pubDate>Thu, 24 Aug 2023 13:56:10 +1200</pubDate>
+      
+      <guid>https://whyread.top/article/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>行为上瘾</title>
+      <link>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</link>
+      <pubDate>Thu, 24 Aug 2023 12:53:24 +1200</pubDate>
+      
+      <guid>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</guid>
+      <description>一本书带你突破认知，讲透瘾性逻辑</description>
+    </item>
+    
+    <item>
+      <title>虚构家族</title>
+      <link>https://whyread.top/blog/yuedu/%E8%99%9A%E6%9E%84%E5%AE%B6%E6%97%8F/</link>
+      <pubDate>Thu, 24 Aug 2023 12:50:24 +1200</pubDate>
+      
+      <guid>https://whyread.top/blog/yuedu/%E8%99%9A%E6%9E%84%E5%AE%B6%E6%97%8F/</guid>
+      <description>鲁敏多年间的文学阅读笔记以及她为“同道中人”开列的一份杂食书单</description>
+    </item>
+    
     <item>
       <title>情绪与心理经典著作（套装共7册）</title>
       <link>https://whyread.top/blog/yuedu/%E6%83%85%E7%BB%AA%E4%B8%8E%E5%BF%83%E7%90%86%E7%BB%8F%E5%85%B8%E8%91%97%E4%BD%9C/</link>
@@ -2414,6 +2441,28 @@ The watch has the following features:</description>
       
       <guid>https://whyread.top/static/imprint/</guid>
       <description>Imprint Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</description>
+    </item>
+    
+    <item>
+      <title>About Us</title>
+      <link>https://whyread.top/static/about/</link>
+      <pubDate>Thu, 12 Jul 2018 18:19:33 +0600</pubDate>
+      
+      <guid>https://whyread.top/static/about/</guid>
+      <description>First of all, thank you for visiting this little site.
+This site is oriented to share english contents which can help people to enjoy learning English.</description>
+    </item>
+    
+    <item>
+      <title>捐款</title>
+      <link>https://whyread.top/static/donate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://whyread.top/static/donate/</guid>
+      <description>支持我们的工作 如果你觉得我们的内容有价值，并且想要支持我们，你可以通过支付宝和微信支付进行捐赠。
+向 『悦读书馆』 捐款 爱书人！ 现在接受您的加捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式 捐款即表示您同意我们的 『服务条款』
+微信支付 扫描以下微信支付二维码进行捐赠：
+支付宝 扫描以下支付宝二维码进行捐赠：</description>
     </item>
     
   </channel>

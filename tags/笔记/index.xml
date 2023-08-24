@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔记 on 悦读书馆</title>
+    <link>https://whyread.top/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on 悦读书馆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>悦读书馆 - All rights reserved</copyright>
+    <lastBuildDate>Thu, 24 Aug 2023 12:53:24 +1200</lastBuildDate><atom:link href="https://whyread.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>行为上瘾</title>
+      <link>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</link>
+      <pubDate>Thu, 24 Aug 2023 12:53:24 +1200</pubDate>
+      
+      <guid>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</guid>
+      <description>一本书带你突破认知，讲透瘾性逻辑</description>
+    </item>
+    
+    <item>
+      <title>虚构家族</title>
+      <link>https://whyread.top/blog/yuedu/%E8%99%9A%E6%9E%84%E5%AE%B6%E6%97%8F/</link>
+      <pubDate>Thu, 24 Aug 2023 12:50:24 +1200</pubDate>
+      
+      <guid>https://whyread.top/blog/yuedu/%E8%99%9A%E6%9E%84%E5%AE%B6%E6%97%8F/</guid>
+      <description>鲁敏多年间的文学阅读笔记以及她为“同道中人”开列的一份杂食书单</description>
+    </item>
+    
+  </channel>
+</rss>
