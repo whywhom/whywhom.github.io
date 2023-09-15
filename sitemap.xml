@@ -2,22 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://whyread.top/categories/articles/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/categories/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E6%9D%8E%E9%80%B5%E9%87%8E%E5%85%BD%E6%9C%89%E9%87%8E%E5%85%BD%E7%9A%84%E4%BB%B7%E5%80%BC/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-09-15T13:01:54+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E6%AD%A6%E6%9D%BE%E4%B8%96%E7%95%8C%E4%BB%A5%E7%97%9B%E5%90%BB%E6%88%91/</loc>
+    <lastmod>2023-09-15T13:01:53+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E6%99%81%E7%9B%96%E6%9D%83%E5%8A%9B%E7%9A%84%E5%B1%B1%E5%B3%B0%E4%B8%8A%E6%B2%A1%E6%9C%89%E4%B8%8B%E5%B1%B1%E7%9A%84%E9%81%93%E8%B7%AF/</loc>
+    <lastmod>2023-09-15T13:01:52+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E5%90%B4%E7%94%A8%E7%BC%A0%E7%BB%95%E5%9C%A8%E5%A4%A7%E6%A0%91%E4%B8%8A%E7%9A%84%E4%B8%80%E6%A0%B9%E8%97%A4%E8%90%9D/</loc>
+    <lastmod>2023-09-15T13:01:51+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E5%AE%8B%E6%B1%9F%E5%A5%8B%E6%96%97%E4%BA%86%E4%BA%8C%E5%8D%81%E5%B9%B4/</loc>
+    <lastmod>2023-09-15T13:01:50+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E9%B2%81%E6%99%BA%E6%B7%B1%E4%B8%96%E9%97%B4%E6%9C%80%E9%9A%BE%E5%BE%97%E7%9A%84%E4%B8%9C%E8%A5%BF%E8%BF%98%E6%98%AF%E5%96%84%E8%89%AF/</loc>
+    <lastmod>2023-09-15T13:01:49+12:00</lastmod>
+  </url><url>
+    <loc>https://whyread.top/article/%E6%9E%97%E5%86%B2%E4%B8%AD%E4%BA%A7%E9%98%B6%E7%BA%A7%E7%9A%84%E5%B2%81%E6%9C%88%E9%9D%99%E5%A5%BD/</loc>
+    <lastmod>2023-09-15T13:01:48+12:00</lastmod>
+  </url><url>
     <loc>https://whyread.top/blog/</loc>
     <lastmod>2023-09-13T13:04:55+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/categories/books/</loc>
     <lastmod>2023-09-13T13:04:55+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/categories/</loc>
-    <lastmod>2023-09-13T13:04:55+12:00</lastmod>
-  </url><url>
-    <loc>https://whyread.top/tags/</loc>
-    <lastmod>2023-09-13T13:04:55+12:00</lastmod>
-  </url><url>
     <loc>https://whyread.top/blog/yuedu/%E4%B8%80%E4%BD%8D%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%9A%84%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-09-13T13:04:55+12:00</lastmod>
-  </url><url>
-    <loc>https://whyread.top/</loc>
     <lastmod>2023-09-13T13:04:55+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/tags/%E7%AE%A1%E7%90%86/</loc>
@@ -98,7 +128,7 @@
     <loc>https://whyread.top/blog/yuedu/%E6%AF%94%E5%88%A9%E6%97%B6%E7%9A%84%E5%93%80%E6%84%81/</loc>
     <lastmod>2023-09-07T08:38:26+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/blog/yuedu/%E6%B1%A0%E8%A2%8B%E8%A5%BF%E5%8F%A3%E5%85%AC%E5%9B%AD-copy/</loc>
+    <loc>https://whyread.top/blog/yuedu/%E6%88%90%E9%95%BF%E7%9A%84%E8%BE%B9%E7%95%8C/</loc>
     <lastmod>2023-08-25T20:08:24+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/tags/%E6%8E%A8%E7%90%86/</loc>
@@ -194,14 +224,14 @@
     <loc>https://whyread.top/tags/%E9%9B%B6%E5%94%AE/</loc>
     <lastmod>2023-08-25T15:53:24+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/article/</loc>
+    <loc>https://whyread.top/tags/%E5%8F%8C%E8%AF%AD/</loc>
     <lastmod>2023-08-24T13:56:10+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/article/test/</loc>
+    <loc>https://whyread.top/tags/%E6%95%A3%E6%96%87/</loc>
     <lastmod>2023-08-24T13:56:10+12:00</lastmod>
   </url><url>
-    <loc>https://whyread.top/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-08-24T12:53:24+12:00</lastmod>
+    <loc>https://whyread.top/article/%E8%8D%B7%E5%A1%98%E6%9C%88%E8%89%B2-%E6%9C%B1%E8%87%AA%E6%B8%85/</loc>
+    <lastmod>2023-08-24T13:56:10+12:00</lastmod>
   </url><url>
     <loc>https://whyread.top/blog/yuedu/%E8%A1%8C%E4%B8%BA%E4%B8%8A%E7%98%BE/</loc>
     <lastmod>2023-08-24T12:53:24+12:00</lastmod>
