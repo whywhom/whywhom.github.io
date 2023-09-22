@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Thu, 21 Sep 2023 10:28:18 +1200</lastBuildDate><atom:link href="https://whyread.top/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 12:26:31 +1200</lastBuildDate><atom:link href="https://whyread.top/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>马伯庸作品合集（套装23册）</title>
+      <link>https://whyread.top/blog/books/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</link>
+      <pubDate>Fri, 22 Sep 2023 12:26:31 +1200</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</guid>
+      <description>精选畅销书作家马伯庸的16部作品，共23册</description>
+    </item>
+    
     <item>
       <title>长安的荔枝</title>
       <link>https://whyread.top/blog/books/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D/</link>
@@ -1161,18 +1170,57 @@
     </item>
     
     <item>
-      <title>悦读258</title>
-      <link>https://whyread.top/blog/yuedu/yuedu258/</link>
+      <title>台上见：王珮瑜京剧学演记</title>
+      <link>https://whyread.top/blog/books/%E5%8F%B0%E4%B8%8A%E8%A7%81/</link>
+      <pubDate>Tue, 16 May 2023 14:48:35 +0000</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E5%8F%B0%E4%B8%8A%E8%A7%81/</guid>
+      <description>关于自己，关于京剧，她还有很多新鲜事儿要分享</description>
+    </item>
+    
+    <item>
+      <title>算法霸权</title>
+      <link>https://whyread.top/blog/books/%E7%AE%97%E6%B3%95%E9%9C%B8%E6%9D%83/</link>
+      <pubDate>Tue, 16 May 2023 14:48:34 +0000</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E7%AE%97%E6%B3%95%E9%9C%B8%E6%9D%83/</guid>
+      <description>数学杀伤性武器的威胁</description>
+    </item>
+    
+    <item>
+      <title>数学思维</title>
+      <link>https://whyread.top/blog/books/%E6%95%B0%E5%AD%A6%E6%80%9D%E7%BB%B4/</link>
+      <pubDate>Tue, 16 May 2023 14:48:33 +0000</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E6%95%B0%E5%AD%A6%E6%80%9D%E7%BB%B4/</guid>
+      <description>跨越抽象与现实的边界，用数学思考万物</description>
+    </item>
+    
+    <item>
+      <title>如何创造可信的AI</title>
+      <link>https://whyread.top/blog/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</link>
+      <pubDate>Tue, 16 May 2023 14:48:32 +0000</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</guid>
+      <description>勾勒未来人工智能发展的最佳路线图，对当前人工智能的现状进行了清晰且客观的评估</description>
+    </item>
+    
+    <item>
+      <title>全本周易精读本</title>
+      <link>https://whyread.top/blog/books/%E5%85%A8%E6%9C%AC%E5%91%A8%E6%98%93%E7%B2%BE%E8%AF%BB%E6%9C%AC/</link>
+      <pubDate>Tue, 16 May 2023 14:48:31 +0000</pubDate>
+      
+      <guid>https://whyread.top/blog/books/%E5%85%A8%E6%9C%AC%E5%91%A8%E6%98%93%E7%B2%BE%E8%AF%BB%E6%9C%AC/</guid>
+      <description>打破派系壁垒，以开阔的视野做扎实的研究，是新时代易学兴盛融合趋势的缩影</description>
+    </item>
+    
+    <item>
+      <title>台湾史学史</title>
+      <link>https://whyread.top/blog/books/%E5%8F%B0%E6%B9%BE%E5%8F%B2%E5%AD%A6%E5%8F%B2/</link>
       <pubDate>Tue, 16 May 2023 14:48:30 +0000</pubDate>
       
-      <guid>https://whyread.top/blog/yuedu/yuedu258/</guid>
-      <description>&lt;h2 id=&#34;书目&#34;&gt;书目&lt;/h2&gt;
-&lt;p&gt;《全本周易精读本》
-《如何创造可信的AI》
-《数学思维》
-《算法霸权》
-《台上见：王珮瑜京剧学演记》
-《台湾史学史》&lt;/p&gt;</description>
+      <guid>https://whyread.top/blog/books/%E5%8F%B0%E6%B9%BE%E5%8F%B2%E5%AD%A6%E5%8F%B2/</guid>
+      <description>从战后到当代台湾的历史研究</description>
     </item>
     
     <item>
