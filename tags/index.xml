@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Thu, 28 Sep 2023 21:10:10 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 09:12:48 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>中医</title>
+      <link>https://whyread.top/tags/%E4%B8%AD%E5%8C%BB/</link>
+      <pubDate>Mon, 02 Oct 2023 09:12:48 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E4%B8%AD%E5%8C%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>医学</title>
+      <link>https://whyread.top/tags/%E5%8C%BB%E5%AD%A6/</link>
+      <pubDate>Mon, 02 Oct 2023 09:12:48 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E5%8C%BB%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>合集</title>
       <link>https://whyread.top/tags/%E5%90%88%E9%9B%86/</link>
@@ -500,15 +518,6 @@
       <pubDate>Thu, 20 Jul 2023 09:38:34 +0000</pubDate>
       
       <guid>https://whyread.top/tags/%E5%81%A5%E5%BA%B7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>医学</title>
-      <link>https://whyread.top/tags/%E5%8C%BB%E5%AD%A6/</link>
-      <pubDate>Thu, 20 Jul 2023 09:38:34 +0000</pubDate>
-      
-      <guid>https://whyread.top/tags/%E5%8C%BB%E5%AD%A6/</guid>
       <description></description>
     </item>
     
@@ -1094,6 +1103,15 @@
       <pubDate>Fri, 28 Apr 2023 10:24:27 +0000</pubDate>
       
       <guid>https://whyread.top/tags/%E7%99%BE%E7%A7%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机</title>
+      <link>https://whyread.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <pubDate>Fri, 28 Apr 2023 10:22:39 +0000</pubDate>
+      
+      <guid>https://whyread.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
       <description></description>
     </item>
     
