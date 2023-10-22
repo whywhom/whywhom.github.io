@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Sun, 22 Oct 2023 11:20:21 +1300</lastBuildDate><atom:link href="https://whyread.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 10:44:13 +1300</lastBuildDate><atom:link href="https://whyread.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Articles</title>
+      <link>https://whyread.top/categories/articles/</link>
+      <pubDate>Mon, 23 Oct 2023 10:44:13 +1300</pubDate>
+      
+      <guid>https://whyread.top/categories/articles/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Books</title>
       <link>https://whyread.top/categories/books/</link>
       <pubDate>Sun, 22 Oct 2023 11:20:21 +1300</pubDate>
       
       <guid>https://whyread.top/categories/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Articles</title>
-      <link>https://whyread.top/categories/articles/</link>
-      <pubDate>Mon, 25 Sep 2023 08:45:21 +1300</pubDate>
-      
-      <guid>https://whyread.top/categories/articles/</guid>
       <description></description>
     </item>
     
