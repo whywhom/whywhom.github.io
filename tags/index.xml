@@ -7,22 +7,130 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Wed, 25 Oct 2023 08:02:59 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 16:11:41 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>合集</title>
-      <link>https://whyread.top/tags/%E5%90%88%E9%9B%86/</link>
-      <pubDate>Wed, 25 Oct 2023 08:02:59 +1300</pubDate>
+      <title>小说</title>
+      <link>https://whyread.top/tags/%E5%B0%8F%E8%AF%B4/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:41 +1300</pubDate>
       
-      <guid>https://whyread.top/tags/%E5%90%88%E9%9B%86/</guid>
+      <guid>https://whyread.top/tags/%E5%B0%8F%E8%AF%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>推理</title>
+      <link>https://whyread.top/tags/%E6%8E%A8%E7%90%86/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:41 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E6%8E%A8%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>犯罪</title>
+      <link>https://whyread.top/tags/%E7%8A%AF%E7%BD%AA/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:41 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E7%8A%AF%E7%BD%AA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>印度</title>
+      <link>https://whyread.top/tags/%E5%8D%B0%E5%BA%A6/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:40 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E5%8D%B0%E5%BA%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>法医</title>
+      <link>https://whyread.top/tags/%E6%B3%95%E5%8C%BB/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:39 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E6%B3%95%E5%8C%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>散文</title>
+      <link>https://whyread.top/tags/%E6%95%A3%E6%96%87/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:38 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E6%95%A3%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>文学</title>
       <link>https://whyread.top/tags/%E6%96%87%E5%AD%A6/</link>
-      <pubDate>Wed, 25 Oct 2023 08:02:59 +1300</pubDate>
+      <pubDate>Tue, 31 Oct 2023 16:11:38 +1300</pubDate>
       
       <guid>https://whyread.top/tags/%E6%96%87%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>漫画</title>
+      <link>https://whyread.top/tags/%E6%BC%AB%E7%94%BB/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:37 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E6%BC%AB%E7%94%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>历史</title>
+      <link>https://whyread.top/tags/%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:36 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E5%8E%86%E5%8F%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>战争</title>
+      <link>https://whyread.top/tags/%E6%88%98%E4%BA%89/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:36 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E6%88%98%E4%BA%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>万圣节</title>
+      <link>https://whyread.top/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/</link>
+      <pubDate>Tue, 31 Oct 2023 15:47:16 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>奇幻</title>
+      <link>https://whyread.top/tags/%E5%A5%87%E5%B9%BB/</link>
+      <pubDate>Tue, 31 Oct 2023 15:47:16 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E5%A5%87%E5%B9%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>魔幻</title>
+      <link>https://whyread.top/tags/%E9%AD%94%E5%B9%BB/</link>
+      <pubDate>Tue, 31 Oct 2023 15:47:16 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E9%AD%94%E5%B9%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>合集</title>
+      <link>https://whyread.top/tags/%E5%90%88%E9%9B%86/</link>
+      <pubDate>Wed, 25 Oct 2023 08:02:59 +1300</pubDate>
+      
+      <guid>https://whyread.top/tags/%E5%90%88%E9%9B%86/</guid>
       <description></description>
     </item>
     
@@ -72,24 +180,6 @@
     </item>
     
     <item>
-      <title>小说</title>
-      <link>https://whyread.top/tags/%E5%B0%8F%E8%AF%B4/</link>
-      <pubDate>Sun, 22 Oct 2023 11:20:21 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E5%B0%8F%E8%AF%B4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>历史</title>
-      <link>https://whyread.top/tags/%E5%8E%86%E5%8F%B2/</link>
-      <pubDate>Sun, 22 Oct 2023 11:20:20 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E5%8E%86%E5%8F%B2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>诗词</title>
       <link>https://whyread.top/tags/%E8%AF%97%E8%AF%8D/</link>
       <pubDate>Sun, 22 Oct 2023 11:20:20 +1300</pubDate>
@@ -131,15 +221,6 @@
       <pubDate>Sun, 22 Oct 2023 11:20:18 +1300</pubDate>
       
       <guid>https://whyread.top/tags/%E8%89%BA%E6%9C%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>推理</title>
-      <link>https://whyread.top/tags/%E6%8E%A8%E7%90%86/</link>
-      <pubDate>Mon, 16 Oct 2023 13:21:49 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E6%8E%A8%E7%90%86/</guid>
       <description></description>
     </item>
     
@@ -198,24 +279,6 @@
     </item>
     
     <item>
-      <title>漫画</title>
-      <link>https://whyread.top/tags/%E6%BC%AB%E7%94%BB/</link>
-      <pubDate>Fri, 13 Oct 2023 09:42:34 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E6%BC%AB%E7%94%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>散文</title>
-      <link>https://whyread.top/tags/%E6%95%A3%E6%96%87/</link>
-      <pubDate>Fri, 13 Oct 2023 09:38:53 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E6%95%A3%E6%96%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>中医</title>
       <link>https://whyread.top/tags/%E4%B8%AD%E5%8C%BB/</link>
       <pubDate>Mon, 02 Oct 2023 09:12:48 +1300</pubDate>
@@ -230,15 +293,6 @@
       <pubDate>Mon, 02 Oct 2023 09:12:48 +1300</pubDate>
       
       <guid>https://whyread.top/tags/%E5%8C%BB%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>奇幻</title>
-      <link>https://whyread.top/tags/%E5%A5%87%E5%B9%BB/</link>
-      <pubDate>Thu, 28 Sep 2023 20:46:20 +1300</pubDate>
-      
-      <guid>https://whyread.top/tags/%E5%A5%87%E5%B9%BB/</guid>
       <description></description>
     </item>
     
@@ -707,15 +761,6 @@
       <pubDate>Wed, 28 Jun 2023 11:26:54 +0000</pubDate>
       
       <guid>https://whyread.top/tags/%E6%8A%97%E6%97%A5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>魔幻</title>
-      <link>https://whyread.top/tags/%E9%AD%94%E5%B9%BB/</link>
-      <pubDate>Fri, 23 Jun 2023 08:31:36 +0000</pubDate>
-      
-      <guid>https://whyread.top/tags/%E9%AD%94%E5%B9%BB/</guid>
       <description></description>
     </item>
     
