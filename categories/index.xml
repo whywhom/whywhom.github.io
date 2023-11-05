@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 悦读书馆</title>
-    <link>https://whyread.top/categories/</link>
+    <link>https://iyuedu.top/categories/</link>
     <description>Recent content in Categories on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Tue, 31 Oct 2023 16:11:41 +1300</lastBuildDate><atom:link href="https://whyread.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 16:11:41 +1300</lastBuildDate><atom:link href="https://iyuedu.top/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Books</title>
-      <link>https://whyread.top/categories/books/</link>
+      <link>https://iyuedu.top/categories/books/</link>
       <pubDate>Tue, 31 Oct 2023 16:11:41 +1300</pubDate>
       
-      <guid>https://whyread.top/categories/books/</guid>
+      <guid>https://iyuedu.top/categories/books/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Articles</title>
-      <link>https://whyread.top/categories/articles/</link>
+      <link>https://iyuedu.top/categories/articles/</link>
       <pubDate>Mon, 23 Oct 2023 10:44:13 +1300</pubDate>
       
-      <guid>https://whyread.top/categories/articles/</guid>
+      <guid>https://iyuedu.top/categories/articles/</guid>
       <description></description>
     </item>
     

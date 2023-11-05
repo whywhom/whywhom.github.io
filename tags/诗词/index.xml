@@ -2,27 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>诗词 on 悦读书馆</title>
-    <link>https://whyread.top/tags/%E8%AF%97%E8%AF%8D/</link>
+    <link>https://iyuedu.top/tags/%E8%AF%97%E8%AF%8D/</link>
     <description>Recent content in 诗词 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Sun, 22 Oct 2023 11:20:20 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/%E8%AF%97%E8%AF%8D/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 11:20:20 +1300</lastBuildDate><atom:link href="https://iyuedu.top/tags/%E8%AF%97%E8%AF%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>曾有少年时</title>
-      <link>https://whyread.top/blog/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
+      <link>https://iyuedu.top/blog/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
       <pubDate>Sun, 22 Oct 2023 11:20:20 +1300</pubDate>
       
-      <guid>https://whyread.top/blog/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
+      <guid>https://iyuedu.top/blog/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
+      <description>大唐才子风华录</description>
+    </item>
+    
+    <item>
+      <title>曾有少年时</title>
+      <link>https://iyuedu.top/book/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
+      <pubDate>Sun, 22 Oct 2023 11:20:20 +1300</pubDate>
+      
+      <guid>https://iyuedu.top/book/books/%E6%9B%BE%E6%9C%89%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
       <description>大唐才子风华录</description>
     </item>
     
     <item>
       <title>鲜衣怒马少年时</title>
-      <link>https://whyread.top/blog/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
+      <link>https://iyuedu.top/blog/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
       <pubDate>Fri, 23 Jun 2023 08:31:35 +0000</pubDate>
       
-      <guid>https://whyread.top/blog/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
+      <guid>https://iyuedu.top/blog/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
+      <description>唐宋诗人的诗酒江湖，串起唐宋文坛一个个耀眼的瞬间</description>
+    </item>
+    
+    <item>
+      <title>鲜衣怒马少年时</title>
+      <link>https://iyuedu.top/book/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</link>
+      <pubDate>Fri, 23 Jun 2023 08:31:35 +0000</pubDate>
+      
+      <guid>https://iyuedu.top/book/books/%E9%B2%9C%E8%A1%A3%E6%80%92%E9%A9%AC%E5%B0%91%E5%B9%B4%E6%97%B6/</guid>
       <description>唐宋诗人的诗酒江湖，串起唐宋文坛一个个耀眼的瞬间</description>
     </item>
     

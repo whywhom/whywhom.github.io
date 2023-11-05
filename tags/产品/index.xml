@@ -2,18 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>产品 on 悦读书馆</title>
-    <link>https://whyread.top/tags/%E4%BA%A7%E5%93%81/</link>
+    <link>https://iyuedu.top/tags/%E4%BA%A7%E5%93%81/</link>
     <description>Recent content in 产品 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Thu, 22 Jun 2023 12:18:11 +0000</lastBuildDate><atom:link href="https://whyread.top/tags/%E4%BA%A7%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jun 2023 12:18:11 +0000</lastBuildDate><atom:link href="https://iyuedu.top/tags/%E4%BA%A7%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>锁脑</title>
-      <link>https://whyread.top/blog/books/%E9%94%81%E8%84%91/</link>
+      <link>https://iyuedu.top/blog/books/%E9%94%81%E8%84%91/</link>
       <pubDate>Thu, 22 Jun 2023 12:18:11 +0000</pubDate>
       
-      <guid>https://whyread.top/blog/books/%E9%94%81%E8%84%91/</guid>
+      <guid>https://iyuedu.top/blog/books/%E9%94%81%E8%84%91/</guid>
+      <description>一本研究信息深度加密和深度优化的书</description>
+    </item>
+    
+    <item>
+      <title>锁脑</title>
+      <link>https://iyuedu.top/book/books/%E9%94%81%E8%84%91/</link>
+      <pubDate>Thu, 22 Jun 2023 12:18:11 +0000</pubDate>
+      
+      <guid>https://iyuedu.top/book/books/%E9%94%81%E8%84%91/</guid>
       <description>一本研究信息深度加密和深度优化的书</description>
     </item>
     

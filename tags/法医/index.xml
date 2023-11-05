@@ -2,18 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>法医 on 悦读书馆</title>
-    <link>https://whyread.top/tags/%E6%B3%95%E5%8C%BB/</link>
+    <link>https://iyuedu.top/tags/%E6%B3%95%E5%8C%BB/</link>
     <description>Recent content in 法医 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Tue, 31 Oct 2023 16:11:39 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/%E6%B3%95%E5%8C%BB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 16:11:39 +1300</lastBuildDate><atom:link href="https://iyuedu.top/tags/%E6%B3%95%E5%8C%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>非常疑犯</title>
-      <link>https://whyread.top/blog/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</link>
+      <link>https://iyuedu.top/blog/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</link>
       <pubDate>Tue, 31 Oct 2023 16:11:39 +1300</pubDate>
       
-      <guid>https://whyread.top/blog/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</guid>
+      <guid>https://iyuedu.top/blog/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</guid>
+      <description>本书是真故图书“法医笔记”系列重磅新作，根据法医红眸亲身经历改编</description>
+    </item>
+    
+    <item>
+      <title>非常疑犯</title>
+      <link>https://iyuedu.top/book/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:39 +1300</pubDate>
+      
+      <guid>https://iyuedu.top/book/books/%E9%9D%9E%E5%B8%B8%E7%96%91%E7%8A%AF/</guid>
       <description>本书是真故图书“法医笔记”系列重磅新作，根据法医红眸亲身经历改编</description>
     </item>
     

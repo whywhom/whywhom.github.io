@@ -2,18 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>印度 on 悦读书馆</title>
-    <link>https://whyread.top/tags/%E5%8D%B0%E5%BA%A6/</link>
+    <link>https://iyuedu.top/tags/%E5%8D%B0%E5%BA%A6/</link>
     <description>Recent content in 印度 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Tue, 31 Oct 2023 16:11:40 +1300</lastBuildDate><atom:link href="https://whyread.top/tags/%E5%8D%B0%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 16:11:40 +1300</lastBuildDate><atom:link href="https://iyuedu.top/tags/%E5%8D%B0%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>大地之上</title>
-      <link>https://whyread.top/blog/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</link>
+      <link>https://iyuedu.top/blog/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</link>
       <pubDate>Tue, 31 Oct 2023 16:11:40 +1300</pubDate>
       
-      <guid>https://whyread.top/blog/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</guid>
+      <guid>https://iyuedu.top/blog/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</guid>
+      <description>一段比《活着》更为惨痛的民族血泪史，一幅印度社会各阶层的全景式画卷</description>
+    </item>
+    
+    <item>
+      <title>大地之上</title>
+      <link>https://iyuedu.top/book/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</link>
+      <pubDate>Tue, 31 Oct 2023 16:11:40 +1300</pubDate>
+      
+      <guid>https://iyuedu.top/book/books/%E5%A4%A7%E5%9C%B0%E4%B9%8B%E4%B8%8A/</guid>
       <description>一段比《活着》更为惨痛的民族血泪史，一幅印度社会各阶层的全景式画卷</description>
     </item>
     
