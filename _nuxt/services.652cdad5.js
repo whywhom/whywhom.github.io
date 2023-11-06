@@ -1,0 +1,1 @@
+import{_ as e}from"./Services.ce021218.js";import{_ as c,c as t,b as n,o as s}from"./entry.44ac830f.js";const r={components:{Services:e}};function _(a,p,i,m,f,d){const o=e;return s(),t("div",null,[n(o)])}const v=c(r,[["render",_]]);export{v as default};

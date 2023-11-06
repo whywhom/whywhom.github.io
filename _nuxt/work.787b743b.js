@@ -1,0 +1,1 @@
+import{_ as o}from"./Work.af3608f1.js";import{_ as t,c as n,b as c,o as r}from"./entry.44ac830f.js";const s={components:{Work:o}};function _(a,p,m,f,d,i){const e=o;return r(),n("div",null,[c(e)])}const k=t(s,[["render",_]]);export{k as default};

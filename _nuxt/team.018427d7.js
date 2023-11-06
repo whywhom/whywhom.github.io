@@ -1,0 +1,1 @@
+import{_ as e}from"./Team.d460a270.js";import{_ as t,c as n,b as c,o as a}from"./entry.44ac830f.js";const s={components:{Team:e}};function _(r,m,p,f,d,i){const o=e;return a(),n("div",null,[c(o)])}const x=t(s,[["render",_]]);export{x as default};
