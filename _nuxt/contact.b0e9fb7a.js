@@ -1,1 +1,0 @@
-import{_ as o}from"./Contact.9d7beb3b.js";import{_ as n,c,b as e,o as a}from"./entry.44ac830f.js";const s={components:{Contact:o}};function _(r,p,m,f,d,i){const t=o;return a(),c("div",null,[e(t)])}const x=n(s,[["render",_]]);export{x as default};

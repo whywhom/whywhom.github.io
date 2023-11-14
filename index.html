@@ -1,103 +1,642 @@
 <!DOCTYPE html>
-<html >
-<head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Falcon</title>
-<meta name="description" content>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="shortcut icon" href="assets/images/fav1.png" type="image/png">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/flaticon.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assets/css/pricing-tab.css">
-<link rel="stylesheet" href="assets/css/aos.css">
-<link rel="stylesheet" href="assets/css/animate.css">
-<link rel="stylesheet" href="assets/css/slick.css">
-<link rel="stylesheet" href="assets/css/default.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<style type="text/css">:root { color: red }</style>
-<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/ajax-contact.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/pricing-tab.js"></script>
-<script src="assets/js/scrolling-nav.js"></script>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/aos.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/validator.min.js"></script>
-<noscript>JavaScript is required</noscript>
-<link rel="preload" as="fetch" crossorigin="anonymous" href="/_payload.json">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.44ac830f.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.9254f444.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Footer.87411438.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/index.8eb45369.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Header.b6d1e8a4.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/nuxt-link.7bd1dcab.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/About.207de743.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Services.ce021218.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Work.af3608f1.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Team.d460a270.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Blog.a182ef03.js">
-<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Contact.9d7beb3b.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/falcon_default.5299995a.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-404.bb2f6df2.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/vue.f36acd1f.b6ba0d8c.js">
-<link rel="prefetch" as="script" crossorigin href="/_nuxt/error-500.d947cc37.js">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/logo-2.fb9c588f.png">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/icon-1.2507ccdd.png">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/icon-2.80effc16.png">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/icon-3.278256e7.png">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/features.d9437f0f.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/counter-man.51c9dd6e.svg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/video.82158f6c.png">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/video-image.d603cef2.jpg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/priceing-1.09ffe864.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/priceing-2.a7a49a34.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/priceing-3.9d7db975.svg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-1.3c965868.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-2.3788d865.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-3.6646527b.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-4.b551f5ec.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-5.3fe33974.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/ts-6.daff9ea4.jpg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/banner-full.9004159a.png">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-1.4fce2d8d.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-2.7ce5c468.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-3.72f39617.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-4.b95fc30e.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-5.9e939e90.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-6.6be90cb6.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/shape-7.9fc4b08a.svg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/loptop.c3f5278d.svg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/about.66b42dd4.png">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/man.3c685d2a.svg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/services.480857e1.png">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/services-woman.94429906.png">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-1.83d2d189.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-2.d958d86b.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-3.8b5188f1.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-4.73b09370.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-5.494c45b0.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/w-6.0cc94883.jpg">
-<link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/work-man.bfa36bcd.svg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/team.0698d37f.png">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/t-1.ac046cca.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/t-2.09c38cde.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/t-3.8a3824a0.jpg">
-<link rel="prefetch" as="image" type="image/jpeg" href="/_nuxt/t-4.8285f866.jpg">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/blog.947d4581.png">
-<link rel="prefetch" as="image" type="image/png" href="/_nuxt/contact.23e6ea75.png">
-<script type="module" src="/_nuxt/entry.44ac830f.js" crossorigin></script>
-<script id="unhead:payload" type="application/json">{"title":"Falcon"}</script></head>
-<body ><div id="__nuxt"><div><!--[--><div><header id="home" class="header-area"><div class="navigation fixed-top"><div class="container"><div class="row"><div class="col-lg-12"><nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><h4 style="color:#fff;font-size:28px;">FALCON</h4></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item active"><a aria-current="page" href="/" class="router-link-active router-link-exact-active page-scroll">Home</a></li><li class="nav-item"><a href="/about" class="page-scroll">About</a></li><li class="nav-item"><a href="/services" class="page-scroll">Services</a></li><li class="nav-item"><a href="/work" class="page-scroll">Portfolio</a></li><li class="nav-item"><a href="/team" class="page-scroll">Team</a></li><li class="nav-item"><a href="/blog" class="page-scroll">Blog</a></li><li class="nav-item"><a href="/contact" class="page-scroll">Contact</a></li></ul></div><div class="navbar-btn d-none d-sm-block"><a class="main-btn" href="#">Support</a></div></nav></div></div></div></div><div class="header-content-area"><div class="container"><div class="row"><div class="col-lg-7"><div class="header-content overflow-hidden"><h5 class="sub-title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Web Design, Branding, UI Design</h5><h1 class="header-title wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s">We Are Making Creative Product</h1><p class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1.8s">Lorem ipsum dolor sit ameconecteur adipisicing elit sed do eiusmod.</p><a class="main-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s" href="#contact">Contact Us</a></div></div></div></div><div class="header-banner"><div class="banner-svg"><img src="/_nuxt/banner-full.9004159a.png" alt="banner"><div class="banner-shape one animation1"><img src="/_nuxt/shape-1.4fce2d8d.svg" alt="shape"></div><div class="banner-shape tow animation4"><img src="/_nuxt/shape-2.7ce5c468.svg" alt="shape"></div><div class="banner-shape three" data-aos="fade-down" data-aos-duration="1000"><img src="/_nuxt/shape-3.72f39617.svg" alt="shape"></div><div class="banner-shape fore animation2"><img src="/_nuxt/shape-4.b95fc30e.svg" alt="shape"></div><div class="banner-shape five animation3"><img src="/_nuxt/shape-5.9e939e90.svg" alt="shape"></div><div class="banner-shape six animation4"><img src="/_nuxt/shape-6.6be90cb6.svg" alt="shape"></div><div class="banner-shape saven animation1"><img src="/_nuxt/shape-7.9fc4b08a.svg" alt="shape"></div></div></div></div></header><section id="features" class="features-area mt-80"><div class="container"><div class="features pt-100 pb-130"><div class="row justify-content-center"><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-features text-center mt-30"><div class="features-icon"><img src="/_nuxt/icon-1.2507ccdd.png" alt="features"></div><div class="features-content mt-30"><h4 class="features-title"><a href="#">Business Analysis</a></h4><p>TouchOne Mini 5” is most suited to applications with limited functions but it does have all of the functionality of its larger 7” cousin.</p></div></div></div><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-features text-center mt-30"><div class="features-icon"><img src="/_nuxt/icon-2.80effc16.png" alt="features"></div><div class="features-content mt-30"><h4 class="features-title"><a href="#">Data Managment</a></h4><p>TouchOne Gen 3 7” was developed from the ground up as a control pad for Bosch Security, global leaders in residential, commercial, and high-end security.</p></div></div></div><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-features text-center mt-30"><div class="features-icon"><img src="/_nuxt/icon-3.278256e7.png" alt="features"></div><div class="features-content mt-30"><h4 class="features-title"><a href="#">Friendly Support</a></h4><p>It’s never a mistake if you can take a lesson from it. We strive to always learn and always improve. If we see something that can be improved, it’s our responsibility to improve it.</p></div></div></div></div><div class="features-man" data-aos="fade-right" data-aos-duration="1000"><img src="/_nuxt/features.d9437f0f.svg" alt="features"></div></div></div></section><section id="about" class="about-area pb-130"><div class="about-laptop"><img data-aos="fade-right" data-aos-duration="1000" src="/_nuxt/loptop.c3f5278d.svg" alt="Loptop"></div><div class="container"><div class="row justify-content-end"><div class="col-lg-6"><div class="about-content"><div class="section-title"><h5 class="sub-title">WELCOME TO Falcon CREATIVE AGENCY</h5><h2 class="title">3 Steps To A Success Product Business.</h2></div><p>Welcome to Falcon, your trusted partner in the world of networking and connectivity solutions. With a strong commitment to innovation, quality, and customer satisfaction, we have emerged as a leading player in the field of router exports.</p><ul class="about-list"><li><i class="fa fa-check-circle"></i> Affordable pricing &amp; billing Plans</li><li><i class="fa fa-check-circle"></i> Built with amazing features</li><li><i class="fa fa-check-circle"></i> Easy to edit &amp; User friendly design</li><li><i class="fa fa-check-circle"></i> Amazing framework with free plans</li></ul></div></div></div></div><div class="about-image"><div class="image animation1"><img src="/_nuxt/about.66b42dd4.png" alt="about"></div></div><div class="about-man"><img data-aos="fade-right" data-aos-duration="1000" src="/_nuxt/man.3c685d2a.svg" alt="Man"></div></section><section id="counter" class="counter-area gray-bg pt-100 pb-130"><div class="counter-man"><img data-aos="fade-right" data-aos-duration="1000" src="/_nuxt/counter-man.51c9dd6e.svg" alt="Man"></div><div class="container"><div class="row justify-content-center"><div class="col-md-4 col-sm-8"><div class="single-counter text-center mt-30"><div class="counter-item"><span><span class="counter">16</span>K</span><p>Global Customer</p></div></div></div><div class="col-md-4 col-sm-8"><div class="single-counter text-center mt-30"><div class="counter-item"><span><span class="counter">10</span>K</span><p>European Customer</p></div></div></div><div class="col-md-4 col-sm-8"><div class="single-counter text-center mt-30"><div class="counter-item"><span><span class="counter">5</span>K</span><p>Asian Customer</p></div></div></div></div></div></section><section id="service" class="services-area pt-125 pb-130"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><div class="section-title text-center pb-10"><h5 class="sub-title">OUR AMAZING SERVICES</h5><h2 class="title">We’r Provided Best Digital Marketing Services!</h2></div></div></div><div class="row"><div class="col-lg-5"><div class="nav flex-column services-content mt-50" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="active" id="v-pills-application-tab" data-toggle="pill" href="#v-pills-application" role="tab" aria-controls="v-pills-application" aria-selected="true"><div class="single-services"><h4 class="services-title">Application Development</h4><p>Providing creative services and marketing solutions that seamlessly integrate with your day-to-day operations, we work alongside you and your team to enact change for good by elevating your brand to achieve your organisation’s biggest goals.</p></div></a><a id="v-pills-web-tab" data-toggle="pill" href="#v-pills-web" role="tab" aria-controls="v-pills-web" aria-selected="false"><div class="single-services"><h4 class="services-title">Web Development</h4><p>Providing creative services and marketing solutions that seamlessly integrate with your day-to-day operations, we work alongside you and your team to enact change for good by elevating your brand to achieve your organisation’s biggest goals.</p></div></a><a id="v-pills-uiux-tab" data-toggle="pill" href="#v-pills-uiux" role="tab" aria-controls="v-pills-uiux" aria-selected="false"><div class="single-services"><h4 class="services-title">UI/UX Design</h4><p>Providing creative services and marketing solutions that seamlessly integrate with your day-to-day operations, we work alongside you and your team to enact change for good by elevating your brand to achieve your organisation’s biggest goals.</p></div></a><a id="v-pills-graphic-tab" data-toggle="pill" href="#v-pills-graphic" role="tab" aria-controls="v-pills-graphic" aria-selected="false"><div class="single-services"><h4 class="services-title">Graphic Design</h4><p>Providing creative services and marketing solutions that seamlessly integrate with your day-to-day operations, we work alongside you and your team to enact change for good by elevating your brand to achieve your organisation’s biggest goals.</p></div></a></div></div><div class="col-lg-7"><div class="tab-content" id="v-pills-tabContent"><div class="tab-pane fade show active" id="v-pills-application" role="tabpanel" aria-labelledby="v-pills-application-tab"><div class="services-image animation1 mt-50"><img src="/_nuxt/services.480857e1.png" alt="Services"></div></div><div class="tab-pane fade" id="v-pills-web" role="tabpanel" aria-labelledby="v-pills-web-tab"><div class="services-image animation1 mt-50"><img src="/_nuxt/services.480857e1.png" alt="Services"></div></div><div class="tab-pane fade" id="v-pills-uiux" role="tabpanel" aria-labelledby="v-pills-uiux-tab"><div class="services-image animation1 mt-50"><img src="/_nuxt/services.480857e1.png" alt="Services"></div></div><div class="tab-pane fade" id="v-pills-graphic" role="tabpanel" aria-labelledby="v-pills-graphic-tab"><div class="services-image animation1 mt-50"><img src="/_nuxt/services.480857e1.png" alt="Services"></div></div></div></div></div></div><div class="services-woman"><img data-aos="fade-left" data-aos-duration="1000" src="/_nuxt/services-woman.94429906.png" alt="Woman"></div></section><section id="work" class="work-area gray-bg pt-125 pb-120"><div class="container"><div class="row justify-content-center"><div class="col-lg-9"><div class="section-title text-center pb-10"><h5 class="sub-title">Our recent works</h5><h2 class="title">We’ve Done Lot’s Of Work, Let’s Check Some From Here</h2></div></div></div><div class="row"><div class="col-lg-12"><div class="work-menu text-center pt-40 pb-30"><ul><li data-filter="*" class="active">All Works <span>06</span></li><li data-filter=".design">Design <span>04</span></li><li data-filter=".development">Development <span>03</span></li><li data-filter=".branding">Branding <span>03</span></li></ul></div></div></div><div class="row grid"><div class="col-lg-4 col-md-6 col-sm-6 design development"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-1.83d2d189.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-1.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div><div class="col-lg-4 col-md-6 col-sm-6 development branding"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-2.d958d86b.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-2.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div><div class="col-lg-4 col-md-6 col-sm-6 design"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-3.8b5188f1.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-3.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div><div class="col-lg-4 col-md-6 col-sm-6 branding design"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-4.73b09370.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-4.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div><div class="col-lg-4 col-md-6 col-sm-6 design"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-5.494c45b0.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-5.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div><div class="col-lg-4 col-md-6 col-sm-6 branding development"><div class="single-work text-center mt-30"><div class="work-image"><img src="/_nuxt/w-6.0cc94883.jpg" alt="Work"><div class="work-overlay"><ul class="work-icon"><li><a class="image-popup" href="assets/images/work/w-6.jpg"><i class="fa fa-picture-o"></i></a></li><li><a href="#"><i class="fa fa-link"></i></a></li></ul></div></div><div class="work-content"><h4 class="work-title"><a href="#">YouTube Redesign</a></h4><span>Design, Branding, Logo</span></div></div></div></div></div><div class="work-woman"><img data-aos="fade-right" data-aos-duration="1000" src="/_nuxt/work-man.bfa36bcd.svg" alt="Man"></div></section><section id="video" class="video-area pt-125 pb-130 bg_cover" style="background-image:url(assets/images/video-bg.jpg);"><div class="container"><div class="row justify-content-end"><div class="col-lg-7"><div class="video-content"><h2 class="video-title">Why We’re The Best Match For Your Business!</h2><p>As a consequence of the ubiquitous use of number eight wire in New Zealand, remote farms had rolls of number eight wire on hand, and the wire would be used inventively and practically to solve mechanical or structural problems other than fencing.</p><a href="#">Read more about us <i class="fa fa-angle-right"></i></a></div></div></div></div><div class="video-woman" data-aos="fade-left" data-aos-duration="1000"><img src="/_nuxt/video.82158f6c.png" alt="Shape"></div><div class="main-video"><div class="video-image"><img src="/_nuxt/video-image.d603cef2.jpg" alt="Video"><a class="video-popup" href="https://www.youtube.com/watch?v=TcMBFSGVi1c&amp;t=70s">Play</a></div></div></section><section id="team" class="team-area pt-125 pb-100"><div class="team-man" data-aos="fade-right" data-aos-duration="1000"><img src="/_nuxt/team.0698d37f.png" alt="Man"></div><div class="container"><div class="row justify-content-center"><div class="col-lg-6"><div class="section-title text-centTeam memberer pb-30"><h5 class="sub-title">Team member</h5><h2 class="title">Team You Want To Work With Us</h2></div></div></div><div class="row team-active"><div class="col-lg-4"><div class="single-team text-center"><div class="team-image"><img src="/_nuxt/t-1.ac046cca.jpg" alt="Team"></div><div class="team-content"><h4 class="team-name"><a href="#">Rolin Marino</a></h4><span>CEO &amp; Founder</span><ul><li><a href="#"><i class="fa fa-facebook-f"></i></a></li><li><a href="#"><i class="fa fa-twitter"></i></a></li><li><a href="#"><i class="fa fa-linkedin"></i></a></li><li><a href="#"><i class="fa fa-google-plus"></i></a></li></ul></div></div></div><div class="col-lg-4"><div class="single-team text-center"><div class="team-image"><img src="/_nuxt/t-2.09c38cde.jpg" alt="Team"></div><div class="team-content"><h4 class="team-name"><a href="#">Mostofa Kamal</a></h4><span>UX Researcher</span><ul><li><a href="#"><i class="fa fa-facebook-f"></i></a></li><li><a href="#"><i class="fa fa-twitter"></i></a></li><li><a href="#"><i class="fa fa-linkedin"></i></a></li><li><a href="#"><i class="fa fa-google-plus"></i></a></li></ul></div></div></div><div class="col-lg-4"><div class="single-team text-center"><div class="team-image"><img src="/_nuxt/t-3.8a3824a0.jpg" alt="Team"></div><div class="team-content"><h4 class="team-name"><a href="#">Tahmina Anny</a></h4><span>UI Designer</span><ul><li><a href="#"><i class="fa fa-facebook-f"></i></a></li><li><a href="#"><i class="fa fa-twitter"></i></a></li><li><a href="#"><i class="fa fa-linkedin"></i></a></li><li><a href="#"><i class="fa fa-google-plus"></i></a></li></ul></div></div></div><div class="col-lg-4"><div class="single-team text-center"><div class="team-image"><img src="/_nuxt/t-4.8285f866.jpg" alt="Team"></div><div class="team-content"><h4 class="team-name"><a href="#">Bobby Akter</a></h4><span>Web Designer</span><ul><li><a href="#"><i class="fa fa-facebook-f"></i></a></li><li><a href="#"><i class="fa fa-twitter"></i></a></li><li><a href="#"><i class="fa fa-linkedin"></i></a></li><li><a href="#"><i class="fa fa-google-plus"></i></a></li></ul></div></div></div></div></div></section><section id="pricing" class="pricing-area gray-bg pt-125 pb-130"><div class="container"><div class="row justify-content-center"><div class="col-lg-6"><div class="section-title text-center"><h5 class="sub-title">pricing plan</h5><h2 class="title">Choose Your Best Pricing Plan</h2></div></div></div><div class="pricing-card"><div class="row"><div class="col-lg-12"><div class="cd-pricing-container cd-has-margins pt-60"><div class="cd-pricing-switcher"><div class="fieldset"><input type="radio" name="duration-2" value="yearly" id="yearly-2" checked><label for="yearly-2">Yearly</label><input type="radio" name="duration-2" value="monthly" id="monthly-2"><label for="monthly-2">Monthly</label><span class="cd-switch"></span></div></div><ul class="cd-pricing-list cd-bounce-invert"><li><ul class="cd-pricing-wrapper"><li data-type="yearly" class="is-visible"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-1.09ffe864.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$125 <span>/yr</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li><li data-type="monthly" class="is-hidden"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-1.09ffe864.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$25 <span>/mo</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li></ul></li><li class="cd-popular"><ul class="cd-pricing-wrapper"><li data-type="yearly" class="is-visible"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-2.a7a49a34.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$125 <span>/yr</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li><li data-type="monthly" class="is-hidden"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-2.a7a49a34.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$25 <span>/mo</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li></ul></li><li><ul class="cd-pricing-wrapper"><li data-type="yearly" class="is-visible"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-3.9d7db975.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$125 <span>/yr</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li><li data-type="monthly" class="is-hidden"><div class="single-pricing pricing-body text-center mt-30"><div class="pricing-thumb"><img src="/_nuxt/priceing-3.9d7db975.svg" alt="pricing"></div><div class="pricing-price mt-30"><h2>$25 <span>/mo</span></h2><p>Starter</p></div><div class="pricing-content mt-25"><p class="mb-35">Power And Predictive Dialing Quality &amp; Customer Experience 24/7 phone and email support</p><a class="main-btn" href="#">Buy Now</a></div></div></li></ul></li></ul></div></div></div></div></div></section><section id="testimonial" class="testimonial-area pt-125 pb-130"><div class="single-author-left author-one"><img src="/_nuxt/ts-1.3c965868.jpg" alt="Author"></div><div class="single-author-left author-tow"><img src="/_nuxt/ts-2.3788d865.jpg" alt="Author"></div><div class="single-author-left author-three"><img src="/_nuxt/ts-3.6646527b.jpg" alt="Author"></div><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><div class="section-title text-center pb-50"><h5 class="sub-title">client’s feedback</h5><h2 class="title">You Can See Our Clients Feedback</h2></div></div></div><div class="row justify-content-center"><div class="col-lg-8"><div class="testimonial-active"><div class="single-testimonial text-center"><div class="testimonial-icon"><i class="flaticon-quote"></i></div><div class="testimonial-content mt-50"><p>Great experience and a great product/service. I would return any day because of Falcon and their kind team.</p><h6 class="name mt-30">Mohammad Mostofa</h6><span>CEO of 2Degrees</span></div></div><div class="single-testimonial text-center"><div class="testimonial-icon"><i class="flaticon-quote"></i></div><div class="testimonial-content mt-50"><p>Your work the past few weeks has been amazing! You really care about your work and you seem to really take the time to do it the best you can.</p><h6 class="name mt-30">Mohammad Mostofa</h6><span>CEO of Spark</span></div></div></div></div></div></div><div class="single-author-right author-one"><img src="/_nuxt/ts-4.b551f5ec.jpg" alt="Author"></div><div class="single-author-right author-tow"><img src="/_nuxt/ts-5.3fe33974.jpg" alt="Author"></div><div class="single-author-right author-three"><img src="/_nuxt/ts-6.daff9ea4.jpg" alt="Author"></div></section><section id="blog" class="blog-area gray-bg pt-125 pb-130"><div class="blog-man" data-aos="fade-right" data-aos-duration="1000"><img src="/_nuxt/blog.947d4581.png" alt="Man"></div><div class="container"><div class="row justify-content-center"><div class="col-lg-6"><div class="section-title text-center pb-30"><h5 class="sub-title">Latest News</h5><h2 class="title">Our Articles Latest News &amp; Blog</h2></div></div></div><div class="row justify-content-center"><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-blog mt-30"><div class="blog-content"><h4 class="blog-title"><a href="#">What is a Virtual LAN (VLAN)?</a></h4><p>By further dividing the network part of the IP address into several subnets, the problems of the low utilization rate of IP address space and inflexible two-level IP addresses can be solved. Similar to VLAN, the subnet can isolate communication between hosts. Hosts belonging to different VLANs cannot communicate directly with each other, nor can hosts belonging to different subnets communicate directly with each other. But there is no necessary correspondence between them.</p></div><div class="blog-meta mt-30 d-flex"><div class="blog-author"><img src="data:image/jpeg;base64,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" alt="Addmin"></div><div class="meta-title align-self-center"><h6 class="title">Posted by <a href="#">Mohammad</a></h6></div></div></div></div><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-blog active mt-30"><div class="blog-content"><h4 class="blog-title"><a href="#">What is IPv6? Why do we choose to use it?</a></h4><p>The earlier version, IPv4 uses a 32-bit addressing scheme and supports over 4.3 billion devices. This may sound like a huge number but apparently, this is not enough. Due to the rapid increase in the use of the Internet, personal computers, smartphones and Internet of Things (IoT) devices, there will be a massive requirement for more IP addresses.</p></div><div class="blog-meta mt-30 d-flex"><div class="blog-author"><img src="data:image/jpeg;base64,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" alt="Addmin"></div><div class="meta-title align-self-center"><h6 class="title">Posted by <a href="#">Mohammad</a></h6></div></div></div></div><div class="col-lg-4 col-md-8 col-sm-9"><div class="single-blog mt-30"><div class="blog-content"><h4 class="blog-title"><a href="#">What are the failover features on a router?</a></h4><p>VRRP provides a better option among the two networking devices. It groups multiple devices into a virtual device, whose IP address is configured as the default gateway address to back up the default gateway. If a gateway fails, VRRP elects a different gateway to forward traffic, thereby ensuring reliable network communication. When the master device fails, the traffic destined for the default gateway is forwarded by the backup device.</p></div><div class="blog-meta mt-30 d-flex"><div class="blog-author"><img src="data:image/jpeg;base64,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" alt="Addmin"></div><div class="meta-title align-self-center"><h6 class="title">Posted by <a href="#">Mohammad</a></h6></div></div></div></div></div></div></section><section id="contact" class="contact-area pt-125 pb-130"><div class="container"><div class="row justify-content-center"><div class="col-lg-6"><div class="section-title section-title-2 text-center pb-30"><h5 class="sub-title">contact us</h5><h2 class="title">Get In Touch</h2></div></div></div><div class="contact-form"><form id="contact-form" action="https://html.codeceil.com/bizto/bizto/assets/contact.php" method="post" data-toggle="validator"><div class="row"><div class="col-lg-6"><div class="single-contact-form form-group"><input type="text" name="name" placeholder="Enter Your Name" data-error="Name is required." required="required"><div class="help-block with-errors"></div></div></div><div class="col-lg-6"><div class="single-contact-form form-group"><input type="email" name="email" placeholder="Enter Your Email" data-error="Valid email is required." required="required"><div class="help-block with-errors"></div></div></div><div class="col-lg-6"><div class="single-contact-form form-group"><input type="text" name="number" placeholder="Your Phone Number" data-error="Phone is required." required="required"><div class="help-block with-errors"></div></div></div><div class="col-lg-6"><div class="single-contact-form form-group"><input type="text" name="subject" placeholder="Your Subject" data-error="Subject is required." required="required"><div class="help-block with-errors"></div></div></div><div class="col-lg-12"><div class="single-contact-form form-group"><textarea name="message" placeholder="Write Your Message" data-error="Please,leave us a message." required="required"></textarea><div class="help-block with-errors"></div></div></div><p class="form-message"></p><div class="col-lg-12"><div class="single-contact-form text-center"><button type="submit" class="main-btn main-btn-2">Send Message</button></div></div></div></form></div></div><div class="contact-woman" data-aos="fade-left" data-aos-duration="1000"><img src="/_nuxt/contact.23e6ea75.png" alt="Woman"></div></section></div><!--]--><div><footer id="footer" class="footer-area"><div class="footer-widget pt-80 pb-130"><div class="container"><div class="row"><div class="col-lg-3 col-md-6 col-sm-12 order-md-0 order-lg-0"><div class="widget-about pt-50"><a href="index.html"><img src="/_nuxt/logo-2.fb9c588f.png" alt="Logo"></a><p class="mt-25">We specialize in exporting high-quality electronic products. Our mission is to connect global markets with reliable, cutting-edge technology solutions.</p></div></div><div class="col-lg-3 col-md-6 col-sm-6 order-md-2 order-lg-1"><div class="widget-link pt-45"><div class="widget-title pb-20"><h4 class="title">Our Company</h4></div><ul><li><a href="#"><i class="fa fa-angle-right"></i>About Company</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Our Testimonials</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Latest News</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Our Mission</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Get a Free Quote</a></li></ul></div></div><div class="col-lg-3 col-md-6 col-sm-6 order-md-3 order-lg-2"><div class="widget-link pt-45"><div class="widget-title pb-20"><h4 class="title">Our Services</h4></div><ul><li><a href="#"><i class="fa fa-angle-right"></i>Web Design</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Graphic Design</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Financial Help</a></li><li><a href="#"><i class="fa fa-angle-right"></i>App Development</a></li><li><a href="#"><i class="fa fa-angle-right"></i>Print Design</a></li></ul></div></div><div class="col-lg-3 col-md-6 col-sm-12 order-md-1 order-lg-3"><div class="widget-contact pt-45"><div class="widget-title pb-20"><h4 class="title">Contact Us</h4></div><div class="widget-info"><p><span>Location:</span>Room 348, Nuobo Plaza, 269 Qianjin 1st Road, Wenhui community, Xinan streent, Bao’an District, Shenzhen, Guangdong,China</p><p><span>Email:</span><a href="mailto:sales@falcon-technology.cn">sales@falcon-technology.cn</a></p><p><span>Email:</span><a href="mailto:ellen@falcon-technology.cn">ellen@falcon-technology.cn</a></p><p><span>Phone:</span>+86 755 27889564</p><p><span>Mobile:</span>+86 18922872901</p><ul class="social mt-30"><li><a href="#"><i class="fa fa-facebook-f"></i></a></li><li><a href="#"><i class="fa fa-twitter"></i></a></li><li><a href="#"><i class="fa fa-linkedin"></i></a></li></ul></div></div></div></div></div></div><div class="footer-copyright pb-15"><div class="container"><div class="row"><div class="col-md-5"><div class="copyright pt-15 text-center text-md-left"><p>Falcon © 2023 All Right Reserved</p></div></div><div class="col-md-7"><div class="copyright-menu text-center text-md-right pt-15"><ul><li><a href="#">Terms &amp; Condition</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Help</a></li></ul></div></div></div></div></div></footer><a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a></div></div></div><script type="application/json" id="__NUXT_DATA__" data-ssr="true" data-src="/_payload.json">[{"state":1,"_errors":3,"serverRendered":5,"path":6,"prerenderedAt":7},["Reactive",2],{},["Reactive",4],{},true,"/",1699300005504]</script>
-<script>window.__NUXT__={};window.__NUXT__.config={public:{},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body>
+<html>  <head>
+    <meta charset="utf-8" />
+    <title>Falcon</title>
+
+    <!--Meta For No Index-->
+    <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+    <!--mobile responsive meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="generator" content="Hugo 0.117.0">
+    <!-- Critical CSS -->
+    
+    <link href="/scss/critical.min.css" rel="stylesheet" />
+
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ95FEWF9K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-JZ95FEWF9K');
+      
+    </script>
+    
+
+    
+  </head>
+
+<body>
+<header class="header">
+  <nav class="main-nav navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand">
+        <img src="/images/logo.png" alt="site-logo" />
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse nav-list"
+        id="mainNav"
+      >
+        <ul class="navbar-nav ml-auto">
+          
+          
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/#gallery">Exhibition</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/#service">Feature</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/about/">About</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/#blog">Blog</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/#pricing">Pricing</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/#faq">FAQ</a>
+          </li>
+          
+          <li class="nav-item ">
+             <a class="nav-link scroll-to" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="content">
+  
+
+  <section class="hero" style="background-image: url( images/hero/hero-bg.jpg );">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="hero-content">
+            <h1><h1>STAY PRODUCTIVE WITH <br> MODERN WORKSPACE</h1></h1>
+            <p>
+              We have the world&#39;s largest network of  workspaces and co-working spaces.
+
+            </p>
+            
+            <div class="hero-video-player">
+              <div class="hero-video-player-icon">
+                <a class="popup-vimeo" href="https://vimeo.com/45830194?autoplay=1&amp;rel=0">
+                    <i class="ti-control-play"></i>
+                </a>
+              </div>
+              <span> <strong>coHub. in</strong> 30 Seconds</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2>Take a look at Our Exibhition</h2>
+          <p>
+            We are the world’s largest provider of flexible workspace solutions, with customers including some of the most successful entrepreneurs
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-6">
+          <div class="gallery-item">
+            <a href="/images/gallery/gallery01.jpg" data-source="/images/gallery/gallery01.jpg"
+               title="">
+                <img src="/images/gallery/gallery01.jpg" alt="gallery-images">
+            </a>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="gallery-item">
+            <a href="/images/gallery/gallery02.jpg" data-source="/images/gallery/gallery02.jpg"
+               title="">
+                <img src="/images/gallery/gallery02.jpg" alt="gallery-images">
+            </a>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="gallery-item">
+            <a href="/images/gallery/gallery03.jpg" data-source="/images/gallery/gallery03.jpg"
+               title="">
+                <img src="/images/gallery/gallery03.jpg" alt="gallery-images">
+            </a>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="gallery-item">
+            <a href="/images/gallery/gallery04.jpg" data-source="/images/gallery/gallery04.jpg"
+               title="">
+                <img src="/images/gallery/gallery04.jpg" alt="gallery-images">
+            </a>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+<section class="cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cta-content">
+          <h2>Visit coHub for a day.</h2>
+          <a href="/contact" class="btn btn-primary mb-3">
+              Schedule your day
+          </a>
+          <p style="font-size: 12px;">or check out <a class="scroll-to" href="/#priceLink">pricing plans</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<section class="service" id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+         <h2> Why Choose us? </h2>
+          <p>
+              We enable people and businesses to work where they want,  when they want and how they want.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-view-grid" aria-hidden="true"></i>
+          <h3>largest Network</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-infinite" aria-hidden="true"></i>
+          <h3>All Sizes And Budget</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-help-alt" aria-hidden="true"></i>
+          <h3>Dedicated Account Manager</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-credit-card" aria-hidden="true"></i>
+          <h3>Easy Payment</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-lock" aria-hidden="true"></i>
+          <h3>Dedicated Locker</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <i class="ti-image" aria-hidden="true"></i>
+          <h3>Personalization</h3>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vel mollitia sit. Dicta maxime ullam quos sapiente eveniet odio accusamus.
+
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>News, updates and insights</h2>
+          <p>
+              With a decade of insights and expertise, we’re reimagining property so that you can focus on your business.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="/images/blog/blog-feature.jpg" alt="blog-images">
+          <div class="blog-content">
+            <h3><a href="/blog/world-most-famous-app-developers/">World Most Famous App Developers</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum …</p>
+            <a class="more" href="/blog/world-most-famous-app-developers/">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="/images/blog/blog-thumb-1.jpg" alt="blog-images">
+          <div class="blog-content">
+            <h3><a href="/blog/the-similarities-between-famous-writers/">The Similarities Between Famous Writers</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum …</p>
+            <a class="more" href="/blog/the-similarities-between-famous-writers/">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="/images/blog/blog-thumb-3.jpg" alt="blog-images">
+          <div class="blog-content">
+            <h3><a href="/blog/the-difference-between-meeting-and-connecting/">The Difference Between Meeting and Connecting</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum …</p>
+            <a class="more" href="/blog/the-difference-between-meeting-and-connecting/">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      
+      <div class="col-12 text-center">
+        <a href="/blog" class="btn btn-primary">View blog page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<section class="testimonial"  style="background-image: url( images/testimonial-bg.jpg );">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="testimonial-content">
+          <h3>Valuable Feedback</h3>
+          <blockquote>
+            ‘We achieved a cost-savings project while achieving cultural transformation to collaborate better together.
+  Our innovation lab brings ideas, skills and importantly, individuals together to enable innovation.’
+
+            <cite>FRANCIS VAN PARYS, PRESIDENT AND CEO, GE HEALTHCARE KOREA</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+  
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2>Simple pricing for everyone</h2>
+          <p>Whether you&#39;re looking for a full-time workspace or are just visiting Melbourne,
+ we&#39;ve got an option for everyone
+
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            
+            <span class="price">
+                <sup>$</sup>19
+            </span>
+            <h3>Daily</h3>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.  Expedita pariatur quidem, impedit ipsa repellat sed!
+
+            </p>
+          </div>
+          <a href="/" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            
+            <span class="pricing-item-badge">Popular</span>
+            
+            <span class="price">
+                <sup>$</sup>79
+            </span>
+            <h3>Weekly</h3>
+            <p>
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero exercitationem sed eius autem quisquam sapiente?
+
+            </p>
+          </div>
+          <a href="/" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            
+            <span class="price">
+                <sup>$</sup>99
+            </span>
+            <h3>Monthly</h3>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,  quas nesciunt vitae suscipit necessitatibus ea.
+
+            </p>
+          </div>
+          <a href="/" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+  
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12">
+        <div class="faq-content text-block">
+          <h2> Frequently Asked Questions </h2>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12">
+        <div class="row">
+         
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3>Q. How do I apply?</h3>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3>Q. Where can I find out about funding?</h3>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3>Q. How can I make a change to my application?</h3>
+              <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit excepturi  eaque quidem recusandae facere obcaecati optio, perferendis iusto maxime eligendi!
+
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3>Q. What are entry requirements?</h3>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3>Q. How do I get a reference?</h3>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section class="contact" id="contact">
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-lg-6">
+        
+        <div id="map" data-lat=45.4502528 data-long=-122.783407 data-pin=/images/pin.png>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-aria">
+          <h3>
+            115 W 18th St. <br>  New York, NY 10011
+          </h3>
+          <ul>
+            <li><i class="ti-email"></i>&nbsp;<a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><i class="ti-mobile"></i>&nbsp;<a href="tel:&#43;%28448%29%20833%205272%20332">&#43;(448) 833 5272 332</a></li>
+          </ul>
+          <p>
+            Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
+          </p>
+          <p>We are open from 7am — 7pm week days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        </div><section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="footer-logo">
+          <img class="img-fluid" src="/images/logo.png" alt="logo">
+        </div>
+        <p class="footer-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quia ab, natus fugiat voluptas saepe ipsum animi officiis in molestiae?
+        </p>
+        <div class="footer-text-block">
+          <p>
+            115 W 18th St. <br>  New York, NY 10011
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 col-md-12 align-self-end">
+        <div class="footer-icon">
+          <ul>
+            
+            <li>
+              <a target="_blank" href="https://www.facebook.com/">
+                <i
+                  class="ti-facebook">
+                </i>
+              </a>
+            </li>
+            
+            <li>
+              <a target="_blank" href="https://twitter.com/">
+                <i
+                  class="ti-twitter-alt">
+                </i>
+              </a>
+            </li>
+            
+            <li>
+              <a target="_blank" href="https://dribbble.com/">
+                <i
+                  class="ti-dribbble">
+                </i>
+              </a>
+            </li>
+            
+            <li>
+              <a target="_blank" href="https://www.instagram.com/">
+                <i
+                  class="ti-instagram">
+                </i>
+              </a>
+            </li>
+            
+            
+            <li><a target="_blank" href="mailto:hello@example.com"><i class="ti-email"></i></a></li>
+            
+            
+            <li><a target="_blank" href="tel:&#43;%28448%29%20833%205272%20332"><i class="ti-mobile"></i></a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-copyright-text">
+          <p> © 2023 <a href="https://staticmania.com/" target="_blank">StaticMania </a> </p>
+          <ul>
+            
+						
+						  <li>
+                <a href="/privacy/">Privacy Policy</a>
+              </li>
+            
+						  <li>
+                <a href="/terms/">Terms</a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Non Critical CSS -->
+
+<link href="/scss/non-critical.min.css" rel="stylesheet" />
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+<!-- VENDOR JS -->
+<script src="/vendor/jQuery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/vendor/slick/slick.min.js"></script>
+<script src="/vendor/aos/aos.js"></script>
+<script src="/vendor/match-height/match-height.js"></script>
+<script src="/vendor/magnific-popup/magnific-popup.min.js"></script>
+<script src="/vendor/g-map/gmap.js"></script>
+
+ 
+<script src="/js/script.min.js"></script>
+</body>
 </html>

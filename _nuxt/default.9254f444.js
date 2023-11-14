@@ -1,1 +1,0 @@
-import{_ as o}from"./Footer.87411438.js";import{_ as n,c as r,q as c,b as s,o as a}from"./entry.44ac830f.js";const _={components:{Footer:o},head(){return{title:"Falcon - Connecting the World"}}};function l(e,p,d,f,m,u){const t=o;return a(),r("div",null,[c(e.$slots,"default"),s(t)])}const h=n(_,[["render",l]]);export{h as default};
