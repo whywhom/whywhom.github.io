@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Wed, 20 Dec 2023 05:49:03 +1300</lastBuildDate><atom:link href="https://iyuedu.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Dec 2023 10:44:13 +1300</lastBuildDate><atom:link href="https://iyuedu.top/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Articles</title>
+      <link>https://iyuedu.top/categories/articles/</link>
+      <pubDate>Sun, 24 Dec 2023 10:44:13 +1300</pubDate>
+      
+      <guid>https://iyuedu.top/categories/articles/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Books</title>
       <link>https://iyuedu.top/categories/books/</link>
       <pubDate>Wed, 20 Dec 2023 05:49:03 +1300</pubDate>
       
       <guid>https://iyuedu.top/categories/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Articles</title>
-      <link>https://iyuedu.top/categories/articles/</link>
-      <pubDate>Sun, 03 Dec 2023 10:44:13 +1300</pubDate>
-      
-      <guid>https://iyuedu.top/categories/articles/</guid>
       <description></description>
     </item>
     
