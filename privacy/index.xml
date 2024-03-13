@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CoHub Privacy &amp; Policy  on Big Pot</title>
-    <link>http://whyread.top/privacy/</link>
-    <description>Recent content in CoHub Privacy &amp; Policy  on Big Pot</description>
+    <title>CoHub Privacy &amp; Policy  on My New Hugo Site</title>
+    <link>https://whyread.top/privacy/</link>
+    <description>Recent content in CoHub Privacy &amp; Policy  on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jan 2022 12:51:52 +0600</lastBuildDate><atom:link href="http://whyread.top/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jan 2022 12:51:52 +0600</lastBuildDate><atom:link href="https://whyread.top/privacy/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
