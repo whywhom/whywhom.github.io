@@ -7,37 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
-    <lastBuildDate>Sun, 07 Oct 2018 11:12:00 +0200</lastBuildDate><atom:link href="https://iyuedu.top/static/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Oct 2018 11:12:00 +0200</lastBuildDate>
+    <atom:link href="https://iyuedu.top/static/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Imprint</title>
       <link>https://iyuedu.top/static/imprint/</link>
       <pubDate>Sun, 07 Oct 2018 11:12:00 +0200</pubDate>
-      
       <guid>https://iyuedu.top/static/imprint/</guid>
       <description>Imprint Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</description>
     </item>
-    
     <item>
       <title>About Us</title>
       <link>https://iyuedu.top/static/about/</link>
       <pubDate>Thu, 12 Jul 2018 18:19:33 +0600</pubDate>
-      
       <guid>https://iyuedu.top/static/about/</guid>
-      <description>First of all, thank you for visiting this little site.
-This site is oriented to share english contents which can help people to enjoy learning English.</description>
+      <description>First of all, thank you for visiting this little site.&#xA;This site is oriented to share english contents which can help people to enjoy learning English.</description>
     </item>
-    
     <item>
       <title>捐款</title>
       <link>https://iyuedu.top/static/donate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://iyuedu.top/static/donate/</guid>
-      <description>支持我们的工作 如果你觉得我们的内容有价值，并且想要支持我们，你可以通过支付宝和微信支付进行捐赠。
-向 『悦读书馆』 捐款 爱书人！ 现在接受您的加捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式 捐款即表示您同意我们的 『服务条款』
-微信支付 扫描以下微信支付二维码进行捐赠：
-支付宝 扫描以下支付宝二维码进行捐赠：</description>
+      <description>支持我们的工作 如果你觉得我们的内容有价值，并且想要支持我们，你可以通过支付宝和微信支付进行捐赠。&#xA;向 『悦读书馆』 捐款 爱书人！ 现在接受您的加捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式 捐款即表示您同意我们的 『服务条款』&#xA;微信支付 扫描以下微信支付二维码进行捐赠：&#xA;支付宝 扫描以下支付宝二维码进行捐赠：</description>
     </item>
-    
   </channel>
 </rss>
