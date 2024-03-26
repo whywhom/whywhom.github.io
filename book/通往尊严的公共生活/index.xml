@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>通往尊严的公共生活 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E9%80%9A%E5%BE%80%E5%B0%8A%E4%B8%A5%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%9F%E6%B4%BB/</link>
+    <link>http://localhost:1313/book/%E9%80%9A%E5%BE%80%E5%B0%8A%E4%B8%A5%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%9F%E6%B4%BB/</link>
     <description>Recent content in 通往尊严的公共生活 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E9%80%9A%E5%BE%80%E5%B0%8A%E4%B8%A5%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E9%80%9A%E5%BE%80%E5%B0%8A%E4%B8%A5%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>狮子吃素的那一天 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E7%8B%AE%E5%AD%90%E5%90%83%E7%B4%A0%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9/</link>
+    <link>http://localhost:1313/book/%E7%8B%AE%E5%AD%90%E5%90%83%E7%B4%A0%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9/</link>
     <description>Recent content in 狮子吃素的那一天 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E7%8B%AE%E5%AD%90%E5%90%83%E7%B4%A0%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E7%8B%AE%E5%AD%90%E5%90%83%E7%B4%A0%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>认知商：如何认清现实与错觉？ on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E8%AE%A4%E7%9F%A5%E5%95%86-%E5%A6%82%E4%BD%95%E8%AE%A4%E6%B8%85%E7%8E%B0%E5%AE%9E%E4%B8%8E%E9%94%99%E8%A7%89/</link>
+    <link>http://localhost:1313/book/%E8%AE%A4%E7%9F%A5%E5%95%86-%E5%A6%82%E4%BD%95%E8%AE%A4%E6%B8%85%E7%8E%B0%E5%AE%9E%E4%B8%8E%E9%94%99%E8%A7%89/</link>
     <description>Recent content in 认知商：如何认清现实与错觉？ on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E8%AE%A4%E7%9F%A5%E5%95%86-%E5%A6%82%E4%BD%95%E8%AE%A4%E6%B8%85%E7%8E%B0%E5%AE%9E%E4%B8%8E%E9%94%99%E8%A7%89/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E8%AE%A4%E7%9F%A5%E5%95%86-%E5%A6%82%E4%BD%95%E8%AE%A4%E6%B8%85%E7%8E%B0%E5%AE%9E%E4%B8%8E%E9%94%99%E8%A7%89/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>情绪与心理经典著作（套装共7册） on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E6%83%85%E7%BB%AA%E4%B8%8E%E5%BF%83%E7%90%86%E7%BB%8F%E5%85%B8%E8%91%97%E4%BD%9C/</link>
+    <link>http://localhost:1313/book/%E6%83%85%E7%BB%AA%E4%B8%8E%E5%BF%83%E7%90%86%E7%BB%8F%E5%85%B8%E8%91%97%E4%BD%9C/</link>
     <description>Recent content in 情绪与心理经典著作（套装共7册） on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E6%83%85%E7%BB%AA%E4%B8%8E%E5%BF%83%E7%90%86%E7%BB%8F%E5%85%B8%E8%91%97%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E6%83%85%E7%BB%AA%E4%B8%8E%E5%BF%83%E7%90%86%E7%BB%8F%E5%85%B8%E8%91%97%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

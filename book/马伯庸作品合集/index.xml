@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>马伯庸作品合集（套装23册） on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</link>
+    <link>http://localhost:1313/book/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/</link>
     <description>Recent content in 马伯庸作品合集（套装23册） on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E9%A9%AC%E4%BC%AF%E5%BA%B8%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

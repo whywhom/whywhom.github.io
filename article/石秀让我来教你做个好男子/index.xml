@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>石秀：让我来教你做个好男子 on 悦读书馆</title>
-    <link>https://iyuedu.top/article/%E7%9F%B3%E7%A7%80%E8%AE%A9%E6%88%91%E6%9D%A5%E6%95%99%E4%BD%A0%E5%81%9A%E4%B8%AA%E5%A5%BD%E7%94%B7%E5%AD%90/</link>
+    <link>http://localhost:1313/article/%E7%9F%B3%E7%A7%80%E8%AE%A9%E6%88%91%E6%9D%A5%E6%95%99%E4%BD%A0%E5%81%9A%E4%B8%AA%E5%A5%BD%E7%94%B7%E5%AD%90/</link>
     <description>Recent content in 石秀：让我来教你做个好男子 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/article/%E7%9F%B3%E7%A7%80%E8%AE%A9%E6%88%91%E6%9D%A5%E6%95%99%E4%BD%A0%E5%81%9A%E4%B8%AA%E5%A5%BD%E7%94%B7%E5%AD%90/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/article/%E7%9F%B3%E7%A7%80%E8%AE%A9%E6%88%91%E6%9D%A5%E6%95%99%E4%BD%A0%E5%81%9A%E4%B8%AA%E5%A5%BD%E7%94%B7%E5%AD%90/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

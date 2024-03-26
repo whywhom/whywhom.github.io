@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>谢谢自己够勇敢 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E8%B0%A2%E8%B0%A2%E8%87%AA%E5%B7%B1%E5%A4%9F%E5%8B%87%E6%95%A2/</link>
+    <link>http://localhost:1313/book/%E8%B0%A2%E8%B0%A2%E8%87%AA%E5%B7%B1%E5%A4%9F%E5%8B%87%E6%95%A2/</link>
     <description>Recent content in 谢谢自己够勇敢 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E8%B0%A2%E8%B0%A2%E8%87%AA%E5%B7%B1%E5%A4%9F%E5%8B%87%E6%95%A2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E8%B0%A2%E8%B0%A2%E8%87%AA%E5%B7%B1%E5%A4%9F%E5%8B%87%E6%95%A2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

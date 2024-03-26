@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>如果故宫会说话 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E5%A6%82%E6%9E%9C%E6%95%85%E5%AE%AB%E4%BC%9A%E8%AF%B4%E8%AF%9D/</link>
+    <link>http://localhost:1313/book/%E5%A6%82%E6%9E%9C%E6%95%85%E5%AE%AB%E4%BC%9A%E8%AF%B4%E8%AF%9D/</link>
     <description>Recent content in 如果故宫会说话 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E5%A6%82%E6%9E%9C%E6%95%85%E5%AE%AB%E4%BC%9A%E8%AF%B4%E8%AF%9D/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E5%A6%82%E6%9E%9C%E6%95%85%E5%AE%AB%E4%BC%9A%E8%AF%B4%E8%AF%9D/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

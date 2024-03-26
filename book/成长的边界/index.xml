@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>成长的边界 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E6%88%90%E9%95%BF%E7%9A%84%E8%BE%B9%E7%95%8C/</link>
+    <link>http://localhost:1313/book/%E6%88%90%E9%95%BF%E7%9A%84%E8%BE%B9%E7%95%8C/</link>
     <description>Recent content in 成长的边界 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E6%88%90%E9%95%BF%E7%9A%84%E8%BE%B9%E7%95%8C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E6%88%90%E9%95%BF%E7%9A%84%E8%BE%B9%E7%95%8C/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

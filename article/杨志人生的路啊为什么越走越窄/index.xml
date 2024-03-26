@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>杨志：人生的路啊，为什么越走越窄？ on 悦读书馆</title>
-    <link>https://iyuedu.top/article/%E6%9D%A8%E5%BF%97%E4%BA%BA%E7%94%9F%E7%9A%84%E8%B7%AF%E5%95%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E8%B5%B0%E8%B6%8A%E7%AA%84/</link>
+    <link>http://localhost:1313/article/%E6%9D%A8%E5%BF%97%E4%BA%BA%E7%94%9F%E7%9A%84%E8%B7%AF%E5%95%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E8%B5%B0%E8%B6%8A%E7%AA%84/</link>
     <description>Recent content in 杨志：人生的路啊，为什么越走越窄？ on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/article/%E6%9D%A8%E5%BF%97%E4%BA%BA%E7%94%9F%E7%9A%84%E8%B7%AF%E5%95%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E8%B5%B0%E8%B6%8A%E7%AA%84/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/article/%E6%9D%A8%E5%BF%97%E4%BA%BA%E7%94%9F%E7%9A%84%E8%B7%AF%E5%95%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E8%B5%B0%E8%B6%8A%E7%AA%84/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

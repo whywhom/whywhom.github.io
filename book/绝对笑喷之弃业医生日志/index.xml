@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>英文版 | 绝对笑喷之弃业医生日志 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E7%BB%9D%E5%AF%B9%E7%AC%91%E5%96%B7%E4%B9%8B%E5%BC%83%E4%B8%9A%E5%8C%BB%E7%94%9F%E6%97%A5%E5%BF%97/</link>
+    <link>http://localhost:1313/book/%E7%BB%9D%E5%AF%B9%E7%AC%91%E5%96%B7%E4%B9%8B%E5%BC%83%E4%B8%9A%E5%8C%BB%E7%94%9F%E6%97%A5%E5%BF%97/</link>
     <description>Recent content in 英文版 | 绝对笑喷之弃业医生日志 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E7%BB%9D%E5%AF%B9%E7%AC%91%E5%96%B7%E4%B9%8B%E5%BC%83%E4%B8%9A%E5%8C%BB%E7%94%9F%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E7%BB%9D%E5%AF%B9%E7%AC%91%E5%96%B7%E4%B9%8B%E5%BC%83%E4%B8%9A%E5%8C%BB%E7%94%9F%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

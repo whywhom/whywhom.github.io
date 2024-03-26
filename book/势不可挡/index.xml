@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>势不可挡 on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E5%8A%BF%E4%B8%8D%E5%8F%AF%E6%8C%A1/</link>
+    <link>http://localhost:1313/book/%E5%8A%BF%E4%B8%8D%E5%8F%AF%E6%8C%A1/</link>
     <description>Recent content in 势不可挡 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E5%8A%BF%E4%B8%8D%E5%8F%AF%E6%8C%A1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E5%8A%BF%E4%B8%8D%E5%8F%AF%E6%8C%A1/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

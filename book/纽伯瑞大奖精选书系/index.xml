@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>纽伯瑞大奖精选书系（套装共20册） on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E7%BA%BD%E4%BC%AF%E7%91%9E%E5%A4%A7%E5%A5%96%E7%B2%BE%E9%80%89%E4%B9%A6%E7%B3%BB/</link>
+    <link>http://localhost:1313/book/%E7%BA%BD%E4%BC%AF%E7%91%9E%E5%A4%A7%E5%A5%96%E7%B2%BE%E9%80%89%E4%B9%A6%E7%B3%BB/</link>
     <description>Recent content in 纽伯瑞大奖精选书系（套装共20册） on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E7%BA%BD%E4%BC%AF%E7%91%9E%E5%A4%A7%E5%A5%96%E7%B2%BE%E9%80%89%E4%B9%A6%E7%B3%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E7%BA%BD%E4%BC%AF%E7%91%9E%E5%A4%A7%E5%A5%96%E7%B2%BE%E9%80%89%E4%B9%A6%E7%B3%BB/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>如何创造可信的AI on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</link>
+    <link>http://localhost:1313/book/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</link>
     <description>Recent content in 如何创造可信的AI on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

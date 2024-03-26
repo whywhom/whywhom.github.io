@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>海明威诞辰120周年图文珍藏版文集（全18卷） on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E6%B5%B7%E6%98%8E%E5%A8%81%E8%AF%9E%E8%BE%B0120%E5%91%A8%E5%B9%B4%E5%9B%BE%E6%96%87%E7%8F%8D%E8%97%8F%E7%89%88%E6%96%87%E9%9B%86/</link>
+    <link>http://localhost:1313/book/%E6%B5%B7%E6%98%8E%E5%A8%81%E8%AF%9E%E8%BE%B0120%E5%91%A8%E5%B9%B4%E5%9B%BE%E6%96%87%E7%8F%8D%E8%97%8F%E7%89%88%E6%96%87%E9%9B%86/</link>
     <description>Recent content in 海明威诞辰120周年图文珍藏版文集（全18卷） on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E6%B5%B7%E6%98%8E%E5%A8%81%E8%AF%9E%E8%BE%B0120%E5%91%A8%E5%B9%B4%E5%9B%BE%E6%96%87%E7%8F%8D%E8%97%8F%E7%89%88%E6%96%87%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E6%B5%B7%E6%98%8E%E5%A8%81%E8%AF%9E%E8%BE%B0120%E5%91%A8%E5%B9%B4%E5%9B%BE%E6%96%87%E7%8F%8D%E8%97%8F%E7%89%88%E6%96%87%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

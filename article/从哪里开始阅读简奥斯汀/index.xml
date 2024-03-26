@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>从哪里开始阅读简·奥斯汀 on 悦读书馆</title>
-    <link>https://iyuedu.top/article/%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E9%98%85%E8%AF%BB%E7%AE%80%E5%A5%A5%E6%96%AF%E6%B1%80/</link>
+    <link>http://localhost:1313/article/%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E9%98%85%E8%AF%BB%E7%AE%80%E5%A5%A5%E6%96%AF%E6%B1%80/</link>
     <description>Recent content in 从哪里开始阅读简·奥斯汀 on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/article/%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E9%98%85%E8%AF%BB%E7%AE%80%E5%A5%A5%E6%96%AF%E6%B1%80/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/article/%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E9%98%85%E8%AF%BB%E7%AE%80%E5%A5%A5%E6%96%AF%E6%B1%80/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

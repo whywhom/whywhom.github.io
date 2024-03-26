@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>皮肤的秘密 - 关于人体最大器官的一切！ on 悦读书馆</title>
-    <link>https://iyuedu.top/book/%E7%9A%AE%E8%82%A4%E7%9A%84%E7%A7%98%E5%AF%86/</link>
+    <link>http://localhost:1313/book/%E7%9A%AE%E8%82%A4%E7%9A%84%E7%A7%98%E5%AF%86/</link>
     <description>Recent content in 皮肤的秘密 - 关于人体最大器官的一切！ on 悦读书馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>悦读书馆 - All rights reserved</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://iyuedu.top/book/%E7%9A%AE%E8%82%A4%E7%9A%84%E7%A7%98%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book/%E7%9A%AE%E8%82%A4%E7%9A%84%E7%A7%98%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
