@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Big Pot on coHub</title>
-    <link>https://whyread.top/bigpot/</link>
+    <link>http://localhost:1313/bigpot/</link>
     <description>Recent content in Big Pot on coHub</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://whyread.top/bigpot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/bigpot/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
