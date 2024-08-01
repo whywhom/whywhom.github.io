@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>文化地图 - The Culture Map | i 悦读</title>
+
+<meta name="description" content="掌握「文化量表」让自己成为国际化人才">
+      <link rel="stylesheet" href="/css/main.min.2dff239451b5c241561832ed339ea00286b502099254bc8f2be8edd47373ac9a.css" integrity="sha256-Lf8jlFG1wkFWGDLtM56gAoa1AgmSVLyPK&#43;jt1HNzrJo=" crossorigin="anonymous">
+
+<link rel="icon" type="image/svg+xml" href="https://iyuedu.top/favicon.svg"> 
+<link rel="icon" type="image/x-icon" href="https://iyuedu.top/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="16x16" href="https://iyuedu.top/favicon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
+
+</head>
+<body>
+  <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
+	<div class="flex items-center">
+		<div class="flex items-center">
+			<button class="flex items-center space-x-2 rounded-full border py-1 pr-[5px] pl-3 group bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="menu-bar">
+				<svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+				</svg>
+				<span class="bg-blue-500 fill-white rounded-full p-1.5">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="group-hover:animate-spin bi bi-egg-fried fill-white" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+						<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"></path>
+					</svg>
+				</span>
+			</button>
+			<div class="relative rounded-full py-1.5 px-6 bg-zinc-100 hover:bg-zinc-200 text-xl font-bold uppercase mx-2">
+				<h2><a class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto" href="https://iyuedu.top/">i 悦读</a></h2>
+			</div>
+		</div>
+		<div class="flex items-center ml-auto">
+			<button class="flex items-center rounded-full p-3 bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="search-bar">
+				<svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+					<path id="path1" class="transition-all ease-linear" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+					<path id="path2" class="transition-all ease-linear hidden" d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+  <nav id="menu-bar" class="block mt-3 close">
+    <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">Home</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">关于</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">categories</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+<div id="search-bar" class="block mt-3 close">
+	
+	<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/pagefind/pagefind-ui.js"></script>
+	<div id="search"></div>
+	<script>
+	  window.addEventListener('DOMContentLoaded', (event) => {
+		new PagefindUI({
+		  element: "#search",
+		  showSubResults: true
+		});
+	  });
+	</script>
+	
+	
+	<div id="search-results"></div>
+</div>
+</div></header>
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/">i 悦读</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/posts/">Posts</a>
+		</li>
+	</ul>
+</div><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-14">
+
+  <article class="md:col-span-3 prose lg:prose-lg">
+
+    <header class="not-prose">
+      
+      <h1 id="title" class="text-4xl font-bold leading-normal">文化地图 - The Culture Map</h1>
+
+      <div id="lead" class="my-6">
+
+        <p class="font-bold">掌握「文化量表」让自己成为国际化人才 </p>
+
+      </div>
+      
+      <div id="writer" class="flex items-center space-x-4">
+
+        
+        
+        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+          
+          <li class="font-semibold my-2"></li>
+          
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2"><time datetime="2024-05-02T06:59:32&#43;13:00">May 2, 2024</time>
+          </li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+            3 min read
+          </li>
+
+        </ul>
+
+      </div>
+      
+    </header>
+
+    <figure id="featureimage" class="rounded-xl aspect-video">
+
+          <img class="rounded-lg" src="https://img9.doubanio.com/lpic/s33791365.jpg" alt="文化地图 - The Culture Map">
+
+    </figure>
+
+    <div id="content" class="mb-14">
+      <h2 id="内容简介-------">内容简介  · · · · · ·</h2>
+<p>善用「文化量表」 让你轻松拥抱世界</p>
+<p>艾琳‧梅尔</p>
+<p>-　曾获全球管理学组织“On the Radar”评选为年度50名全球最有前瞻性商业思想家之一
+-　亚马逊书店5颗星推荐、销售总排行榜前20大</p>
+<p>《外交期刊》、《专业经理人》、《金融时报》、《科克斯书评》 好评推荐！
+全球华人竞争力基金会董事长石滋宜博士 专序推荐！</p>
+<p>【精彩案例】</p>
+<p>◎赞美不一定是赞美，指责不一定是指责：聋子杜拉克</p>
+<p>对于美国老板韦伯和法国下属杜拉克之间的沟通问题，我们再多仔细想想，这是个性不合，抑或是文化差异导致的结果。在这个案例中，国籍的刻板印象不但没有带来什么好处，反而可能更令人疑惑。毕竟，对于法国人，一般普遍都会认定他们是含蓄与委婉沟通的高手，听和说都很细腻敏锐；美国人的沟通则被认为倾向于坦率直白，越直接越好。但是在「聋子杜拉克」的故事里，却是法国总监天真地忽略掉美国上司一直试图传递的讯息，而美国上司抱怨他的法国下属不够世故，没办法理解他的意思。</p>
+<p>◎阅读空气：如何解读隐晦的讯息</p>
+<p>假设你和一位名叫玛莉安的公司同事，都是来自像伊朗这样的高情境文化，想像玛莉安搭晚班十点左右的火车来拜访你，如果你问玛莉安睡前要不要先吃点东西，而她很礼貌地回答「不，谢谢」，你的反应应该是再多问她两次。只有当她回答「不，谢谢」三次以上，你才能把她的「不」当作真正的答案。</p>
+<p>答案就在那个所有礼貌的伊朗人都明白的共通预设上——你与玛莉安都知道，无论她有多饿，一个教养良好的人不会在别人第一次提供食物时就接受。所以，如果你不问她二或三次，玛莉安可能就要挨饿上床，而你则要为她没有尝到你特别准备的鸡肉沙拉而感到遗憾。</p>
+<p>◎直言不讳：是给你的珍贵礼物，还是赏你一巴掌？</p>
+<p>「你这人不知变通又不善交际，才会与你的团队沟通困难。」若是有公司同仁对你说这句话，你会如何反应？来自荷兰的威伦听着马丁的这番发言，他的耳朵渐渐变红，但马丁丝毫不觉困扰，他平静地在所有人面前，继续分析威伦的缺点。就在这时其他的成员（清一色都是美国人），全部尴尬地低头望着自己的脚。</p>
+<p>团辅结束后，有好几个人跑来跟我说，他们觉得马丁的评论非常不恰当。但回过头却看到威伦仍和马丁坐在一起，像多年好友一样谈笑风声，丝毫没有受到刚刚在众人面前被责难的影响！</p>
+<p>◎迟到多久才算晚？</p>
+<p>如果你住在像德国、北欧、美国或英国这类线性时间国家，迟到一分一秒你可能就需要打通电话报备了！但如果你住在法国或义大利北部，你可能不需要打这通电话，因为晚个六到七分钟基本上仍在「准时」范围内。</p>
+<p>处于弹性时间的文化，比如中东，非洲，印度，南美，时间在你脑中可能呈现全然不同的弹性，在这个情境下，九点十五分与九点四十五分到的差异微乎其微，并且每个人都能接受。</p>
+<p>当人们使用以下字眼描述那些从其他国家来的人——「没有弹性」、「混乱」、「晚」、「僵硬」、「缺乏组织」、「不可调适」，很有可能他们指的正是对「时间」的概念差异。要理解不同文化中对「时间」的潜在假设所造成行为与期待的落差可能深具挑战性。</p>
+<p>◎桃子与椰子：友善并不等于关系导向</p>
+<p>和许多文化比起来，美国人更有可能对陌生人微笑，以及去跟他们几乎不认识的人私下闲谈。其他人可能会把这种「友善」当作建立友谊的意图，等到后来发现美国人无意延续这份无心的行为，其他的文化通常就会指责他们是「骗子」或「伪善」。另一方面，来自桃子文化国度的人，遇到那些才刚认识的波兰、法国、德国、俄国同事，当自己的友善笑容与私人闲话，居然遭到一板一眼的无情对待时，会把他们像石头般冷硬的表情，看作傲慢自大，甚至是带有敌意的表现。</p>
+<p>在这些椰子文化里，对于没有交情的人，人们会比较为封闭（就像椰子坚韧的硬壳一样）。他们几乎都不对陌生人微笑，不会问偶然认识的人私人问题，或提供个人资讯给那些他们并不亲近的人。要突破他们最初的硬壳，需要花一点时间，但是如果你办到了，这些人会逐渐变得温暖和友善。虽然关系建立起来很慢，可是却往往能维持得更久。</p>
+<p>本书特点</p>
+<p>　搞懂文化差异，才能在全球企业谈判中无往不利！</p>
+<ul>
+<li>印度客户对你的提案半摇头半点头时，他是赞成？还是反对？</li>
+<li>美国老板对你的表现赞不绝口，只是有点「小小建议」，一切真的没问题？</li>
+<li>为什么我的提案准备得如此充分，日本董事们却丝毫不为所动？</li>
+<li>刚才法国同事对我讲了那么犀利的话，现在却怎么还能对我笑兮兮？</li>
+<li>为什么那个俄罗斯的合作案我拿不下来，别人一出马就搞定？</li>
+<li>墨西哥老板好热情，开完会后请我吃饭到半夜，他怎么都不嫌累？</li>
+<li>上谈判桌前要先攀好交情，但是对面那群荷兰人里谁是老板？怎么攀？</li>
+</ul>
+<p>八个面向的文化量表（the eight-scale model）</p>
+<ul>
+<li>1、沟通：低情境vs高情境</li>
+<li>2、评估：直接否定回应vs间接否定回应</li>
+<li>3、说服：原理优先vs应用优先</li>
+<li>4、领导：平权式vs阶级</li>
+<li>5、决策：共识vs由上而下</li>
+<li>6、信任：任务导向vs关系导向</li>
+<li>7、歧异：对峙vs避免对峙</li>
+<li>8、时程：线性时间vs弹性时间</li>
+</ul>
+<p>让你精确掌握文化交锋的真相，避免沦为「国际文盲」！　</p>
+<p>名家推荐</p>
+<p>　　艾琳•梅尔为我们呈现所有商业领袖都该知道的守则：在现今多元文化的工作环境中，如何进行有效的管理。 －－畅销书《UP学：所有经理人相见恨晚的一本书》作者马歇尔高德史密斯(Marshall Goldsmith)</p>
+<p>　　也许你正坐在波士顿的桌前，或是在北京的餐厅用餐，无论身在何方，跨文化沟通都会是你在全球化经济下的一大挑战，也是通往成功的金钥。艾琳•梅尔无疑写下一本宝典，所有的经营者都该拜读。 －－Thinkers50创办人戴斯狄洛夫(Des Dearlove)和斯图尔特克雷纳(Stuart Crainer)</p>
+<p>　　我真心推荐这本书－无论作为专业参考或是闲暇消遣都很适合。身为新世代学者的代表之一，艾琳展现了将复杂的理论模型付诸实用的能力。必读！ －－《跨越文化浪潮》作者佛恩斯特朗皮纳斯(Fons Trompenaars)</p>
+<p>　　即使商业的世界逐渐虚拟化、电子化，《文化地图》仍提醒我们，了解人际互动中的文化差异是重要的。对于跨国企业领导人来说，调和团队中的文化和个人差异是提高成效的关键。但唯有了解，才能面对和处理。梅尔透过研究与分析，指出一条明路，《文化地图》将帮助企业领导搭建「文化间的桥梁」，使组织团队的运作更加顺畅。 －－凯杰管理顾问公司全球执行长贝纳博士(Dr. Didier CL Bonnet)</p>
+<p>　　或许经济已全球化，但文化不然。艾琳梅尔的《文化地图》告诉我们，市场由人群构成；而偏见、期望、不同价值观都有可能在出乎意料的时刻，使我们做出不同的决策。文化影响人们，人们创造经济，唯有了解这项真理，才能通往成功。如果你想迈向全球，这本书是最好的旅途指引。 －－Google欧洲产品行销经理派德皮纳(Pedro Pina)</p>
+<p>Breaking Through the Invisible Boundaries of Global Business
+Why does your Swedish colleague have so many problems leading his Chinese team? How do you foster a good relationship with your Brazilian suppliers while sitting at your desk in Europe? How do you navigate the tricky task of performance reviews when your American employees precede negative feedback with three nice comments, while the French, Dutch, Israelis, and Germans skip the positives and get straight to the point? What is the best method for getting your team based on four continents to work together effectively?</p>
+<p>Globalization has led to the rapid connection of internationally based employees from all levels of multinational companies. Where once an employee might have been expected to primarily collaborate with colleagues from his own country, today many people are part of global networks connected with people scattered around the world. Yet most managers have little understanding of how local culture impacts global interaction. Even those who are culturally informed, travel extensively, and have lived abroad often have few strategies for dealing with the cross-cultural complexity that affects their team’s day-to-day effectiveness. The Culture Map provides a new way forward, with vital insights for working effectively and sensitively with one’s counterparts in the new global marketplace.</p>
+<p>Based on her work at INSEAD, the “Business School for the World” based in Paris, Erin Meyer provides a field-tested model for decoding how cultural differences impact international business.  She combines a smart analytical framework with practical, actionable advice for working in a global world. Whether you need to motivate employees, delight clients, or simply organize a conference call among members of a cross-cultural team, the eight dimensions featured in The Culture Map will help you improve your effectiveness.  By analyzing the positioning of one culture relative to another, the dimensions enable you to decode how culture influences your own international collaboration.</p>
+<p>The book is also filled with engaging, real-life stories and anecdotes from around the world that impart important lessons about global teamwork and international collaboration, including:</p>
+<p>Takaki explains to his multinational colleagues the importance of “reading the air,” or picking up on the unspoken subtext of a conversation, in Japanese communication
+Sarah sends e-mails to several Indian IT engineers only to understand later that she has offended and isolated their boss by not going through him
+Sabine doesn’t realize her job is in jeopardy after her performance review, as her American boss couches the message in a positivity rarely used in France.
+Ulrich’s Russian staff perceive him as weak and incompetent as he employs the egalitarian leadership techniques so popular in his native Denmark.
+Bo Chen – who has something urgent to say – waits patiently to be called on while his American colleagues jump in one after the other.  His opportunity never comes.
+Now available in Korean, Japanese, Chinese, Indonesian, Turkish, Russian, Dutch, Spanish, German and French. Currently being translated in Italian.</p>
+<h2 id="作者简介-------">作者简介  · · · · · ·</h2>
+<p>艾琳梅尔Erin Meyer</p>
+<p>　　任教于英士国际商学院（INSEAD）——世界知名的一所领导性国际商业学校，专精跨文化管理、组织行为学。在美国、非洲和欧洲多地居住和工作的丰富经历，促使她投入对世界不同地区，不同的沟通和商业模式的研究调查工作；多年来全力研究成功的国际领导人，如何得以在跨文化的环境里，自在优游于错综复杂的文化差异之间。透过她所提供的理论架构，协助了无数国际企业经理人了解不同文化间的差异，得以比较各文化的管理风格异同，精确设定最合适的领导方式。</p>
+<p>　　为英士国际商学院「全球虚拟团队人力管理」与「国际企业管理技巧」教育计划的计划主持人。曾受邀为默克集团化工制药公司(MERCK)、艾克森美孚石油公司(ExxonMobil)、莱雅集团化妆品公司(L&rsquo;Oreal)、米其林轮胎公司(Michelin)、世界银行(World Bank)与纽约证券交易所(New York Stock Exchange)……等多家大型企业进行演讲。文章常见于《哈佛商业评论》(Harvard Business Review)、《新加坡商业时报》(Singapore Business Times)与富比士网站(Forbes.com)。</p>
+<p>　　目前居住在法国巴黎。 2013年获全球管理学组织“On the Radar”，评选为年度50名全球最有前瞻性商业思想家之一。个人推特：@ErinMeyerINSEAD</p>
+<h2 id="下载链接">下载链接：</h2>
+<p><a href="https://url96.ctfile.com/d/35561896-61138204-b7b948?p=4184">城通网盘</a>（访问密码：4184）</p>
+
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+
+      <li class="font-semibold my-4">Tags:</li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E8%81%8C%E5%9C%BA/">职场</a></li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E7%AE%A1%E7%90%86/">管理</a></li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E8%8B%B1%E6%96%87/">英文</a></li>
+    </ul>
+</div>
+
+    <footer id="content-footer" class="not-prose">
+
+      <div id="comment" class="border p-8 bg-zinc-100 rounded-2xl">
+
+        
+
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bookstore-4" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+
+      
+
+      <div id="related-post" class="">
+
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/the-4-hour-work-week/"></a>
+
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s2656192.jpg" alt="每周工作4小时（英文版）" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%81%8C%E5%9C%BA/">职场</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%8B%B1%E6%96%87/">英文</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-04-08T06:59:23&#43;13:00">Apr 08, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">每周工作4小时（英文版）</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">不管你是忙碌的上班族，还是世界500强的总裁，这本书都将改变你的人生。</p>
+
+	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/the-fine-art-of-small-talk/"></a>
+
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s4258682.jpg" alt="The Fine Art of Small Talk" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%81%8C%E5%9C%BA/">职场</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%8F%A3%E8%AF%AD/">口语</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%8B%B1%E6%96%87/">英文</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-04-08T06:59:19&#43;13:00">Apr 08, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">The Fine Art of Small Talk</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">任何人都可以在任何情况下闲聊的技巧和策略</p>
+
+	</div>
+</article>
+          
+        </div>
+      </div>
+
+    </footer>
+
+  </article>
+
+  
+  <aside class="md:col-span-1"><div class="lg:sticky lg:top-8">
+
+	<div class="rounded-2xl p-4 bg-zinc-100 mb-10">
+
+		<img class="aspect-video rounded" src="/images/ads-placeholder.png" alt="Banner Email Marketing">
+
+		<p class="text-right text-xs mt-2 leading-none text-zinc-500">Advertisement</p>
+
+</div><h2 class="font-bold text-xl mb-8">Donation</h2>
+
+<div class="mb-10">
+	<p class="mb-5">捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式</p>
+    <p>Please consider supporting us through Alipay or WeChat.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">Alipay</h2>
+        <img src="/donation/AliPayQR.png" alt="Alipay QR Code" class="w-full">
+      </div>
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">WeChat</h2>
+        <img src="/donation/WeChatQR.png" alt="WeChat QR Code" class="w-full">
+      </div>
+    </div>
+
+</div><div class="space-y-6">
+
+		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
+
+		<article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/other-rivers/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img9.doubanio.com/lpic/s34686385.jpg" alt="Other Rivers: A Chinese Education" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Other Rivers: A Chinese Education</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-08-01/2024-08-01-antidoping-agency/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-08-01/2024080101_hu3d03a01dcc18bc5be0e67db3d8d209a6_68711_250x250_crop_q75_box_center.jpg" alt="药检阳性归咎于食品污染即可免责？反兴奋剂机构展开调查" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">药检阳性归咎于食品污染即可免责？反兴奋剂机构展开调查</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-07-29/2024-07-23-the-ai-gap/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-07-29/2024072901_hucf967c33f389130ab619766a81118218_154340_250x250_crop_q75_box_center.jpg" alt="中国人工智能进步加速，正缩小与美国差距" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">中国人工智能进步加速，正缩小与美国差距</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-07-23/2024-07-23-bidens-decision/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-07-23/2024072301_hucf967c33f389130ab619766a81118218_90111_250x250_crop_q75_box_center.jpg" alt="拜登宣布退选：放弃寻求连任，转而支持哈里斯" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">拜登宣布退选：放弃寻求连任，转而支持哈里斯</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/say-nothing/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s33925370.jpg" alt="什么也别说 - Say Nothing" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">什么也别说 - Say Nothing</h3>
+	</div>
+</article>
+		
+	</div>
+
+</div>
+</aside>
+
+</div>
+  
+</main>
+  <footer class="bg-zinc-100 py-10 md:py-14"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+  <div class="flex flex-wrap space-y-6 mb-4">
+
+    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+
+      <a class="flex items-center group" href="https://iyuedu.top/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="mr-2 group-hover:animate-spin" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+        </svg>
+        
+        <span class="text-2xl font-semibold uppercase">i 悦读</span>
+      </a>
+
+      <p class="font-semibold text-sm">
+        Write with love. i 悦读.<br>捐赠对我们来说非常重要。这是保持服务正常运行的最安全、最可靠的方式。
+      </p>
+
+      <p class="text-sm">有时你们真的很慷慨，其实闲时来逛逛，已经是最好的支持了。</p>
+
+    </div>
+
+    <div class="self-center flex flex-col w-full md:w-2/5">
+
+      <div class="columns-1 space-y-4">
+
+        <ul id="social-media" class="flex items-center space-x-4">
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.facebook.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.twitter.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.github.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.instagram.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+			</svg>
+		</a>
+	</li>
+</ul>
+ 
+        <div class="text-sm">
+          <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2023028266号-1</a>
+        </div>
+
+        <div class="text-sm">
+          <a target="_blank" rel="noopener" href="https://iyuedu.top/">本站所有书籍信息及简介均来自互联网！</a>
+        </div>
+
+    </div>
+
+    </div>
+    
+  </div>
+
+  <div class="my-8">
+    <ul class="flex items-center space-x-4">
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">Home</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/about/">关于</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="border-t pt-4">
+
+    <p class="text-sm">Copyright © 2024. All rights reserved. <a href="https://iyuedu.top/" target="_blank" rel="noopener">https://iyuedu.top/</a></p>
+
+  </div>
+
+</div>
+</footer>
+      <script defer src="/js/insertoggle.474f9b0e08021c6519cff4e46df14ccf148285b2d3a23d6321d6e10f25c291fb.js" integrity="sha256-R0&#43;bDggCHGUZz/TkbfFMzxSChbLToj1jIdbhDyXCkfs=" crossorigin="anonymous"></script>
+</body>
+</html>

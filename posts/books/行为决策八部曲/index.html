@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>行为决策八部曲 | i 悦读</title>
+
+<meta name="description" content="你以为你以为的就是你以为的吗">
+      <link rel="stylesheet" href="/css/main.min.2dff239451b5c241561832ed339ea00286b502099254bc8f2be8edd47373ac9a.css" integrity="sha256-Lf8jlFG1wkFWGDLtM56gAoa1AgmSVLyPK&#43;jt1HNzrJo=" crossorigin="anonymous">
+
+<link rel="icon" type="image/svg+xml" href="https://iyuedu.top/favicon.svg"> 
+<link rel="icon" type="image/x-icon" href="https://iyuedu.top/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="16x16" href="https://iyuedu.top/favicon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
+
+</head>
+<body>
+  <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
+	<div class="flex items-center">
+		<div class="flex items-center">
+			<button class="flex items-center space-x-2 rounded-full border py-1 pr-[5px] pl-3 group bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="menu-bar">
+				<svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+				</svg>
+				<span class="bg-blue-500 fill-white rounded-full p-1.5">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="group-hover:animate-spin bi bi-egg-fried fill-white" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+						<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"></path>
+					</svg>
+				</span>
+			</button>
+			<div class="relative rounded-full py-1.5 px-6 bg-zinc-100 hover:bg-zinc-200 text-xl font-bold uppercase mx-2">
+				<h2><a class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto" href="https://iyuedu.top/">i 悦读</a></h2>
+			</div>
+		</div>
+		<div class="flex items-center ml-auto">
+			<button class="flex items-center rounded-full p-3 bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="search-bar">
+				<svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+					<path id="path1" class="transition-all ease-linear" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+					<path id="path2" class="transition-all ease-linear hidden" d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+  <nav id="menu-bar" class="block mt-3 close">
+    <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">Home</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">关于</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">categories</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+<div id="search-bar" class="block mt-3 close">
+	
+	<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/pagefind/pagefind-ui.js"></script>
+	<div id="search"></div>
+	<script>
+	  window.addEventListener('DOMContentLoaded', (event) => {
+		new PagefindUI({
+		  element: "#search",
+		  showSubResults: true
+		});
+	  });
+	</script>
+	
+	
+	<div id="search-results"></div>
+</div>
+</div></header>
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/">i 悦读</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/posts/">Posts</a>
+		</li>
+	</ul>
+</div><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-14">
+
+  <article class="md:col-span-3 prose lg:prose-lg">
+
+    <header class="not-prose">
+      
+      <h1 id="title" class="text-4xl font-bold leading-normal">行为决策八部曲</h1>
+
+      <div id="lead" class="my-6">
+
+        <p class="font-bold">你以为你以为的就是你以为的吗 </p>
+
+      </div>
+      
+      <div id="writer" class="flex items-center space-x-4">
+
+        
+        
+        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+          
+          <li class="font-semibold my-2"></li>
+          
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2"><time datetime="2023-02-28T13:35:06&#43;00:00">February 28, 2023</time>
+          </li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+            1 min read
+          </li>
+
+        </ul>
+
+      </div>
+      
+    </header>
+
+    <figure id="featureimage" class="rounded-xl aspect-video">
+
+          <img class="rounded-lg" src="https://images-cn.ssl-images-amazon.cn/images/I/41rK9tagmTL.jpg" alt="行为决策八部曲">
+
+    </figure>
+
+    <div id="content" class="mb-14">
+      <h2 id="内容简介-------">内容简介  · · · · · ·</h2>
+<p>噪声</p>
+<p>想象一下，两名医生对相同的病人给出了不同的诊断；两名法官对犯了同罪的嫌疑人给出了不同的判决。再想象一下，同样的医生、法官或决策者做出了不同的决策，而这种决策仅仅取决于决策是在什么时间做出的。这些不同决策背后的罪魁祸首，就是“噪声”。
+《噪声》是诺贝尔经济学奖得主、“行为经济学之父”丹尼尔·卡尼曼携手决策领域专家奥利维耶·西博尼和卡斯·桑斯坦共同推出的重磅新作，也是卡尼曼继畅销书《思考，快与慢》之后酝酿10年思考的全球瞩目里程碑式巨作，行为科学领域又一重大发现。几十年来，大家都认为，偏差是导致人类判断出错的关键。但是今天，卡尼曼系统性地指出：噪声，才是影响人类判断的黑洞。
+本书通过系统性研究，通过两个公式揭开了“判断出错”的本质，并且通过对三种噪声的系统性分析带你直击噪声。并且，从六大部分阐述了“噪声”：从寻获噪声到探究人类判断的本质，从预测噪声到阐释噪声的主要原因，从探讨如何改进判断和防止错误的的实际问题，一直延伸到什么才是合适的噪声水平。”“噪声”是随机的，但却是致命的。卡尼曼在书中提出了6大原则，帮你重塑决策框架，做聪明的决策者。同时，卡尼曼更是精妙地附上了“审查噪声”的使用指南，以及写给决策者的“观察者清单”。
+《噪声》一经出版便风靡全球31个国家与地区，吸引了无数商业人士的目光，被投资人、心理学家、众多媒体人争相盛赞。</p>
+<p>福格行为模型</p>
+<p>福格博士亲自拆解了他提出的福格行为模型，揭示了驱动人类所有行为的3个关键要素，解析了每一个要素在驱动人类行为中的重要作用，提供了激发每一个要素以更好地推动行为改变的有效方法。此外，福格博士还给出了让福格行为模型更好地发挥作用的两个方法，通过设计情绪来设计行为，通过打造高频率小成功让小改变自然生长。
+本书不仅能够帮助人们毫不费力地养成好习惯，也能够指导人们成功对抗坏习惯；不仅能够帮助个人实现改变，也能够帮助群体直面挑战。只要掌握福格行为模型的精髓并加以灵活运用，每个人都能够轻松改变自己的工作与生活，成为自己想要成为的那个人。
+本书给出了福格行为设计工具箱，包含15种人生情景与挑战、300个微习惯配方、100种庆祝方式，手把手地教你减重、减压、改善睡眠质量、摆脱坏习惯、提升效率……
+《纽约时报》大畅销书，美国亚马逊2020年商业与领导力书籍#1。</p>
+<p>影响力</p>
+<p>本书是西奥迪尼的社会心理学经典作品，在书中，作者从专业角度为读者阐释了顺从他人行为背后的六大基本原则：互惠、承诺和一致、社会认同、喜好、权威和稀缺，为我们解释了为什么有些人极具说服力，而我们总是容易上当受骗。本书对于商业人士以及广大普通读者有深远的意义，教你学会对顺从业人士说“不”，帮助你成为一个真正对他人有影响力的人。
+西奥迪尼经典作品 风靡全球30载，被引述率高居当今社会心理学之冠，《财富》杂志鼎力推荐的“75本商业必读书”之一，亚马逊推荐的“人生必读100本书”之一。
+自出版以来，《影响力》就一直是畅销佳作。由于它的影响，劝说得以成为一门科学。无论你是普通人还是为某一产品或事业观点游说的人，这都是一本最基本的书，是你理解人们心理的基石。
+在这本书中，心理学家罗伯特·B·西奥迪尼博士为我们解释了为什么有些人极具说服力，而我们总是容易上当受骗。隐藏在冲动地顺从他人行为背后的6大心理秘笈，正是这一切的根源。那些劝说高手们，总是熟练地运用它们，让我们就范。</p>
+<p>你以为你以为的就是你以为的吗？</p>
+<p>在《你以为你以为的就是你以为的吗》中，作者精心设计了12道检测思考清晰度的逻辑谜题，涵盖哲学、逻辑推理、信仰、思想一致性、禁忌底线、道德标准、艺术、身心灵、自由、终极逻辑常识等多个有趣话题。读者可以通过12道逻辑谜题检测思考的清晰度，快速提高思考力，抓住别人的思维漏洞！
+面对社会上众多混乱的声音，找回理性判断的能力，拥有最清晰的思路，解除根深蒂固的痛苦。严密有趣的进阶测试，清晰易懂的题目解析，使本书成为英国最受欢迎的哲学普及类读物。</p>
+<p>模型思维</p>
+<p>工作中，你在团队中是不是不可替代的人？
+爱情上，为什么异地恋的相聚能够带来很大的幸福感？
+游戏中，选择什么样的策略才能在各种游戏中立于不败之地？
+现实社会中，为什么很少有女性成为CEO？为什么披头士的歌曲会那么流行？
+……</p>
+<p>关于这些问题的正确答案，都可以用斯科特·佩奇新书《模型思维》中的模型来回答。斯科特·佩奇是风靡全球的“模型思维课”主讲人，有超过100万各行各业的人反复学习并从中受益。新书《模型思维》讲解了24种模型，从线性回归到随机漫步，从博弈论到合作，涵盖学习、工作、生活等方方面面——这些有趣的模型可以把任何人变成天才。
+芒格说：“要想成为一个有智慧的人，你必须拥有多个模型。”这是一个数据爆炸的时代，数据充斥着我们的工作与生活，但仅拥有数据是远远不够的，必须学会让数据说话。模型就是让数据说话的秘诀，模型将帮助我们所有人从掌握信息提升到拥有智慧。
+本书中的24种模型就是一个应对复杂世界的思维工具箱。各行各业、各种需求的所有人都可以根据此书建立专属于自己的思维工具箱，成为一个多模型思考者。它将帮助你整理数据、提取信息、去伪存真，在决策时让你知道选择什么样的模型，选取一个模型还是几个模型。而这是现代高手必备的一种大智慧。</p>
+<p>稀缺：我们是如何陷入贫穷与忙碌的</p>
+<p>在长期研究穷人和扶贫的过程中，塞德希尔· 穆来纳森发现他和穷人的焦虑竟然类似：穷人缺钱，他缺时间。在这一现象基础上，他与普林斯顿大学心理学教授埃尔德·沙菲尔进行了大量的实验室研究和现实调查，却发现了一个存在于世人中间的惊人真相：穷困之人会永远缺钱，而忙碌之人会永远缺时间。
+但是，进一步的研究证实：这些都是表面现象。因为即便是给穷人一笔钱，给拖延症患者一些时间，他们也无法变得富足和高效。实际上，在长期性的资源（钱、时间）稀缺中，人们已经形成了“管窥”之见，只能看到“管子”之中的事物，虽然这有可能为我们带来“专注红利”（短期的富裕或效率），但是从长远来看，这种“专心致志”反而会让我们产生“权衡式思维”，不断增加我们的带宽负担——当1元钱的价值在穷人与富人之间产生了巨大差异时，当印度金奈的街头小贩们陷入了无止境的借贷压力时，当每个人都处在多任务处理的“杂耍”状态中时……最理性的经济模型和行为方式都会变得不再符合自身的内在逻辑。最终，稀缺会俘获我们的大脑，渐渐让我们失去认知能力和执行控制力，变得更加愚笨和冲动。
+《稀缺》是《思考，快与慢》作者丹尼尔·卡尼曼最推崇的行为经济学新作，它旨在揭示稀缺心态的各种复杂成因，并提出以“余闲”牵制稀缺的应对之法。所以，只有对“带宽”进行合理的规划和管理，我们才有可能从稀缺走向富足。
+哈佛大学终身教授、“麦克阿瑟天才奖”获得者塞得希尔·穆来纳森和普林斯顿大学心理学教授埃尔德·沙菲尔强强联合之作，继诺贝尔经济学奖获得者丹尼尔·卡尼曼《思考，快与慢》之后的又一部行为经济学重磅著作，《金融时报》2013年必读十佳商业图书。</p>
+<p>慢决策</p>
+<p>华尔街金融畅销书《泥鸽靶》《火柴大王》作者帕特诺伊，用《慢决策》颠覆你的常识，重新定义“慢”的智慧。
+这是一本讨论决策时机及教你如何在充分思考后果断下决定的书。“慢决策”主张等待是生活的常态，只要延迟得恰到好处，在做决定前等待一段时间尽可能搜集最多信息，行动起来便可得心应手。
+帕特诺伊教授通过探访百余位专家，从投资管理、喜剧表演、比赛、军事策略制定、创新发明，甚至说话、约会、道歉等对时机的正确把握中，揭开时间管理与延迟决策的谜团。“慢决策”才能够领导“快时代”！</p>
+<p>整合决策</p>
+<p>这是一本实用之书。书中揭示了领导者致胜的关键在于他们的思维方式：跳出两难选择，重新界定问题，通过转变看问题的视角，权衡各方，提出更好的解决方案。他和詹妮弗·里尔教授在《整合决策》中进一步揭示了如何将整合思维的理论转化为实践操作方法，他提出应用整合决策制定优秀决策的4个阶段。
+全球极具影响力的50大商业思想家之一、罗特曼管理学院前院长罗杰·马丁、罗特曼管理学院副教授詹妮弗·里尔总结十多年商业咨询经验的经典力作。</p>
+<h2 id="下载链接">下载链接：</h2>
+<p><a href="https://url96.ctfile.com/d/35561896-54716236-49f06d?p=4184">城通网盘</a>(访问密码： 4184)</p>
+
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+
+      <li class="font-semibold my-4">Tags:</li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E5%95%86%E4%B8%9A/">商业</a></li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
+    </ul>
+</div>
+
+    <footer id="content-footer" class="not-prose">
+
+      <div id="comment" class="border p-8 bg-zinc-100 rounded-2xl">
+
+        
+
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bookstore-4" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+
+      
+
+      <div id="related-post" class="">
+
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E5%BF%83%E7%90%86%E5%AD%A6%E8%AF%91%E4%B8%9B/"></a>
+
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://images-cn.ssl-images-amazon.cn/images/I/51FCnu4P2cL.jpg" alt="人际关系心理学译丛" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%BF%83%E7%90%86/">心理</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-02-28T13:35:05&#43;00:00">Feb 28, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">人际关系心理学译丛</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">如何正确吵架、情感勒索、分手后，成为更好的自己</p>
+
+	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/yuedu/yuedu240/"></a>
+
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://images-cn.ssl-images-amazon.cn/images/I/41bw1GVcodL._SY346_.jpg" alt="悦读240" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%82%A6%E8%AF%BB/">悦读</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-02-26T14:00:14&#43;00:00">Feb 26, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">悦读240</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">summary</p>
+
+	</div>
+</article>
+          
+        </div>
+      </div>
+
+    </footer>
+
+  </article>
+
+  
+  <aside class="md:col-span-1"><div class="lg:sticky lg:top-8">
+
+	<div class="rounded-2xl p-4 bg-zinc-100 mb-10">
+
+		<img class="aspect-video rounded" src="/images/ads-placeholder.png" alt="Banner Email Marketing">
+
+		<p class="text-right text-xs mt-2 leading-none text-zinc-500">Advertisement</p>
+
+</div><h2 class="font-bold text-xl mb-8">Donation</h2>
+
+<div class="mb-10">
+	<p class="mb-5">捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式</p>
+    <p>Please consider supporting us through Alipay or WeChat.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">Alipay</h2>
+        <img src="/donation/AliPayQR.png" alt="Alipay QR Code" class="w-full">
+      </div>
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">WeChat</h2>
+        <img src="/donation/WeChatQR.png" alt="WeChat QR Code" class="w-full">
+      </div>
+    </div>
+
+</div><div class="space-y-6">
+
+		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
+
+		<article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/other-rivers/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img9.doubanio.com/lpic/s34686385.jpg" alt="Other Rivers: A Chinese Education" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Other Rivers: A Chinese Education</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-08-01/2024-08-01-antidoping-agency/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-08-01/2024080101_hu3d03a01dcc18bc5be0e67db3d8d209a6_68711_250x250_crop_q75_box_center.jpg" alt="药检阳性归咎于食品污染即可免责？反兴奋剂机构展开调查" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">药检阳性归咎于食品污染即可免责？反兴奋剂机构展开调查</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-07-29/2024-07-23-the-ai-gap/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-07-29/2024072901_hucf967c33f389130ab619766a81118218_154340_250x250_crop_q75_box_center.jpg" alt="中国人工智能进步加速，正缩小与美国差距" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">中国人工智能进步加速，正缩小与美国差距</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/news/2024-07-23/2024-07-23-bidens-decision/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/2024-07-23/2024072301_hucf967c33f389130ab619766a81118218_90111_250x250_crop_q75_box_center.jpg" alt="拜登宣布退选：放弃寻求连任，转而支持哈里斯" width="250" height="250">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">拜登宣布退选：放弃寻求连任，转而支持哈里斯</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/say-nothing/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s33925370.jpg" alt="什么也别说 - Say Nothing" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">什么也别说 - Say Nothing</h3>
+	</div>
+</article>
+		
+	</div>
+
+</div>
+</aside>
+
+</div>
+  
+</main>
+  <footer class="bg-zinc-100 py-10 md:py-14"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+  <div class="flex flex-wrap space-y-6 mb-4">
+
+    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+
+      <a class="flex items-center group" href="https://iyuedu.top/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="mr-2 group-hover:animate-spin" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+        </svg>
+        
+        <span class="text-2xl font-semibold uppercase">i 悦读</span>
+      </a>
+
+      <p class="font-semibold text-sm">
+        Write with love. i 悦读.<br>捐赠对我们来说非常重要。这是保持服务正常运行的最安全、最可靠的方式。
+      </p>
+
+      <p class="text-sm">有时你们真的很慷慨，其实闲时来逛逛，已经是最好的支持了。</p>
+
+    </div>
+
+    <div class="self-center flex flex-col w-full md:w-2/5">
+
+      <div class="columns-1 space-y-4">
+
+        <ul id="social-media" class="flex items-center space-x-4">
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.facebook.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.twitter.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.github.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.instagram.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+			</svg>
+		</a>
+	</li>
+</ul>
+ 
+        <div class="text-sm">
+          <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2023028266号-1</a>
+        </div>
+
+        <div class="text-sm">
+          <a target="_blank" rel="noopener" href="https://iyuedu.top/">本站所有书籍信息及简介均来自互联网！</a>
+        </div>
+
+    </div>
+
+    </div>
+    
+  </div>
+
+  <div class="my-8">
+    <ul class="flex items-center space-x-4">
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">Home</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/about/">关于</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="border-t pt-4">
+
+    <p class="text-sm">Copyright © 2024. All rights reserved. <a href="https://iyuedu.top/" target="_blank" rel="noopener">https://iyuedu.top/</a></p>
+
+  </div>
+
+</div>
+</footer>
+      <script defer src="/js/insertoggle.474f9b0e08021c6519cff4e46df14ccf148285b2d3a23d6321d6e10f25c291fb.js" integrity="sha256-R0&#43;bDggCHGUZz/TkbfFMzxSChbLToj1jIdbhDyXCkfs=" crossorigin="anonymous"></script>
+</body>
+</html>
