@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on i 悦读</title>
-    <link>https://iyuedu.netlify.app/tags/ai/</link>
+    <link>https://iyuedu.top/tags/ai/</link>
     <description>Recent content in AI on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 03 Aug 2024 06:52:48 +1300</lastBuildDate>
-    <atom:link href="https://iyuedu.netlify.app/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iyuedu.top/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>哈佛商业评论•人工智能必读10本书</title>
-      <link>https://iyuedu.netlify.app/posts/books/hbrs-10-must-reads-on-ai/</link>
+      <link>https://iyuedu.top/posts/books/hbrs-10-must-reads-on-ai/</link>
       <pubDate>Sat, 03 Aug 2024 06:52:48 +1300</pubDate>
-      <guid>https://iyuedu.netlify.app/posts/books/hbrs-10-must-reads-on-ai/</guid>
+      <guid>https://iyuedu.top/posts/books/hbrs-10-must-reads-on-ai/</guid>
       <description>《哈佛商业评论•人工智能必读10本书》&#xA;作者：Harvard Business Review 出版社：Ascent Audio 主题领域：Artificial Intelligence (AI)&#xA;内容简介 · · · · · · The next generation of AI is here - use it to lead your business forward.</description>
     </item>
     <item>
       <title>中国人工智能进步加速，正缩小与美国差距</title>
-      <link>https://iyuedu.netlify.app/posts/news/2024-07-29/2024-07-23-the-ai-gap/</link>
+      <link>https://iyuedu.top/posts/news/2024-07-29/2024-07-23-the-ai-gap/</link>
       <pubDate>Mon, 29 Jul 2024 09:11:37 +1300</pubDate>
-      <guid>https://iyuedu.netlify.app/posts/news/2024-07-29/2024-07-23-the-ai-gap/</guid>
+      <guid>https://iyuedu.top/posts/news/2024-07-29/2024-07-23-the-ai-gap/</guid>
       <description>China Is Closing the A.I. Gap With the United States MEAGHAN TOBIN, CADE METZ&#xA;At the World Artificial Intelligence Conference in Shanghai this month, start-up founder Qu Dongqi showed off a video he had recently posted online.</description>
     </item>
   </channel>
