@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://iyuedu.top/categories/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/posts/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/tags/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/categories/%E5%9B%BE%E4%B9%A6/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/tags/%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/posts/books/wen-cheng/</loc>
+    <lastmod>2024-09-25T06:52:16+13:00</lastmod>
+  </url><url>
     <loc>https://iyuedu.top/tags/10/</loc>
     <lastmod>2024-09-25T05:49:03+13:00</lastmod>
   </url><url>
-    <loc>https://iyuedu.top/categories/</loc>
-    <lastmod>2024-09-25T05:49:03+13:00</lastmod>
-  </url><url>
     <loc>https://iyuedu.top/tags/feature/</loc>
-    <lastmod>2024-09-25T05:49:03+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/</loc>
-    <lastmod>2024-09-25T05:49:03+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/posts/</loc>
-    <lastmod>2024-09-25T05:49:03+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/</loc>
     <lastmod>2024-09-25T05:49:03+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/tags/%E6%9C%9F%E5%88%8A/</loc>
@@ -33,9 +42,6 @@
     <lastmod>2024-09-25T05:49:03+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/tags/%E5%8E%86%E5%8F%B2/</loc>
-    <lastmod>2024-09-24T06:52:16+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/categories/%E5%9B%BE%E4%B9%A6/</loc>
     <lastmod>2024-09-24T06:52:16+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/books/cha-guan-zhi-shang/</loc>
@@ -132,9 +138,6 @@
     <lastmod>2024-09-10T06:51:14+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/books/jia-ting-sheng-huo/</loc>
-    <lastmod>2024-09-02T06:51:14+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/%E5%B0%8F%E8%AF%B4/</loc>
     <lastmod>2024-09-02T06:51:14+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/article/wei-shi-jie-mo-ri-gou-zhi-cang-shen-chu/</loc>
