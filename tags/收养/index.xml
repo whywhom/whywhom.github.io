@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>收养 on i 悦读</title>
-    <link>https://iyuedu.top/tags/%E6%94%B6%E5%85%BB/</link>
+    <link>http://localhost:1313/tags/%E6%94%B6%E5%85%BB/</link>
     <description>Recent content in 收养 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 12 Sep 2024 06:51:48 +1300</lastBuildDate>
-    <atom:link href="https://iyuedu.top/tags/%E6%94%B6%E5%85%BB/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%94%B6%E5%85%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“一个时代的终结”：中国不再允许外国家庭收养中国儿童</title>
-      <link>https://iyuedu.top/posts/news/2024-09-12/2024-09-12-china-stops-foreign-adoptions/</link>
+      <link>http://localhost:1313/posts/news/2024-09-12/2024-09-12-china-stops-foreign-adoptions/</link>
       <pubDate>Thu, 12 Sep 2024 06:51:48 +1300</pubDate>
-      <guid>https://iyuedu.top/posts/news/2024-09-12/2024-09-12-china-stops-foreign-adoptions/</guid>
+      <guid>http://localhost:1313/posts/news/2024-09-12/2024-09-12-china-stops-foreign-adoptions/</guid>
       <description>&lt;h2 id=&#34;china-stops-foreign-adoptions-ending-a-complicated-chapter&#34;&gt;China Stops Foreign Adoptions, Ending a Complicated Chapter&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;艾莎, ZIXU WANG&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;For three decades, China sent tens of thousands of young children overseas for adoption as it enforced a strict one-child policy that forced many families to abandon their babies. Now the government will no longer allow most foreign adoptions, a move that it said was in line with global trends.&lt;/p&gt;</description>
     </item>
   </channel>

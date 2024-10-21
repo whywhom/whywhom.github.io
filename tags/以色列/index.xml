@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>以色列 on i 悦读</title>
-    <link>https://iyuedu.top/tags/%E4%BB%A5%E8%89%B2%E5%88%97/</link>
+    <link>http://localhost:1313/tags/%E4%BB%A5%E8%89%B2%E5%88%97/</link>
     <description>Recent content in 以色列 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 24 Sep 2024 06:51:50 +1300</lastBuildDate>
-    <atom:link href="https://iyuedu.top/tags/%E4%BB%A5%E8%89%B2%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E4%BB%A5%E8%89%B2%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>以色列的寻呼机攻击改变了世界</title>
-      <link>https://iyuedu.top/posts/news/2024-09-24/2024-09-24-japanese-seafood/</link>
+      <link>http://localhost:1313/posts/news/2024-09-24/2024-09-24-japanese-seafood/</link>
       <pubDate>Tue, 24 Sep 2024 06:51:50 +1300</pubDate>
-      <guid>https://iyuedu.top/posts/news/2024-09-24/2024-09-24-japanese-seafood/</guid>
+      <guid>http://localhost:1313/posts/news/2024-09-24/2024-09-24-japanese-seafood/</guid>
       <description>&lt;h2 id=&#34;israels-pager-attacks-have-changed-the-world&#34;&gt;Israel’s Pager Attacks Have Changed the World&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;BRUCE SCHNEIER&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Israel’s brazen attacks on Hezbollah last week, in which hundreds of pagers and two-way radios exploded and killed at least 37 people, graphically illustrated a threat that cybersecurity experts have been warning about for years: Our international supply chains for computerized equipment leave us vulnerable. And we have no good means to defend ourselves.&lt;/p&gt;</description>
     </item>
   </channel>
