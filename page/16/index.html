@@ -22,7 +22,7 @@
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
-          document.location.href = "/posts";
+          document.location.href = "/posts/protected";
         });
       }
     });
@@ -107,7 +107,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -214,8 +214,6 @@
     </section>
   </div>
   </div>
-
-
 
 
 
@@ -374,8 +372,6 @@
 
 
 
-
-
 <section class="mb-16">
 
   <div class="flex items-center mb-6">
@@ -501,8 +497,6 @@
 
 </section>
 <hr class="my-8">
-
-
 
 
 
@@ -658,33 +652,6 @@
     
 
     <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%81%B6%E9%AD%94%E6%B3%95%E5%88%99/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img9.doubanio.com/lpic/s26353045.jpg" alt="恶魔法则" style="width: 100%; height: 100%; object-fit: cover;">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%8E%84%E5%B9%BB/">玄幻</a></li>
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%B0%8F%E8%AF%B4/">小说</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2024-05-11T06:59:36&#43;13:00">May 11, 2024</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">恶魔法则</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">终有一天，这个世界将被我踩在脚下！</p>
-
-	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86/"></a>
 	
@@ -926,6 +893,33 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">平衡血糖水平，提升和改善健康状况</p>
 
 	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E9%A3%8E%E8%B5%B7%E9%99%87%E8%A5%BF/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s27269050.jpg" alt="风起陇西" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%82%AC%E7%96%91/">悬疑</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-05-07T06:59:32&#43;13:00">May 07, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">风起陇西</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">三国时代的间谍战争，黑暗中的猎杀与反猎杀</p>
+
+	</div>
 </article>
 
   </div>
@@ -1030,7 +1024,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

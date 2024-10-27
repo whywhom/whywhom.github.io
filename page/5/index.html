@@ -22,7 +22,7 @@
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
-          document.location.href = "/posts";
+          document.location.href = "/posts/protected";
         });
       }
     });
@@ -107,7 +107,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -214,8 +214,6 @@
     </section>
   </div>
   </div>
-
-
 
 
 
@@ -374,8 +372,6 @@
 
 
 
-
-
 <section class="mb-16">
 
   <div class="flex items-center mb-6">
@@ -501,8 +497,6 @@
 
 </section>
 <hr class="my-8">
-
-
 
 
 
@@ -658,32 +652,6 @@
     
 
     <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/zhong-guo-jin-dai-shi/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s33707263.jpg" alt="中国近代史" style="width: 100%; height: 100%; object-fit: cover;">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2024-08-13T06:51:10&#43;13:00">Aug 13, 2024</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">中国近代史</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">近代史研究开山经典，影响海内外数代学人</p>
-
-	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/ji-e-de-sheng-shi/"></a>
 	
@@ -917,6 +885,32 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">探寻北宋盛衰之变背后的深层成因，以及超越时代的镜鉴意义。</p>
 
 	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/sheng-shi-de-beng-ta/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s34257130.jpg" alt="盛世的崩塌：盛唐与安史之乱时期的政治、战争与诗" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-08-13T06:51:01&#43;13:00">Aug 13, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">盛世的崩塌：盛唐与安史之乱时期的政治、战争与诗</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">一部全新视角下的大唐帝国兴衰史！</p>
+
+	</div>
 </article>
 
   </div>
@@ -1021,7 +1015,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

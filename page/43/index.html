@@ -22,7 +22,7 @@
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
-          document.location.href = "/posts";
+          document.location.href = "/posts/protected";
         });
       }
     });
@@ -107,7 +107,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -214,8 +214,6 @@
     </section>
   </div>
   </div>
-
-
 
 
 
@@ -374,8 +372,6 @@
 
 
 
-
-
 <section class="mb-16">
 
   <div class="flex items-center mb-6">
@@ -501,8 +497,6 @@
 
 </section>
 <hr class="my-8">
-
-
 
 
 
@@ -658,31 +652,6 @@
     
 
     <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/%E7%9C%8B%E7%94%B5%E5%BD%B1%E5%AD%A6%E5%8E%86%E5%8F%B2/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%94%B5%E5%BD%B1/">电影</a></li>
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2023-06-09T13:53:16&#43;00:00">Jun 09, 2023</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">看电影，学历史</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">透过五光十色的影像本事，探索电影里没说的历史</p>
-
-	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%B2%A1%E6%9C%89%E6%AD%BB%E6%8E%89/"></a>
 	
@@ -924,6 +893,31 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">我们关注遥远时代的普通人，是因为他们是真实历史的一部分，没有他们，历史就是不完整、不真切的</p>
 
 	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%B3%A2%E6%96%AF%E7%AC%94%E8%AE%B0/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%8E%86%E5%8F%B2/">历史</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%B3%A2%E6%96%AF/">波斯</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-06-07T09:45:30&#43;00:00">Jun 07, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">波斯笔记（上下册）</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">对波斯帝国史的深入探讨，为中国看待欧亚大陆两千年以来的文明进程开启了新的视野</p>
+
+	</div>
 </article>
 
   </div>
@@ -1028,7 +1022,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

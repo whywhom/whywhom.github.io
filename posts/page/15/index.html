@@ -21,7 +21,7 @@
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
-          document.location.href = "/posts";
+          document.location.href = "/posts/protected";
         });
       }
     });
@@ -105,7 +105,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -142,31 +142,6 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-y-10 gap-x-4">
 
       <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%B5%B7%E6%98%8E%E5%A8%81%E8%AF%9E%E8%BE%B0120%E5%91%A8%E5%B9%B4%E5%9B%BE%E6%96%87%E7%8F%8D%E8%97%8F%E7%89%88%E6%96%87%E9%9B%86/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%96%87%E5%AD%A6/">文学</a></li>
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2023-10-25T08:01:59&#43;13:00">Oct 25, 2023</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">海明威诞辰120周年图文珍藏版文集（全18卷）</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">诺奖得主海明威诞辰120周年图文珍藏纪念版文集。</p>
-
-	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/%E5%8F%A4%E5%B0%94%E7%BA%B3%E4%BD%9C%E5%93%81%E9%9B%86%E7%AC%AC%E4%B8%80%E8%BE%91/"></a>
 	
@@ -651,6 +626,32 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">阐释人类社会行为和社会组织发展变化的机制</p>
 
 	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E5%9C%B0%E4%B8%8B%E5%9F%8E/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img2.doubanio.com/lpic/s29644811.jpg" alt="地下城" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%96%87%E5%AD%A6/">文学</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-10-13T09:30:00&#43;13:00">Oct 13, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">地下城</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">孟买贫民窟的生命、死亡与希望</p>
+
+	</div>
 </article>
     
     </div>
@@ -701,14 +702,6 @@
 		<h3 class="font-bold group-hover:underline decoration-auto">地下人</h3>
 	</div>
 </article><article class="relative group flex flex-row">
-	<a class="insert-link" href="https://iyuedu.top/posts/protected/the-economist/"></a>
-	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/economist/image_hu5803833949819447006.jpg" alt="经济学人2025 - 欢迎赞助" width="250" height="250">
-
-	</figure>
-	<div class="basis-2/3 self-center ml-4">
-		<h3 class="font-bold group-hover:underline decoration-auto">经济学人2025 - 欢迎赞助</h3>
-	</div>
-</article><article class="relative group flex flex-row">
 	<a class="insert-link" href="https://iyuedu.top/posts/magazine/the-economist/"></a>
 	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100"><img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://iyuedu.top/images/economist/image_hu5803833949819447006.jpg" alt="经济学人 - 欢迎赞助" width="250" height="250">
 
@@ -735,6 +728,16 @@
 	</figure>
 	<div class="basis-2/3 self-center ml-4">
 		<h3 class="font-bold group-hover:underline decoration-auto">风──中国古代春宫秘戏图讲(限制级)</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/se-chun-gong-mi-xi-tu/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s28137218.jpg" alt="色──中国古代情色文学和春宫秘戏图(限制级)" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">色──中国古代情色文学和春宫秘戏图(限制级)</h3>
 	</div>
 </article>
 		
@@ -835,7 +838,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>
