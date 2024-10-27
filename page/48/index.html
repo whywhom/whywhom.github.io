@@ -16,7 +16,18 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/posts/protected";
+        });
+      }
+    });
+  }
+</script>
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -41,6 +52,7 @@
 
     gtag('config', 'G-5Y7Z1C2GWB');
   </script>  
+  
 </head>
 <body>
   <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
@@ -93,6 +105,9 @@
     </li>
     <li class="my-2">
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
     </li>
     </ul>
   </nav>
@@ -199,6 +214,8 @@
     </section>
   </div>
   </div>
+
+
 
 
 
@@ -357,6 +374,8 @@
 
 
 
+
+
 <section class="mb-16">
 
   <div class="flex items-center mb-6">
@@ -482,6 +501,8 @@
 
 </section>
 <hr class="my-8">
+
+
 
 
 
@@ -637,6 +658,32 @@
     
 
     <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E7%99%BE%E7%A7%91%E8%BE%BE%E4%BA%BA%E9%80%9F%E6%88%90/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%A7%91%E6%99%AE/">科普</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%99%BE%E7%A7%91/">百科</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-04-28T10:24:27&#43;00:00">Apr 28, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">百科达人速成（套装10册）</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">一颗小小的流星安静滑过，还来不及许愿，不可思议的事情发生了</p>
+
+	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%8E%A2%E5%AF%BB%E4%B8%AD%E5%8D%8E%E6%96%87%E6%98%8E%E5%8F%98%E8%BF%81/"></a>
 	
@@ -865,31 +912,6 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">一个女人惊心动魄的俘虏求生记，一场有关爱情、人性、伦理的绝境试炼</p>
 
 	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%97%B6%E9%97%B4%E7%9A%84%E8%B4%A8%E9%87%8F/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%A7%91%E6%99%AE/">科普</a></li>
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E7%A7%91%E5%AD%A6/">科学</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2023-04-28T10:22:37&#43;00:00">Apr 28, 2023</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">时间的质量</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">时间的快慢只是记忆的假象，不以我们的意志为转移，才是真正的现实</p>
-
-	</div>
 </article>
 
   </div>
@@ -993,6 +1015,8 @@
         <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
       
     </ul>
   </div>

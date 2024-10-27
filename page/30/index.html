@@ -16,7 +16,18 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/posts/protected";
+        });
+      }
+    });
+  }
+</script>
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -41,6 +52,7 @@
 
     gtag('config', 'G-5Y7Z1C2GWB');
   </script>  
+  
 </head>
 <body>
   <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
@@ -93,6 +105,9 @@
     </li>
     <li class="my-2">
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/protected/">会员</a>
     </li>
     </ul>
   </nav>
@@ -199,6 +214,8 @@
     </section>
   </div>
   </div>
+
+
 
 
 
@@ -357,6 +374,8 @@
 
 
 
+
+
 <section class="mb-16">
 
   <div class="flex items-center mb-6">
@@ -482,6 +501,8 @@
 
 </section>
 <hr class="my-8">
+
+
 
 
 
@@ -637,6 +658,31 @@
     
 
     <article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/%E4%BB%8A%E6%9D%91%E6%98%8C%E5%BC%98%E5%BC%8F%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4%E9%9B%86/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E5%90%88%E9%9B%86/">合集</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2023-10-16T13:21:49&#43;13:00">Oct 16, 2023</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">今村昌弘式推理小说集（套装3册）</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">杀机蠢蠢欲动且看神红推理搭档如何揪出人心中的邪魔</p>
+
+	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
 	
 	<a class="insert-link" href="https://iyuedu.top/posts/books/%E6%88%98%E7%95%A5%E5%88%B0%E6%89%A7%E8%A1%8C%E7%94%9F%E9%95%BF%E5%A5%97%E8%A3%85/"></a>
 	
@@ -862,32 +908,6 @@
 		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">阐释人类社会行为和社会组织发展变化的机制</p>
 
 	</div>
-</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="https://iyuedu.top/posts/books/%E5%9C%B0%E4%B8%8B%E5%9F%8E/"></a>
-	
-	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
-
-			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img2.doubanio.com/lpic/s29644811.jpg" alt="地下城" style="width: 100%; height: 100%; object-fit: cover;">
-
-	</figure>
-
-	<div class="pt-6">
-
-    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
-        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%96%87%E5%AD%A6/">文学</a></li>
-    </ul>
-</div>
-
-	<div class="pt-6">
-
-		<time datetime="2023-10-13T09:30:00&#43;13:00">Oct 13, 2023</time>
-
-		<h4 class="my-2 text-sm text-sky-700 font-bold">地下城</h4>
-
-		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">孟买贫民窟的生命、死亡与希望</p>
-
-	</div>
 </article>
 
   </div>
@@ -991,6 +1011,8 @@
         <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/protected/">会员</a></li>
       
     </ul>
   </div>
