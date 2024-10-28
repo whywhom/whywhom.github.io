@@ -343,7 +343,22 @@
         </button>
 
         
-        <a id="download-link" href="" style="display: none;">下载链接</a>
+        <button id="logout-button" onclick="window.netlifyIdentity.open('login')"
+            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
+            style="display: none;">
+            退出登录
+        </button>
+
+        
+        
+        
+            <button 
+            id="download-button" 
+            class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out" 
+            style="display: none;"
+            onclick="window.location.href=''">
+            下载链接
+            </button>
 
         
         <script>
@@ -363,15 +378,18 @@
                 if (user) {
                     
                     document.getElementById("download-link").style.display = "inline";
+                    document.getElementById("logout-button").style.display = "inline";
                     document.getElementById("login-button").style.display = "none";
                 } else {
                     
                     document.getElementById("download-link").style.display = "none";
+                    document.getElementById("logout-button").style.display = "none";
                     document.getElementById("login-button").style.display = "inline";
                 }
             } else {
                 
                 document.getElementById("login-button").style.display = "none";
+                document.getElementById("logout-button").style.display = "none";
                 document.getElementById("download-link").style.display = "none";
             }
         });
@@ -382,6 +400,7 @@
             
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
+                document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
@@ -392,6 +411,7 @@
         window.netlifyIdentity.on("logout", () => {
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "none";
+                document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
             window.location.href = window.location.origin;
