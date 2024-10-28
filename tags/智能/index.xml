@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>智能 on i 悦读</title>
-    <link>https://iyuedu.top/tags/%E6%99%BA%E8%83%BD/</link>
+    <link>http://localhost:1313/tags/%E6%99%BA%E8%83%BD/</link>
     <description>Recent content in 智能 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 16 May 2023 14:48:32 +0000</lastBuildDate>
-    <atom:link href="https://iyuedu.top/tags/%E6%99%BA%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%99%BA%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何创造可信的AI</title>
-      <link>https://iyuedu.top/posts/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</link>
+      <link>http://localhost:1313/posts/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</link>
       <pubDate>Tue, 16 May 2023 14:48:32 +0000</pubDate>
-      <guid>https://iyuedu.top/posts/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</guid>
+      <guid>http://localhost:1313/posts/books/%E5%A6%82%E4%BD%95%E5%88%9B%E9%80%A0%E5%8F%AF%E4%BF%A1%E7%9A%84ai/</guid>
       <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;当下的AI存在哪些风险？真的有可信的AI吗？理想的AI与现实的AI之间究竟存在哪些差距？如何构建人类和AI之间的信任？&lt;/p&gt;&#xA;&lt;p&gt;关于人工智能的炒作总是甚嚣尘上，但要得到真正可信的AI，却远比想象的要复杂得多，超级智能的时代还远没有到来。创造真正可信的AI需要赋予机器常识和深度理解，而不是简单地统计分析数据。本书勾勒了未来人工智能发展的最佳路线图，对当前人工智能的现状进行了清晰且客观的评估。&lt;/p&gt;&#xA;&lt;p&gt;作者盖瑞·马库斯是人工智能领域的专家，同时还是心理学和神经科学教授，在计算机科学、认知科学、语言学、人工智能等领域都练就了相当深厚的学术功底，并敢于挑战学术界的主流观点。当整个人工智能学术界都在过分乐观地高歌猛进时，他不断撰文和发表演讲来指出以深度学习为代表的当下AI的弊端和局限性，《如何创造可信的AI》这本书正是马库斯对他关于人工智能观点的最佳总结。&lt;/p&gt;&#xA;&lt;p&gt;盖瑞·马库斯和欧内斯特·戴维斯从深度学习算法固有的缺陷出发，阐述了当下AI技术发展的桎梏，对当前AI的场景应用和研究范式中的问题进行了分析，他指出AI真正的问题在于信任，常识才是深度理解的关键。最终从认知科学中提炼出了11条对人工智能发展方面的启示，以通用人工智能为发展目标，给出了未来AI技术的一种发展方向。&lt;/p&gt;&#xA;&lt;h2 id=&#34;作者简介-------&#34;&gt;作者简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;盖瑞·马库斯（Gary Marcus），新硅谷机器人创业公司AI首席执行官兼创始人。机器学习公司“几何智能”首席执行官兼创始人，该公司于2016年被优步收购，随后马库斯在优步创立了人工智能实验室。纽约大学心理学和神经科学教授。研究方向跨越人类和动物的行为，涉及神经科学、心理学、人工智能等多个领域。1994年于麻省理工学院博士毕业，师从心理学大师史蒂芬·平克。&lt;/p&gt;</description>
     </item>
   </channel>
