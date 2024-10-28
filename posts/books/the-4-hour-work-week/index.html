@@ -31,6 +31,15 @@
       console.log('User is not logged in');
     }
   });
+
+  window.netlifyIdentity.on('login', user => {
+    console.log('User logged in:', user);
+    window.netlifyIdentity.close();
+  });
+
+  window.netlifyIdentity.on('logout', () => {
+    console.log('User logged out');
+  });
 </script>
   <script>
     
