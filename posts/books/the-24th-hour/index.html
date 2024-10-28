@@ -240,6 +240,8 @@ SFPD Sergeant Lindsay Boxer, Medical Examiner Claire Washburn, Assistant Distric
 
 <script>
     
+  localStorage.setItem("redirectAfterLogin", window.location.href);
+    
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
             if (isPrivate) {
@@ -262,11 +264,14 @@ SFPD Sergeant Lindsay Boxer, Medical Examiner Claire Washburn, Assistant Distric
 
         
         window.netlifyIdentity.on("login", () => {
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;  
         });
 
         
@@ -275,6 +280,7 @@ SFPD Sergeant Lindsay Boxer, Medical Examiner Claire Washburn, Assistant Distric
                 document.getElementById("download-link").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
+            window.location.href = window.location.origin;
             document.location.reload(); 
         });
     }

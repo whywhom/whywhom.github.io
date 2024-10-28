@@ -226,6 +226,8 @@ ISBN: 9781405957496</p>
 
 <script>
     
+  localStorage.setItem("redirectAfterLogin", window.location.href);
+    
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
             if (isPrivate) {
@@ -248,11 +250,14 @@ ISBN: 9781405957496</p>
 
         
         window.netlifyIdentity.on("login", () => {
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;  
         });
 
         
@@ -261,6 +266,7 @@ ISBN: 9781405957496</p>
                 document.getElementById("download-link").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
+            window.location.href = window.location.origin;
             document.location.reload(); 
         });
     }
