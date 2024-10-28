@@ -278,31 +278,28 @@
 <p>夏尔马不得不离开去C.P.I.总部主持一个图书聚会，地点就在街对面，我们一起走了过去。当我们在人行横道上等待时，一位年轻的国会工作人员停下来与夏尔马握手。还有几个人正朝C.P.I.的联排别墅走去。派对上有一个完整的酒吧和猪肉三明治。几天后，美国时刻将举办一个名为“Lawless Lawfare Luau”的夏威夷主题派对，与会者将佩戴花环。“我不知道没有C.P.I.的华盛顿，”夏尔马告诉我。“但那些在此之前在的人说那是一片荒地。”♦</p>
 
 <div>
-    <div id="content" class="flex items-center space-x-4">
+    <div id="content" class="flex">
         
-        <button id="login-button" onclick="window.netlifyIdentity.open('login')"
-            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
-            style="display: none;">
+        <button id="login-button" onclick="window.netlifyIdentity.open('login')" style="display: none;"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
             登录
         </button>
 
-        
-        <a id="download-link" href="" style="display: none;">
-            <button id="download-button"
-                class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out"
-                style="display: none;" onclick="window.location.href=''">
-                下载链接
-            </button>
-        </a>
 
         
-
         
-        <button id="logout-button"
-            class="bg-red-500 text-white font-bold py-2 px-4 rounded-full border-2 border-red-500 hover:bg-red-700 transition duration-300 ease-in-out"
-            style="display: none;" onclick="window.netlifyIdentity.logout()">
-            退出登录
+
+        <button id="download-link" href="" style="display: none;"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            下载
         </button>
+
+        
+        <button id="logout-button" onclick="window.netlifyIdentity.open('logout')" style="display: none;"
+            class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 rounded-full">
+            退出
+        </button>
+
 
         
         <script>
@@ -344,7 +341,7 @@
             
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
-                
+                document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
@@ -355,7 +352,7 @@
         window.netlifyIdentity.on("logout", () => {
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "none";
-                
+                document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
             window.location.href = window.location.origin;
