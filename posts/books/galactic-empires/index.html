@@ -214,7 +214,7 @@ To find a home and keep humanity safe from hostile aliens, Task Force Conquest m
 
 <script>
     
-  localStorage.setItem("redirectAfterLogin", window.location.href);
+
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -238,14 +238,14 @@ To find a home and keep humanity safe from hostile aliens, Task Force Conquest m
 
         
         window.netlifyIdentity.on("login", () => {
-            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
-            localStorage.removeItem("redirectAfterLogin");  
+            
+            
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            window.location.href = redirectUrl;  
+            
         });
 
         

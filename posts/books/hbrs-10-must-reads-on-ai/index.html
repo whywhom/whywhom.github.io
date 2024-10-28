@@ -218,7 +218,7 @@ Ben Armstrong 和 Julie Shah 撰写的 A Smarter Strategy for Using Robots</p>
 
 <script>
     
-  localStorage.setItem("redirectAfterLogin", window.location.href);
+
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -242,14 +242,14 @@ Ben Armstrong 和 Julie Shah 撰写的 A Smarter Strategy for Using Robots</p>
 
         
         window.netlifyIdentity.on("login", () => {
-            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
-            localStorage.removeItem("redirectAfterLogin");  
+            
+            
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            window.location.href = redirectUrl;  
+            
         });
 
         
