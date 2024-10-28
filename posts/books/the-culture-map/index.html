@@ -288,7 +288,7 @@ Now available in Korean, Japanese, Chinese, Indonesian, Turkish, Russian, Dutch,
 
 <script>
     
-    
+    localStorage.setItem("redirectAfterLogin", window.location.href);
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -315,15 +315,15 @@ Now available in Korean, Japanese, Chinese, Indonesian, Turkish, Russian, Dutch,
 
         
         window.netlifyIdentity.on("login", () => {
-            
-            
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            
+            window.location.reload(); 
         });
 
         
@@ -333,8 +333,8 @@ Now available in Korean, Japanese, Chinese, Indonesian, Turkish, Russian, Dutch,
                 document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
-            
-            document.location.reload(); 
+            window.netlifyIdentity.logout(); 
+            window.location.reload(); 
         });
     }
 </script>

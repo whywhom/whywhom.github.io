@@ -236,7 +236,7 @@ Three thousand years ago on a battlefield in ancient Palestine, a shepherd boy f
 
 <script>
     
-    
+    localStorage.setItem("redirectAfterLogin", window.location.href);
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -263,15 +263,15 @@ Three thousand years ago on a battlefield in ancient Palestine, a shepherd boy f
 
         
         window.netlifyIdentity.on("login", () => {
-            
-            
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            
+            window.location.reload(); 
         });
 
         
@@ -281,8 +281,8 @@ Three thousand years ago on a battlefield in ancient Palestine, a shepherd boy f
                 document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
-            
-            document.location.reload(); 
+            window.netlifyIdentity.logout(); 
+            window.location.reload(); 
         });
     }
 </script>

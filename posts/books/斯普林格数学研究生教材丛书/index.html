@@ -597,7 +597,7 @@ Banach空间是泛函分析的重要内容，正是由于它在二战期间的�
 
 <script>
     
-    
+    localStorage.setItem("redirectAfterLogin", window.location.href);
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -624,15 +624,15 @@ Banach空间是泛函分析的重要内容，正是由于它在二战期间的�
 
         
         window.netlifyIdentity.on("login", () => {
-            
-            
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            
+            window.location.reload(); 
         });
 
         
@@ -642,8 +642,8 @@ Banach空间是泛函分析的重要内容，正是由于它在二战期间的�
                 document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
-            
-            document.location.reload(); 
+            window.netlifyIdentity.logout(); 
+            window.location.reload(); 
         });
     }
 </script>

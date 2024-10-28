@@ -247,7 +247,7 @@ Once you master The Fine Art of Small Talk, you&rsquo;ll excel at making others 
 
 <script>
     
-    
+    localStorage.setItem("redirectAfterLogin", window.location.href);
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -274,15 +274,15 @@ Once you master The Fine Art of Small Talk, you&rsquo;ll excel at making others 
 
         
         window.netlifyIdentity.on("login", () => {
-            
-            
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            
+            window.location.reload(); 
         });
 
         
@@ -292,8 +292,8 @@ Once you master The Fine Art of Small Talk, you&rsquo;ll excel at making others 
                 document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
-            
-            document.location.reload(); 
+            window.netlifyIdentity.logout(); 
+            window.location.reload(); 
         });
     }
 </script>

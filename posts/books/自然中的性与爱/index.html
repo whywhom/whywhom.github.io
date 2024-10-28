@@ -243,7 +243,7 @@ BBC广受赞誉的人文科普专栏结集，牛津大学文学教授的诗意�
 
 <script>
     
-    
+    localStorage.setItem("redirectAfterLogin", window.location.href);
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -270,15 +270,15 @@ BBC广受赞誉的人文科普专栏结集，牛津大学文学教授的诗意�
 
         
         window.netlifyIdentity.on("login", () => {
-            
-            
+            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
+            localStorage.removeItem("redirectAfterLogin");  
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
                 document.getElementById("logout-button").style.display = "inline";
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
-            
+            window.location.reload(); 
         });
 
         
@@ -288,8 +288,8 @@ BBC广受赞誉的人文科普专栏结集，牛津大学文学教授的诗意�
                 document.getElementById("logout-button").style.display = "none";
                 document.getElementById("login-button").style.display = "inline";
             }
-            
-            document.location.reload(); 
+            window.netlifyIdentity.logout(); 
+            window.location.reload(); 
         });
     }
 </script>
