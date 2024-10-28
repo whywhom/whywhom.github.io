@@ -102,7 +102,7 @@
   <nav id="menu-bar" class="block mt-3 close">
     <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">Home</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">首页</a>
     </li>
     <li class="my-2">
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a>
@@ -117,13 +117,13 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">关于</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">categories</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">分类</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
     </li>
     </ul>
   </nav>
@@ -220,6 +220,66 @@
 <h2 id="下载链接">下载链接：</h2>
 <p><a href="https://url96.ctfile.com/d/35561896-55814509-a64bcb?p=4184">城通网盘</a>(访问密码： 4184)</p>
 
+<div>
+    <div id="content">
+        
+        <button id="login-button" onclick="window.netlifyIdentity.open('login')"
+            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
+            style="display: none;">
+            登录
+        </button>
+
+        
+        <a id="download-link" href="" style="display: none;">下载链接</a>
+
+        
+        <script>
+            const isPrivate =  false ;
+        </script>
+    </div>
+</div>
+
+<script>
+    
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (isPrivate) {
+                
+                if (user) {
+                    
+                    document.getElementById("download-link").style.display = "inline";
+                    document.getElementById("login-button").style.display = "none";
+                } else {
+                    
+                    document.getElementById("download-link").style.display = "none";
+                    document.getElementById("login-button").style.display = "inline";
+                }
+            } else {
+                
+                document.getElementById("login-button").style.display = "none";
+                document.getElementById("download-link").style.display = "none";
+            }
+        });
+
+        
+        window.netlifyIdentity.on("login", () => {
+            if (isPrivate) {
+                document.getElementById("download-link").style.display = "inline";
+                document.getElementById("login-button").style.display = "none";
+            }
+            window.netlifyIdentity.close(); 
+        });
+
+        
+        window.netlifyIdentity.on("logout", () => {
+            if (isPrivate) {
+                document.getElementById("download-link").style.display = "none";
+                document.getElementById("login-button").style.display = "inline";
+            }
+            document.location.reload(); 
+        });
+    }
+</script>
 
     <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
 
@@ -436,7 +496,7 @@
   <div class="my-8">
     <ul class="flex items-center space-x-4">
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/">Home</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">首页</a></li>
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a></li>
       
@@ -446,11 +506,11 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/about/">关于</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">分类</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
       
     </ul>
   </div>

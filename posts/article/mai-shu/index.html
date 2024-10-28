@@ -102,7 +102,7 @@
   <nav id="menu-bar" class="block mt-3 close">
     <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">Home</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">首页</a>
     </li>
     <li class="my-2">
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a>
@@ -117,13 +117,13 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">关于</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">categories</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">分类</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
     </li>
     </ul>
   </nav>
@@ -207,6 +207,66 @@
 <p>在伦敦的时候，从寓所出来，走过近旁小街。有一家小书店门口摆着一架旧书。上前去徘徊了一下，看见一本《牛津书话选》(The Book Lovers&rsquo;Anthology)，烫花布面，装订不马虎，四百多面，本子也不小，准有七八成新，才一先令六便士，那时合中国一元三毛钱，比东安市场旧洋书还贱些。这选本节录许多名家诗文，说到书的各方面的；性质有点像叶德辉氏《书林清话》，但不像《清话》有系统；他们旨趣原是两样的。因为买这本书，结识了那掌柜的；他以后给我找了不少便宜的旧书。有一种书，他找不到旧的，便和我说，他们批购新书按七五扣，他愿意少赚一扣，按九扣卖给我。我没有要他这么办，但是很感谢他的好意。</p>
 <p>一九三五年一月十日</p>
 
+<div>
+    <div id="content">
+        
+        <button id="login-button" onclick="window.netlifyIdentity.open('login')"
+            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
+            style="display: none;">
+            登录
+        </button>
+
+        
+        <a id="download-link" href="" style="display: none;">下载链接</a>
+
+        
+        <script>
+            const isPrivate =  false ;
+        </script>
+    </div>
+</div>
+
+<script>
+    
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (isPrivate) {
+                
+                if (user) {
+                    
+                    document.getElementById("download-link").style.display = "inline";
+                    document.getElementById("login-button").style.display = "none";
+                } else {
+                    
+                    document.getElementById("download-link").style.display = "none";
+                    document.getElementById("login-button").style.display = "inline";
+                }
+            } else {
+                
+                document.getElementById("login-button").style.display = "none";
+                document.getElementById("download-link").style.display = "none";
+            }
+        });
+
+        
+        window.netlifyIdentity.on("login", () => {
+            if (isPrivate) {
+                document.getElementById("download-link").style.display = "inline";
+                document.getElementById("login-button").style.display = "none";
+            }
+            window.netlifyIdentity.close(); 
+        });
+
+        
+        window.netlifyIdentity.on("logout", () => {
+            if (isPrivate) {
+                document.getElementById("download-link").style.display = "none";
+                document.getElementById("login-button").style.display = "inline";
+            }
+            document.location.reload(); 
+        });
+    }
+</script>
 
     <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
 
@@ -476,7 +536,7 @@
   <div class="my-8">
     <ul class="flex items-center space-x-4">
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/">Home</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">首页</a></li>
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a></li>
       
@@ -486,11 +546,11 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/about/">关于</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">categories</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">分类</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">Tags</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
       
     </ul>
   </div>
