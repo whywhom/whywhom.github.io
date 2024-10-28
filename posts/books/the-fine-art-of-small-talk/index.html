@@ -15,36 +15,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  
-  window.netlifyIdentity = window.netlifyIdentity || {
-    on: () => {},
-    open: () => {},
-    close: () => {},
-    currentUser: () => null
-  };
-  window.netlifyIdentity.on('init', user => {
-    if (user) {
-      console.log('User is logged in:', user);
-    } else {
-      console.log('User is not logged in');
-    }
-  });
-
-  window.netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    window.netlifyIdentity.close();
-    
-    document.location.href = '/';
-  });
-
-  window.netlifyIdentity.on('logout', () => {
-    console.log('User logged out');
-    
-    document.location.href = '/';
-  });
-</script>
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -399,12 +369,6 @@ Once you master The Fine Art of Small Talk, you&rsquo;ll excel at making others 
 
   
   <aside class="md:col-span-1"><div class="lg:sticky lg:top-8">
-
-	<div>
-		<button onclick="window.netlifyIdentity.open()">Log in</button>
-		<i> / </i>
-		<button onclick="window.netlifyIdentity.logout()">Log out</button>
-	</div>
 
 	<div class="rounded-2xl p-4 bg-zinc-100 mb-10">
 
