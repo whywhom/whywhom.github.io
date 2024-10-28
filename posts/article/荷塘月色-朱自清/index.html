@@ -441,6 +441,7 @@ they find the seeds as pure as the water at hand.</p>
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

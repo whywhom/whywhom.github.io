@@ -270,6 +270,7 @@ An American linguist teaching in England explores the sibling rivalry between Br
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

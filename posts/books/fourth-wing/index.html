@@ -304,6 +304,7 @@ GRE单词出现18247个/次，考研单词出现157790个/次，
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

@@ -274,6 +274,7 @@ Patrick Radden Keefe</p>
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

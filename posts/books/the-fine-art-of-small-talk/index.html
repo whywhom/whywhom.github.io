@@ -282,6 +282,7 @@ Once you master The Fine Art of Small Talk, you&rsquo;ll excel at making others 
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

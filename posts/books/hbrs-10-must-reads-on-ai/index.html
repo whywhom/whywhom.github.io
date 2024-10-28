@@ -283,6 +283,7 @@ Ben Armstrong 和 Julie Shah 撰写的 A Smarter Strategy for Using Robots</p>
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

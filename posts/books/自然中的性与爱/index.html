@@ -278,6 +278,7 @@ BBC广受赞誉的人文科普专栏结集，牛津大学文学教授的诗意�
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

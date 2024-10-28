@@ -323,6 +323,7 @@ Now available in Korean, Japanese, Chinese, Indonesian, Turkish, Russian, Dutch,
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

@@ -430,6 +430,7 @@ Upwork 外包服务平台 <a href="https://www.upwork.com">https://www.upwork.co
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

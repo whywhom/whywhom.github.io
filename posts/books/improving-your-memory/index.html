@@ -262,6 +262,7 @@ David Thomas is a Sunday Times bestselling author who has previously published t
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

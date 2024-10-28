@@ -283,6 +283,7 @@ Her unique approach to managing your money emphasises your psychology of spendin
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 

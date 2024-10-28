@@ -271,6 +271,7 @@ Three thousand years ago on a battlefield in ancient Palestine, a shepherd boy f
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
+            window.location.href = redirectUrl;
             window.location.reload(); 
         });
 
