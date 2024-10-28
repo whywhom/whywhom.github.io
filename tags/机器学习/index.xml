@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>机器学习 on i 悦读</title>
-    <link>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://iyuedu.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 机器学习 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 12 Jul 2024 06:50:47 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iyuedu.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning - A Probabilistic Perspective</title>
-      <link>http://localhost:1313/posts/books/machine-learning-a-probabilistic-perspective/</link>
+      <link>https://iyuedu.top/posts/books/machine-learning-a-probabilistic-perspective/</link>
       <pubDate>Fri, 12 Jul 2024 06:50:47 +1300</pubDate>
-      <guid>http://localhost:1313/posts/books/machine-learning-a-probabilistic-perspective/</guid>
+      <guid>https://iyuedu.top/posts/books/machine-learning-a-probabilistic-perspective/</guid>
       <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;随着电子形式的数据量的不断增加，对数据分析的自动化方法的需求也在不断增长。机器学习的目标是开发能够自动检测数据模式的方法，然后使用未发现的模式来预测未来的数据或其他感兴趣的结果。因此，机器学习与统计和数据挖掘领域密切相关，但在其重点和术语方面略有不同。这本书提供了该领域的详细介绍，并包括从应用领域，如分子生物学，文本处理，计算机视觉和机器人的工作示例。&lt;/p&gt;&#xA;&lt;h2 id=&#34;目标读者&#34;&gt;目标读者&lt;/h2&gt;&#xA;&lt;p&gt;本书适用于计算机科学、统计学、电子工程、计量经济学或其他任何具有适当数学背景的学科的高年级本科生和研究生。特别地，假定读者已经熟悉基本的多元微积分、概率论、线性代数和计算机编程。事先接触统计学是有帮助的，但不是必须的。&lt;/p&gt;&#xA;&lt;p&gt;“概率视角”是什么意思？&lt;/p&gt;&#xA;&lt;p&gt;本书采用了这样一种视角，即创造能从数据中学习的机器的最好方法是使用概率论的工具，几个世纪以来，概率论一直是统计学和工程学的支柱。概率论可以应用于任何涉及不确定性的问题。在机器学习中，不确定性有多种形式: 给定一些数据，什么是最好的预测(或决策)?给定数据的最佳模型是什么?接下来我应该执行什么度量?等。&lt;/p&gt;&#xA;&lt;p&gt;概率推理系统地应用于所有的推理问题，包括统计模型的推理参数，有时被称为贝叶斯方法。然而，这个词往往会引起非常强烈的反应(积极或消极，取决于你问谁)，所以我们更喜欢中性的术语“概率方法”。此外，我们将经常使用最大似然估计等技术，它们不是贝叶斯方法，但肯定属于概率范式。&lt;/p&gt;&#xA;&lt;p&gt;这本书并没有描述一本关于不同启发式方法的烹饪书，而是强调了一种基于模型的机器学习方法。对于任何给定的模型，通常可以应用多种算法。相反，任何给定的算法通常都可以应用于各种模型。这种模块化，即模型与算法的区别，是一种很好的教学方法，也是一种很好的工程技术。&lt;/p&gt;&#xA;&lt;p&gt;我们将经常使用图模型的语言以一种简洁和直观的方式来指定我们的模型。我们将看到，除了帮助理解之外，图结构还有助于开发有效的算法。然而，这本书主要不是关于图形模型的;它是关于概率建模的。&lt;/p&gt;&#xA;&lt;h2 id=&#34;作者简介-------&#34;&gt;作者简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;在加入谷歌之前，Kevin P. Murphy 是不列颠哥伦比亚大学（UBC）的终身副教授。他在加州大学伯克利分校获得博士学位。&lt;/p&gt;</description>
     </item>
   </channel>

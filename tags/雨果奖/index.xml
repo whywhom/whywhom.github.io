@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>雨果奖 on i 悦读</title>
-    <link>http://localhost:1313/tags/%E9%9B%A8%E6%9E%9C%E5%A5%96/</link>
+    <link>https://iyuedu.top/tags/%E9%9B%A8%E6%9E%9C%E5%A5%96/</link>
     <description>Recent content in 雨果奖 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 23 Oct 2023 10:44:13 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E9%9B%A8%E6%9E%9C%E5%A5%96/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iyuedu.top/tags/%E9%9B%A8%E6%9E%9C%E5%A5%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rabbit Test - 兔子测试</title>
-      <link>http://localhost:1313/posts/article/%E5%85%94%E5%AD%90%E6%B5%8B%E8%AF%95/</link>
+      <link>https://iyuedu.top/posts/article/%E5%85%94%E5%AD%90%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Mon, 23 Oct 2023 10:44:13 +1300</pubDate>
-      <guid>http://localhost:1313/posts/article/%E5%85%94%E5%AD%90%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://iyuedu.top/posts/article/%E5%85%94%E5%AD%90%E6%B5%8B%E8%AF%95/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;BY SAMANTHA MILLS IN UNCANNY MAGAZINE ISSUE FORTY-NINE | 7067 WORDS&#xA;Content Note: Sexual Assault, abuse, traumatic miscarriage, psych ward treatment, and suicide.&lt;/p&gt;</description>
     </item>
   </channel>

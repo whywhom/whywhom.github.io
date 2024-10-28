@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on i 悦读</title>
-    <link>http://localhost:1313/tags/ai/</link>
+    <link>https://iyuedu.top/tags/ai/</link>
     <description>Recent content in AI on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 23 Sep 2024 06:52:14 +1300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iyuedu.top/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hum</title>
-      <link>http://localhost:1313/posts/books/hum/</link>
+      <link>https://iyuedu.top/posts/books/hum/</link>
       <pubDate>Sat, 21 Sep 2024 06:52:14 +1300</pubDate>
-      <guid>http://localhost:1313/posts/books/hum/</guid>
+      <guid>https://iyuedu.top/posts/books/hum/</guid>
       <description>&lt;h1 id=&#34;经济学人推荐新书哼&#34;&gt;经济学人推荐新书：《哼》&lt;/h1&gt;&#xA;&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;Helen Phillips/著，Hum（中译：《哼》）. Marysue Rucci Books出版; 272 pages; $27.99. Atlantic Books出版; £16.99&lt;/p&gt;&#xA;&lt;p&gt;一部关于人工智能的扣人心弦的科幻小说抓住了人类的意义。《哼》唤起了一种令人感到诡异现实的技术反乌托邦。&lt;/p&gt;</description>
     </item>
     <item>
       <title>哈佛商业评论•人工智能必读10本书</title>
-      <link>http://localhost:1313/posts/books/hbrs-10-must-reads-on-ai/</link>
+      <link>https://iyuedu.top/posts/books/hbrs-10-must-reads-on-ai/</link>
       <pubDate>Sat, 03 Aug 2024 06:52:48 +1300</pubDate>
-      <guid>http://localhost:1313/posts/books/hbrs-10-must-reads-on-ai/</guid>
+      <guid>https://iyuedu.top/posts/books/hbrs-10-must-reads-on-ai/</guid>
       <description>&lt;p&gt;《哈佛商业评论•人工智能必读10本书》&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;作者：Harvard Business Review&#xA;出版社：Ascent Audio&#xA;主题领域：Artificial Intelligence (AI)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;The next generation of AI is here - use it to lead your business forward.&lt;/p&gt;</description>
     </item>
   </channel>
