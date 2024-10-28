@@ -15,32 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  
-  window.netlifyIdentity = window.netlifyIdentity || {
-    on: () => {},
-    open: () => {},
-    close: () => {},
-    currentUser: () => null
-  };
-  window.netlifyIdentity.on('init', user => {
-    if (user) {
-      console.log('User is logged in:', user);
-    } else {
-      console.log('User is not logged in');
-    }
-  });
-
-  window.netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    window.netlifyIdentity.close();
-  });
-
-  window.netlifyIdentity.on('logout', () => {
-    console.log('User logged out');
-  });
-</script>
+ 
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -119,7 +94,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -213,82 +188,6 @@
 <p>生命的外表随着时代的变迁不断变化，而生命的实质却更接近一次又一次的复演。人生经验必须经由每个人一次次重新经历获得，从一无所知到生命绽放。而经典，便是数千年来无数人的生命体验经过时间的大浪淘沙和淬砺沉淀后，留下来的最精华的部分。与非经典相比，经典往往能够一针见血地抓住问题的实质，对人生体验有更经济也更深刻的呈现。</p>
 <p>197:
 <a href="https://url96.ctfile.com/d/35561896-51858499-c2ec30?p=4184">城通网盘</a>(访问密码： 4184)</p>
-<div>
-    <div id="content" class="flex">
-        
-        <button id="login-button" onclick="window.netlifyIdentity.open('login')" style="display: none;">登录</button>
-
-        
-        <a id="download-link" href="" style="display: none;">
-            下载链接
-        </a>
-
-        
-
-        
-        <button id="logout-button" onclick="window.netlifyIdentity.open('logout')" style="display: none;">退出</button>
-  
-
-        
-        <script>
-            const isPrivate =  false ;
-        </script>
-    </div>
-</div>
-
-<script>
-    
-    localStorage.setItem("redirectAfterLogin", window.location.href);
-    
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (isPrivate) {
-                
-                if (user) {
-                    
-                    document.getElementById("download-link").style.display = "inline";
-                    document.getElementById("logout-button").style.display = "inline";
-                    document.getElementById("login-button").style.display = "none";
-                } else {
-                    
-                    document.getElementById("download-link").style.display = "none";
-                    document.getElementById("logout-button").style.display = "none";
-                    document.getElementById("login-button").style.display = "inline";
-                }
-            } else {
-                
-                document.getElementById("login-button").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
-                document.getElementById("download-link").style.display = "none";
-            }
-        });
-
-        
-        window.netlifyIdentity.on("login", () => {
-            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
-            localStorage.removeItem("redirectAfterLogin");  
-            if (isPrivate) {
-                document.getElementById("download-link").style.display = "inline";
-                document.getElementById("logout-button").style.display = "inline";
-                document.getElementById("login-button").style.display = "none";
-            }
-            window.netlifyIdentity.close(); 
-            window.location.href = redirectUrl;
-            window.location.reload(); 
-        });
-
-        
-        window.netlifyIdentity.on("logout", () => {
-            if (isPrivate) {
-                document.getElementById("download-link").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
-                document.getElementById("login-button").style.display = "inline";
-            }
-            window.netlifyIdentity.logout(); 
-            window.location.reload(); 
-        });
-    }
-</script>
 
     <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
 
@@ -569,7 +468,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

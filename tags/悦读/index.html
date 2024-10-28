@@ -15,32 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  
-  window.netlifyIdentity = window.netlifyIdentity || {
-    on: () => {},
-    open: () => {},
-    close: () => {},
-    currentUser: () => null
-  };
-  window.netlifyIdentity.on('init', user => {
-    if (user) {
-      console.log('User is logged in:', user);
-    } else {
-      console.log('User is not logged in');
-    }
-  });
-
-  window.netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    window.netlifyIdentity.close();
-  });
-
-  window.netlifyIdentity.on('logout', () => {
-    console.log('User logged out');
-  });
-</script>
+ 
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -119,7 +94,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -874,7 +849,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

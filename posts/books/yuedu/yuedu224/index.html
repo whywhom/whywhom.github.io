@@ -15,32 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  
-  window.netlifyIdentity = window.netlifyIdentity || {
-    on: () => {},
-    open: () => {},
-    close: () => {},
-    currentUser: () => null
-  };
-  window.netlifyIdentity.on('init', user => {
-    if (user) {
-      console.log('User is logged in:', user);
-    } else {
-      console.log('User is not logged in');
-    }
-  });
-
-  window.netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    window.netlifyIdentity.close();
-  });
-
-  window.netlifyIdentity.on('logout', () => {
-    console.log('User logged out');
-  });
-</script>
+ 
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -119,7 +94,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -219,82 +194,6 @@
 <p>贾府的崩溃，说到底其实就是经济的崩溃。《红楼梦》故事的展开，无不与经济问题密切相关，但是经济问题在小说中大多是一个隐性的存在，当情节需要时，它才显现出来，成为小说内容的一部分。《荣国府的经济账》一书以经济和与经济相关的制度为切入点，分析了林黛玉的家产之谜、荣国府家政主持者的身份、王熙凤与月钱管理、探春治家除弊、贾府的管家阶层等八个问题。角度新颖，逻辑缜密，分析鞭辟入里，令人拍案叫绝。该书既有学术的严谨性，又有很强的可读性和趣味性，是一部别具视角的研“红”佳作。</p>
 <p>224:
 <a href="https://url96.ctfile.com/d/35561896-53529010-259212?p=4184">城通网盘</a>(访问密码： 4184)</p>
-<div>
-    <div id="content" class="flex">
-        
-        <button id="login-button" onclick="window.netlifyIdentity.open('login')" style="display: none;">登录</button>
-
-        
-        <a id="download-link" href="" style="display: none;">
-            下载链接
-        </a>
-
-        
-
-        
-        <button id="logout-button" onclick="window.netlifyIdentity.open('logout')" style="display: none;">退出</button>
-  
-
-        
-        <script>
-            const isPrivate =  false ;
-        </script>
-    </div>
-</div>
-
-<script>
-    
-    localStorage.setItem("redirectAfterLogin", window.location.href);
-    
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (isPrivate) {
-                
-                if (user) {
-                    
-                    document.getElementById("download-link").style.display = "inline";
-                    document.getElementById("logout-button").style.display = "inline";
-                    document.getElementById("login-button").style.display = "none";
-                } else {
-                    
-                    document.getElementById("download-link").style.display = "none";
-                    document.getElementById("logout-button").style.display = "none";
-                    document.getElementById("login-button").style.display = "inline";
-                }
-            } else {
-                
-                document.getElementById("login-button").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
-                document.getElementById("download-link").style.display = "none";
-            }
-        });
-
-        
-        window.netlifyIdentity.on("login", () => {
-            const redirectUrl = localStorage.getItem("redirectAfterLogin") || window.location.origin;
-            localStorage.removeItem("redirectAfterLogin");  
-            if (isPrivate) {
-                document.getElementById("download-link").style.display = "inline";
-                document.getElementById("logout-button").style.display = "inline";
-                document.getElementById("login-button").style.display = "none";
-            }
-            window.netlifyIdentity.close(); 
-            window.location.href = redirectUrl;
-            window.location.reload(); 
-        });
-
-        
-        window.netlifyIdentity.on("logout", () => {
-            if (isPrivate) {
-                document.getElementById("download-link").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
-                document.getElementById("login-button").style.display = "inline";
-            }
-            window.netlifyIdentity.logout(); 
-            window.location.reload(); 
-        });
-    }
-</script>
 
     <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
 
@@ -575,7 +474,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>

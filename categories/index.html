@@ -15,32 +15,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
 <link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  
-  window.netlifyIdentity = window.netlifyIdentity || {
-    on: () => {},
-    open: () => {},
-    close: () => {},
-    currentUser: () => null
-  };
-  window.netlifyIdentity.on('init', user => {
-    if (user) {
-      console.log('User is logged in:', user);
-    } else {
-      console.log('User is not logged in');
-    }
-  });
-
-  window.netlifyIdentity.on('login', user => {
-    console.log('User logged in:', user);
-    window.netlifyIdentity.close();
-  });
-
-  window.netlifyIdentity.on('logout', () => {
-    console.log('User logged out');
-  });
-</script>
+ 
   <script>
     
     window.dataLayer = window.dataLayer || [];
@@ -119,7 +94,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
     </li>
     <li class="my-2">
-      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E4%BC%9A%E5%91%98/">会员</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200">会员</a>
     </li>
     </ul>
   </nav>
@@ -169,15 +144,6 @@
   				<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
 			</svg>
       		<span>期刊</span></a>
-  		</li>
-
-      <li class="relative hover:bg-zinc-200 border py-6 px-8 rounded-2xl group">
-      	<a class="insert-link flex items-center space-x-4" href="/categories/%E4%BC%9A%E5%91%98/">
-      		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="group-hover:animate-spin" viewBox="0 0 16 16">
-  				<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  				<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
-			</svg>
-      		<span>会员</span></a>
   		</li>
 
       <li class="relative hover:bg-zinc-200 border py-6 px-8 rounded-2xl group">
@@ -380,7 +346,7 @@
       
         <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
       
-        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E4%BC%9A%E5%91%98/">会员</a></li>
+        <li><a class="decoration-auto hover:underline font-semibold" href="">会员</a></li>
       
     </ul>
   </div>
