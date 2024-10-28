@@ -17,15 +17,33 @@
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/posts/protected";
-        });
-      }
-    });
-  }
+  
+  window.netlifyIdentity = window.netlifyIdentity || {
+    on: () => {},
+    open: () => {},
+    close: () => {},
+    currentUser: () => null
+  };
+  window.netlifyIdentity.on('init', user => {
+    if (user) {
+      console.log('User is logged in:', user);
+    } else {
+      console.log('User is not logged in');
+    }
+  });
+
+  window.netlifyIdentity.on('login', user => {
+    console.log('User logged in:', user);
+    window.netlifyIdentity.close();
+    
+    document.location.href = '/';
+  });
+
+  window.netlifyIdentity.on('logout', () => {
+    console.log('User logged out');
+    
+    document.location.href = '/';
+  });
 </script>
   <script>
     
@@ -312,6 +330,12 @@ BBC广受赞誉的人文科普专栏结集，牛津大学文学教授的诗意�
 
   
   <aside class="md:col-span-1"><div class="lg:sticky lg:top-8">
+
+	<div>
+		<button onclick="window.netlifyIdentity.open()">Log in</button>
+		<i> / </i>
+		<button onclick="window.netlifyIdentity.logout()">Log out</button>
+	</div>
 
 	<div class="rounded-2xl p-4 bg-zinc-100 mb-10">
 
