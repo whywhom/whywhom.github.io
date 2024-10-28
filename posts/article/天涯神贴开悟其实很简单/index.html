@@ -596,7 +596,7 @@
 <p>从我们的身体出发，我们会来到我们的精神世界，这个没有问题，大多数人在一生中都可以走到这个世界，而且目前这个精神世界已经非常拥挤，大多数人还在这个精神世界里结婚生子了，他们在精神世界生活的非常惬意，他们以为人生的终点就是那里，遗憾的是，他们错过了人生中更重要的下一站，那就是从精神世界出发，我们终究会到达下一个更加美丽的世界——心灵世界。</p>
 
 <div>
-    <div id="content">
+    <div id="content" class="flex items-center space-x-4">
         
         <button id="login-button" onclick="window.netlifyIdentity.open('login')"
             class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
@@ -605,22 +605,22 @@
         </button>
 
         
-        <button id="logout-button" onclick="window.netlifyIdentity.open('logout')"
-            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
-            style="display: none;">
-            退出登录
-        </button>
+        <a id="download-link" href="" style="display: none;">
+            <button id="download-button"
+                class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out"
+                style="display: none;" onclick="window.location.href=''">
+                下载链接
+            </button>
+        </a>
 
         
+
         
-        
-            <button 
-            id="download-button" 
-            class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out" 
-            style="display: none;"
-            onclick="window.location.href=''">
-            下载链接
-            </button>
+        <button id="logout-button"
+            class="bg-red-500 text-white font-bold py-2 px-4 rounded-full border-2 border-red-500 hover:bg-red-700 transition duration-300 ease-in-out"
+            style="display: none;" onclick="window.netlifyIdentity.logout()">
+            退出登录
+        </button>
 
         
         <script>
@@ -631,7 +631,7 @@
 
 <script>
     
-
+    
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -662,7 +662,7 @@
             
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
-                document.getElementById("logout-button").style.display = "inline";
+                
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
@@ -673,7 +673,7 @@
         window.netlifyIdentity.on("logout", () => {
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
+                
                 document.getElementById("login-button").style.display = "inline";
             }
             window.location.href = window.location.origin;

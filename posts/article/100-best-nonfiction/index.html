@@ -595,7 +595,7 @@
 <p>William Lamb, 2nd Viscount Melbourne, was a prime minister of England best known as the political guide and close friend of the young Queen Victoria (there were rumors that she would marry him, despite their forty-year age difference). A politician who was bored by politics, Lord Melbourne nevertheless created a stable coalition of moderates. Lord Cecil’s two-volume biography (The Young Melbourne and Lord M) was heralded as “brilliant, beautiful, and utterly absorbing” by The New York Times Book Review and Cecil was dubbed “A historian of the heart” by L. P. Hartley.</p>
 
 <div>
-    <div id="content">
+    <div id="content" class="flex items-center space-x-4">
         
         <button id="login-button" onclick="window.netlifyIdentity.open('login')"
             class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
@@ -604,22 +604,22 @@
         </button>
 
         
-        <button id="logout-button" onclick="window.netlifyIdentity.open('logout')"
-            class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full border-2 border-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out"
-            style="display: none;">
-            退出登录
-        </button>
+        <a id="download-link" href="" style="display: none;">
+            <button id="download-button"
+                class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out"
+                style="display: none;" onclick="window.location.href=''">
+                下载链接
+            </button>
+        </a>
 
         
+
         
-        
-            <button 
-            id="download-button" 
-            class="bg-green-500 text-white font-bold py-2 px-4 rounded-full border-2 border-green-500 hover:bg-green-700 transition duration-300 ease-in-out" 
-            style="display: none;"
-            onclick="window.location.href=''">
-            下载链接
-            </button>
+        <button id="logout-button"
+            class="bg-red-500 text-white font-bold py-2 px-4 rounded-full border-2 border-red-500 hover:bg-red-700 transition duration-300 ease-in-out"
+            style="display: none;" onclick="window.netlifyIdentity.logout()">
+            退出登录
+        </button>
 
         
         <script>
@@ -630,7 +630,7 @@
 
 <script>
     
-
+    
     
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
@@ -661,7 +661,7 @@
             
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "inline";
-                document.getElementById("logout-button").style.display = "inline";
+                
                 document.getElementById("login-button").style.display = "none";
             }
             window.netlifyIdentity.close(); 
@@ -672,7 +672,7 @@
         window.netlifyIdentity.on("logout", () => {
             if (isPrivate) {
                 document.getElementById("download-link").style.display = "none";
-                document.getElementById("logout-button").style.display = "none";
+                
                 document.getElementById("login-button").style.display = "inline";
             }
             window.location.href = window.location.origin;
