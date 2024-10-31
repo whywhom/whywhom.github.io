@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>哈佛经济学家推理系列 | i 悦读</title>
+
+<meta name="description" content="边际谋杀 致命的均衡 夺命曲线 看不见的手">
+      <link rel="stylesheet" href="/css/main.min.2dff239451b5c241561832ed339ea00286b502099254bc8f2be8edd47373ac9a.css" integrity="sha256-Lf8jlFG1wkFWGDLtM56gAoa1AgmSVLyPK&#43;jt1HNzrJo=" crossorigin="anonymous">
+
+<link rel="icon" type="image/svg+xml" href="https://iyuedu.top/favicon.svg"> 
+<link rel="icon" type="image/x-icon" href="https://iyuedu.top/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="16x16" href="https://iyuedu.top/favicon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="https://iyuedu.top/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="https://iyuedu.top/favicon-64.png"> 
+
+ 
+  <script>
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+    </script>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Y7Z1C2GWB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5Y7Z1C2GWB');
+  </script>  
+  
+</head>
+<body>
+  <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
+	<div class="flex items-center">
+		<div class="flex items-center">
+			<button class="flex items-center space-x-2 rounded-full border py-1 pr-[5px] pl-3 group bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="menu-bar">
+				<svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+				</svg>
+				<span class="bg-blue-500 fill-white rounded-full p-1.5">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="group-hover:animate-spin bi bi-egg-fried fill-white" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+						<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"></path>
+					</svg>
+				</span>
+			</button>
+			<div class="relative rounded-full py-1.5 px-6 bg-zinc-100 hover:bg-zinc-200 text-xl font-bold uppercase mx-2">
+				<h2><a class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto" href="https://iyuedu.top/">i 悦读</a></h2>
+			</div>
+		</div>
+		<div class="flex items-center ml-auto">
+			<button class="flex items-center rounded-full p-3 bg-zinc-100 hover:bg-zinc-200 toggle-button" data-target="search-bar">
+				<svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+					<path id="path1" class="transition-all ease-linear" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+					<path id="path2" class="transition-all ease-linear hidden" d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+  <nav id="menu-bar" class="block mt-3 close">
+    <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">首页</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">关于</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">分类</a>
+    </li>
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">标签</a>
+    </li>
+    </ul>
+  </nav>
+<div id="search-bar" class="block mt-3 close">
+	
+	<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/pagefind/pagefind-ui.js"></script>
+	<div id="search"></div>
+	<script>
+	  window.addEventListener('DOMContentLoaded', (event) => {
+		new PagefindUI({
+		  element: "#search",
+		  showSubResults: true
+		});
+	  });
+	</script>
+	
+	
+	<div id="search-results"></div>
+</div>
+</div></header>
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/">i 悦读</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="https://iyuedu.top/posts/">Posts</a>
+		</li>
+	</ul>
+</div><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-14">
+
+  <article class="md:col-span-3 prose lg:prose-lg">
+
+    <header class="not-prose">
+      
+      <h1 id="title" class="text-4xl font-bold leading-normal">哈佛经济学家推理系列</h1>
+
+      <div id="lead" class="my-6">
+
+        <p class="font-bold">边际谋杀 致命的均衡 夺命曲线 看不见的手 </p>
+
+      </div>
+      
+      <div id="writer" class="flex items-center space-x-4">
+
+        
+        
+        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+          
+          <li class="font-semibold my-2"></li>
+          
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2"><time datetime="2024-10-31T06:01:02&#43;13:00">October 31, 2024</time>
+          </li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+            1 min read
+          </li>
+
+        </ul>
+
+      </div>
+      
+    </header>
+
+    <figure id="featureimage" class="rounded-xl aspect-video">
+
+          <img class="rounded-lg" src="https://img1.doubanio.com/lpic/s1505730.jpg" alt="哈佛经济学家推理系列">
+
+    </figure>
+
+    <div id="content" class="mb-14">
+      <h2 id="内容简介-------">内容简介  · · · · · ·</h2>
+<p>《边际谋杀》</p>
+<p>本书为哈佛经济学家推理系列本。</p>
+<p>在加勒比海林木繁茂的圣约翰岛上，月桂湾蔗园饭店是个理想的度假胜地──看来是如此。但是对于前来度假的哈佛大学经济学教授亨利·斯皮尔曼来说，这个地方还给了他一个出乎意料的命题：谋杀案。</p>
+<p>岛上警方的调查工作几乎完全触礁，而这位矮小、秃头、又喜欢用人类行为来训练自己好奇心的斯皮尔曼，则进行他自己的调查，只是他用的是完全不同的法则──经济学原理。他从“理性”这个主题变化出许多经济概念并加以应用，其中包括：</p>
+<p>理性的人在选择“工作”或“休闲”时的思考方式;如何为一本书制订定最合适的定价;为什么有些人会和别人保持着某种关系;一个产品的供给量和销售量在什么情况下会相等;不同个人的效用为什么无法比较。</p>
+<p>本故事核心在一个谜：某人的行为无法令人一眼看穿，但人们不知道是什么被隐藏起来了。当斯皮尔曼看见有人的行为似乎不太理性，不是以表面上最低的成本来达到目标，他就知道其中必有蹊跷，只要充分观察这些“非理性”的行为，他就能推论出对方的问题所在。</p>
+<p>《致命的均衡》</p>
+<p>本书为哈佛经济学家推理系列第二本。</p>
+<p>丹尼斯·高森── 一位前途光明的年轻学者──疑似自杀了。从经济学理性分析的角度来看，不论是否能够留在哈佛，都有大好前景等着他。但是他竟然会认为自杀的机会成本(考虑到他未来可能的发展，这成本可说相当地高)，比无法获得终身教职的情感成本要低很多。自杀这种的成本收益计算，对于学习经济学出身的丹尼斯?高森来说，实在是匪夷所思。</p>
+<p>然而，一切并没有结束。终身教职评审委员会的两位成员先后遭到谋杀，三个死亡案件的幕后黑手到底是谁，亨利?斯皮尔曼用他一贯的经济学思维查找疑点。</p>
+<p>亨利?斯皮尔曼很清楚，凶手就在委员会成员之中，但是哪一位杰出的教授，会因为谋杀其他同事而大幅提高效用呢?谜团等待着亨利·斯皮尔曼教授破解。</p>
+<p>《夺命曲线》</p>
+<p>本书为哈佛经济学家推理系列第三本。</p>
+<p>斯皮尔曼接受美国某企业家成立的基金会委托，来到英国的剑桥大学，协助洽谈购买伟大的经济学家马歇尔的故居。马歇尔是凯恩斯的老师、现代经济学理论之父，其故居贝里奥庄(Balliol Croft)在经济学圈内享有盛名，他的传世巨著《经济学原理》(Principles of Economics)便是在此写成。</p>
+<p>没想到购房计划尚未谈妥，同行的美国企业家即遭受神秘袭击，差点丧命;之后主教学院院长奈吉尔?哈特更是被骇人听闻的手法谋杀，使得购屋之行更加显得危机重重。</p>
+<p>等到第二具尸体出现，若有所悟的斯皮尔曼不惜冒着生命危险，与生平罕见的残酷冷血杀手面对面展开搏斗!</p>
+<p>在书中，伟大的经济学家马歇尔、边沁、亚当?斯密、凯恩斯的观念将粉墨登场……</p>
+<p>且看斯皮尔曼如何运用“信息不对称”侦破命案。</p>
+<p>《看不见的手》</p>
+<p>本书为哈佛经济学家推理系列第四本。</p>
+<p>刚成为新科诺贝尔经济学奖得主的亨利·斯皮尔曼受邀至蒙特维斯塔大学担任客座教授。一开始，校内先是发生了离奇的艺术窃案，之后原本打算教授“艺术与经济学”的课程他，却被迫要面对据传是自杀的驻校艺术家特里斯坦?惠勒案件。</p>
+<p>在斯皮尔曼客座讲学的“艺术与经济学”课堂上，学生们与斯皮尔曼激荡思考着亚当?斯密的比喻，艺术品的供需以及定价与一般商品的有何不同，又有哪些因素影响会影响供需与价格。</p>
+<p>在斯皮尔曼欣慰于学生们对经济学这个迷人领域正以经济学的思维方式不断思考成长时，他没想到，这个课堂也逐渐让校园谋杀案的情势逐渐明朗后背后潜伏的强敌与谋杀凶手得以浮现。斯皮尔曼将再一次出马寻找真相。</p>
+<h2 id="作者简介-------">作者简介  · · · · · ·</h2>
+<p>马歇尔·杰文斯是两位美国经济学家共同创作的笔名——维吉尼亚大学经济系“罗伯·泰勒讲座教授”肯尼斯·艾尔辛格(Kenneth G. Elzinga)，以及三一大学(Trinity University)教授威廉·布瑞特(William Breit，1933-2011)。他们合着有四本哈佛经济学家推理系列经济学小说：《看不见的手》(The Mystery of the Invisible Hand)、《夺命曲线》(A Deadly Indifference)，以及《致命的均衡》(The Fatal Equilibrium)。</p>
+<h2 id="下载链接">下载链接：</h2>
+<p><a href="https://url96.ctfile.com/d/35561896-63627019-0f944f?p=4184">城通网盘</a>（访问密码：4184）</p>
+
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+
+      <li class="font-semibold my-4">Tags:</li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+        <li ><a class="py-2 px-6 border rounded-full hover:bg-zinc-100 active:bg-zinc-300" href="/tags/%E4%BE%A6%E6%8E%A2/">侦探</a></li>
+    </ul>
+</div>
+
+    <footer id="content-footer" class="not-prose">
+
+      <div id="comment" class="border p-8 bg-zinc-100 rounded-2xl">
+
+        
+
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bookstore-4" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+
+      
+
+      <div id="related-post" class="">
+
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/the-deadly-percheron/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img9.doubanio.com/lpic/s22894376.jpg" alt="致命的佩尔什马" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E4%BE%A6%E6%8E%A2/">侦探</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-10-31T06:01:01&#43;13:00">Oct 31, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">致命的佩尔什马</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">一部以战时纽约为背景的失忆悬疑片</p>
+
+	</div>
+</article><article class="relative group p-4 bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="https://iyuedu.top/posts/books/night-at-the-crossroads/"></a>
+	
+	<figure class="w-full aspect-[4/3] overflow-hidden rounded-3xl">
+
+			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s29458857.jpg" alt="Night at the Crossroads" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+
+	<div class="pt-6">
+
+    <ul id="taxonomy" class="not-prose flex items-center space-x-1 flex-wrap whitespace-wrap overflow-x-auto">
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E4%BE%A6%E6%8E%A2/">侦探</a></li>
+        <li ><a class="text-xs text-yellow-600 py-1 px-1 border rounded-md" href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a></li>
+    </ul>
+</div>
+
+	<div class="pt-6">
+
+		<time datetime="2024-10-30T06:01:01&#43;13:00">Oct 30, 2024</time>
+
+		<h4 class="my-2 text-sm text-sky-700 font-bold">Night at the Crossroads</h4>
+
+		<p class="text-xs leading-normal text-zinc-500 line-clamp-2">最具人文关怀的推理大师，犯罪浪漫主义代表作，麦格雷探案集</p>
+
+	</div>
+</article>
+          
+        </div>
+      </div>
+
+    </footer>
+
+  </article>
+
+  
+  <aside class="md:col-span-1"><div class="lg:sticky lg:top-8">
+
+	<div class="rounded-2xl p-4 bg-zinc-100 mb-10">
+
+		
+		<img class="aspect-video rounded" src="/images/yueduke_search.png" alt="Banner Email Marketing">
+		<p class="text-right text-xs mt-2 leading-none text-zinc-500">Advertisement</p>
+
+</div><h2 class="font-bold text-xl mb-8">Donation</h2>
+
+<div class="mb-10">
+	<p class="mb-5">捐赠对我们来说非常重要。 这是保持服务正常运行的最安全、最可靠的方式</p>
+    <p>Please consider supporting us through Alipay or WeChat.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">Alipay</h2>
+        <img src="/donation/AliPayQR.png" alt="Alipay QR Code" class="w-full">
+      </div>
+      <div class="flex flex-col items-center">
+        <h2 class="text-yellow-600">WeChat</h2>
+        <img src="/donation/WeChatQR.png" alt="WeChat QR Code" class="w-full">
+      </div>
+    </div>
+
+</div><div class="space-y-6">
+
+		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
+
+		<article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/ha-fo-jing-ji-xue-jia-tui-li/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s1505730.jpg" alt="哈佛经济学家推理系列" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">哈佛经济学家推理系列</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/the-deadly-percheron/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img9.doubanio.com/lpic/s22894376.jpg" alt="致命的佩尔什马" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">致命的佩尔什马</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/night-at-the-crossroads/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s29458857.jpg" alt="Night at the Crossroads" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Night at the Crossroads</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/mans-search-for-meaning/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img1.doubanio.com/lpic/s8060520.jpg" alt="Man&#39;s Search for Meaning" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Man&#39;s Search for Meaning</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="https://iyuedu.top/posts/books/blitzscaling/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl bg-zinc-100">
+
+		  <img class="object-cover h-full w-full group-hover:scale-105 transition duration-500 cursor-pointer" src="https://img3.doubanio.com/lpic/s29864492.jpg" alt="Blitzscaling" style="width: 100%; height: 100%; object-fit: cover;" style="width: 100%; height: 100%; object-fit: cover;">
+
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Blitzscaling</h3>
+	</div>
+</article>
+		
+	</div>
+
+</div>
+</aside>
+
+</div>
+  
+</main>
+  <footer class="bg-zinc-100 py-10 md:py-14"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+
+  <div class="flex flex-wrap space-y-6 mb-4">
+
+    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+
+      <a class="flex items-center group" href="https://iyuedu.top/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="mr-2 group-hover:animate-spin" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+        </svg>
+        
+        <span class="text-2xl font-semibold uppercase">i 悦读</span>
+      </a>
+
+      <p class="font-semibold text-sm">
+        Write with love. i 悦读.<br>捐赠对我们来说非常重要。这是保持服务正常运行的最安全、最可靠的方式。
+      </p>
+
+      <p class="text-sm">有时你们真的很慷慨，其实闲时来逛逛，已经是最好的支持了。</p>
+
+    </div>
+
+    <div class="self-center flex flex-col w-full md:w-2/5">
+
+      <div class="columns-1 space-y-4">
+
+        <ul id="social-media" class="flex items-center space-x-4">
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.facebook.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.twitter.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.github.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+			</svg>
+		</a>
+	</li>
+	<li>
+		<a class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2" href="https://www.instagram.com/#" target="_blank" rel="noopener noreferrer">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+				  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+			</svg>
+		</a>
+	</li>
+</ul>
+ 
+        <div class="text-sm">
+          <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2023028266号-1</a>
+        </div>
+
+        <div class="text-sm">
+          <a target="_blank" rel="noopener" href="https://iyuedu.top/">本站所有书籍信息及简介均来自互联网！</a>
+        </div>
+
+    </div>
+
+    </div>
+    
+  </div>
+
+  <div class="my-8">
+    <ul class="flex items-center space-x-4">
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/">首页</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E5%9B%BE%E4%B9%A6/">图书</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%9C%9F%E5%88%8A/">期刊</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/%E6%96%87%E7%AB%A0/">文章</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/about/">关于</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/categories/">分类</a></li>
+      
+        <li><a class="decoration-auto hover:underline font-semibold" href="/tags/">标签</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="border-t pt-4">
+
+    <p class="text-sm">Copyright © 2024. All rights reserved. <a href="https://iyuedu.top/" target="_blank" rel="noopener">https://iyuedu.top/</a></p>
+
+  </div>
+
+</div>
+</footer>
+      <script defer src="/js/insertoggle.474f9b0e08021c6519cff4e46df14ccf148285b2d3a23d6321d6e10f25c291fb.js" integrity="sha256-R0&#43;bDggCHGUZz/TkbfFMzxSChbLToj1jIdbhDyXCkfs=" crossorigin="anonymous"></script>
+</body>
+</html>
