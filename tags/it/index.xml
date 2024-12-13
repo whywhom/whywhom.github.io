@@ -6,8 +6,15 @@
     <description>Recent content in IT on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 29 Nov 2024 06:01:13 +1300</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2024 06:01:02 +1300</lastBuildDate>
     <atom:link href="https://iyuedu.top/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入理解LINUX内核(第三版)</title>
+      <link>https://iyuedu.top/posts/books/shen-ru-li-jie-linux-nei-he-3/</link>
+      <pubDate>Fri, 13 Dec 2024 06:01:02 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/shen-ru-li-jie-linux-nei-he-3/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;为了彻底理解是什么使得Linux能正常运行以及其为何能在各种不同的系统中运行良好，你需要深入研究内核最本质的部分。内核处理CPU与外界间的所有交互，并且决定哪些程序将以什么顺序共享处理器时间。它如此有效地管理有限的内存，以至成百上千的进程能高效地共享系统。它熟练地统筹数据传输，这样CPU 不用为等待速度相对较慢的硬盘而消耗比正常耗时更长的时间。&lt;/p&gt;&#xA;&lt;p&gt;《深入理解Linux内核，第三版》指导你对内核中使用的最重要的数据结构、算法和程序设计诀窍进行一次遍历。通过对表面特性的探究，作者给那些想知道自己机器工作原理的人提供了颇有价值的见解。书中讨论了Intel特有的重要性质。相关的代码片段被逐行剖析。然而，本书涵盖的不仅仅是代码的功能，它解释了Linux以自己的方式工作的理论基础。&lt;/p&gt;&#xA;&lt;p&gt;本书新版涵盖2.6版本，其在内核的几乎每个子系统中都有重要的变化，尤其是在内存管理和块设备领域。本书侧重于以下主题：&lt;/p&gt;&#xA;&lt;p&gt;●内存管理，包括文件缓存、进程交换和直接内存存取（DMA）&lt;/p&gt;&#xA;&lt;p&gt;●虚拟文件系统层和第二、第三扩展文件系统&lt;/p&gt;&#xA;&lt;p&gt;●进程创建和调度&lt;/p&gt;&#xA;&lt;p&gt;●信号、中断和设备驱动程序的主要接口&lt;/p&gt;&#xA;&lt;p&gt;●定时&lt;/p&gt;&#xA;&lt;p&gt;●内核中的同步&lt;/p&gt;&#xA;&lt;p&gt;●进程间通信（IPC）&lt;/p&gt;&#xA;&lt;p&gt;●程序的执行&lt;/p&gt;&#xA;&lt;p&gt;《深入理解Linux内核》将使你了解Linux的所有内部工作，它不仅仅是一个理论上的练习。你将学习到哪些情况下Linux性能最佳，并且你将看到，在大量的不同环境里进行进程调度、文件存取和内存管理时它如何满足提供良好的系统响应的需要。这本书将帮助你充分利用Linux系统。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>程序员超强大脑</title>
       <link>https://iyuedu.top/posts/books/the-programmers-brain/</link>
