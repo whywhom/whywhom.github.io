@@ -6,8 +6,15 @@
     <description>Recent content in 设计 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Sep 2024 06:01:11 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2025 06:01:08 +1300</lastBuildDate>
     <atom:link href="https://iyuedu.top/tags/%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件设计哲学 A Philosophy of Software Design</title>
+      <link>https://iyuedu.top/posts/books/a-philosophy-of-software-design/</link>
+      <pubDate>Mon, 13 Jan 2025 06:01:08 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/a-philosophy-of-software-design/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;本书探讨了软件设计的主题：如何将复杂的软件系统分解为可以相对独立实现的模块（例如类和方法）。&lt;/p&gt;&#xA;&lt;p&gt;本书首先介绍了软件设计中的基本问题，即管理复杂性。然后讨论了如何处理软件设计过程的哲学问题，并介绍了在软件设计过程中应用的一系列设计原则。本书还介绍了一组识别设计问题的危险信号。&lt;/p&gt;&#xA;&lt;p&gt;您可以应用本书中的想法来最大限度地降低大型软件系统的复杂性，以便您可以更快、更便宜地编写软件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;作者简介-------&#34;&gt;作者简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;John Kenneth Ousterhout is an American computer scientist. He is a professor of computer science at Stanford University. He founded Electric Cloud with John Graham-Cumming.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>设计原本</title>
       <link>https://iyuedu.top/posts/books/she-ji-yuan-ben/</link>
