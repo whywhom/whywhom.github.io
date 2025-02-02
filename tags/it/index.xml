@@ -6,8 +6,29 @@
     <description>Recent content in IT on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jan 2025 06:01:08 +1300</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2025 06:01:26 +1300</lastBuildDate>
     <atom:link href="https://iyuedu.top/tags/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Probabilistic Machine Learning: Advanced Topics</title>
+      <link>https://iyuedu.top/posts/books/probabilistic-machine-learning-advanced-topics/</link>
+      <pubDate>Mon, 03 Feb 2025 06:01:26 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/probabilistic-machine-learning-advanced-topics/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;这是一本高级书籍，适合从事机器学习和统计学工作的研究人员和研究生，他们想要了解深度学习、贝叶斯推理、生成模型和不确定情况下的决策。&lt;/p&gt;&#xA;&lt;p&gt;《Probabilistic Machine Learning:Advanced Topics》是一本面向机器学习深度学习研究者的书，围绕概率方法在深度学习中的应用展开。书中内容涵盖变分推断、马尔可夫链蒙特卡洛方法(MCMC)、生成模型(如变分自编码器和生成对抗网络)、贝叶斯优化和强化学习等主题。它通过深入的理论讲解和具体的案例分析，帮助大家理解复杂的概率建模与推断，并提供代码示例，便于实践操作。&lt;/p&gt;&#xA;&lt;p&gt;这本严谨的书得到了来自谷歌、DeepMind、亚马逊、普渡大学、纽约大学和华盛顿大学等地的顶尖科学家和领域专家的贡献，对于理解机器学习中的关键问题至关重要。&lt;/p&gt;&#xA;&lt;p&gt;涵盖高维输出的生成，例如图像、文本和图形&#xA;讨论基于潜在变量模型发现数据洞察的方法&#xA;考虑不同分布下的训练和测试&#xA;探索如何使用概率模型和推理进行因果推理和决策&#xA;提供在线 Python 代码&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Probabilistic Machine Learning: An Introduction 2022</title>
+      <link>https://iyuedu.top/posts/books/probabilistic-machine-learning-an-introduction/</link>
+      <pubDate>Mon, 03 Feb 2025 06:01:26 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/probabilistic-machine-learning-an-introduction/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;通过概率建模和贝叶斯决策理论的统一视角，对机器学习进行详细且最新的介绍。通过概率建模&lt;/p&gt;&#xA;&lt;p&gt;和贝叶斯决策理论的统一视角，对机器学习进行详细且最新的介绍。&lt;/p&gt;&#xA;&lt;p&gt;本书通过概率建模和贝叶斯决策理论的统一视角，对机器学习（包括深度学习）进行详细且最新的介绍。本书涵盖了数学背景（包括线性代数和优化）、基本监督学习（包括线性和逻辑回归和深度神经网络）以及更高级的主题（包括迁移学习和无监督学习）。章末练习让学生可以学以致用，附录涵盖了符号。&lt;/p&gt;&#xA;&lt;p&gt;概率机器学习源自作者 2012 年出版的《机器学习——概率视角》一书。这不仅仅是一次简单的更新，而是一本全新的书，反映了自 2012 年以来该领域的巨大发展，最显著的是深度学习。此外，新书还附有在线 Python 代码，使用 scikit-learn、JAX、PyTorch 和 Tensorflow 等库，可用于重现几乎所有图形；这些代码可以使用基于云的笔记本在 Web 浏览器中运行，并为书中讨论的理论主题提供实用补充。本入门教材之后将有续集，采用相同的概率方法，涵盖更高级的主题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Neural Networks and Deep Learning：A Textbook</title>
+      <link>https://iyuedu.top/posts/books/neural-networks-and-deep-learning/</link>
+      <pubDate>Mon, 03 Feb 2025 06:01:25 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/neural-networks-and-deep-learning/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;如果给初学深度学习神经网络的同学们推荐一本书，那肯定会推荐这本书由Charu C.Aggarwal 编写的《Neural Networks and DeepLearning：ATextbook》。&lt;/p&gt;&#xA;&lt;p&gt;真的很全面很通俗！完美解决了初学者不知道怎么学、从哪开始学、怎么系统学等等问题！&lt;/p&gt;&#xA;&lt;p&gt;本书涵盖了深度学习中的经典和现代模型。主要关注深度学习的理论和算法。神经网络的理论和算法对于理解重要概念尤为重要，这样人们才能理解神经架构在不同应用中的重要设计概念。为什么神经网络有效？它们什么时候比现成的机器学习模型更好？深度什么时候有用？为什么训练神经网络如此困难？有哪些陷阱？本书还大量讨论了不同的应用，以便让实践者了解神经架构是如何为不同类型的问题设计的。详细介绍了针对各种数据域（例如文本、图像和图形）的深度学习方法。本书的章节涵盖三个类别：&lt;/p&gt;&#xA;&lt;p&gt;神经网络基础：第 2 章讨论了反向传播算法。&lt;/p&gt;&#xA;&lt;p&gt;许多传统的机器学习模型可以理解为神经网络的特例。第 3 章探讨了传统机器学习与神经网络之间的联系。支持向量机、线性/逻辑回归、奇异值分解、矩阵分解和推荐系统被证明是神经网络的特例。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>软件设计哲学 A Philosophy of Software Design</title>
       <link>https://iyuedu.top/posts/books/a-philosophy-of-software-design/</link>
