@@ -6,8 +6,15 @@
     <description>Recent content in 图书 on i 悦读</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Feb 2025 06:01:26 +1300</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 06:01:26 +1300</lastBuildDate>
     <atom:link href="https://iyuedu.top/categories/%E5%9B%BE%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Principles Of Deep Learning Theory</title>
+      <link>https://iyuedu.top/posts/books/the-principles-of-deep-learning-theory/</link>
+      <pubDate>Wed, 05 Feb 2025 06:01:26 +1300</pubDate>
+      <guid>https://iyuedu.top/posts/books/the-principles-of-deep-learning-theory/</guid>
+      <description>&lt;h2 id=&#34;内容简介-------&#34;&gt;内容简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;本教科书建立了一个理论框架，用于理解具有实际意义的深度学习模型。&lt;/p&gt;&#xA;&lt;p&gt;Roberts 和 Yaida 借鉴了理论物理学的方法，对现实的深度神经网络的实际工作方式提供了清晰而富有教学意义的解释。为了使理论前沿的结果易于理解，作者摒弃了该学科传统上强调的令人生畏的形式主义，同时又不牺牲准确性。&lt;/p&gt;&#xA;&lt;p&gt;本书直截了当、通俗易懂，在新颖结果的详细第一性原理推导与理论家和实践者的洞察力和直觉之间取得了平衡。&lt;/p&gt;&#xA;&lt;p&gt;这本独立的教科书非常适合对人工智能感兴趣的学生和研究人员，他们只需要具备线性代数、微积分和非形式概率论的最低先决条件，它可以轻松填满一学期的深度学习理论课程。&lt;/p&gt;&#xA;&lt;p&gt;这是第一次，现代人工智能能力中令人兴奋的实际进步可以与一套有效的原则相匹配，为深度学习的理论研究提供了永恒的蓝图。&lt;/p&gt;&#xA;&lt;h2 id=&#34;作者简介-------&#34;&gt;作者简介  · · · · · ·&lt;/h2&gt;&#xA;&lt;p&gt;Dan Roberts (&lt;a href=&#34;https://danintheory.com&#34;&gt;https://danintheory.com&lt;/a&gt;) 目前是麻省理工学院理论物理中心的研究员、美国国家科学基金会人工智能与基本相互作用研究所的附属机构以及 Salesforce 的首席研究员。此前，他是 Salesforce 收购的协作人工智能公司 Diffeo 的联合创始人兼首席技术官、纽约 Facebook 人工智能研究中心 (FAIR) 的研究科学家以及新泽西州普林斯顿高等研究院自然科学学院的成员。Dan 获得了麻省理工学院的博士学位，资助方为赫兹基金会奖学金和 NDSEG，并以马歇尔学者的身份在剑桥大学和牛津大学学习。Dan 的研究集中在物理学和计算之间的相互作用上，之前他专注于黑洞、量子混沌、计算复杂性、随机性之间的关系，以及物理定律与计算基本极限的关系。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Probabilistic Machine Learning: Advanced Topics</title>
       <link>https://iyuedu.top/posts/books/probabilistic-machine-learning-advanced-topics/</link>
