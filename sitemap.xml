@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://iyuedu.top/tags/ai/</loc>
+    <lastmod>2025-02-19T06:01:26+13:00</lastmod>
+  </url><url>
     <loc>https://iyuedu.top/categories/</loc>
     <lastmod>2025-02-19T06:01:26+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/</loc>
+    <lastmod>2025-02-19T06:01:26+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/tags/it/</loc>
     <lastmod>2025-02-19T06:01:26+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/</loc>
@@ -15,12 +21,6 @@
     <lastmod>2025-02-19T06:01:26+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/categories/%E5%9B%BE%E4%B9%A6/</loc>
-    <lastmod>2025-02-19T06:01:26+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2025-02-19T06:01:26+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/%E6%8E%A8%E7%90%86/</loc>
     <lastmod>2025-02-19T06:01:26+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/books/deep-learning-adaptive/</loc>
@@ -95,6 +95,12 @@
     <loc>https://iyuedu.top/posts/books/chu-ban-jin-zhi/</loc>
     <lastmod>2025-02-07T06:01:26+13:00</lastmod>
   </url><url>
+    <loc>https://iyuedu.top/tags/%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2025-02-07T06:01:26+13:00</lastmod>
+  </url><url>
+    <loc>https://iyuedu.top/tags/%E6%8E%A8%E7%90%86/</loc>
+    <lastmod>2025-02-07T06:01:26+13:00</lastmod>
+  </url><url>
     <loc>https://iyuedu.top/posts/books/zai-jian-qun-xing/</loc>
     <lastmod>2025-02-06T06:01:26+13:00</lastmod>
   </url><url>
@@ -103,9 +109,6 @@
   </url><url>
     <loc>https://iyuedu.top/posts/magazine/the-yorker-20250210/</loc>
     <lastmod>2025-02-06T05:49:06+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/it/</loc>
-    <lastmod>2025-02-05T06:01:26+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/books/the-principles-of-deep-learning-theory/</loc>
     <lastmod>2025-02-05T06:01:26+13:00</lastmod>
@@ -598,9 +601,6 @@
   </url><url>
     <loc>https://iyuedu.top/posts/article/ten-classic-ai-books/</loc>
     <lastmod>2024-11-10T01:45:13+13:00</lastmod>
-  </url><url>
-    <loc>https://iyuedu.top/tags/ai/</loc>
-    <lastmod>2024-11-08T06:01:03+13:00</lastmod>
   </url><url>
     <loc>https://iyuedu.top/posts/books/how-to-build-your-career-in-ai/</loc>
     <lastmod>2024-11-08T06:01:03+13:00</lastmod>
