@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Resume</title>
-    <link>http://localhost:49843/</link>
-    <description>Recent content on My Resume</description>
+    <title>Andy&#39;s Blog</title>
+    <link>https://whywhom.github.io/</link>
+    <description>Recent content on Andy&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:49843/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Nov 2024 23:29:21 +0530</lastBuildDate>
+    <atom:link href="https://whywhom.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android architecture</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-8-android-architecture/</link>
+      <pubDate>Sun, 03 Nov 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-8-android-architecture/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-8-android-architecture-07ca74eee000&#34;&gt;🔗 Android Interview Series 2024 — Part 8 (Android architecture)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-can-you-explain-the-mvc-and-mvp-patterns-what-are-the-main-differences-and-why-are-they-not-used-in-android-development&#34;&gt;1. Can you explain the MVC and MVP patterns? What are the main differences and why are they not used in Android development?&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;MVC is the Model-View-Controller architecture where model refers to the data model classes. The view refers to the xml files and the controller handles the business logic. The issue with this architecture is unit testing. The model can be easily tested since it is not tied to anything. The controller is tightly coupled with the android apis making it difficult to unit test. Modularity &amp;amp; flexibility is a problem since the view and the controller are tightly coupled. If we change the view, the controller logic should also be changed. Maintenance is also an issue.&lt;/li&gt;&#xA;&lt;li&gt;MVP architecture: Model-View-Presenter architecture. MVP separates concerns by using a Presenter to handle business logic, the View (often an Activity or Fragment) to display UI, and the Model to manage data. In this setup, the Presenter is responsible for updating the View based on the Model’s data and handling user actions, making it testable and reducing the burden on the Android lifecycle-aware View. This separation improves testability since the Presenter can be tested independently of the Android framework. But the Presenter does not inherently respond to lifecycle events like configuration changes (e.g., screen rotations), which means that extra handling is often required to manage these situations.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;2-what-is-mvvm-architecture-in-android&#34;&gt;2. What is MVVM architecture in android?&lt;/h5&gt;&#xA;&lt;p&gt;MVVM (Model-View-View Model) architecture: MVVM leverages ViewModel, a lifecycle-aware component that holds and processes data for the UI, separating it from the View (Activity/Fragment). The Model represents the data layer and interacts with the ViewModel, which then updates the View using LiveData, DataBinding, or StateFlow. The ViewModel handles data and business logic, while the View observes changes and updates UI reactively, which is lifecycle-aware and thus avoids memory leaks and configuration issues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jetpack Compose</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-7-jetpack-compose/</link>
+      <pubDate>Thu, 03 Oct 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-7-jetpack-compose/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-7-jetpack-compose-ff7d2ecd9018&#34;&gt;🔗 Android Interview Series 2024 — Part 7 (Jetpack Compose)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-what-is-jetpack-compose&#34;&gt;1. What is Jetpack Compose?&lt;/h5&gt;&#xA;&lt;p&gt;Jetpack Compose is Android’s recommended modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Jetpack Compose is declarative programming, which means you can describe your user interface by invoking a set of composables, which is vastly different from the traditional way of imperative UI design.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kotlin Flows</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-6-kotlin-flows/</link>
+      <pubDate>Tue, 03 Sep 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-6-kotlin-flows/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df&#34;&gt;🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-what-is-flow&#34;&gt;1. What is Flow?&lt;/h5&gt;&#xA;&lt;p&gt;A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to emit multiple values over time in a sequential and reactive manner. Some key characteristics of Flow:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Flow is designed to handle asynchronous data streams, where values are emitted one after the other. Each emission is processed sequentially, suspending until the previous emission completes, providing a natural way to handle data flow in a non-blocking way.&lt;/li&gt;&#xA;&lt;li&gt;Flow handles backpressure automatically by suspending emissions if the collector (consumer) is slow to process them. This prevents overwhelming the consumer and manages resource usage effectively.&lt;/li&gt;&#xA;&lt;li&gt;Flow is &amp;ldquo;cold,&amp;rdquo; meaning it doesn’t produce or emit any values until it is actively collected. Each time you call collect on a Flow, it starts from scratch, similar to how a function is called and executed anew. This is different from hot streams, like LiveData or RxJava’s Subject, which emit values independently of whether there’s an active observer.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;2-what-are-the-different-ways-to-create-a-flow&#34;&gt;2. What are the different ways to create a Flow?&lt;/h5&gt;&#xA;&lt;p&gt;Flow builders allow you to create flows in various ways depending on your use case. The most commonly used flow builders include:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kotlin Coroutines</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-5-kotlin-coroutines/</link>
+      <pubDate>Sat, 03 Aug 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-5-kotlin-coroutines/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-5-kotlin-coroutines-3dd1ae81c721&#34;&gt;🔗 Android Interview Series 2024 — Part 5 (Kotlin Coroutines)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-what-are-coroutines&#34;&gt;1. What are coroutines?&lt;/h5&gt;&#xA;&lt;p&gt;Coroutine stands for cooperating functions. They provide a more efficient and readable way to handle asynchronous tasks. It is similar to a thread, in that it takes a block of code to run that works concurrently with the rest of the code. However, a coroutine is not bound to any particular thread. It may suspend its execution in one thread and resume in another one. Coroutines were launched to Kotlin in version 1.3.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kotlin Basics</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-4-kotlin-basics/</link>
+      <pubDate>Wed, 03 Jul 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-4-kotlin-basics/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-4-kotlin-basics-16531ee54e8a&#34;&gt;🔗 Android Interview Series 2024 — Part 4 (Kotlin Basics)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;&#xA;&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java basics</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-3-java-basics/</link>
+      <pubDate>Mon, 03 Jun 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-3-java-basics/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://medium.com/android-news/android-interview-questions-cheat-sheet-part-ii-bea0633f0da7&#34;&gt;🔗 Android Interview Series 2024 — Part 3 (Java basics)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;&#xA;&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android intermediate</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-2-android-intermediate/</link>
+      <pubDate>Fri, 03 May 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-2-android-intermediate/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-2-android-intermediate-472e0e787725&#34;&gt;🔗 Android Interview Series 2024 — Part 2 (Android intermediate)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-what-are-android-architecture-components-and-why-are-they-useful&#34;&gt;1. What are Android Architecture Components, and why are they useful?&lt;/h5&gt;&#xA;&lt;p&gt;Android Architecture Components are a set of libraries introduced by Google to help developers design robust, testable, and maintainable Android applications. These libraries provide solutions to common problems that Android developers face, such as managing UI lifecycle changes and handling data persistence efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Android basics Interview</title>
+      <link>https://whywhom.github.io/blogs/android-interview-series-2024-part-1-android-basics/</link>
+      <pubDate>Wed, 03 Apr 2024 23:29:21 +0530</pubDate>
+      <guid>https://whywhom.github.io/blogs/android-interview-series-2024-part-1-android-basics/</guid>
+      <description>&lt;p&gt;Here is the original article:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://proandroiddev.com/android-interview-series-2024-part-1-android-basics-23a713f4a648&#34;&gt;🔗 Android Interview Series 2024 – Part 1 (Android Basics)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-what-is-the-android-application-architecture&#34;&gt;1. What is the Android Application Architecture?&lt;/h5&gt;&#xA;&lt;p&gt;Android application architecture has the following components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Content Providers − It will share the data between applications.&lt;/li&gt;&#xA;&lt;li&gt;Services − It will perform background functionalities&lt;/li&gt;&#xA;&lt;li&gt;Intent − It will perform the inter connection between activities and the data passing mechanism.&lt;/li&gt;&#xA;&lt;li&gt;Resource Externalization − strings and graphics.&lt;/li&gt;&#xA;&lt;li&gt;Notification − light, sound, icon, notification, dialog box and toast.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;2-what-is-the-application-class&#34;&gt;2. What is the Application class?&lt;/h5&gt;&#xA;&lt;p&gt;The Application class in Android is the base class within an Android app that contains all other components such as activities and services. The Application class, or any subclass of the Application class, is instantiated before any other class when the process for your application/package is created.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Gallery</title>
+      <link>https://whywhom.github.io/gallery/</link>
+      <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
+      <guid>https://whywhom.github.io/gallery/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

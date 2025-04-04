@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/images/andy.jpeg type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://whywhom.github.io/blogs/android-interview-series-2024-part-6-kotlin-flows/">
+  <meta property="og:site_name" content="Andy&#39;s Blog">
+  <meta property="og:title" content="Kotlin Flows">
+  <meta property="og:description" content="Android Interview Series 2024 — Part 6">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-09-03T23:29:21+05:30">
+    <meta property="article:modified_time" content="2024-09-03T23:29:21+05:30">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Interview">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kotlin Flows">
+  <meta name="twitter:description" content="Android Interview Series 2024 — Part 6">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Android Interview Series 2024 — Part 6">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Kotlin Flows | Andy&#39;s Blog
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/andy.jpeg" width="30" height="30"
+                    class="d-inline-block align-top">
+                Andy&#39;s Blog
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume" title="Resume">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Kotlin Flows</h1>
+            <div class="text-center">
+              
+                Anitaa Murthy
+                <small>|</small>
+              
+              Sep 3, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" alt="Kotlin Flows">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df">🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-flow">1. What is Flow?</h5>
+<p>A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to emit multiple values over time in a sequential and reactive manner. Some key characteristics of Flow:</p>
+<ul>
+<li>Flow is designed to handle asynchronous data streams, where values are emitted one after the other. Each emission is processed sequentially, suspending until the previous emission completes, providing a natural way to handle data flow in a non-blocking way.</li>
+<li>Flow handles backpressure automatically by suspending emissions if the collector (consumer) is slow to process them. This prevents overwhelming the consumer and manages resource usage effectively.</li>
+<li>Flow is &ldquo;cold,&rdquo; meaning it doesn’t produce or emit any values until it is actively collected. Each time you call collect on a Flow, it starts from scratch, similar to how a function is called and executed anew. This is different from hot streams, like LiveData or RxJava’s Subject, which emit values independently of whether there’s an active observer.</li>
+</ul>
+<h5 id="2-what-are-the-different-ways-to-create-a-flow">2. What are the different ways to create a Flow?</h5>
+<p>Flow builders allow you to create flows in various ways depending on your use case. The most commonly used flow builders include:</p>
+<ul>
+<li>The flow builder is the primary way to create a flow. It allows you to emit values asynchronously using the emit() function.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">simpleFlow</span>(): Flow<span style="color:#f92672">&lt;</span>Int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>        delay(100) <span style="color:#75715e">// Simulate some delay</span>
+</span></span><span style="display:flex;"><span>        emit(i) <span style="color:#75715e">// Emit values from 1 to 5</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>The flowOf builder creates a flow from a fixed set of values.</li>
+</ul>
+<pre tabindex="0"><code>val values = flowOf(1, 2, 3, 4, 5)
+</code></pre><ul>
+<li>The asFlow extension allows you to convert collections or sequences into flows.</li>
+</ul>
+<pre tabindex="0"><code>val values = listOf(1, 2, 3).asFlow()
+</code></pre><h5 id="3-what-are-the-two-different-types-of-flows">3. What are the two different types of Flows?</h5>
+<p>There are two different types of Flows:</p>
+<ol>
+<li>A Cold Flow in Kotlin is a flow that does not start emitting values until a collector actively starts collecting it. This means that each collector (or subscriber) gets its own instance of the flow, and the flow starts from scratch every time it is collected.</li>
+</ol>
+<ul>
+<li>Cold flows are “lazy,” so no work is done until there is a demand for data.</li>
+<li>Each collector receives its own independent stream of data. Each time a new collector subscribes, the flow starts from the beginning.</li>
+<li>Suitable for use cases where you want fresh data for each subscriber, such as database queries, network requests, or other repeatable sources.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Regular Flow example</span>
+</span></span><span style="display:flex;"><span>    val coldFlow <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>         emit(0) 
+</span></span><span style="display:flex;"><span>         emit(1)
+</span></span><span style="display:flex;"><span>         emit(2)
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    launch { <span style="color:#75715e">// Calling collect the first time</span>
+</span></span><span style="display:flex;"><span>        coldFlow.<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;cold flow collector 1 received: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        delay(2500)
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Calling collect a second time</span>
+</span></span><span style="display:flex;"><span>      coldFlow.<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;cold flow collector 2 received: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// RESULT</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Both the collectors will get all the values from the beginning. </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// For both collectors, the corresponding Flow starts from the beginning.</span>
+</span></span><span style="display:flex;"><span>flow collector 1 received: <span style="color:#f92672">[</span>0, 1, 2<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>flow collector 1 received: <span style="color:#f92672">[</span>0, 1, 2<span style="color:#f92672">]</span>
+</span></span></code></pre></div><ol start="2">
+<li>Hot Flow emit values independently of whether there are active collectors or not. Once started, a hot flow continuously produces data that is shared among all collectors. This behavior is similar to broadcasting: new subscribers (collectors) receive only the latest emissions but miss any past values emitted before they started collecting.</li>
+</ol>
+<ul>
+<li>All collectors receive data from the same ongoing flow, starting from the latest value at the time they subscribe.</li>
+<li>Emission does not restart for each new collector; it’s a single, shared source.</li>
+<li>Suitable for scenarios like UI state updates, event broadcasting, or shared state where all subscribers need access to the latest values.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// SharedFlow example</span>
+</span></span><span style="display:flex;"><span>    val sharedFlow <span style="color:#f92672">=</span> MutableSharedFlow<span style="color:#f92672">&lt;</span>Int<span style="color:#f92672">&gt;</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sharedFlow.<span style="color:#a6e22e">emit</span>(0)
+</span></span><span style="display:flex;"><span>    sharedFlow.<span style="color:#a6e22e">emit</span>(1)
+</span></span><span style="display:flex;"><span>    sharedFlow.<span style="color:#a6e22e">emit</span>(2)
+</span></span><span style="display:flex;"><span>    sharedFlow.<span style="color:#a6e22e">emit</span>(3)
+</span></span><span style="display:flex;"><span>    sharedFlow.<span style="color:#a6e22e">emit</span>(4)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    launch {
+</span></span><span style="display:flex;"><span>        sharedFlow.<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;SharedFlow collector 1 received: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        delay(2500)
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Calling collect a second time</span>
+</span></span><span style="display:flex;"><span>      sharedFlow.<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;SharedFlow collector 2 received: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// RESULT </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// The collectors will get the values from where they have started collecting. </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Here the 1st collector gets all the values. But the 2nd collector gets </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// only those values that got emitted after 2500 milliseconds as it started </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// collecting after 2500 milliseconds.</span>
+</span></span><span style="display:flex;"><span>SharedFlow collector 1 received: <span style="color:#f92672">[</span>0,1,2,3,4<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>SharedFlow collector 2 received: <span style="color:#f92672">[</span>2,3,4<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h5 id="4-sharedflow-vs-stateflow">4. SharedFlow vs StateFlow?</h5>
+<p>Both SharedFlow and StateFlow are types of hot flows that emit values to multiple subscribers and keep emitting even when no subscribers are actively collecting.</p>
+<ol>
+<li>StateFlow is a specialized hot flow designed to hold and emit state updates. It always has a single current value and emits the latest state to new collectors.</li>
+</ol>
+<ul>
+<li>It holds a single, current value that can be read and updated directly. Changes to the value are updated immediately, and new collectors always receive the latest value upon subscription.</li>
+<li>Only the latest value is replayed to new collectors.</li>
+<li>Exposed as an immutable StateFlow, so external subscribers can read but not modify the value.</li>
+<li>Commonly used in ViewModels to hold the UI state and expose it to the UI layer, such as with Android’s Jetpack Compose or LiveData replacements. Ideal for cases where a single source of truth (the current state) needs to be shared with multiple consumers, ensuring all consumers always have the most recent data.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val _textStateFlow <span style="color:#f92672">=</span> MutableStateFlow(<span style="color:#e6db74">&#34;Hello World&#34;</span>)
+</span></span><span style="display:flex;"><span>    val stateFlow <span style="color:#f92672">=</span>_textStateFlow.<span style="color:#a6e22e">asStateFlow</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">triggerStateFlow</span>(){
+</span></span><span style="display:flex;"><span>        _textStateFlow.<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;State flow&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Collecting StateFlow in Activity/Fragment</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeFragment</span> : Fragment() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val viewModel: HomeViewModel by <span style="color:#a6e22e">viewModels</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onViewCreated</span>(view: View, savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onViewCreated</span>(view, savedInstanceState)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lifecycleScope.<span style="color:#a6e22e">launchWhenStarted</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Triggers the flow and starts listening for values</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// collectLatest() is a higher-order function in Kotlin&#39;s Flow API </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// that allows you to collect emitted values from a Flow and perform </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// a transformation on the most recent value only. It is similar to </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// collect(), which is used to collect all emitted values, </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// but collectLatest only processes the latest value emitted and </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ignores any previous values that have not yet been processed.</span>
+</span></span><span style="display:flex;"><span>    viewModel.<span style="color:#a6e22e">stateFlow</span>.<span style="color:#a6e22e">collectLatest</span> {
+</span></span><span style="display:flex;"><span>          binding.<span style="color:#a6e22e">stateFlowButton</span>.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> it
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Collecting StateFlow in Compose</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Compose</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">HomeScreen</span>() {
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// Compose provides the collectAsStateWithLifecycle function, which </span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// collects values from a flow and gives the latest value to be used </span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// wherever needed. When a new flow value is emitted, we get the updated </span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// value, and re-composition takes place to update the state of the value.</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// It uses LifeCycle.State.Started by default to start collecting values </span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// when the lifecycle is in the specified state and stops when it falls </span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// below it.</span>
+</span></span><span style="display:flex;"><span>  val someFlow by viewModel.<span style="color:#a6e22e">flow</span>.<span style="color:#a6e22e">collectAsStateWithLifecycle</span>()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>SharedFlow is a general-purpose hot flow that can emit events or shared data to multiple subscribers.</li>
+</ol>
+<ul>
+<li>Unlike StateFlow, SharedFlow is highly configurable, allowing you to control the number of past emissions that new subscribers will receive (replay) and set a buffer to handle emissions when there are no active collectors.</li>
+<li>SharedFlow does not hold a single current value. Instead, it broadcasts emissions to all subscribers.</li>
+<li>Allows you to define a buffer for values, which can prevent emissions from being lost if there are no active collectors or if collectors are slow.</li>
+<li>Best for representing events or streams of data that do not represent a continuous state (such as notifications, one-time actions, or events that multiple subscribers might need).</li>
+</ul>
+<h5 id="5-what-are-terminal-operators-in-flow">5. What are Terminal operators in Flow?</h5>
+<p>Terminal operators are operators that collect the values emitted by a flow and perform a final action on them. Terminal operators are responsible for starting the flow’s collection process, meaning that until a terminal operator is invoked, the flow remains cold and does not produce any values. Different types of terminal operators:</p>
+<ul>
+<li>collect: is used to receive each emitted value from the flow and perform a specified action on it.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>flowOf(1, 2, 3).<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Received: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>toList collects all emitted values and stores them in a List, returning the list when the flow completes. Useful when you want to gather all items from a flow into a list.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val resultList <span style="color:#f92672">=</span> flowOf(1, 2, 3).<span style="color:#a6e22e">toList</span>()
+</span></span><span style="display:flex;"><span>println(resultList) <span style="color:#75715e">// Output: [1, 2, 3]</span>
+</span></span></code></pre></div><ul>
+<li>toSet collects all emitted values into a Set, eliminating duplicates, and returns the set when the flow completes.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val resultSet <span style="color:#f92672">=</span> flowOf(1, 2, 2, 3).<span style="color:#a6e22e">toSet</span>()
+</span></span><span style="display:flex;"><span>println(resultSet) <span style="color:#75715e">// Output: [1, 2, 3]</span>
+</span></span></code></pre></div><ul>
+<li>first returns the first value emitted by the flow and then immediately cancels further collection. firstOrNull is similar but returns null if the flow is empty.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val firstValue <span style="color:#f92672">=</span> flowOf(1, 2, 3).<span style="color:#a6e22e">first</span>()
+</span></span><span style="display:flex;"><span>println(firstValue) <span style="color:#75715e">// Output: 1</span>
+</span></span></code></pre></div><ul>
+<li>last collects all values and returns the last emitted value. If the flow is empty, it throws an exception. lastOrNull returns the last emitted value or null if the flow is empty.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val lastValue <span style="color:#f92672">=</span> flowOf(1, 2, 3).<span style="color:#a6e22e">last</span>()
+</span></span><span style="display:flex;"><span>println(lastValue) <span style="color:#75715e">// Output: 3</span>
+</span></span></code></pre></div><ul>
+<li>single expects the flow to emit exactly one value. If the flow emits more than one value, it throws an exception. singleOrNull returns null if the flow is empty, and if there’s only one item, it returns that item. It throws an exception if the flow emits more than one item.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val singleValue <span style="color:#f92672">=</span> flowOf(42).<span style="color:#a6e22e">single</span>()
+</span></span><span style="display:flex;"><span>println(singleValue) <span style="color:#75715e">// Output: 42</span>
+</span></span></code></pre></div><ul>
+<li>reduce performs a reduction operation, accumulating values as they are emitted by the flow. This operator applies an accumulator function to combine values and returns the final accumulated result. It’s similar to fold, but reduce doesn’t take an initial value and starts with the first emitted value as the initial accumulator.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val sum <span style="color:#f92672">=</span> flowOf(1, 2, 3, 4).<span style="color:#a6e22e">reduce</span> { accumulator, value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    accumulator <span style="color:#f92672">+</span> value
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>println(sum) <span style="color:#75715e">// Output: 10</span>
+</span></span></code></pre></div><ul>
+<li>fold is similar to reduce, but it allows you to specify an initial value for the accumulation. This is useful if you want to start the accumulation with a specific value (e.g., an initial count or sum).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val sumWithInitial <span style="color:#f92672">=</span> flowOf(1, 2, 3, 4).<span style="color:#a6e22e">fold</span>(10) { accumulator, value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    accumulator <span style="color:#f92672">+</span> value
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>println(sumWithInitial) <span style="color:#75715e">// Output: 20</span>
+</span></span></code></pre></div><ul>
+<li>count counts the number of items emitted by the flow that satisfy a given predicate and returns the count. If no predicate is provided, it counts all items emitted.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val count <span style="color:#f92672">=</span> flowOf(1, 2, 3, 4).<span style="color:#a6e22e">count</span> { it <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0 }
+</span></span><span style="display:flex;"><span>println(count) <span style="color:#75715e">// Output: 2 (counts 2 and 4)</span>
+</span></span></code></pre></div><h5 id="6-what-does-the-launchin-keyword-do">6. What does the launchIn keyword do?</h5>
+<p>launchIn collects the flow within a specific coroutine scope without blocking the calling coroutine. It is often used when working with hot flows and when you want to start collecting in a different coroutine scope. Unlike other terminal operators, launchIn doesn’t wait for the flow to complete but runs it in a separate coroutine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val scope <span style="color:#f92672">=</span> CoroutineScope(Dispatchers.<span style="color:#a6e22e">Default</span>)
+</span></span><span style="display:flex;"><span>flowOf(1, 2, 3)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">onEach</span> { println(<span style="color:#e6db74">&#34;Received: $it&#34;</span>) }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">launchIn</span>(scope)
+</span></span></code></pre></div><h5 id="7-what-is-the-difference-between-statein-and-sharein">7. What is the difference between StateIn and ShareIn?</h5>
+<p>stateIn and shareIn are operators used to convert a Flow into a hot flow that can be shared among multiple collectors. Both are commonly used for transforming cold flows into hot flows that keep data in memory and emit it to multiple subscribers.</p>
+<p>The stateIn operator converts a cold Flow into a StateFlow, which is a hot flow that retains the latest emitted value and always has a single current state.</p>
+<ul>
+<li>When a new collector starts collecting, it immediately receives the latest value held in StateFlow, even if it started after that value was emitted.</li>
+<li>Since StateFlow must always have a value, stateIn requires an initial value that will be emitted until the flow starts producing data.</li>
+<li>StateFlow always retains the latest emitted value, making it ideal for state management where you need to hold a &ldquo;single source of truth&rdquo; that represents the current state.
+New collectors receive the latest value immediately upon subscription, even if they subscribe after the value was emitted.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UiState</span> {
+</span></span><span style="display:flex;"><span>    object Loading : UiState()
+</span></span><span style="display:flex;"><span>    data <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Success</span>(val users: List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>) : UiState()
+</span></span><span style="display:flex;"><span>    data <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Error</span>(val message: String) : UiState()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Simulate a repository flow that fetches users</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val userFlow <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>        emit(UiState.<span style="color:#a6e22e">Loading</span>)
+</span></span><span style="display:flex;"><span>        delay(2000) <span style="color:#75715e">// Simulate network delay</span>
+</span></span><span style="display:flex;"><span>        emit(UiState.<span style="color:#a6e22e">Success</span>(listOf(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>))) <span style="color:#75715e">// Simulated data</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Convert the userFlow to StateFlow using stateIn</span>
+</span></span><span style="display:flex;"><span>    val uiState: StateFlow<span style="color:#f92672">&lt;</span>UiState<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> userFlow
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">stateIn</span>(
+</span></span><span style="display:flex;"><span>            scope <span style="color:#f92672">=</span> viewModelScope,                <span style="color:#75715e">// Use viewModelScope to manage lifecycle</span>
+</span></span><span style="display:flex;"><span>            started <span style="color:#f92672">=</span> SharingStarted.<span style="color:#a6e22e">WhileSubscribed</span>(5000), <span style="color:#75715e">// Start when UI subscribes and stop when inactive</span>
+</span></span><span style="display:flex;"><span>            initialValue <span style="color:#f92672">=</span> UiState.<span style="color:#a6e22e">Loading</span>         <span style="color:#75715e">// Initial state while loading data</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserFragment</span> : Fragment(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">fragment_user</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val viewModel: UserViewModel by <span style="color:#a6e22e">viewModels</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onViewCreated</span>(view: View, savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onViewCreated</span>(view, savedInstanceState)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        val textView <span style="color:#f92672">=</span> view.<span style="color:#a6e22e">findViewById</span><span style="color:#f92672">&lt;</span>TextView<span style="color:#f92672">&gt;</span>(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">textView</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Observe the uiState from the ViewModel</span>
+</span></span><span style="display:flex;"><span>        viewLifecycleOwner.<span style="color:#a6e22e">lifecycleScope</span>.<span style="color:#a6e22e">launchWhenStarted</span> {
+</span></span><span style="display:flex;"><span>            viewModel.<span style="color:#a6e22e">uiState</span>.<span style="color:#a6e22e">collect</span> { uiState <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>                when (uiState) {
+</span></span><span style="display:flex;"><span>                    is UiState.<span style="color:#a6e22e">Loading</span> <span style="color:#f92672">-&gt;</span> textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Loading...&#34;</span>
+</span></span><span style="display:flex;"><span>                    is UiState.<span style="color:#a6e22e">Success</span> <span style="color:#f92672">-&gt;</span> textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Users: ${uiState.users.joinToString()}&#34;</span>
+</span></span><span style="display:flex;"><span>                    is UiState.<span style="color:#a6e22e">Error</span> <span style="color:#f92672">-&gt;</span> textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Error: ${uiState.message}&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The shareIn operator converts a cold Flow into a SharedFlow, which is a hot flow that can replay a specified number of past values to new collectors.</p>
+<ul>
+<li>Unlike stateIn, shareIn allows you to configure how many values to replay (if any) and provides more flexibility for managing event-driven flows.</li>
+<li>Since SharedFlow doesn’t retain a single latest value by default, it’s better for event-based data streams where the most recent state isn’t needed.</li>
+<li>SharedFlow can be configured to replay a certain number of past values to new collectors, making it suitable for event streams or data that needs to be replayed partially.</li>
+<li>Unlike stateIn, shareIn doesn’t require an initial value, as it’s used for handling events rather than holding state.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NotificationViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Simulate a stream of notifications from a repository</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val notificationFlow <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> notificationCount <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            emit(<span style="color:#e6db74">&#34;Notification #$notificationCount&#34;</span>)
+</span></span><span style="display:flex;"><span>            notificationCount<span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>            delay(2000) <span style="color:#75715e">// Emit a notification every 2 seconds</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Convert the notification flow to a SharedFlow with a replay of the last 2 notifications</span>
+</span></span><span style="display:flex;"><span>    val sharedNotifications: SharedFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> notificationFlow
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">shareIn</span>(
+</span></span><span style="display:flex;"><span>            scope <span style="color:#f92672">=</span> viewModelScope,                         <span style="color:#75715e">// Start and manage in viewModelScope</span>
+</span></span><span style="display:flex;"><span>            started <span style="color:#f92672">=</span> SharingStarted.<span style="color:#a6e22e">WhileSubscribed</span>(5000), <span style="color:#75715e">// Keep active while subscribed</span>
+</span></span><span style="display:flex;"><span>            replay <span style="color:#f92672">=</span> 2                                      <span style="color:#75715e">// Replay the last 2 notifications to new subscribers</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NotificationFragment</span> : Fragment(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">fragment_notification</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val viewModel: NotificationViewModel by <span style="color:#a6e22e">viewModels</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onViewCreated</span>(view: View, savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onViewCreated</span>(view, savedInstanceState)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        val textView <span style="color:#f92672">=</span> view.<span style="color:#a6e22e">findViewById</span><span style="color:#f92672">&lt;</span>TextView<span style="color:#f92672">&gt;</span>(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">notificationTextView</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Collect notifications from sharedNotifications</span>
+</span></span><span style="display:flex;"><span>        viewLifecycleOwner.<span style="color:#a6e22e">lifecycleScope</span>.<span style="color:#a6e22e">launchWhenStarted</span> {
+</span></span><span style="display:flex;"><span>            viewModel.<span style="color:#a6e22e">sharedNotifications</span>.<span style="color:#a6e22e">collect</span> { notification <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>                textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> notification
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="8-how-can-we-collect-flows-in-jetpack-compose">8. How can we collect Flows in Jetpack Compose?</h5>
+<ul>
+<li>Using collectAsState with StateFlow: The collectAsState extension function is ideal for collecting a StateFlow in a Jetpack Compose function. It converts the StateFlow into a Compose State, which automatically re-composes the UI when the flow emits a new value.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Suppose we have a ViewModel with a StateFlow representing a UI state.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val _uiState <span style="color:#f92672">=</span> MutableStateFlow(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span><span style="display:flex;"><span>    val uiState: StateFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> _uiState
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Composable</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">MyScreen</span>(viewModel: MyViewModel <span style="color:#f92672">=</span> viewModel()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Collect the StateFlow as State in Compose</span>
+</span></span><span style="display:flex;"><span>    val uiState by viewModel.<span style="color:#a6e22e">uiState</span>.<span style="color:#a6e22e">collectAsState</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use the uiState to display the data</span>
+</span></span><span style="display:flex;"><span>    Text(text <span style="color:#f92672">=</span> uiState)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Using collectAsStateWithLifecycle for Lifecycle-Aware Collection: In scenarios where the Flow may emit values while the composable is not in a visible lifecycle state (such as paused or stopped), it’s recommended to use collectAsStateWithLifecycle, which is lifecycle-aware and only collects when the composable is in an active lifecycle state.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Suppose we have a ViewModel with a StateFlow representing a UI state.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val _uiState <span style="color:#f92672">=</span> MutableStateFlow(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span><span style="display:flex;"><span>    val uiState: StateFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> _uiState
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Composable</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">MyScreen</span>(viewModel: MyViewModel <span style="color:#f92672">=</span> viewModel()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Collect StateFlow in a lifecycle-aware manner</span>
+</span></span><span style="display:flex;"><span>    val uiState by viewModel.<span style="color:#a6e22e">uiState</span>.<span style="color:#a6e22e">collectAsStateWithLifecycle</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Text(text <span style="color:#f92672">=</span> uiState)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Using LaunchedEffect with collect for Event Flows: If you want to collect Flow events that are not StateFlow or that represent one-time events (such as navigation events or showing a toast), you can use LaunchedEffect along with collect. This method allows you to collect Flow values inside a composable without re-composing on every emission.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EventViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>    val events <span style="color:#f92672">=</span> MutableSharedFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>() <span style="color:#75715e">// SharedFlow for one-time events</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">sendEvent</span>(message: String) {
+</span></span><span style="display:flex;"><span>        viewModelScope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>            events.<span style="color:#a6e22e">emit</span>(message)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Composable</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">EventScreen</span>(viewModel: EventViewModel <span style="color:#f92672">=</span> viewModel()) {
+</span></span><span style="display:flex;"><span>    val coroutineScope <span style="color:#f92672">=</span> rememberCoroutineScope()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Collect events from SharedFlow using LaunchedEffect</span>
+</span></span><span style="display:flex;"><span>    LaunchedEffect(Unit) {
+</span></span><span style="display:flex;"><span>        viewModel.<span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">collectLatest</span> { message <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Handle one-time events, such as showing a toast or navigating</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Received event: $message&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// UI content</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// You could call `viewModel.sendEvent(&#34;Event message&#34;)` from a button click or other UI action</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="9-how-can-we-handle-backpressure-when-using-flows">9. How can we handle backpressure when using flows?</h5>
+<p>Backpressure occurs when the producer emits items at a higher rate than the consumer can process, leading to potential issues like memory overflow or delayed processing. Kotlin’s Flow API provides several operators and strategies for handling backpressure effectively:</p>
+<ul>
+<li>The buffer operator allows you to add a buffer to a flow, enabling the producer to emit items without waiting for each item to be processed by the consumer. This helps smooth out the differences between the production and consumption rates.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    flow {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>            delay(100) <span style="color:#75715e">// Simulate fast producer</span>
+</span></span><span style="display:flex;"><span>            emit(i)
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Emitted: $i&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">buffer</span>(capacity <span style="color:#f92672">=</span> 2) <span style="color:#75715e">// Buffer with capacity of 2</span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        delay(300) <span style="color:#75715e">// Simulate slower consumer</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Collected: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>conflate: If only the latest values matter, we can make use of the conflate operator: this keeps only the most recent value, dropping any previous unprocessed values. This reduces the memory usage by discarding intermediate emissions when the consumer is slower.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    flow {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>        delay(100) <span style="color:#75715e">// Fast producer</span>
+</span></span><span style="display:flex;"><span>        emit(i)
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Emitted: $i&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">conflate</span>()
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    delay(300) <span style="color:#75715e">// Slow consumer</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Collected: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>zip and combine: These operators merge emissions from multiple flows. zip matches values pairwise, while combine merges the latest values from each flow.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>  val fastFlow <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>          delay(100) <span style="color:#75715e">// Fast producer</span>
+</span></span><span style="display:flex;"><span>          emit(<span style="color:#e6db74">&#34;Fast $i&#34;</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  val slowFlow <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>          delay(300) <span style="color:#75715e">// Slow producer</span>
+</span></span><span style="display:flex;"><span>          emit(<span style="color:#e6db74">&#34;Slow $i&#34;</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Using zip to slow down fastFlow to match slowFlow</span>
+</span></span><span style="display:flex;"><span>  fastFlow.<span style="color:#a6e22e">zip</span>(slowFlow) { fast, slow <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;$fast with $slow&#34;</span>
+</span></span><span style="display:flex;"><span>  }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>      println(result)
+</span></span><span style="display:flex;"><span>  }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="10-how-can-we-cancel-a-flow">10. How can we cancel a flow?</h5>
+<p>Flow operates under the structured concurrency model of coroutines. So cancelling a Flow is generally done by cancelling the coroutine that is collecting the flow. Since flows are cold and only emit values when they are actively collected, cancelling the coroutine effectively stops the flow collection and cancels any ongoing emissions.</p>
+<h5 id="11-what-does-the-flowon-keyword-do">11. What does the flowOn keyword do?</h5>
+<p>The flowOn operator is used to change the coroutine context of the upstream operations in a flow. This is particularly useful when you need to specify a different thread or dispatcher for specific parts of a flow pipeline, without affecting the downstream operations (like collection).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.Dispatchers
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.runBlocking
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">getDatabaseData</span>(): Flow<span style="color:#f92672">&lt;</span>Int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Fetching data from database on thread: ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>        delay(100) <span style="color:#75715e">// Simulating database delay</span>
+</span></span><span style="display:flex;"><span>        emit(i)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}.<span style="color:#a6e22e">flowOn</span>(Dispatchers.<span style="color:#a6e22e">IO</span>) <span style="color:#75715e">// Use IO dispatcher for database access</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    getDatabaseData()
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">map</span> { it <span style="color:#f92672">*</span> 2 } <span style="color:#75715e">// Processing on IO thread</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Collected $value on thread: ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="12-how-can-we-combine-multiple-flows">12. How can we combine multiple flows?</h5>
+<p>Common operators to combine multiple flows:</p>
+<ul>
+<li>The zip operator combines two flows into one by pairing each emission from one flow with the corresponding emission from the other flow. The resulting flow emits values as pairs or as a transformation based on a provided lambda function. The combination stops as soon as one of the flows completes.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Zip: Output </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1A, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2B, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3C</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val flow1 <span style="color:#f92672">=</span> flowOf(1, 2, 3)
+</span></span><span style="display:flex;"><span>    val flow2 <span style="color:#f92672">=</span> flowOf(<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#e6db74">&#34;C&#34;</span>, <span style="color:#e6db74">&#34;D&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    flow1.<span style="color:#a6e22e">zip</span>(flow2) { number, letter <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;$number$letter&#34;</span>
+</span></span><span style="display:flex;"><span>    }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>The combine operator takes the latest value from each flow and emits a new value whenever any of the flows emit a value. This is useful for cases where you want to react to the latest values from multiple flows.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Output: </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3C</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val flow1 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>        emit(1)
+</span></span><span style="display:flex;"><span>        delay(100)
+</span></span><span style="display:flex;"><span>        emit(2)
+</span></span><span style="display:flex;"><span>        delay(100)
+</span></span><span style="display:flex;"><span>        emit(3)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    val flow2 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>        delay(50)
+</span></span><span style="display:flex;"><span>        emit(<span style="color:#e6db74">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span>        delay(150)
+</span></span><span style="display:flex;"><span>        emit(<span style="color:#e6db74">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span>        delay(50)
+</span></span><span style="display:flex;"><span>        emit(<span style="color:#e6db74">&#34;C&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    flow1.<span style="color:#a6e22e">combine</span>(flow2) { number, letter <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;$number$letter&#34;</span>
+</span></span><span style="display:flex;"><span>    }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>The flattenMerge operator collects from multiple flows concurrently and merges their emissions into a single flow. This is useful when you want to start collecting from multiple flows simultaneously without waiting for one to complete before starting the next.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val flow1 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    delay(100)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>val flow2 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    delay(50)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>val flow3 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    delay(150)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;C&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    listOf(flow1, flow2, flow3).<span style="color:#a6e22e">asFlow</span>().<span style="color:#a6e22e">flattenMerge</span>().<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(value) <span style="color:#75715e">// Output: B, A, C</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>The merge operator combines multiple flows by interleaving their emissions without pairing them. It collects from each flow as they emit and emits each value in the order it’s produced.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val flow1 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;A&#34;</span>)
+</span></span><span style="display:flex;"><span>    delay(100)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;B&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>val flow2 <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    delay(50)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;1&#34;</span>)
+</span></span><span style="display:flex;"><span>    delay(50)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;2&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    merge(flow1, flow2).<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(value)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>flatMapConcat: Concatenates flows sequentially, waiting for each inner flow to complete before moving to the next.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val numbers <span style="color:#f92672">=</span> flowOf(1, 2, 3)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">getStringFlow</span>(number: Int) <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;$number: A&#34;</span>)
+</span></span><span style="display:flex;"><span>    delay(100)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;$number: B&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1: B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2: B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: B</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    numbers.<span style="color:#a6e22e">flatMapConcat</span> { number <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        getStringFlow(number)
+</span></span><span style="display:flex;"><span>    }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>flatMapMerge: Collects from multiple flows concurrently, merging their emissions as they come.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val numbers <span style="color:#f92672">=</span> flowOf(1, 2, 3)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">getStringFlow</span>(number: Int) <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;$number: A&#34;</span>)
+</span></span><span style="display:flex;"><span>    delay(100)
+</span></span><span style="display:flex;"><span>    emit(<span style="color:#e6db74">&#34;$number: B&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1: B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2: B</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: B</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    numbers.<span style="color:#a6e22e">flatMapMerge</span> { number <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        getStringFlow(number)
+</span></span><span style="display:flex;"><span>    }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>flatMapLatest: Cancels the previous flow whenever a new flow is emitted, only collecting the latest emitted flow.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3: B</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    numbers.<span style="color:#a6e22e">flatMapLatest</span> { number <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        getStringFlow(number)
+</span></span><span style="display:flex;"><span>    }.<span style="color:#a6e22e">collect</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(result)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="13-what-are-the-different-ways-to-handle-exception-in-flows">13. What are the different ways to handle exception in flows?</h5>
+<ul>
+<li>The <code>catch</code> operator is the primary way to handle exceptions in flows. It catches exceptions thrown by the upstream flow and allows you to handle or emit alternative values.</li>
+<li>The <code>onCompletion</code> operator is a terminal operation that is triggered when the flow completes, either normally or exceptionally. It allows you to perform cleanup actions or log when a flow has finished, regardless of whether it completed successfully or due to an exception.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    flow {
+</span></span><span style="display:flex;"><span>        emit(1)
+</span></span><span style="display:flex;"><span>        emit(2)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> RuntimeException(<span style="color:#e6db74">&#34;Flow exception&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">onCompletion</span> { cause <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (cause <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Flow completed exceptionally: ${cause.message}&#34;</span>)
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Flow completed successfully&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">catch</span> { e <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;Caught exception: ${e.message}&#34;</span>) }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span> println(value) }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>We can handle exceptions more granularly by using emitCatching (a function you implement to wrap emit). This approach allows us to catch exceptions within specific parts of the flow and handle them without breaking the flow.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">customFlow</span>() <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        emit(1)
+</span></span><span style="display:flex;"><span>        emit(2)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> RuntimeException(<span style="color:#e6db74">&#34;Custom error&#34;</span>)
+</span></span><span style="display:flex;"><span>        emit(3)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (e: Exception) {
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Caught exception in emit: ${e.message}&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    customFlow().<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Collected: $value&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="14-how-does-the-retry-operator-work-with-flow">14. How does the retry operator work with Flow?</h5>
+<p>The retry operator allows you to retry the flow when an exception occurs, making it useful for transient errors, such as network issues. You can specify the number of retry attempts and use a predicate to determine which exceptions should trigger a retry.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    flow {
+</span></span><span style="display:flex;"><span>        emit(1)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> RuntimeException(<span style="color:#e6db74">&#34;Network error&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">retry</span>(retries <span style="color:#f92672">=</span> 3) { e <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Retrying due to: ${e.message}&#34;</span>)
+</span></span><span style="display:flex;"><span>        e is RuntimeException
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">catch</span> { e <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;Caught exception after retries: ${e.message}&#34;</span>) }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">collect</span> { value <span style="color:#f92672">-&gt;</span> println(value) }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="15-how-do-you-implement-a-debounce-mechanism-for-user-input-using-flows">15. How do you implement a debounce mechanism for user input using flows?</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SearchViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Flow that holds the latest user input</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val _searchQuery <span style="color:#f92672">=</span> MutableStateFlow(<span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    val searchQuery: StateFlow<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">get</span>() <span style="color:#f92672">=</span> _searchQuery
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Flow that emits debounced search results</span>
+</span></span><span style="display:flex;"><span>    val searchResults: Flow<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">=</span> searchQuery
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">debounce</span>(300) <span style="color:#75715e">// Wait for 300 ms of inactivity</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">distinctUntilChanged</span>() <span style="color:#75715e">// Only proceed if the query has changed</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">flatMapLatest</span> { query <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            performSearch(query)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">catch</span> { emit(emptyList()) } <span style="color:#75715e">// Handle any errors</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Update the search query</span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">updateSearchQuery</span>(query: String) {
+</span></span><span style="display:flex;"><span>        _searchQuery.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> query
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Simulated search function</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> fun <span style="color:#a6e22e">performSearch</span>(query: String): Flow<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">=</span> flow {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (query.<span style="color:#a6e22e">isBlank</span>()) {
+</span></span><span style="display:flex;"><span>            emit(emptyList())
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            delay(500) <span style="color:#75715e">// Simulate network delay</span>
+</span></span><span style="display:flex;"><span>            emit(listOf(<span style="color:#e6db74">&#34;Result 1 for &#39;$query&#39;&#34;</span>, <span style="color:#e6db74">&#34;Result 2 for &#39;$query&#39;&#34;</span>, <span style="color:#e6db74">&#34;Result 3 for &#39;$query&#39;&#34;</span>))
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Composable</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">SearchScreen</span>(viewModel: SearchViewModel <span style="color:#f92672">=</span> hiltViewModel()) {
+</span></span><span style="display:flex;"><span>    val searchQuery by viewModel.<span style="color:#a6e22e">searchQuery</span>.<span style="color:#a6e22e">collectAsState</span>()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Observes the debounced search results from viewModel.searchResults, </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// updating the UI only after the debounce delay.</span>
+</span></span><span style="display:flex;"><span>    val searchResults by viewModel.<span style="color:#a6e22e">searchResults</span>.<span style="color:#a6e22e">collectAsState</span>(initial <span style="color:#f92672">=</span> emptyList())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Column(modifier <span style="color:#f92672">=</span> Modifier.<span style="color:#a6e22e">fillMaxSize</span>().<span style="color:#a6e22e">padding</span>(16.<span style="color:#a6e22e">dp</span>)) {
+</span></span><span style="display:flex;"><span>        TextField(
+</span></span><span style="display:flex;"><span>            value <span style="color:#f92672">=</span> searchQuery,
+</span></span><span style="display:flex;"><span>            onValueChange <span style="color:#f92672">=</span> { viewModel.<span style="color:#a6e22e">updateSearchQuery</span>(it) },
+</span></span><span style="display:flex;"><span>            modifier <span style="color:#f92672">=</span> Modifier.<span style="color:#a6e22e">fillMaxWidth</span>(),
+</span></span><span style="display:flex;"><span>            label <span style="color:#f92672">=</span> { Text(<span style="color:#e6db74">&#34;Search&#34;</span>) }
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Spacer(modifier <span style="color:#f92672">=</span> Modifier.<span style="color:#a6e22e">height</span>(16.<span style="color:#a6e22e">dp</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Text(<span style="color:#e6db74">&#34;Results:&#34;</span>)
+</span></span><span style="display:flex;"><span>        searchResults.<span style="color:#a6e22e">forEach</span> { result <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            Text(text <span style="color:#f92672">=</span> result)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="16-difference-between-livedata--flows">16. Difference between LiveData &amp; Flows.</h5>
+<ul>
+<li><code>LiveData</code> is a Hot stream. It starts emitting data as soon as it has an active observer (typically a lifecycle-aware component like an Activity or Fragment) and continues to emit values even if there are no observers. <code>Flow</code> is a Cold stream. It only starts emitting data when it’s collected. Each time a Flow is collected, it starts from the beginning and behaves as if it&rsquo;s &ldquo;restarted.&rdquo;</li>
+<li><code>LiveData</code> is Lifecycle-aware by default. It automatically starts and stops observing based on the lifecycle of the UI component. <code>Flow</code> is not lifecycle-aware by default. When using Flow in Android, you must manually manage the lifecycle (e.g., using lifecycleScope or repeatOnLifecycle).</li>
+<li><code>LiveData</code> is designed for use in the UI layer, especially for observing data in ViewModels. It is tightly integrated with the Android lifecycle, making it ideal for UI-bound data. <code>Flow</code> is a general-purpose reactive data stream that can be used throughout the application, not just in the UI layer. It’s well-suited for managing data streams in repositories, data sources, or any asynchronous data-handling logic.</li>
+<li><code>LiveData</code> doesn’t have built-in error handling. <code>Flow</code> supports built-in error handling operators like catch, retry, and retryWhen.</li>
+<li><code>LiveData</code> always observes on the main thread, so you don’t need to worry about threading when observing from UI components. <code>Flow</code> allows explicit control over threading using the flowOn operator, which lets you specify which dispatcher should be used for upstream operations.</li>
+<li><code>LiveData</code> doesn’t support back pressure handling natively. If data is produced faster than it’s consumed, it could lead to missed updates or performance issues. <code>Flow</code> has built-in back pressure handling, allowing you to use operators like buffer, conflate, collectLatest, and debounce to control the rate of data flow and avoid overwhelming the consumer.</li>
+<li><code>LiveData</code> requires additional handling for one-time events like navigation or showing a message. Patterns like SingleLiveEvent or EventWrapper are commonly used to avoid issues with events being re-emitted on configuration changes. <code>Flow</code> is more suitable for one-time events, especially with SharedFlow or StateFlow, which allow you to configure replay behavior and provide finer control over event emission and collection.</li>
+<li><code>LiveData to Flow</code>: You can convert LiveData to Flow using the .asFlow() extension function. <code>Flow to LiveData</code>: You can convert Flow to LiveData using the .asLiveData() extension function, making it easy to use Flow in lifecycle-aware contexts.</li>
+</ul>
+<h5 id="17-difference-between-flows--channels">17. Difference between Flows &amp; Channels?</h5>
+<ul>
+<li><code>Flow</code> is a cold stream (starts emitting on collection), while <code>Channel</code> is a hot stream (emits values immediately upon being sent).</li>
+<li><code>Flow</code> has a single producer-consumer model, while <code>Channel</code> supports multiple producers and consumers, making it ideal for communication between coroutines.</li>
+<li><code>Flow</code> starts and stops with each collection; <code>Channel</code> can remain open and active until explicitly closed.</li>
+<li><code>Flow</code> has built-in suspension to handle backpressure; <code>Channel</code> uses buffering to manage backpressure (e.g., Buffered, Conflated).</li>
+<li><code>Flow</code> has built-in error handling with operators like catch; <code>Channel</code> doesn’t support built-in error handling but can propagate exceptions.</li>
+<li><code>Flow</code> offers a rich set of operators (map, filter, combine), while <code>Channel</code> provides basic send and receive methods without transformations.</li>
+<li><code>Channel</code> supports concurrent producers and consumers, whereas <code>Flow</code> is more suited for sequential processing.</li>
+<li><code>Flow</code> can only be collected once per collector, while a <code>Channel</code> allows values to be received by multiple consumers.</li>
+<li><code>Flow</code> is ideal for data streams, transformations, and UI updates; <code>Channel</code> is suited for message passing and producer-consumer patterns.</li>
+</ul>
+<h5 id="18-example-of-unit-testing-with-flows">18. Example of unit testing with flows</h5>
+<p>Step 1: Define the ViewModel</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.lifecycle.ViewModel
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.Flow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.catch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.flow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(val id: Int, val name: String)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserRepository</span> {
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">getUsers</span>(): Flow<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserViewModel</span>(<span style="color:#66d9ef">private</span> val userRepository: UserRepository) : ViewModel() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Expose users flow with error handling</span>
+</span></span><span style="display:flex;"><span>    val users: Flow<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">=</span> userRepository.<span style="color:#a6e22e">getUsers</span>()
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">catch</span> { emit(emptyList()) } <span style="color:#75715e">// Emit an empty list on error</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Step 2: Set Up Test Dependencies</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>dependencies {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Testing libraries</span>
+</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#34;org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0&#34;</span>
+</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#34;app.cash.turbine:turbine:0.7.0&#34;</span>
+</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#34;org.mockito:mockito-core:4.0.0&#34;</span>
+</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#34;org.mockito.kotlin:mockito-kotlin:4.0.0&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Step 3: Test the UserViewModel using Flow and Turbine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> app.cash.turbine.test
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.ExperimentalCoroutinesApi
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.flow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.test.runTest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.Assert.assertEquals
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.Before
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.Rule
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.Test
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.mockito.Mockito.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.mockito.kotlin.mock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@OptIn</span>(ExperimentalCoroutinesApi::<span style="color:#66d9ef">class</span><span style="color:#960050;background-color:#1e0010">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">class</span> UserViewModelTest {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> lateinit <span style="color:#66d9ef">var</span> userRepository: UserRepository
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> lateinit <span style="color:#66d9ef">var</span> viewModel: UserViewModel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Before</span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">setUp</span>() {
+</span></span><span style="display:flex;"><span>        userRepository <span style="color:#f92672">=</span> mock()
+</span></span><span style="display:flex;"><span>        viewModel <span style="color:#f92672">=</span> UserViewModel(userRepository)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#960050;background-color:#1e0010">`</span>should emit list of users when repository returns data<span style="color:#960050;background-color:#1e0010">`</span>() <span style="color:#f92672">=</span> runTest {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Arrange</span>
+</span></span><span style="display:flex;"><span>        val mockUsers <span style="color:#f92672">=</span> listOf(User(1, <span style="color:#e6db74">&#34;Alice&#34;</span>), User(2, <span style="color:#e6db74">&#34;Bob&#34;</span>))
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">`</span>when<span style="color:#960050;background-color:#1e0010">`</span>(userRepository.<span style="color:#a6e22e">getUsers</span>()).<span style="color:#a6e22e">thenReturn</span>(flow { emit(mockUsers) })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Act &amp; Assert</span>
+</span></span><span style="display:flex;"><span>        viewModel.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">test</span> {
+</span></span><span style="display:flex;"><span>            assertEquals(mockUsers, awaitItem()) <span style="color:#75715e">// Check that the emitted item is the expected user list</span>
+</span></span><span style="display:flex;"><span>            cancelAndConsumeRemainingEvents() <span style="color:#75715e">// Ensure the flow is cancelled after checking</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#960050;background-color:#1e0010">`</span>should emit empty list when repository <span style="color:#66d9ef">throws</span> an error<span style="color:#960050;background-color:#1e0010">`</span>() <span style="color:#f92672">=</span> runTest {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Arrange</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">`</span>when<span style="color:#960050;background-color:#1e0010">`</span>(userRepository.<span style="color:#a6e22e">getUsers</span>()).<span style="color:#a6e22e">thenReturn</span>(flow { <span style="color:#66d9ef">throw</span> RuntimeException(<span style="color:#e6db74">&#34;Network error&#34;</span>) })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Act &amp; Assert</span>
+</span></span><span style="display:flex;"><span>        viewModel.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">test</span> {
+</span></span><span style="display:flex;"><span>            assertEquals(emptyList<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span>(), awaitItem()) <span style="color:#75715e">// Check that an empty list is emitted on error</span>
+</span></span><span style="display:flex;"><span>            cancelAndConsumeRemainingEvents()
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="thanks-for-reading">Thanks for reading!</h5>
+<p>Hope you find this useful. This is just a list of questions I personally found useful in interviews. This list is by no means exhaustive. Let me know your thoughts in the responses. Happy coding!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/android"
+                target="_blank"
+              >Android</a></li>
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/interview"
+                target="_blank"
+              >Interview</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-6-kotlin-flows%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Kotlin%20Flows&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-6-kotlin-flows%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Kotlin%20Flows: https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-6-kotlin-flows%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Kotlin%20Flows&amp;body=Check%20out%20this%20site https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-6-kotlin-flows%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Android architecture">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Android architecture">Android architecture</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-8-android-architecture-07ca74eee000">🔗 Android Interview Series 2024 — Part 8 (Android architecture)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-can-you-explain-the-mvc-and-mvp-patterns-what-are-the-main-differences-and-why-are-they-not-used-in-android-development">1. Can you explain the MVC and MVP patterns? What are the main differences and why are they not used in …</h5></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Jetpack Compose">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Jetpack Compose">Jetpack Compose</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-7-jetpack-compose-ff7d2ecd9018">🔗 Android Interview Series 2024 — Part 7 (Jetpack Compose)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-jetpack-compose">1. What is Jetpack Compose?</h5>
+<p>Jetpack Compose is Android’s recommended modern toolkit for building native UI. It …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Kotlin Flows">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Kotlin Flows">Kotlin Flows</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df">🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-flow">1. What is Flow?</h5>
+<p>A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Sep 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+    
+
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://whywhom.github.io/" title="Andy&#39;s Blog">
+                        <img alt="Footer logo" src="/images/andy.jpeg"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

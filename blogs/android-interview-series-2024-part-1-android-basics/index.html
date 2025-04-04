@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/images/andy.jpeg type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://whywhom.github.io/blogs/android-interview-series-2024-part-1-android-basics/">
+  <meta property="og:site_name" content="Andy&#39;s Blog">
+  <meta property="og:title" content="Android basics Interview">
+  <meta property="og:description" content="Android Interview Series 2024 — Part 1">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-04-03T23:29:21+05:30">
+    <meta property="article:modified_time" content="2024-04-03T23:29:21+05:30">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Interview">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Android basics Interview">
+  <meta name="twitter:description" content="Android Interview Series 2024 — Part 1">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Android Interview Series 2024 — Part 1">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Android basics Interview | Andy&#39;s Blog
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/andy.jpeg" width="30" height="30"
+                    class="d-inline-block align-top">
+                Andy&#39;s Blog
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume" title="Resume">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Android basics Interview</h1>
+            <div class="text-center">
+              
+                Anitaa Murthy
+                <small>|</small>
+              
+              Apr 3, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://hdwallsbox.com/wallpapers/m/78/3d-android-logo-background-m77313.jpg" alt="Android basics Interview">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-1-android-basics-23a713f4a648">🔗 Android Interview Series 2024 – Part 1 (Android Basics)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-the-android-application-architecture">1. What is the Android Application Architecture?</h5>
+<p>Android application architecture has the following components:</p>
+<ul>
+<li>Content Providers − It will share the data between applications.</li>
+<li>Services − It will perform background functionalities</li>
+<li>Intent − It will perform the inter connection between activities and the data passing mechanism.</li>
+<li>Resource Externalization − strings and graphics.</li>
+<li>Notification − light, sound, icon, notification, dialog box and toast.</li>
+</ul>
+<h5 id="2-what-is-the-application-class">2. What is the Application class?</h5>
+<p>The Application class in Android is the base class within an Android app that contains all other components such as activities and services. The Application class, or any subclass of the Application class, is instantiated before any other class when the process for your application/package is created.</p>
+<h5 id="3-what-is-context">3. What is <code>Context</code>?</h5>
+<p>A <code>Context</code> is a handle to the system; it provides services like resolving resources, obtaining access to databases and preferences, and so on. An Android app has activities. Context is like a handle to the environment your application is currently running in.</p>
+<ul>
+<li>Application Context: This context is tied to the lifecycle of an application. The application context can be used when you need a context whose lifecycle is separate from the current context or when you are passing a context beyond the scope of an activity.</li>
+<li>Activity Context: This context is available in an activity. This context is tied to the lifecycle of an activity. The activity context should be used when you are passing the context in the scope of an activity or you need the context whose lifecycle is attached to the current context.</li>
+</ul>
+<h5 id="4-what-are-the-four-components-of-an-android-application">4. What are the four components of an android application?</h5>
+<p>An Android application is built around four main components, each serving a distinct purpose in how the application operates and interacts with the system and other applications. These four components are:</p>
+<ul>
+<li>Activities</li>
+<li>Services</li>
+<li>Broadcast Receivers</li>
+<li>Content Providers</li>
+</ul>
+<h5 id="5-describe-services">5. Describe services</h5>
+<p>A Service is a component that performs long-running operations in the background. Services do not provide a user interface; instead, they run in the background to handle tasks like data processing, file downloading, or playing music, even if the app isn’t in the foreground. These are the three different types of services:</p>
+<ul>
+<li>Foreground Service: Runs actively and is visible to the user through a persistent notification in the notification bar. It is commonly used for tasks that the user is explicitly aware of, such as music players or navigation apps. Foreground services have a higher priority than other services.</li>
+<li>Background Service: Runs in the background without user interaction. Since Android 8.0 (Oreo), background services are restricted due to battery and performance optimizations. Background tasks are generally handled by WorkManager or JobScheduler for greater efficiency.</li>
+<li>Bound Service: Allows components (like activities and fragments) to bind to the service, enabling communication. For example, a bound service could handle requests and return results to a client, such as fetching data or updating an activity with real-time information.</li>
+</ul>
+<h5 id="6-explain-the-service-lifecycle">6. Explain the Service lifecycle.</h5>
+<p>Services have a distinct lifecycle that differs from activities. Understanding these methods is key to managing resources and preventing memory leaks:</p>
+<ul>
+<li><code>onCreate()</code>: Called when the service is created for the first time. This is where you initialize resources such as setting up connections or data processing.</li>
+<li><code>onStartCommand()</code>: Called each time a client starts the service using startService(). This method is where the service performs its main task. You can decide to keep the service running indefinitely or to stop it once the task is completed.</li>
+<li><code>onBind()</code>: Called when another component wants to bind with the service by calling bindService(). A bound service uses this to return an IBinder instance for communication.</li>
+<li><code>onUnbind()</code>: Called when all clients unbind from the service.</li>
+<li><code>onDestroy()</code>: Called when the service is being terminated. This is where resources are released, and any running tasks are cleaned up.</li>
+</ul>
+<h5 id="7-difference-between-service--intent-service">7. Difference between Service &amp; Intent Service</h5>
+<ul>
+<li><code>A Service</code> runs on the main (UI) thread of the application. When an IntentService is started, it creates a worker thread to handle all intent requests sequentially.</li>
+<li><code>A Service</code> can handle multiple tasks simultaneously but requires additional threading management. An IntentService processes intents sequentially in a single background worker thread. When an intent is sent to an IntentService, it queues the work and processes each request in order, one at a time, until all tasks are complete.</li>
+<li><code>Service</code> is ideal for long-running tasks that require interaction or need to keep running in the background even if the user has left the app. IntentService is ideal for short, discrete background tasks that don’t require prolonged activity or user interaction, such as: downloading a file, uploading data to a server, processing or syncing data in the background.</li>
+</ul>
+<h5 id="8-what-is-android-bound-service">8. What is Android Bound Service?</h5>
+<p>A Bound Service in Android is a type of service that allows other components, like activities or fragments, to bind to it and interact with it directly. Unlike a started service that runs independently, a bound service provides a client-server interface and remains active only as long as there are clients bound to it. Bound services are ideal when you need to maintain an interactive, continuous connection between the service and clients, such as: <strong>Real-Time Data Syncing, Media Playback, Location Updates</strong> etc.</p>
+<h5 id="9-explain-the-difference-between-intentservice-and-jobintentservice">9. Explain the difference between IntentService and JobIntentService.</h5>
+<ul>
+<li><code>IntentService</code> is a specialized Service that handles each incoming intent on a worker thread, automatically stopping itself when all tasks are completed. It’s useful for lightweight, immediate tasks that need to run in the background. However, IntentService runs only as long as the app is in the foreground or has a persistent process, as it doesn’t survive app process termination.</li>
+<li><code>JobIntentService</code>, introduced as part of Android’s support library, was designed to work better with these background restrictions. It combines the features of IntentService with JobScheduler, enabling tasks to be completed even if the app is no longer in the foreground. When the device is running Android 8.0 or later, JobIntentService uses the JobScheduler API, which allows tasks to persist across app restarts or even device reboots. It’s ideal for tasks that are not immediate but need guaranteed execution at some point, like uploading logs or syncing data.</li>
+</ul>
+<h5 id="10-describe-activities">10. Describe activities</h5>
+<p>An Activity represents a single screen with a user interface. It acts as the entry point for interacting with the app and serves as a container for views. Each activity is typically associated with a layout file that defines the UI components.</p>
+<h5 id="11-lifecycle-of-an-activity">11. Lifecycle of an Activity</h5>
+<ul>
+<li><code>OnCreate()</code>: This is when the view is first created. This is normally where we create views, get data from bundles etc.</li>
+<li><code>OnStart()</code>: Called when the activity is becoming visible to the user. Followed by onResume() if the activity comes to the foreground, or onStop() if it becomes hidden.</li>
+<li><code>OnResume()</code>: Called when the activity will start interacting with the user. At this point your activity is at the top of the activity stack, with user input going to it.</li>
+<li><code>OnPause()</code>: Called as part of the activity lifecycle when an activity is going into the background, but has not (yet) been killed.</li>
+<li><code>OnStop()</code>: Called when you are no longer visible to the user.</li>
+<li><code>OnDestroy()</code>: Called when the activity is finishing</li>
+<li><code>OnRestart()</code>: Called after your activity has been stopped, prior to it being started again.</li>
+</ul>
+<h5 id="12-whats-the-difference-between-oncreate-and-onstart">12. What’s the difference between <code>onCreate()</code> and <code>onStart()</code>?</h5>
+<p>The <code>onCreate()</code> method is called once during the Activity lifecycle, either when the application starts, or when the Activity has been destroyed and then recreated, for example during a configuration change.
+The <code>onStart()</code> method is called whenever the Activity becomes visible to the user, typically after <code>onCreate()</code> or <code>onRestart()</code>.</p>
+<h5 id="13-scenario-in-which-only-ondestroy-is-called-for-an-activity-without-onpause-and-onstop">13. Scenario in which only onDestroy is called for an activity without onPause() and onStop()?</h5>
+<p>If finish() is called in the OnCreate() method of an activity, the system will invoke onDestroy() method directly.</p>
+<h5 id="14-why-would-you-set-the-setcontentview-in-oncreate-of-activity-class">14. Why would you set the setContentView() in onCreate() of Activity class?</h5>
+<p>As onCreate() of an Activity is called only once, this is the point where most initialisation should go. It is inefficient to set the content in onResume() or onStart() (which are called multiple times) as the setContentView() is a heavy operation.</p>
+<h5 id="15-difference-between-onsavedinstancestate-and-onrestoreinstancestate-in-an-activity">15. Difference between onSavedInstanceState() and onRestoreInstanceState() in an activity?</h5>
+<ul>
+<li><code>OnRestoreInstanceState()</code> – When activity is recreated after it was previously destroyed, we can recover the saved state from the Bundle that the system passes to the activity. Both the onCreate() and onRestoreInstanceState() callback methods receive the same Bundle that contains the instance state information. But because the onCreate() method is called whether the system is creating a new instance of your activity or recreating a previous one, you must check whether the state Bundle is null before you attempt to read it. If it is null, then the system is creating a new instance of the activity, instead of restoring a previous one that was destroyed.</li>
+<li><code>onSaveInstanceState()</code> – is a method used to store data before pausing the activity.</li>
+</ul>
+<h5 id="16-launch-modes-in-android">16. Launch modes in Android?</h5>
+<ul>
+<li>Standard: It creates a new instance of an activity in the task from which it was started. Multiple instances of the activity can be created and multiple instances can be added to the same or different tasks. Eg: Suppose there is an activity stack of A -&gt; B -&gt; C. Now if we launch B again with the launch mode as “standard”, the new stack will be A -&gt; B -&gt; C -&gt; B.</li>
+<li>SingleTop: It is the same as the standard, except if there is a previous instance of the activity that exists in the top of the stack, then it will not create a new instance but rather send the intent to the existing instance of the activity. Eg: Suppose there is an activity stack of A -&gt; B. Now if we launch C with the launch mode as “singleTop”, the new stack will be A -&gt; B -&gt; C as usual. Now if there is an activity stack of A -&gt; B -&gt; C. If we launch C again with the launch mode as “singleTop”, the new stack will still be A -&gt; B -&gt; C.</li>
+<li>SingleTask: A new task will always be created and a new instance will be pushed to the task as the root one. So if the activity is already in the task, the intent will be redirected to onNewIntent() or else a new instance will be created. At a time only one instance of activity will exist. Eg: Suppose there is an activity stack of A -&gt; B -&gt; C -&gt; D. Now if we launch D with the launch mode as “singleTask”, the new stack will be A -&gt; B -&gt; C -&gt; D as usual. Now if there is an activity stack of A -&gt; B -&gt; C -&gt; D. If we launch activity B again with the launch mode as “singleTask”, the new activity stack will be A -&gt; B. Activities C and D will be destroyed.</li>
+<li>SingleInstance: Same as single task but the system does not launch any activities in the same task as this activity. If new activities are launched, they are done so in a separate task. Eg: Suppose there is an activity stack of A -&gt; B -&gt; C -&gt; D. If we launch activity B again with the launch mode as “singleInstance”, the new activity stack will be: Task1 — A -&gt; B -&gt; C; Task2 — D.</li>
+</ul>
+<h5 id="17-how-does-the-activity-respond-when-the-user-rotates-the-screen">17. How does the activity respond when the user rotates the screen?</h5>
+<p>When the screen is rotated, the current instance of activity is destroyed a new instance of the Activity is created in the new orientation. The onRestart() is invoked first when a screen is rotated. The other lifecycle methods get invoked in the similar flow as they were when the activity was first created.</p>
+<h5 id="18-mention-two-ways-to-clear-the-back-stack-of-activities-when-a-new-activity-is-called-using-intent">18. Mention two ways to clear the back stack of Activities when a new Activity is called using intent.</h5>
+<p>The first approach is to use a <code>FLAG_ACTIVITY_CLEAR_TOP</code> flag. The second way is by using <code>FLAG_ACTIVITY_CLEAR_TASK</code> and <code>FLAG_ACTIVITY_NEW_TASK</code> in conjunction.</p>
+<h5 id="19-whats-the-difference-between-flag_activity_clear_task-and-flag_activity_clear_top">19. What’s the difference between FLAG_ACTIVITY_CLEAR_TASK and FLAG_ACTIVITY_CLEAR_TOP?</h5>
+<ul>
+<li><code>FLAG_ACTIVITY_CLEAR_TOP</code>, if set and if an old instance of this Activity exists in the task list then barring that all the other activities are removed and that old activity becomes the root of the task list. Else if there’s no instance of that activity then a new instance of it is made the root of the task list. Using FLAG_ACTIVITY_NEW_TASK in conjunction is a good practice, though not necessary.</li>
+<li><code>FLAG_ACTIVITY_CLEAR_TASK</code> is used to clear all the activities from the task including any existing instances of the class invoked. The Activity launched by intent becomes the new root of the otherwise empty task list. This flag has to be used in conjunction with FLAG_ ACTIVITY_NEW_TASK.</li>
+</ul>
+<h5 id="20-difference-between-activity--service">20. Difference between Activity &amp; Service</h5>
+<p>Activities are basically containers or windows to the user interface. Services is a component that is used to perform operations on the background. It does not have an UI.</p>
+<h5 id="21-what-is-the-ontrimmemory-method">21. What is the onTrimMemory() method?</h5>
+<ul>
+<li>The <code>onTrimMemory()</code> method in Android is a callback that informs an app about its current memory status, allowing it to manage resources and release memory when necessary.</li>
+<li>This method is called with different levels of memory urgency, represented by constants like <code>TRIM_MEMORY_RUNNING_MODERATE</code>, <code>TRIM_MEMORY_RUNNING_LOW</code>, or <code>TRIM_MEMORY_BACKGROUND</code>, indicating whether the app is in the background, has reduced memory, or is at risk of being killed if memory isn’t freed.</li>
+</ul>
+<h5 id="22-explain-the-purpose-of-jobscheduler-and-how-it-works">22. Explain the purpose of JobScheduler and how it works.</h5>
+<p>The <code>JobScheduler</code> API is designed to schedule tasks that need to be run in the background under specific conditions, such as network availability, device charging, or idle state. Introduced in Android 5.0 (API level 21),  <code>JobScheduler</code> allows developers to defer jobs until these optimal conditions are met, enhancing device efficiency and battery life by batching background tasks.</p>
+<h5 id="23-describe-content-providers">23. Describe content providers</h5>
+<ul>
+<li>A ContentProvider provides data from one application to another, when requested. It manages access to a structured set of data.</li>
+<li>It provides mechanisms for defining data security.</li>
+<li>ContentProvider is the standard interface that connects data in one process with code running in another process. When you want to access data in a ContentProvider, you must instead use the ContentResolver object in your application’s Context to communicate with the provider as a client.</li>
+<li>The provider object receives data requests from clients, performs the requested action, and returns the results.</li>
+</ul>
+<h5 id="24-access-data-using-content-provider">24. Access data using Content Provider:</h5>
+<p>Start by making sure your Android application has the necessary read access permissions. Then, get access to the ContentResolver object by calling getContentResolver() on the Context object, and retrieving the data by constructing a query using ContentResolver.query(). This method returns a Cursor, so you can retrieve data from each column using Cursor methods.</p>
+<h5 id="25-what-are-broadcastreceivers">25. What are BroadcastReceivers?</h5>
+<p>Broadcast Receivers allow your app to respond to system-wide events, like network changes or low battery. They can be registered in code or manifest and are useful for tasks like reacting to connectivity changes in a messaging app.</p>
+<h5 id="26-what-is-an-intent">26. What is an intent?</h5>
+<p><code>Intents</code> are messages that can be used to pass information to the various components of android. For instance, launch an activity, open a webview etc. Two types of intents-</p>
+<ul>
+<li><code>Explicit</code>: Explicit intent is when you call an application activity from another activity of the same application.</li>
+<li><code>Implicit</code>: Implicit intent is when you call system default intent like send email, send SMS, dial number.</li>
+</ul>
+<h5 id="27-what-is-a-sticky-intent">27. What is a Sticky Intent?</h5>
+<p>A Sticky Intent is an intent that remains in the system after it has been broadcast. When a sticky broadcast is sent, it “sticks” around in the system so that future receivers can access the data even if they register after the broadcast was originally sent. This can be useful when you want to broadcast an intent that other components might need to access at a later time, rather than at the time of broadcast.</p>
+<blockquote>
+<p>Note: Sticky broadcasts were widely used in earlier versions of Android but are discouraged in modern Android development. The Android team now recommends alternatives like ViewModel and LiveData to achieve similar results more securely and efficiently.</p>
+</blockquote>
+<h5 id="28-what-is-a-pending-intent">28. What is a Pending Intent?</h5>
+<p>A PendingIntent in Android is a special type of intent that grants another app or system component the permission to execute a predefined action on behalf of your application at a later time. It’s essentially a wrapped intent that can be handed off to another application or the Android system to execute later, often under specific conditions. Example Use Cases:</p>
+<ul>
+<li>Notifications: When you create a notification, you usually want to trigger an action when the user clicks it (like opening an activity). A PendingIntent lets you specify this action in advance.</li>
+<li>Alarms with AlarmManager: If you want to schedule an action to be executed at a specific time, you use PendingIntent with AlarmManager to define the action.</li>
+<li>Location Updates: PendingIntent is used with location services to trigger a specific action when a location condition is met, like entering or exiting a geographical area.</li>
+</ul>
+<h5 id="29-what-is-an-action">29. What is an Action?</h5>
+<p>An Action represents a specific operation or behavior that an Intent can perform. It’s essentially a string constant that defines what type of operation should be carried out, and it’s used by both the system and applications to specify and handle particular actions. Actions are fundamental in defining the nature of intents, allowing Android components (like activities, services, and broadcast receivers) to respond to specific events or tasks.</p>
+<h5 id="30-what-are-intent-filters">30. What are intent Filters?</h5>
+<p>Intent Filters in Android define the types of intents that a component (such as an Activity, Service, or BroadcastReceiver) can respond to. They are specified in the AndroidManifest.xml file or programmatically and allow the Android system to determine which components are capable of handling certain intents. Intent filters make it possible for apps to interact with each other and respond to system-wide events.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>activity android:name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.ExampleActivity&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>intent<span style="color:#f92672">-</span>filter<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>action android:name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>category android:name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>data android:scheme<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http&#34;</span> android:host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;www.example.com&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>intent<span style="color:#f92672">-</span>filter<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>activity<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h5 id="31-what-is-a-fragment-and-how-does-it-differ-from-an-activity">31. What is a Fragment, and how does it differ from an Activity?</h5>
+<p>Fragment is a UI entity attached to Activity. Fragments can be reused by attaching in different activities. Activity can have multiple fragments attached to it. Fragment must be attached to an activity and its lifecycle will depend on its host activity.</p>
+<h5 id="32-describe-fragment-lifecycle">32. Describe fragment lifecycle</h5>
+<ul>
+<li><code>onAttach()</code> : The fragment instance is associated with an activity instance.The fragment and the activity is not fully initialized. Typically you get in this method a reference to the activity which uses the fragment for further initialization work.</li>
+<li><code>onCreate()</code> : The system calls this method when creating the fragment. You should initialize essential components of the fragment that you want to retain when the fragment is paused or stopped, then resumed.</li>
+<li><code>onCreateView()</code> : The system calls this callback when it’s time for the fragment to draw its user interface for the first time. To draw a UI for your fragment, you must return a View component from this method that is the root of your fragment’s layout. You can return null if the fragment does not provide a UI.</li>
+<li><code>onActivityCreated()</code> : The onActivityCreated() is called after the onCreateView() method when the host activity is created. Activity and fragment instance have been created as well as the view hierarchy of the activity. At this point, view can be accessed with the findViewById() method. example. In this method you can instantiate objects which require a Context object</li>
+<li><code>onStart()</code> : The onStart() method is called once the fragment gets visible.</li>
+<li><code>onResume()</code> : Fragment becomes active.</li>
+<li><code>onPause()</code> : The system calls this method as the first indication that the user is leaving the fragment. This is usually where you should commit any changes that should be persisted beyond the current user session.</li>
+<li><code>onStop()</code> : Fragment going to be stopped by calling onStop()</li>
+<li><code>onDestroyView()</code> : Fragment view will destroy after call this method</li>
+<li><code>onDestroy()</code>: called to do final clean up of the fragment’s state but Not guaranteed to be called by the Android platform.</li>
+</ul>
+<h5 id="33-what-is-the-difference-between-fragments--activities-explain-the-relationship-between-the-two">33. What is the difference between fragments &amp; activities. Explain the relationship between the two.</h5>
+<p>An Activity is an application component that provides a screen, with which users can interact in order to do something whereas a Fragment represents a behavior or a portion of user interface in an Activity (with its own lifecycle and input events, and which can be added or removed at will).</p>
+<h5 id="34-difference-between-addingreplacing-fragment-in-backstack">34. Difference between adding/replacing fragment in backstack?</h5>
+<ul>
+<li>replace removes the existing fragment and adds a new fragment. This means when you press back button the fragment that got replaced will be created with its onCreateView being invoked.</li>
+<li>add retains the existing fragments and adds a new fragment that means existing fragment will be active and they wont be in ‘paused’ state hence when a back button is pressed onCreateView is not called for the existing fragment(the fragment which was there before new fragment was added).</li>
+</ul>
+<p><strong>Note</strong>: In terms of fragment’s life cycle events onPause(), onResume(), onCreateView() and other life cycle events will be invoked in case of replace but they wont be invoked in case of add.</p>
+<h5 id="35-what-are-retained-fragments">35. What are retained fragments?</h5>
+<p>Retained Fragments are fragments that are preserved across configuration changes (like screen rotations). By setting a fragment to be retained, you prevent it from being destroyed and recreated when the activity’s configuration changes, allowing the fragment to retain its data and state.</p>
+<p>To create a retained fragment, you need to call setRetainInstance(true) in the fragment’s onCreate() method. This marks the fragment as retained, allowing it to survive configuration changes.</p>
+<h5 id="36-how-do-you-handle-back-navigation-in-a-fragment">36. How do you handle back navigation in a Fragment?</h5>
+<p>You can use the OnBackPressedDispatcher to listen for back press events and navigate accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// MainActivity.kt</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.os.Bundle
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.activity.OnBackPressedCallback
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.appcompat.app.AppCompatActivity
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.Fragment
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.FragmentManager
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.commit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.app.R
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> : AppCompatActivity() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onCreate</span>(savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreate</span>(savedInstanceState)
+</span></span><span style="display:flex;"><span>        setContentView(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">activity_main</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (savedInstanceState <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>            supportFragmentManager.<span style="color:#a6e22e">commit</span> {
+</span></span><span style="display:flex;"><span>                replace(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">fragment_container</span>, FirstFragment())
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// FirstFragment.kt</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.os.Bundle
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.LayoutInflater
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.View
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.ViewGroup
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.widget.Button
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.activity.OnBackPressedCallback
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.Fragment
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.commit
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.app.R
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstFragment</span> : Fragment() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onCreateView</span>(
+</span></span><span style="display:flex;"><span>        inflater: LayoutInflater, container: ViewGroup<span style="color:#f92672">?</span>,
+</span></span><span style="display:flex;"><span>        savedInstanceState: Bundle<span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>    ): View<span style="color:#f92672">?</span> {
+</span></span><span style="display:flex;"><span>        val view <span style="color:#f92672">=</span> inflater.<span style="color:#a6e22e">inflate</span>(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">fragment_first</span>, container, <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        view.<span style="color:#a6e22e">findViewById</span><span style="color:#f92672">&lt;</span>Button<span style="color:#f92672">&gt;</span>(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">button_to_second_fragment</span>).<span style="color:#a6e22e">setOnClickListener</span> {
+</span></span><span style="display:flex;"><span>            parentFragmentManager.<span style="color:#a6e22e">commit</span> {
+</span></span><span style="display:flex;"><span>                replace(R.<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">fragment_container</span>, SecondFragment())
+</span></span><span style="display:flex;"><span>                addToBackStack(<span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> view
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// SecondFragment.kt</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.os.Bundle
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.LayoutInflater
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.View
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> android.view.ViewGroup
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.activity.OnBackPressedCallback
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> androidx.fragment.app.Fragment
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.example.app.R
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SecondFragment</span> : Fragment() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onCreateView</span>(
+</span></span><span style="display:flex;"><span>        inflater: LayoutInflater, container: ViewGroup<span style="color:#f92672">?</span>,
+</span></span><span style="display:flex;"><span>        savedInstanceState: Bundle<span style="color:#f92672">?</span>
+</span></span><span style="display:flex;"><span>    ): View<span style="color:#f92672">?</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> inflater.<span style="color:#a6e22e">inflate</span>(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">fragment_second</span>, container, <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onViewCreated</span>(view: View, savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onViewCreated</span>(view, savedInstanceState)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle back press when this fragment is active</span>
+</span></span><span style="display:flex;"><span>        requireActivity().<span style="color:#a6e22e">onBackPressedDispatcher</span>.<span style="color:#a6e22e">addCallback</span>(
+</span></span><span style="display:flex;"><span>            viewLifecycleOwner,
+</span></span><span style="display:flex;"><span>            object : OnBackPressedCallback(<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>                override fun <span style="color:#a6e22e">handleOnBackPressed</span>() {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Custom behavior on back press</span>
+</span></span><span style="display:flex;"><span>                    parentFragmentManager.<span style="color:#a6e22e">popBackStack</span>()
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="37-how-do-you-communicate-between-fragments">37. How do you communicate between fragments?</h5>
+<ul>
+<li>Using a Shared ViewModel: The most modern and recommended approach, especially within a single activity, is to use a shared ViewModel scoped to the Activity. Both fragments observe data within the same ViewModel, allowing seamless data sharing. This approach works well with the Android Architecture Components and ensures data consistency even through configuration changes.</li>
+<li>Direct Interface Callback: Define an interface in the fragment and let the activity implement it. Fragment A can then call methods on this interface, which the activity handles by passing data to Fragment B. This approach is less commonly used now with ViewModel but still effective when fragments communicate indirectly through their host activity.</li>
+<li>Fragment Result API: Introduced in AndroidX, the Fragment Result API is a direct way to communicate between two fragments, often for one-time data exchanges. Fragment A sets a result with a unique key, and Fragment B registers to observe this result using that key. It’s simple and scoped to the fragment lifecycle, making it a good choice for temporary data passing, like sending a user selection or form data.</li>
+<li>Passing Data through Arguments: for one-way communication (e.g., sending data from Fragment A to Fragment B when Fragment B is created), you can pass data through Bundle arguments using Fragment.setArguments(). This method is straightforward and primarily used for sending data at the time of fragment creation.</li>
+</ul>
+<h5 id="38-what-is-the-difference-between-oncreateview-and-onviewcreated-in-fragments">38. What is the difference between onCreateView and onViewCreated in Fragments?</h5>
+<ul>
+<li><code>onCreateView</code>: This method is called when the fragment is creating its view hierarchy, and its primary purpose is to inflate the layout for the fragment. You usually override onCreateView to return the root view for your fragment by inflating a layout file.</li>
+<li><code>onViewCreated</code>: This method is called after onCreateView and is meant for additional view setup. It’s triggered after the fragment’s view has been created and fully inflated, making it the ideal place to initialize UI components, set up listeners, or perform operations that interact with the view.</li>
+</ul>
+<h5 id="39-how-would-you-update-the-ui-of-an-activity-from-a-background-service">39. How would you update the UI of an activity from a background service?</h5>
+<ul>
+<li>Using BroadcastReceiver: One common method is to use a BroadcastReceiver in the activity to listen for broadcasts sent from the service. When the service needs to update the UI, it sends a broadcast with the relevant data, and the activity’s receiver handles the UI update. (Sample code)</li>
+</ul>
+<pre tabindex="0"><code>class MyService : Service() {
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // Perform background work
+        val result = &#34;Data from Service&#34;
+        
+        // Send broadcast to update UI
+        val broadcastIntent = Intent(&#34;com.example.UPDATE_UI&#34;)
+        broadcastIntent.putExtra(&#34;result_data&#34;, result)
+        sendBroadcast(broadcastIntent)
+        
+        return START_STICKY
+    }
+}
+
+class MainActivity : AppCompatActivity() {
+    
+    private val updateReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            val data = intent?.getStringExtra(&#34;result_data&#34;)
+            // Update the UI with received data
+            textView.text = data
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // Register receiver to listen for broadcasts from the service
+        val intentFilter = IntentFilter(&#34;com.example.UPDATE_UI&#34;)
+        registerReceiver(updateReceiver, intentFilter)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        // Unregister receiver when activity is stopped
+        unregisterReceiver(updateReceiver)
+    }
+}
+</code></pre><ul>
+<li>You can use a shared ViewModel with LiveData to observe data changes. This approach is especially effective for a single-activity application where fragments and services share data using ViewModel. (Sample)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SharedViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val _data <span style="color:#f92672">=</span> MutableLiveData<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>()
+</span></span><span style="display:flex;"><span>    val data: LiveData<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">get</span>() <span style="color:#f92672">=</span> _data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">updateData</span>(newData: String) {
+</span></span><span style="display:flex;"><span>        _data.<span style="color:#a6e22e">postValue</span>(newData)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyService</span> : Service() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val viewModel: SharedViewModel by <span style="color:#a6e22e">viewModels</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onStartCommand</span>(intent: Intent<span style="color:#f92672">?</span>, flags: Int, startId: Int): Int {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Perform background work and update ViewModel</span>
+</span></span><span style="display:flex;"><span>        val result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Data from Service&#34;</span>
+</span></span><span style="display:flex;"><span>        viewModel.<span style="color:#a6e22e">updateData</span>(result)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> START_STICKY
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> : AppCompatActivity() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val viewModel: SharedViewModel by <span style="color:#a6e22e">viewModels</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onCreate</span>(savedInstanceState: Bundle<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onCreate</span>(savedInstanceState)
+</span></span><span style="display:flex;"><span>        setContentView(R.<span style="color:#a6e22e">layout</span>.<span style="color:#a6e22e">activity_main</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Observe data changes in ViewModel</span>
+</span></span><span style="display:flex;"><span>        viewModel.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#66d9ef">this</span>) { data <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Update UI with new data</span>
+</span></span><span style="display:flex;"><span>            textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> data
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Messenger allows the service to communicate with a client (activity) using message passing. This approach is beneficial if you need two-way communication between the activity and the service. (Sample code)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyService</span> : Service() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val messenger <span style="color:#f92672">=</span> Messenger(IncomingHandler())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    inner <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IncomingHandler</span> : Handler(Looper.<span style="color:#a6e22e">getMainLooper</span>()) {
+</span></span><span style="display:flex;"><span>        override fun <span style="color:#a6e22e">handleMessage</span>(msg: Message) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Handle incoming messages if needed</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onBind</span>(intent: Intent<span style="color:#f92672">?</span>): IBinder<span style="color:#f92672">?</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> messenger.<span style="color:#a6e22e">binder</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Method to send message to the activity</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> fun <span style="color:#a6e22e">sendMessageToActivity</span>(data: String) {
+</span></span><span style="display:flex;"><span>        val message <span style="color:#f92672">=</span> Message.<span style="color:#a6e22e">obtain</span>(<span style="color:#66d9ef">null</span>, 1, 0, 0)
+</span></span><span style="display:flex;"><span>        message.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> Bundle().<span style="color:#a6e22e">apply</span> { putString(<span style="color:#e6db74">&#34;data&#34;</span>, data) }
+</span></span><span style="display:flex;"><span>        messenger.<span style="color:#a6e22e">send</span>(message)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> : AppCompatActivity() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> serviceMessenger: Messenger<span style="color:#f92672">?</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val replyMessenger <span style="color:#f92672">=</span> Messenger(Handler { msg <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        val data <span style="color:#f92672">=</span> msg.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;data&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Update UI</span>
+</span></span><span style="display:flex;"><span>        textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> data
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val connection <span style="color:#f92672">=</span> object : ServiceConnection {
+</span></span><span style="display:flex;"><span>        override fun <span style="color:#a6e22e">onServiceConnected</span>(name: ComponentName<span style="color:#f92672">?</span>, service: IBinder<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>            serviceMessenger <span style="color:#f92672">=</span> Messenger(service)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        override fun <span style="color:#a6e22e">onServiceDisconnected</span>(name: ComponentName<span style="color:#f92672">?</span>) {
+</span></span><span style="display:flex;"><span>            serviceMessenger <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onStart</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onStart</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Bind to the service</span>
+</span></span><span style="display:flex;"><span>        val intent <span style="color:#f92672">=</span> Intent(<span style="color:#66d9ef">this</span>, MyService::<span style="color:#66d9ef">class</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">java</span>)
+</span></span><span style="display:flex;"><span>        bindService(intent, connection, Context.<span style="color:#a6e22e">BIND_AUTO_CREATE</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onStop</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">onStop</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Unbind from the service</span>
+</span></span><span style="display:flex;"><span>        unbindService(connection)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>You can use LocalBroadcastManager for broadcasting data updates. This is similar to BroadcastReceiver, but LocalBroadcastManager confines broadcasts to within the same app, which is more secure and efficient.</li>
+</ul>
+<h5 id="40-what-is-the-purpose-of-the-recyclerviewadapter">40. What is the purpose of the RecyclerView.Adapter?</h5>
+<ul>
+<li>The purpose of the RecyclerView.Adapter in Android is to act as a bridge between the data source and the RecyclerView UI component.</li>
+<li>It is responsible for creating ViewHolder objects to display each item in the list and binding the data from the data source to these ViewHolders. The adapter ensures that only a limited number of views are created and recycled efficiently as they scroll off-screen, improving performance by reducing memory usage and avoiding the need to create a new view for every item in the list.</li>
+<li>The adapter also manages notifying the RecyclerView about data changes, which allows the list to update dynamically. By separating data management from the layout and UI logic, RecyclerView.Adapter promotes a clean, modular approach to implementing dynamic lists.</li>
+</ul>
+<h5 id="41-what-is-constraintlayout-and-why-is-it-useful">41. What is ConstraintLayout, and why is it useful?</h5>
+<p>It allows you to create large and complex layouts with a flat view hierarchy (no nested view groups). It’s similar to RelativeLayout in that all views are laid out according to relationships between sibling views and the parent layout, but it’s more flexible than RelativeLayout and easier to use with Android Studio’s Layout Editor. Using ConstraintLayout, developers can create responsive UIs that adapt well to different screen sizes, orientations, and resolutions by specifying constraints that make views dynamically adjust.</p>
+<h5 id="42-difference-between-relativelayout-and-linearlayout">42. Difference between RelativeLayout and LinearLayout?</h5>
+<ul>
+<li>Linear Layout — Arranges elements either vertically or horizontally. i.e. in a row or column.</li>
+<li>Relative Layout — Arranges elements relative to parent or other elements.</li>
+</ul>
+<h5 id="43-when-might-you-use-a-framelayout">43. When might you use a FrameLayout?</h5>
+<ul>
+<li>Frame Layouts are designed to contain a single item, making them an efficient choice when you need to display a single View.</li>
+<li>If you add multiple Views to a FrameLayout then it’ll stack them one above the other, so FrameLayouts are also useful if you need overlapping Views, for example if you’re implementing an overlay or a HUD element.</li>
+</ul>
+<h5 id="thanks-for-reading">Thanks for reading!</h5>
+<p>Hope you find this useful. This is just a list of questions I personally found useful in interviews. This list is by no means exhaustive. Let me know your thoughts in the responses. Happy coding!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/android"
+                target="_blank"
+              >Android</a></li>
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/interview"
+                target="_blank"
+              >Interview</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-1-android-basics%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Android%20basics%20Interview&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-1-android-basics%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Android%20basics%20Interview: https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-1-android-basics%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Android%20basics%20Interview&amp;body=Check%20out%20this%20site https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-1-android-basics%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Android architecture">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Android architecture">Android architecture</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-8-android-architecture-07ca74eee000">🔗 Android Interview Series 2024 — Part 8 (Android architecture)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-can-you-explain-the-mvc-and-mvp-patterns-what-are-the-main-differences-and-why-are-they-not-used-in-android-development">1. Can you explain the MVC and MVP patterns? What are the main differences and why are they not used in …</h5></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Jetpack Compose">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Jetpack Compose">Jetpack Compose</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-7-jetpack-compose-ff7d2ecd9018">🔗 Android Interview Series 2024 — Part 7 (Jetpack Compose)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-jetpack-compose">1. What is Jetpack Compose?</h5>
+<p>Jetpack Compose is Android’s recommended modern toolkit for building native UI. It …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Kotlin Flows">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Kotlin Flows">Kotlin Flows</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df">🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-flow">1. What is Flow?</h5>
+<p>A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Sep 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+    
+
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://whywhom.github.io/" title="Andy&#39;s Blog">
+                        <img alt="Footer logo" src="/images/andy.jpeg"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

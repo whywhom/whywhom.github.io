@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/images/andy.jpeg type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://whywhom.github.io/blogs/android-interview-series-2024-part-5-kotlin-coroutines/">
+  <meta property="og:site_name" content="Andy&#39;s Blog">
+  <meta property="og:title" content="Kotlin Coroutines">
+  <meta property="og:description" content="Android Interview Series 2024 — Part 5">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-08-03T23:29:21+05:30">
+    <meta property="article:modified_time" content="2024-08-03T23:29:21+05:30">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Interview">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kotlin Coroutines">
+  <meta name="twitter:description" content="Android Interview Series 2024 — Part 5">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Android Interview Series 2024 — Part 5">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Kotlin Coroutines | Andy&#39;s Blog
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/images/andy.jpeg" width="30" height="30"
+                    class="d-inline-block align-top">
+                Andy&#39;s Blog
+                
+            </a>
+
+            
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume" title="Resume">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Kotlin Coroutines</h1>
+            <div class="text-center">
+              
+                Anitaa Murthy
+                <small>|</small>
+              
+              Aug 3, 2024
+
+              
+              <span id="readingTime">
+                min read
+              </span>
+              
+            </div>
+          </div>
+          
+          <div class="featured-image">
+            <img class="img-fluid mx-auto d-block" src="https://hdwallsbox.com/wallpapers/m/78/3d-android-logo-background-m77313.jpg" alt="Kotlin Coroutines">
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-5-kotlin-coroutines-3dd1ae81c721">🔗 Android Interview Series 2024 — Part 5 (Kotlin Coroutines)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-are-coroutines">1. What are coroutines?</h5>
+<p>Coroutine stands for cooperating functions. They provide a more efficient and readable way to handle asynchronous tasks. It is similar to a thread, in that it takes a block of code to run that works concurrently with the rest of the code. However, a coroutine is not bound to any particular thread. It may suspend its execution in one thread and resume in another one. Coroutines were launched to Kotlin in version 1.3.</p>
+<h5 id="2-how-do-coroutines-differ-from-traditional-threading">2. How do coroutines differ from traditional threading?</h5>
+<ul>
+<li>Coroutines are lightweight — We can run many coroutines on a single thread due to its support for suspension. Here suspension means that you can execute some instructions, then stop the coroutine in between the execution and continue when you wish to. Suspending saves memory over blocking while supporting many concurrent operations.</li>
+<li>Coroutines have fewer memory leaks — coroutines follow the structured concurrency principle, which means that each coroutine should be launched inside a specific context with a determinate life-time. Structured concurrency is an approach where the lifetime of coroutines is tied to a specific scope, ensuring that all launched coroutines within that scope complete before the scope itself completes. This helps avoid coroutine leaks and simplifies resource management.</li>
+<li>On android, coroutines offer Main-safety — coroutines help to manage long-running tasks that might otherwise block the main thread and cause your app to become unresponsive. Main-safety allows you to ensure that any suspend function can be called from the main thread.</li>
+<li>Coroutines offer built-in cancellation support — one of the most important mechanisms of coroutines is cancellation because, on Android, nearly every coroutine is associated with some view, and if this view is destroyed, its coroutines are not needed, so they should be cancelled. This is a crucial capability that used to require a lot of effort from developers, but coroutines offer a simple and safe cancellation mechanism.</li>
+<li>Coroutines are cooperatively multitasked — this means that coroutines are concurrency primitives that cooperatively execute a set of instructions and that the operating system doesn’t control the scheduling of tasks or processes performed by coroutines. Instead, it relies on the program, and platform that runs them to do that. As such, coroutines can yield control back to the scheduler to allow other threads to run. Scheduler from OS is responsible to let these threads do their job and if need be can also pause them so that the same resources can be used by other threads.</li>
+</ul>
+<h5 id="3-what-is-structured-concurrency">3. What is structured concurrency?</h5>
+<p>Structured concurrency is a design principle where the lifetime of coroutines is tied to a specific scope, ensuring that all launched coroutines within that scope complete before the scope itself completes. It ties the lifecycle of coroutines to the scope they are launched in, ensuring they are properly cancelled when the scope is no longer active. Key concepts of structured concurrency include:</p>
+<ul>
+<li>Hierarchical Structure: Coroutines launched in a scope form a parent-child relationship, where the parent coroutine is responsible for managing the lifecycle of its children.</li>
+<li>Automatic Cancellation: With structured concurrency, if a coroutine within a scope fails, other coroutines in the same scope are canceled automatically, preventing incomplete or inconsistent tasks.</li>
+<li>Scope-Aware Exception Handling: Exceptions in child coroutines can be propagated to the parent, ensuring that the entire operation fails fast if any part of it fails.</li>
+</ul>
+<h5 id="4-what-are-suspend-functions">4. What are suspend functions?</h5>
+<p>Suspending functions are those functions that can be paused and then continued later. While the suspend function is executing, the coroutine releases the thread on which it was running and allows other coroutines to access that thread (because coroutines are cooperative).</p>
+<p>The syntax of the suspended function is the same as that of the normal function but with the addition of the suspend keyword. Suspend functions are only allowed to be called from a coroutine or another suspend function.</p>
+<blockquote>
+<p>A suspend function is a special type of function in Kotlin that can be paused (suspended) and resumed later without blocking the main thread. It allows writing asynchronous, non-blocking code in a sequential manner.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>suspend fun <span style="color:#a6e22e">fetchUserData</span>(): User {
+</span></span><span style="display:flex;"><span>    val response <span style="color:#f92672">=</span> apiService.<span style="color:#a6e22e">getUser</span>()  <span style="color:#75715e">// Assume this is a suspending API call</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="5-how-would-you-define-a-coroutine-scope">5. How would you define a coroutine scope?</h5>
+<ul>
+<li>A coroutine scope defines the lifecycle/lifetime of a coroutine. It is responsible for controlling the lifecycle of a group of coroutines and their context.</li>
+<li>Each coroutine scope has a context that can include a dispatcher (like Dispatchers.IO for background work, Dispatchers.Main for UI updates, etc.) and other configuration settings. Coroutines launched within the scope inherit this context, making it easy to handle the specifics of threading or exception handling.</li>
+<li>Coroutine scopes help ensure that coroutines are canceled if they’re no longer needed. For instance, in an Android app, the lifecycle of a coroutine scope is often tied to a component like a ViewModel or Activity. When the component is destroyed, all coroutines within its scope are canceled to avoid memory leaks or unnecessary background work.</li>
+<li>By grouping related coroutines under a single scope, you can manage tasks as a group. For example, in an API call with several concurrent requests, you might want to cancel all requests if one fails. The coroutine scope helps to implement this pattern effectively.</li>
+<li>A coroutine scope allows you to catch exceptions across all coroutines within it, ensuring consistent error handling without needing to manage each coroutine separately.</li>
+</ul>
+<p>How to Define a Coroutine Scope?</p>
+<p>A coroutine scope is typically defined using CoroutineScope or specific lifecycle-aware scopes like:</p>
+<ul>
+<li>1️⃣ GlobalScope – Unbound, not recommended for structured concurrency.</li>
+<li>2️⃣ runBlocking – Blocks the current thread (used in main functions or testing).</li>
+<li>3️⃣ CoroutineScope(Dispatchers.IO/Main/etc.) – Custom scope for background tasks.</li>
+<li>4️⃣ viewModelScope (Android) – Automatically cancels when ViewModel is cleared.</li>
+<li>5️⃣ lifecycleScope (Android) – Tied to the Lifecycle of an Activity/Fragment.</li>
+</ul>
+<h5 id="6-what-are-the-3-primary-coroutine-scopes">6. What are the 3 primary coroutine scopes?</h5>
+<p>In Kotlin, there are three primary coroutine scopes commonly used, especially in Android development, to manage the lifecycle of coroutines:</p>
+<ul>
+<li>GlobalScope: is a predefined coroutine scope that lives for the duration of the application&rsquo;s lifetime. Coroutines launched in GlobalScope are not tied to any specific lifecycle or component. Therefore, they are <strong>never canceled automatically</strong> and continue running as long as the app is alive. Since it lacks <strong>structured concurrency</strong>, it&rsquo;s often discouraged for most use cases, as it can lead to memory leaks or wasted resources if not managed carefully.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>GlobalScope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do some long-running work</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>CoroutineScope: is a general-purpose coroutine scope that you can define with a specific lifecycle and context. It’s commonly used to create custom coroutine scopes, especially in classes that need to control coroutine lifecycles explicitly (e.g., repositories, service classes). With CoroutineScope, you can specify a Job or dispatcher, making it more flexible and adaptable.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyRepository</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val scope <span style="color:#f92672">=</span> CoroutineScope(Job() <span style="color:#f92672">+</span> Dispatchers.<span style="color:#a6e22e">IO</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">fetchData</span>() {
+</span></span><span style="display:flex;"><span>        scope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Coroutine runs on Dispatchers.IO</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">clear</span>() {
+</span></span><span style="display:flex;"><span>        scope.<span style="color:#a6e22e">cancel</span>() <span style="color:#75715e">// Cancels all coroutines launched in this scope</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>viewModelScope, lifecycleScope</code>: These scopes are specific to Android and simplify coroutine management by tying coroutine lifecycles to Android components. They automatically cancel coroutines based on the lifecycle of the component, reducing the need for explicit cleanup.</li>
+</ul>
+<ol>
+<li><code>viewModelScope</code>: Tied to a ViewModel’s lifecycle, coroutines launched in this scope are canceled automatically when the ViewModel is cleared.</li>
+<li><code>lifecycleScope</code>: Available for Activity or Fragment, it cancels coroutines when the component&rsquo;s lifecycle reaches a specific state (e.g., onDestroy).</li>
+</ol>
+<h5 id="7-what-are-coroutine-builders">7. What are coroutine builders?</h5>
+<p>Coroutine builders are functions for initialising or creating new coroutines. They simplify the process of launching coroutines and help define the structure of concurrent tasks. Each builder serves a different purpose, depending on how you want the coroutine to behave.</p>
+<h5 id="8-what-are-the-different-coroutine-builders">8. What are the different coroutine builders?</h5>
+<ul>
+<li>launch: is the most common coroutine builder, that launches a new coroutine concurrently, i.e., without blocking the current thread. It’s typically used for fire-and-forget tasks where you don’t need a return value. launch creates a Job that represents the coroutine and can be used to manage its lifecycle (e.g., cancel it). launch is used a lot on ViewModels to create a bridge from non-suspending code to suspending code.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>launch {
+</span></span><span style="display:flex;"><span>    delay(1000L)
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Hello World!&#34;</span>)    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>async: like the launch function, it is also used to launch a new coroutine; the only difference is that it returns a deferred instead of a Job. The deferred is a non-blocking future that promises to deliver the result later. The running coroutine is cancelled when the resulting deferred is cancelled. You can call await() on this Deferred to get the result once the coroutine completes. It’s commonly used for parallel execution of tasks when you need to retrieve and combine results.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val deferred1 <span style="color:#f92672">=</span> async { fetchDataFromNetwork() }
+</span></span><span style="display:flex;"><span>val deferred2 <span style="color:#f92672">=</span> async { fetchDataFromDatabase() }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Wait for both results</span>
+</span></span><span style="display:flex;"><span>val result <span style="color:#f92672">=</span> deferred1.<span style="color:#a6e22e">await</span>() <span style="color:#f92672">+</span> deferred2.<span style="color:#a6e22e">await</span>()
+</span></span></code></pre></div><ul>
+<li>runBlocking: runs a new coroutine and blocks the current thread until its completion. In other words, the thread that runs in it gets blocked for the given duration until all the code blocks inside the brackets of run-blocking complete their execution. It’s primarily used in unit tests or in main functions where you need to call suspending functions but don’t have a coroutine context. It should be used sparingly in Android development since it blocks the main thread, potentially causing UI freezes.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Calls a suspending function and waits for it to complete</span>
+</span></span><span style="display:flex;"><span>    fetchData()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>withContext: It is a suspending function that is used to switch coroutine context within a coroutine. It suspends the current coroutine, switches to the specified context, and resumes execution in the new context. withContext is synchronous within a coroutine and returns the result directly, making it useful for switching between threads seamlessly within a coroutine. You’ll be using it most of the time to switch the dispatcher the coroutine will be executed on.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val result <span style="color:#f92672">=</span> withContext(Dispatchers.<span style="color:#a6e22e">IO</span>) {
+</span></span><span style="display:flex;"><span>    fetchDataFromNetwork()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Now you can use the result on the main thread</span>
+</span></span><span style="display:flex;"><span>textView.<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> result
+</span></span></code></pre></div><h5 id="9-what-is-the-concept-of-coroutinecontext">9. What is the concept of CoroutineContext?</h5>
+<p>Coroutine Context is a set of elements that define the behaviour and characteristics of a coroutine. It includes things like dispatchers, jobs, exception handlers, and coroutine name. The context is used to determine how and where the coroutine will be executed.</p>
+<h5 id="10-how-would-you-define-coroutine-dispatcher">10. How would you define Coroutine Dispatcher?</h5>
+<p>A Coroutine Dispatcher is responsible for determining the thread or threads on which the coroutine will be executed. It controls where the coroutine’s code executes. Kotlin provides several standard dispatchers:</p>
+<ul>
+<li>Dispatchers.Main: Runs the coroutine on the main (UI) thread, useful for updating UI elements.</li>
+<li>Dispatchers.IO: IO Dispatchers initiate the coroutine on the IO thread. This one is suitable for I/O operations that can block the execution thread, such as reading or writing files, making database queries, or making network requests.</li>
+<li>Dispatchers.Default: The default dispatcher is used when no other dispatcher is explicitly specified in the scope. It takes advantage of a pool of shared background threads. This is a good option for compute-intensive coroutines that need CPU resources.</li>
+<li>Dispatchers.Unconfined: Starts the coroutine in the current thread but does not confine it to any specific thread afterward. It is appropriate for coroutines that do not consume CPU or update shared data confined to a specific thread.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    launch { <span style="color:#75715e">// context of the parent, main runBlocking coroutine</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;main runBlocking      : I&#39;m working in thread ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    launch(Dispatchers.<span style="color:#a6e22e">Unconfined</span>) { <span style="color:#75715e">// not confined -- will work with main thread</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Unconfined            : I&#39;m working in thread ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    launch(Dispatchers.<span style="color:#a6e22e">Default</span>) { <span style="color:#75715e">// will get dispatched to DefaultDispatcher </span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Default               : I&#39;m working in thread ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    launch(newSingleThreadContext(<span style="color:#e6db74">&#34;MyOwnThread&#34;</span>)) { <span style="color:#75715e">// will get its own new thread</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;newSingleThreadContext: I&#39;m working in thread ${Thread.currentThread().name}&#34;</span>)
+</span></span><span style="display:flex;"><span>    }    
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="11-what-is-a-coroutine-job">11. What is a Coroutine Job?</h5>
+<p>A Job represents the lifecycle of a coroutine. It’s responsible for controlling the coroutine’s status, such as whether it’s active, completed, or canceled.
+Jobs are hierarchical, meaning if a parent job is canceled, all child jobs within it are also canceled.
+For every coroutine that is created, a Job instance is returned to uniquely identify that coroutine and allow you to manage its lifecycle.
+By adding a Job to the CoroutineContext, you can manage coroutine lifecycles explicitly, which is particularly helpful in Android to prevent memory leaks and ensure tasks are canceled when they’re no longer needed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val job <span style="color:#f92672">=</span> Job()
+</span></span><span style="display:flex;"><span>val scope <span style="color:#f92672">=</span> CoroutineScope(job <span style="color:#f92672">+</span> Dispatchers.<span style="color:#a6e22e">Main</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// This coroutine will be tied to the &#39;job&#39; lifecycle</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cancel all coroutines in this scope by canceling the job</span>
+</span></span><span style="display:flex;"><span>job.<span style="color:#a6e22e">cancel</span>()
+</span></span></code></pre></div><h5 id="12-what-is-a-supervisorjob">12. What is a SupervisorJob?</h5>
+<p>It is an implementation of Job that acts as a supervisor for child coroutines. It allows child coroutines to fail independently of each other, without causing the entire scope to cancel. This is particularly useful when you have multiple tasks running in parallel, and you want each task to continue running even if one of them fails.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyViewModel</span> : ViewModel() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val supervisorJob <span style="color:#f92672">=</span> SupervisorJob()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> val scope <span style="color:#f92672">=</span> CoroutineScope(supervisorJob <span style="color:#f92672">+</span> Dispatchers.<span style="color:#a6e22e">Main</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">loadData</span>() {
+</span></span><span style="display:flex;"><span>        scope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>            val job1 <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                    fetchDataFromNetwork()
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">catch</span> (e: Exception) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Handle network failure without affecting other tasks</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            val job2 <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>                    fetchDataFromDatabase()
+</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">catch</span> (e: Exception) {
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">// Handle database failure independently</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    override fun <span style="color:#a6e22e">onCleared</span>() {
+</span></span><span style="display:flex;"><span>        supervisorJob.<span style="color:#a6e22e">cancel</span>() <span style="color:#75715e">// Cancels all coroutines when ViewModel is cleared</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="13-what-is-the-coroutinename">13. What is the coroutineName?</h5>
+<p>The CoroutineContext can hold other elements like CoroutineName, which is used for debugging purposes, or custom elements for handling specific needs. For example, <code>CoroutineName(&quot;MyCoroutine&quot;)</code> allows you to assign a name to the coroutine, making it easier to track in logs.</p>
+<h5 id="14-what-are-the-different-ways-you-can-cancel-a-coroutine">14. What are the different ways you can cancel a coroutine?</h5>
+<p>Cancellation is a cooperative mechanism, meaning that a coroutine can only be canceled if it checks for cancellation at specific points and responds appropriately.</p>
+<ul>
+<li>Manual checking: You can also use isActive, an extension property on CoroutineScope, to check if the coroutine is still active. If you want to cancel the coroutine, you can use cancel() on its Job or CoroutineScope.</li>
+<li>Cancellation typically propagates through the coroutine hierarchy. When a parent coroutine is canceled, all its child coroutines are also canceled automatically, ensuring a clean, consistent state across related tasks.</li>
+<li>Cancellation check points: These are points in the code where the coroutine automatically checks for cancellation. Common cancellation points include:</li>
+<li>Suspending functions like delay(), yield(), withTimeout, and functions that perform I/O operations, such as network calls.</li>
+<li>These functions check if the coroutine’s Job is still active. If it’s canceled, they throw a CancellationException, which stops the coroutine.</li>
+</ul>
+<h5 id="15-how-do-you-handle-cancellation-exceptions">15. How do you handle cancellation exceptions?</h5>
+<p>When a coroutine is canceled, it throws a CancellationException. This exception is used to signal that the coroutine was canceled and is not considered a failure in the usual sense, so it won’t be logged as an error. However, if the cancellation needs to be handled or cleaned up, you can catch the CancellationException explicitly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>scope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        delay(5000) <span style="color:#75715e">// This coroutine will be canceled if scope.cancel() is called</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (e: CancellationException) {
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Coroutine was canceled&#34;</span>) <span style="color:#75715e">// Optional: Perform cleanup or logging</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Use finally to release resources or perform additional cleanup</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Clean up resources&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="16-how-can-you-handle-errors-in-coroutines">16. How can you handle errors in coroutines?</h5>
+<p>Since coroutines often perform background tasks like network requests or database operations, managing errors properly helps prevent crashes and ensures that failures are handled gracefully. Some best practices on error handling:</p>
+<ul>
+<li>Using try-catch for Exception Handling in Coroutines: You can use a try-catch block within a coroutine to handle exceptions as you would in regular synchronous code. This allows you to handle specific errors within the coroutine, preventing the coroutine from terminating abruptly due to an exception.</li>
+<li>Using CoroutineExceptionHandler: is a way to handle uncaught exceptions at the coroutine scope level. This handler catches any unhandled exceptions thrown by coroutines within its scope. Note that CoroutineExceptionHandler only works with root coroutines launched using launch. It does not handle exceptions in child coroutines launched with async or withContext, as they propagate exceptions back to their caller.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>val exceptionHandler <span style="color:#f92672">=</span> CoroutineExceptionHandler { _, exception <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Caught exception: ${exception.message}&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>scope.<span style="color:#a6e22e">launch</span>(exceptionHandler) {
+</span></span><span style="display:flex;"><span>    val data <span style="color:#f92672">=</span> fetchDataFromNetwork() <span style="color:#75715e">// Exception will be caught by exceptionHandler</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Coroutines started with launch and async handle exceptions differently:</p>
+<ul>
+<li>Exceptions in launch coroutines are immediately propagated to the parent scope or handled by a CoroutineExceptionHandler.</li>
+<li>Exceptions in async coroutines are deferred until you call await(). If the exception occurs, it will be thrown when await() is called, allowing you to handle it there.</li>
+<li>supervisorScope and SupervisorJob are useful for handling exceptions in coroutines independently within a scope, allowing one child coroutine to fail without canceling the others. This approach is ideal when you have several concurrent tasks that should run independently, and the failure of one task should not impact the others.</li>
+</ul>
+<h5 id="17-how-can-you-handle-timeouts-in-kotlin-coroutines">17. How can you handle timeouts in Kotlin Coroutines?</h5>
+<p>timeouts can be handled using the withTimeout and withTimeoutOrNull functions. These functions allow you to set a maximum time limit for coroutine execution. If the coroutine takes longer than the specified time, it’s automatically canceled, ensuring that resources aren’t tied up by long-running tasks.</p>
+<ul>
+<li>withTimeout(timeMillis) sets a time limit (in milliseconds) for the coroutine to complete. If the coroutine exceeds this limit, it throws a TimeoutCancellationException. This exception can be caught with a try-catch block, allowing you to handle the timeout as needed.</li>
+<li>withTimeoutOrNull(timeMillis) also sets a time limit but behaves differently from withTimeout. Instead of throwing an exception, withTimeoutOrNull returns null if the coroutine doesn’t complete within the time limit. This can make handling timeouts simpler, as you don’t need a try-catch block.</li>
+</ul>
+<h5 id="18-how-do-you-achieve-parallelism-using-coroutines">18. How do you achieve parallelism using coroutines?</h5>
+<p>The async coroutine builder is commonly used to perform parallel tasks that return a result. By launching multiple async coroutines, each task can run concurrently, and you can use await() to retrieve the result when needed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>suspend fun <span style="color:#a6e22e">fetchDataFromNetwork</span>(): String {
+</span></span><span style="display:flex;"><span>    delay(1000) <span style="color:#75715e">// Simulates network delay</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Network Data&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>suspend fun <span style="color:#a6e22e">fetchDataFromDatabase</span>(): String {
+</span></span><span style="display:flex;"><span>    delay(500) <span style="color:#75715e">// Simulates database delay</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Database Data&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Launch two coroutines in parallel</span>
+</span></span><span style="display:flex;"><span>    val networkData <span style="color:#f92672">=</span> async { fetchDataFromNetwork() }
+</span></span><span style="display:flex;"><span>    val databaseData <span style="color:#f92672">=</span> async { fetchDataFromDatabase() }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Wait for both results</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Fetched data: ${networkData.await()} and ${databaseData.await()}&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="19-what-are-coroutine-channels">19. What are coroutine channels?</h5>
+<p>Coroutine channels in Kotlin are a communication mechanism that allows coroutines to send and receive data asynchronously. Channels provide a way for coroutines to communicate with each other safely without needing to use traditional concurrency primitives like locks. Channels are particularly useful for coordinating tasks, streaming data, or implementing producer-consumer patterns.</p>
+<h5 id="20-what-is-mutex">20. What is Mutex?</h5>
+<p>A Mutex (short for “mutual exclusion”) is a synchronization primitive used in concurrent programming to prevent multiple threads or coroutines from accessing shared resources (like variables or data structures) simultaneously. Mutex provides a non-blocking way to synchronize access to shared resources. By allowing only one coroutine to access critical sections at a time, it prevents race conditions and ensures data consistency.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.sync.Mutex
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.sync.withLock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// counter is a shared variable that both coroutines (job1 and job2) try to modify concurrently.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> counter <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>val mutex <span style="color:#f92672">=</span> Mutex() <span style="color:#75715e">// Mutex for synchronizing access</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val job1 <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>        repeat(1000) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Lock the mutex while incrementing the counter</span>
+</span></span><span style="display:flex;"><span>            mutex.<span style="color:#a6e22e">withLock</span> {
+</span></span><span style="display:flex;"><span>                counter<span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    val job2 <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>        repeat(1000) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// suspending function that acquires the Mutex </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// for the duration of the block. Inside this block, </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// the counter is incremented safely by each coroutine, </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// one at a time.</span>
+</span></span><span style="display:flex;"><span>            mutex.<span style="color:#a6e22e">withLock</span> {
+</span></span><span style="display:flex;"><span>                counter<span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    job1.<span style="color:#a6e22e">join</span>()
+</span></span><span style="display:flex;"><span>    job2.<span style="color:#a6e22e">join</span>()
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Counter = $counter&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="21-define-the-role-of-the-yield-function">21. Define the role of the <code>yield</code> function.</h5>
+<ul>
+<li>The yield function in Kotlin coroutines is a suspending function that gives a coroutine the opportunity to suspend voluntarily, allowing other coroutines or tasks to run.</li>
+<li>When a coroutine calls yield, it temporarily suspends its execution, giving the dispatcher a chance to switch to another coroutine or task, then resumes the original coroutine when its turn comes again.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// In this example, the job coroutine yields control </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// on each iteration of the loop. This allows the </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// anotherJob coroutine to interleave its execution, </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// so both coroutines can run cooperatively on the same thread.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Without yield, job would run continuously through </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// all iterations, potentially delaying anotherJob </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// if running on the same dispatcher.</span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val job <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>        repeat(5) { i <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Coroutine working on iteration $i&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span>() <span style="color:#75715e">// Yield control to other coroutines</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    val anotherJob <span style="color:#f92672">=</span> launch {
+</span></span><span style="display:flex;"><span>        repeat(5) { j <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            println(<span style="color:#e6db74">&#34;Another coroutine working on iteration $j&#34;</span>)
+</span></span><span style="display:flex;"><span>            delay(100) <span style="color:#75715e">// Simulate some work</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    job.<span style="color:#a6e22e">join</span>()
+</span></span><span style="display:flex;"><span>    anotherJob.<span style="color:#a6e22e">join</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="22-how-can-you-combine-multiple-coroutine-results">22. How can you combine multiple coroutine results?</h5>
+<p>You can combine multiple coroutine results using functions like awaitAll or awaitAllOrNull. These functions take multiple Deferred objects (result of async) and return a list of their results or null if any of them fails.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val tasks <span style="color:#f92672">=</span> listOf(
+</span></span><span style="display:flex;"><span>        async(Dispatchers.<span style="color:#a6e22e">IO</span>) { fetchDataFromNetwork() },
+</span></span><span style="display:flex;"><span>        async(Dispatchers.<span style="color:#a6e22e">IO</span>) { fetchDataFromDatabase() }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Await all results in parallel</span>
+</span></span><span style="display:flex;"><span>    val results <span style="color:#f92672">=</span> tasks.<span style="color:#a6e22e">awaitAll</span>()
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Fetched data: ${results[0]} and ${results[1]}&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="23-what-is-the-role-of-the-produce-coroutine-builder-in-coroutines">23. What is the role of the <code>produce</code> coroutine builder in coroutines?</h5>
+<p>The produce coroutine builder in Kotlin coroutines is used to create a producer coroutine that generates a stream of values and sends them through a channel. This builder is particularly useful when implementing the producer-consumer pattern, where a producer coroutine sends data items that can be consumed by one or more consumer coroutines.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.channels.*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun CoroutineScope.<span style="color:#a6e22e">produceNumbers</span>(): ReceiveChannel<span style="color:#f92672">&lt;</span>Int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> produce {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i in 1..<span style="color:#a6e22e">5</span>) {
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Producing $i&#34;</span>)
+</span></span><span style="display:flex;"><span>        send(i) <span style="color:#75715e">// Send each number to the channel</span>
+</span></span><span style="display:flex;"><span>        delay(500) <span style="color:#75715e">// Simulate some work</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val numbers <span style="color:#f92672">=</span> produceNumbers() <span style="color:#75715e">// Start producing numbers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    numbers.<span style="color:#a6e22e">consumeEach</span> { value <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Consumed $value&#34;</span>)
+</span></span><span style="display:flex;"><span>        delay(1000) <span style="color:#75715e">// Simulate some work with each consumed value</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Done consuming&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="24-what-is-the-role-of-coroutinestartlazy-in-the-context-of-coroutine-builders">24. What is the role of CoroutineStart.LAZY in the context of coroutine builders?</h5>
+<p>CoroutineStart.LAZY is a coroutine start option in Kotlin that delays the start of a coroutine until it’s explicitly needed. When you launch a coroutine with CoroutineStart.LAZY, it won’t start running immediately. Instead, it will only start executing when one of the following conditions is met:</p>
+<ul>
+<li>start() is explicitly called on the coroutine’s Job.</li>
+<li>join() is called on the coroutine’s Job, waiting for it to complete.</li>
+<li>await() is called on a Deferred result if using async.
+The coroutine result is accessed (for instance, if it’s used or awaited elsewhere in the program).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Launch a coroutine with CoroutineStart.LAZY</span>
+</span></span><span style="display:flex;"><span>    val job <span style="color:#f92672">=</span> launch(start <span style="color:#f92672">=</span> CoroutineStart.<span style="color:#a6e22e">LAZY</span>) {
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Coroutine started&#34;</span>)
+</span></span><span style="display:flex;"><span>        delay(1000) <span style="color:#75715e">// Simulate some work</span>
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;Coroutine completed&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Coroutine hasn&#39;t started yet&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Start the coroutine explicitly</span>
+</span></span><span style="display:flex;"><span>    job.<span style="color:#a6e22e">start</span>() <span style="color:#75715e">// This triggers the coroutine execution</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alternatively, calling job.join() would also start and wait for its completion</span>
+</span></span><span style="display:flex;"><span>    job.<span style="color:#a6e22e">join</span>() <span style="color:#75715e">// Waits for coroutine to complete</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Coroutine has finished execution&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="25-how-do-you-implement-a-debounce-mechanism-for-user-input-using-coroutines">25. How do you implement a debounce mechanism for user input using coroutines?</h5>
+<p>A common way to implement debounce with coroutines is to use a CoroutineScope to launch a coroutine that delays execution for a specified debounce time. If a new input comes in before the delay completes, the previous coroutine is canceled, and a new coroutine is launched.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlinx.coroutines.flow.*
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> kotlin.system.measureTimeMillis
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Debouncer</span>(<span style="color:#66d9ef">private</span> val debounceTime: Long, <span style="color:#66d9ef">private</span> val scope: CoroutineScope) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> debounceJob: Job<span style="color:#f92672">?</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fun <span style="color:#a6e22e">submit</span>(action: () <span style="color:#f92672">-&gt;</span> Unit) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Cancel any previously scheduled job</span>
+</span></span><span style="display:flex;"><span>        debounceJob<span style="color:#f92672">?</span>.<span style="color:#a6e22e">cancel</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Schedule a new job</span>
+</span></span><span style="display:flex;"><span>        debounceJob <span style="color:#f92672">=</span> scope.<span style="color:#a6e22e">launch</span> {
+</span></span><span style="display:flex;"><span>            delay(debounceTime)
+</span></span><span style="display:flex;"><span>            action() <span style="color:#75715e">// Perform the action after the debounce time</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fun <span style="color:#a6e22e">main</span>() <span style="color:#f92672">=</span> runBlocking {
+</span></span><span style="display:flex;"><span>    val debouncer <span style="color:#f92672">=</span> Debouncer(debounceTime <span style="color:#f92672">=</span> 300L, scope <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Simulate typing events</span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Typing...&#34;</span>)
+</span></span><span style="display:flex;"><span>    debouncer.<span style="color:#a6e22e">submit</span> { println(<span style="color:#e6db74">&#34;User input submitted after debounce!&#34;</span>) }
+</span></span><span style="display:flex;"><span>    delay(100) <span style="color:#75715e">// Simulate user typing again</span>
+</span></span><span style="display:flex;"><span>    debouncer.<span style="color:#a6e22e">submit</span> { println(<span style="color:#e6db74">&#34;User input submitted after debounce!&#34;</span>) }
+</span></span><span style="display:flex;"><span>    delay(400) <span style="color:#75715e">// Pause longer than the debounce time</span>
+</span></span><span style="display:flex;"><span>    debouncer.<span style="color:#a6e22e">submit</span> { println(<span style="color:#e6db74">&#34;User input submitted after debounce!&#34;</span>) }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Delay to see final result before main exits</span>
+</span></span><span style="display:flex;"><span>    delay(500)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="thanks-for-reading">Thanks for reading!</h5>
+<p>Hope you find this useful. This is just a list of questions I personally found useful in interviews. This list is by no means exhaustive. Let me know your thoughts in the responses. Happy coding!</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div id="stickySideBar" class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/android"
+                target="_blank"
+              >Android</a></li>
+              
+              <li class="list-inline-item"><a href="https://whywhom.github.io/tags/interview"
+                target="_blank"
+              >Interview</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-5-kotlin-coroutines%2f">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=Kotlin%20Coroutines&url=https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-5-kotlin-coroutines%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Kotlin%20Coroutines: https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-5-kotlin-coroutines%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href='mailto:?subject=Kotlin%20Coroutines&amp;body=Check%20out%20this%20site https%3a%2f%2fwhywhom.github.io%2fblogs%2fandroid-interview-series-2024-part-5-kotlin-coroutines%2f'>
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+
+<div class="progress">
+  <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<Script src="/js/scrollProgressBar.js"></script>
+
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  let stickySideBarElem = document.getElementById("stickySideBar");
+  let stickyNavBar =  true ;
+  if(stickyNavBar) {
+    let headerElem = document.getElementById("profileHeader");
+    let headerHeight = headerElem.offsetHeight + 15;
+    stickySideBarElem.style.top = headerHeight + "px";
+  } else {
+    stickySideBarElem.style.top = "50px";
+  }
+</script>
+
+
+<script src="/js/readingTime.js"></script>
+
+
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
+    
+    
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Android architecture">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Android architecture">Android architecture</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-8-android-architecture-07ca74eee000">🔗 Android Interview Series 2024 — Part 8 (Android architecture)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-can-you-explain-the-mvc-and-mvp-patterns-what-are-the-main-differences-and-why-are-they-not-used-in-android-development">1. Can you explain the MVC and MVP patterns? What are the main differences and why are they not used in …</h5></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Jetpack Compose">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Jetpack Compose">Jetpack Compose</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-7-jetpack-compose-ff7d2ecd9018">🔗 Android Interview Series 2024 — Part 7 (Jetpack Compose)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-jetpack-compose">1. What is Jetpack Compose?</h5>
+<p>Jetpack Compose is Android’s recommended modern toolkit for building native UI. It …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Kotlin Flows">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Kotlin Flows">Kotlin Flows</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df">🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-flow">1. What is Flow?</h5>
+<p>A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Sep 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+    
+
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://whywhom.github.io/" title="Andy&#39;s Blog">
+                        <img alt="Footer logo" src="/images/andy.jpeg"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

@@ -1,488 +1,1078 @@
 <!DOCTYPE html>
-
-<html lang="en-us">
+<html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.135.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49843&amp;path=livereload" data-no-instant defer></script>
-
-    
-    <title>My Resume</title>
-
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Android Resume - Android Resume/CV Template For Software Developers">
-    <meta name="author" content="Andy">
-
-    <link rel="shortcut icon" href="favicon.ico">
-
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
-    
-    
-    <link rel="stylesheet" href="http://localhost:49843/assets/css/devresume.min.556ba18f6242ca280e03f23e18024e9ae88999c70542812766c66b36ec566fc7.css">
+	<meta name="generator" content="Hugo 0.135.0"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/images/andy.jpeg type="image/gif">
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://whywhom.github.io/">
+  <meta property="og:site_name" content="Andy&#39;s Blog">
+  <meta property="og:title" content="Andy&#39;s Blog">
+  <meta property="og:description" content="Welcome to my site! 🚀">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Andy&#39;s Blog">
+  <meta name="twitter:description" content="Welcome to my site! 🚀">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content=Welcome&#32;to&#32;my&#32;site!&#32;🚀>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
+
+  <title>
+Andy&#39;s Blog
+
+  </title>
 </head>
 
-<body>
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    <div class="main-wrapper">
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
 
-        <div class="container px-3 px-lg-5">
 
-            <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
 
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
                 
-                <div class="resume-header">
-
-                    <div class="row align-items-center">
-
-                        
-                        
-                        <div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-                            <h2 class="resume-name mb-0 text-uppercase">Andy Wu</h2>
-                            <div class="resume-tagline mb-3 mb-md-0">Senior Android Engineer</div>
-                        </div>
-
-                        
-
-                        
-                        
-                        <div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
-                            <ul class="list-unstyled mb-0">
-                                
-                                <li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="tel:#">&#43;64 210673367</a></li>
-                                
-                                <li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="mailto:#">andywhynz@gmail.com</a></li>
-                                
-                                <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>Auckland, New Zealand</li>
-                            </ul>
-                        </div>
-
-                        
-
-                    </div>
-
-                </div>
-
-
-                <hr>
-
+                <img src="/images/andy.jpeg" width="30" height="30"
+                    class="d-inline-block align-top">
+                Andy&#39;s Blog
                 
-                
-                <div class="resume-intro py-3">
-
-                    <div class="media flex-column flex-md-row align-items-center">
-
-                        
-
-                        <div class="media-body text-left">
-                            <p class="mb-0">Experienced Senior Android Developer with 10+ years of expertise in designing, developing, and optimizing Android applications. Skilled in Kotlin, Jetpack Compose, MVVM, and scalable architectures, with a strong focus on performance, UI/UX, and maintainability. Passionate about building high-quality mobile experiences and mentoring junior developers.</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-
-                <hr>
-
-                <div class="resume-body">
-
-                    <div class="row">
-
-                        <div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
-
-                            
-                            
-                            <section class="work-section py-3">
-
-                                <h3 class="text-uppercase resume-section-heading mb-4">Work Experience</h3>
-
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Senior Android Developer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">Spark | Auckland | Mar. 2022 - Present</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Led the development of features of the Spark App &amp; Skinny Jump App, improving app performance.</li>
-                                            
-                                            <li>Migrated the Skinny Jump App to Jetpack Compose, reducing UI development time by optimizing widgets.</li>
-                                            
-                                            <li>Deployed the app to Google Play Store, ensuring compliance with store policies and optimizing release processes.</li>
-                                            
-                                            <li>Optimized app performance and resolved stability issues, enhancing code quality and efficiency.</li>
-                                            
-                                            <li>Upgraded apps to the latest Android version, ensuring compatibility and optimal performance.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Senior Android Developer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">MEGA The Privacy Company | Auckland | Jan. 2021 - Mar. 2022</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Designed and developed new features of the Android App for MEGA, ensuring high performance and scalability.</li>
-                                            
-                                            <li>Architected the meeting project using MVVM and Kotlin, enhancing maintainability and modularity.</li>
-                                            
-                                            <li>Migrated the app to new Android SDK, ensuring full compatibility with the latest OS updates.</li>
-                                            
-                                            <li>Maintained and optimized app performance by leveraging performance analysis tools to identify and resolve resource inefficiencies, memory leaks, and response time issues.</li>
-                                            
-                                            <li>Collaborated effectively with design and QA teams, efficiently managing requirement changes and ensuring smooth project execution.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Android Engineer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">Go Gym Buddy | Auckland | Jul. 2019 - Jan. 2021</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Developed, maintained, and released an Android application using Java and Kotlin, ensuring code quality and stability.</li>
-                                            
-                                            <li>Refactored the MVP architecture to improve scalability, maintainability, and overall performance.</li>
-                                            
-                                            <li>Optimized application performance, identifying and addressing bottlenecks to improve speed and reduce memory consumption.</li>
-                                            
-                                            <li>Implemented and released new features, aligning with user feedback and business requirements, enhancing the app’s functionality and user experience.</li>
-                                            
-                                            <li>Utilized best practices in Android development to streamline the development process and ensure consistency across releases.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Senior Technical Manager</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">Datatist | Shanghai, China | Sep. 2016 – Mar. 2018</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Led a team of three developers and implemented the Scrum framework to enhance productivity within the Android team.</li>
-                                            
-                                            <li>Designed and developed an easy-to-integrate Android SDK for mass data collection, tailored to customer needs.</li>
-                                            
-                                            <li>Built a hybrid Android application that efficiently processes JSON data from servers and visualizes it using dynamic charts and animations.</li>
-                                            
-                                            <li>Provided technical support to clients, troubleshooting and resolving issues to ensure seamless product integration.</li>
-                                            
-                                            <li>Authored comprehensive technical design documents and specifications for clear development guidelines.</li>
-                                            
-                                            <li>Analyzed client requests and implemented changes to improve functionality and user experience.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Senior Android Engineer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">DynamiCode | Shanghai, China | Dec. 2014 – Sep. 2016</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Led the development of an Android-based POS project, successfully passing the UnionPay certification test.</li>
-                                            
-                                            <li>Planned, optimized, and refactored existing Android applications for POS terminals to enhance performance and usability.</li>
-                                            
-                                            <li>Developed and launched a new SDK to facilitate seamless integration between customers and the POS terminal.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Senior Android Engineer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">DZH Limited | Shanghai, China | Apr. 2014 - Nov. 2014</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Collaborated with a mobile team of 40+ members, including Android &amp; iOS developers and testers.</li>
-                                            
-                                            <li>Contributed to the development of multiple financial products for the Android platform.</li>
-                                            
-                                            <li>Designed and implemented a trade module for the stock exchange and a business module for financial transactions.</li>
-                                            
-                                            <li>Enhanced mobile app stability by identifying, debugging, and resolving critical issues.</li>
-                                            
-                                            <li>Proposed and implemented optimal coding methodologies aligned with the latest industry best practices and project requirements.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">Software Engineer</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">Hisense | Qingdao, China | Sep. 2005 – Dec. 2013</div>
-                                    </div>
-                                    <div class="item-content">
-                                        <p></p>
-                                        <ul class="resume-list">
-                                            
-                                            <li>Led the development of a PC assistant, overseeing PC software integration for Hisense mobile devices.</li>
-                                            
-                                            <li>Developed factory testing applications for mobile phones to ensure quality and performance.</li>
-                                            
-                                            <li>Designed and built multiple applications for the Android and Brew platforms, including Power Saving Assistant, Speech Assistant, and various games.</li>
-                                            
-                                            <li>Contributed to the Hisense smart refrigeration project, enhancing IoT and smart home capabilities.</li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-
-                            </section>
-
-                            
-
-                            
-
-                            
-
-                        </div>
-
-                        
-                        <aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
-
-
-                            
-                            
-                            <section class="education-section py-3">
-
-                                <h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
-
-                                <ul class="list-unstyled resume-education-list">
-                                    
-                                    <li class="mb-3">
-                                        <div class="resume-degree font-weight-bold">PGD in Information Technology</div>
-                                        <div class="resume-degree-org text-muted">Eastern Institute of Technology</div>
-                                        <div class="resume-degree-time text-muted">July 2019</div>
-                                    </li>
-                                    
-                                    <li class="mb-3">
-                                        <div class="resume-degree font-weight-bold">M.S. in Communication and Information System</div>
-                                        <div class="resume-degree-org text-muted">Jilin University</div>
-                                        <div class="resume-degree-time text-muted">July 2005</div>
-                                    </li>
-                                    
-                                </ul>
-
-                            </section>
-
-                            
-
-                            
-
-                            
-                            
-                            <section class="skills-section py-3">
-
-                                <h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
-
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Languages &amp; Frameworks: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">Kotlin | Java | Jetpack Compose | Android SDK</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Architecture &amp; Design Patterns: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">MVVM | Clean Architecture | Android Architecture Components</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Dependency Injection: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">Dagger | Hilt</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Navigation &amp; UI: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">Navigation Components | Material Design</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">App Performance: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">Memory management | Network efficiency | Battery optimization</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Automated Testing: </h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">Unit tests (JUnit, Mockito, Turbine)</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-                                <div class="item">
-                                    <h4 class="item-title">Professional</h4>
-                                    <ul class="list-unstyled resume-skills-list">
-                                        
-                                        <li class="mb-2">CI/CD &amp; DevOps</li>
-                                        
-                                        <li class="mb-2">Code Reviews</li>
-                                        
-                                        <li class="mb-2">Agile Practices</li>
-                                        
-                                        <li class="mb-2">Mentorship &amp; Knowledge Sharing</li>
-                                        
-                                    </ul>
-                                </div>
-                                
-
-                            </section>
-
-                            
-
-                            
-                            
-                            <section class="skills-section py-3">
-
-                                <h3 class="text-uppercase resume-section-heading mb-4">Languages</h3>
-
-                                <ul class="list-unstyled resume-lang-list">
-                                    
-                                    
-                                    <li class="mb-2">English <span class="text-muted"></span></li>
-                                    
-                                    
-                                    <li class="mb-2">Chinese <span class="text-muted"></span></li>
-                                    
-                                </ul>
-
-                            </section>
-
-                            
-
-                            
-                            
-                            <section class="skills-section py-3">
-
-                                <h3 class="text-uppercase resume-section-heading mb-4">Interests</h3>
-
-                                <ul class="list-unstyled resume-interests-list mb-0">
-                                    
-                                    <li class="mb-2">Fitness</li>
-                                    
-                                    <li class="mb-2">Travelling</li>
-                                    
-                                    <li class="mb-2">Reading</li>
-                                    
-                                </ul>
-
-                            </section>
-
-                            
-
-                        </aside>
-
-
-                    </div>
-
-                </div>
-
-                <hr>
-
-                
-                
-                <div class="resume-footer text-center">
-
-                    <ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
-                        
-                        <li class="list-inline-item mb-lg-0 mr-3">
-                            <a class="resume-link" href="//github.com/whywhom" target="_blank">
-                                <i class="fab fa-github-square fa-2x mr-2" data-fa-transform="down-4"></i>
-                                <span class="d-none d-lg-inline-block text-muted">Andy&#39;s github</span>
-                            </a>
-                        </li>
-                        
-                        <li class="list-inline-item mb-lg-0 mr-3">
-                            <a class="resume-link" href="//linkedin.com/in/hywu" target="_blank">
-                                <i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i>
-                                <span class="d-none d-lg-inline-block text-muted">Andy&#39;s LinkedIn</span>
-                            </a>
-                        </li>
-                        
-                    </ul>
-
-                </div>
-
-                
-
-            </article>
-
-        </div>
-
-        
-        <footer class="footer text-center py-4">
+            </a>
 
             
+                <div>
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
 
-            <small class="copyright text-muted">Designed with <i class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-            <br>
-            <small class="copyright">2025 &copy; Ported to Hugo by <a href="https://github.com/cowboysmall" target="_blank">CowboySmall</a></small>
-        </footer>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
 
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
 
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About Me
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/#education"
+                            aria-label="education">
+                            Education
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Blog posts">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/resume" title="Resume">
+                            
+                            Resume
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
+                <span class="subtitle">
+                    Hi, my name is
+                </span>
+                <h1>
+                    Andy.
+                </h1>
+                <h2>
+                    I build apps for Android
+                </h2>
+                <p class="hero-content">
+                    A passionate Android developer. I specialize in using modern mobile technologies to create apps that look great, feel smooth, and function flawlessly.
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        
+                        <a href="/resume" class="btn" ZgotmplZ
+			  
+                          target="_blank"
+                          >
+                            Resume
+                        </a>
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span>
+    
+    <span class="px-1">
+        <a href="https://github.com/whywhom"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+    </span>
+    
+
+    
+</span>
+</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                        <img src="/images/andy.jpeg"
+                            class="img-thumbnail mx-auto rounded-circle"
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
+            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
+                <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1"
+                    transform="translate(391 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1"
+                    transform="translate(391 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1"
+                    transform="translate(391 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1"
+                    transform="translate(391 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1"
+                    transform="translate(391 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1"
+                    transform="translate(391 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1"
+                    transform="translate(391 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1"
+                    transform="translate(391 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2214" data-name="Rectangle 2214" width="12" height="2" rx="1"
+                    transform="translate(499 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2289" data-name="Rectangle 2289" width="12" height="2" rx="1"
+                    transform="translate(499 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2256" data-name="Rectangle 2256" width="12" height="2" rx="1"
+                    transform="translate(499 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2290" data-name="Rectangle 2290" width="12" height="2" rx="1"
+                    transform="translate(499 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2231" data-name="Rectangle 2231" width="12" height="2" rx="1"
+                    transform="translate(499 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2291" data-name="Rectangle 2291" width="12" height="2" rx="1"
+                    transform="translate(499 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2257" data-name="Rectangle 2257" width="12" height="2" rx="1"
+                    transform="translate(499 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2292" data-name="Rectangle 2292" width="12" height="2" rx="1"
+                    transform="translate(499 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2210" data-name="Rectangle 2210" width="12" height="2" rx="1"
+                    transform="translate(445 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2279" data-name="Rectangle 2279" width="12" height="2" rx="1"
+                    transform="translate(445 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2248" data-name="Rectangle 2248" width="12" height="2" rx="1"
+                    transform="translate(445 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2280" data-name="Rectangle 2280" width="12" height="2" rx="1"
+                    transform="translate(445 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2226" data-name="Rectangle 2226" width="12" height="2" rx="1"
+                    transform="translate(445 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2281" data-name="Rectangle 2281" width="12" height="2" rx="1"
+                    transform="translate(445 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2249" data-name="Rectangle 2249" width="12" height="2" rx="1"
+                    transform="translate(445 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2293" data-name="Rectangle 2293" width="12" height="2" rx="1"
+                    transform="translate(445 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2219" data-name="Rectangle 2219" width="12" height="2" rx="1"
+                    transform="translate(553 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2310" data-name="Rectangle 2310" width="12" height="2" rx="1"
+                    transform="translate(553 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2262" data-name="Rectangle 2262" width="12" height="2" rx="1"
+                    transform="translate(553 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2311" data-name="Rectangle 2311" width="12" height="2" rx="1"
+                    transform="translate(553 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2232" data-name="Rectangle 2232" width="12" height="2" rx="1"
+                    transform="translate(553 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2312" data-name="Rectangle 2312" width="12" height="2" rx="1"
+                    transform="translate(553 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2263" data-name="Rectangle 2263" width="12" height="2" rx="1"
+                    transform="translate(553 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2313" data-name="Rectangle 2313" width="12" height="2" rx="1"
+                    transform="translate(553 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2209" data-name="Rectangle 2209" width="12" height="2" rx="1"
+                    transform="translate(418 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2273" data-name="Rectangle 2273" width="12" height="2" rx="1"
+                    transform="translate(418 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2242" data-name="Rectangle 2242" width="12" height="2" rx="1"
+                    transform="translate(418 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2282" data-name="Rectangle 2282" width="12" height="2" rx="1"
+                    transform="translate(418 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2223" data-name="Rectangle 2223" width="12" height="2" rx="1"
+                    transform="translate(418 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2274" data-name="Rectangle 2274" width="12" height="2" rx="1"
+                    transform="translate(418 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2243" data-name="Rectangle 2243" width="12" height="2" rx="1"
+                    transform="translate(418 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2294" data-name="Rectangle 2294" width="12" height="2" rx="1"
+                    transform="translate(418 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2217" data-name="Rectangle 2217" width="12" height="2" rx="1"
+                    transform="translate(526 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2314" data-name="Rectangle 2314" width="12" height="2" rx="1"
+                    transform="translate(526 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2258" data-name="Rectangle 2258" width="12" height="2" rx="1"
+                    transform="translate(526 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2315" data-name="Rectangle 2315" width="12" height="2" rx="1"
+                    transform="translate(526 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2233" data-name="Rectangle 2233" width="12" height="2" rx="1"
+                    transform="translate(526 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2316" data-name="Rectangle 2316" width="12" height="2" rx="1"
+                    transform="translate(526 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2259" data-name="Rectangle 2259" width="12" height="2" rx="1"
+                    transform="translate(526 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2317" data-name="Rectangle 2317" width="12" height="2" rx="1"
+                    transform="translate(526 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2211" data-name="Rectangle 2211" width="12" height="2" rx="1"
+                    transform="translate(472 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2295" data-name="Rectangle 2295" width="12" height="2" rx="1"
+                    transform="translate(472 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2250" data-name="Rectangle 2250" width="12" height="2" rx="1"
+                    transform="translate(472 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2296" data-name="Rectangle 2296" width="12" height="2" rx="1"
+                    transform="translate(472 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2227" data-name="Rectangle 2227" width="12" height="2" rx="1"
+                    transform="translate(472 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2297" data-name="Rectangle 2297" width="12" height="2" rx="1"
+                    transform="translate(472 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2251" data-name="Rectangle 2251" width="12" height="2" rx="1"
+                    transform="translate(472 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2298" data-name="Rectangle 2298" width="12" height="2" rx="1"
+                    transform="translate(472 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2221" data-name="Rectangle 2221" width="12" height="2" rx="1"
+                    transform="translate(580 1392) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2318" data-name="Rectangle 2318" width="12" height="2" rx="1"
+                    transform="translate(580 1500) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2264" data-name="Rectangle 2264" width="12" height="2" rx="1"
+                    transform="translate(580 1446) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2319" data-name="Rectangle 2319" width="12" height="2" rx="1"
+                    transform="translate(580 1554) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2236" data-name="Rectangle 2236" width="12" height="2" rx="1"
+                    transform="translate(580 1419) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2320" data-name="Rectangle 2320" width="12" height="2" rx="1"
+                    transform="translate(580 1527) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2265" data-name="Rectangle 2265" width="12" height="2" rx="1"
+                    transform="translate(580 1473) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2321" data-name="Rectangle 2321" width="12" height="2" rx="1"
+                    transform="translate(580 1581) rotate(90)" fill="#282f49" />
+                <rect id="Rectangle_2207" data-name="Rectangle 2207" width="12" height="2" rx="1"
+                    transform="translate(396 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2270" data-name="Rectangle 2270" width="12" height="2" rx="1"
+                    transform="translate(396 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2239" data-name="Rectangle 2239" width="12" height="2" rx="1"
+                    transform="translate(396 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2283" data-name="Rectangle 2283" width="12" height="2" rx="1"
+                    transform="translate(396 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2224" data-name="Rectangle 2224" width="12" height="2" rx="1"
+                    transform="translate(396 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2275" data-name="Rectangle 2275" width="12" height="2" rx="1"
+                    transform="translate(396 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2244" data-name="Rectangle 2244" width="12" height="2" rx="1"
+                    transform="translate(396 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2299" data-name="Rectangle 2299" width="12" height="2" rx="1"
+                    transform="translate(396 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2215" data-name="Rectangle 2215" width="12" height="2" rx="1"
+                    transform="translate(504 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2300" data-name="Rectangle 2300" width="12" height="2" rx="1"
+                    transform="translate(504 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2252" data-name="Rectangle 2252" width="12" height="2" rx="1"
+                    transform="translate(504 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2301" data-name="Rectangle 2301" width="12" height="2" rx="1"
+                    transform="translate(504 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2228" data-name="Rectangle 2228" width="12" height="2" rx="1"
+                    transform="translate(504 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2302" data-name="Rectangle 2302" width="12" height="2" rx="1"
+                    transform="translate(504 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2253" data-name="Rectangle 2253" width="12" height="2" rx="1"
+                    transform="translate(504 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2303" data-name="Rectangle 2303" width="12" height="2" rx="1"
+                    transform="translate(504 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2212" data-name="Rectangle 2212" width="12" height="2" rx="1"
+                    transform="translate(450 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2284" data-name="Rectangle 2284" width="12" height="2" rx="1"
+                    transform="translate(450 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2245" data-name="Rectangle 2245" width="12" height="2" rx="1"
+                    transform="translate(450 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2285" data-name="Rectangle 2285" width="12" height="2" rx="1"
+                    transform="translate(450 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2229" data-name="Rectangle 2229" width="12" height="2" rx="1"
+                    transform="translate(450 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2286" data-name="Rectangle 2286" width="12" height="2" rx="1"
+                    transform="translate(450 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2246" data-name="Rectangle 2246" width="12" height="2" rx="1"
+                    transform="translate(450 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2304" data-name="Rectangle 2304" width="12" height="2" rx="1"
+                    transform="translate(450 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2218" data-name="Rectangle 2218" width="12" height="2" rx="1"
+                    transform="translate(558 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2322" data-name="Rectangle 2322" width="12" height="2" rx="1"
+                    transform="translate(558 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2266" data-name="Rectangle 2266" width="12" height="2" rx="1"
+                    transform="translate(558 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2323" data-name="Rectangle 2323" width="12" height="2" rx="1"
+                    transform="translate(558 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2234" data-name="Rectangle 2234" width="12" height="2" rx="1"
+                    transform="translate(558 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2324" data-name="Rectangle 2324" width="12" height="2" rx="1"
+                    transform="translate(558 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2267" data-name="Rectangle 2267" width="12" height="2" rx="1"
+                    transform="translate(558 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2325" data-name="Rectangle 2325" width="12" height="2" rx="1"
+                    transform="translate(558 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2208" data-name="Rectangle 2208" width="12" height="2" rx="1"
+                    transform="translate(423 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2276" data-name="Rectangle 2276" width="12" height="2" rx="1"
+                    transform="translate(423 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2240" data-name="Rectangle 2240" width="12" height="2" rx="1"
+                    transform="translate(423 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2287" data-name="Rectangle 2287" width="12" height="2" rx="1"
+                    transform="translate(423 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2225" data-name="Rectangle 2225" width="12" height="2" rx="1"
+                    transform="translate(423 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2277" data-name="Rectangle 2277" width="12" height="2" rx="1"
+                    transform="translate(423 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2247" data-name="Rectangle 2247" width="12" height="2" rx="1"
+                    transform="translate(423 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2305" data-name="Rectangle 2305" width="12" height="2" rx="1"
+                    transform="translate(423 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2216" data-name="Rectangle 2216" width="12" height="2" rx="1"
+                    transform="translate(531 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2326" data-name="Rectangle 2326" width="12" height="2" rx="1"
+                    transform="translate(531 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2260" data-name="Rectangle 2260" width="12" height="2" rx="1"
+                    transform="translate(531 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2327" data-name="Rectangle 2327" width="12" height="2" rx="1"
+                    transform="translate(531 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2235" data-name="Rectangle 2235" width="12" height="2" rx="1"
+                    transform="translate(531 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2328" data-name="Rectangle 2328" width="12" height="2" rx="1"
+                    transform="translate(531 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2261" data-name="Rectangle 2261" width="12" height="2" rx="1"
+                    transform="translate(531 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2329" data-name="Rectangle 2329" width="12" height="2" rx="1"
+                    transform="translate(531 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2213" data-name="Rectangle 2213" width="12" height="2" rx="1"
+                    transform="translate(477 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2306" data-name="Rectangle 2306" width="12" height="2" rx="1"
+                    transform="translate(477 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2254" data-name="Rectangle 2254" width="12" height="2" rx="1"
+                    transform="translate(477 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2307" data-name="Rectangle 2307" width="12" height="2" rx="1"
+                    transform="translate(477 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2230" data-name="Rectangle 2230" width="12" height="2" rx="1"
+                    transform="translate(477 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2308" data-name="Rectangle 2308" width="12" height="2" rx="1"
+                    transform="translate(477 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2255" data-name="Rectangle 2255" width="12" height="2" rx="1"
+                    transform="translate(477 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2309" data-name="Rectangle 2309" width="12" height="2" rx="1"
+                    transform="translate(477 1588) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2220" data-name="Rectangle 2220" width="12" height="2" rx="1"
+                    transform="translate(585 1399) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2330" data-name="Rectangle 2330" width="12" height="2" rx="1"
+                    transform="translate(585 1507) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2268" data-name="Rectangle 2268" width="12" height="2" rx="1"
+                    transform="translate(585 1453) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2331" data-name="Rectangle 2331" width="12" height="2" rx="1"
+                    transform="translate(585 1561) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2237" data-name="Rectangle 2237" width="12" height="2" rx="1"
+                    transform="translate(585 1426) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2332" data-name="Rectangle 2332" width="12" height="2" rx="1"
+                    transform="translate(585 1534) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2269" data-name="Rectangle 2269" width="12" height="2" rx="1"
+                    transform="translate(585 1480) rotate(-180)" fill="#282f49" />
+                <rect id="Rectangle_2333" data-name="Rectangle 2333" width="12" height="2" rx="1"
+                    transform="translate(585 1588) rotate(-180)" fill="#282f49" />
+            </g>
+        </svg>
+    </div>
+    
+</section>
 
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">About Me</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            
+            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    <img src="/images/andy.jpeg" class="img-thumbnail mx-auto rounded-circle" alt="">
+                </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                I am a software developer with a passion for Android development. I have a background in Information Technology, and I am particularly interested in the intersection of technology and user experience. Currently, I work as an Android developer at Spark in Auckland, New Zealand.
+
+                
+                Here are a few technologies I&#39;ve been working with recently:
+                <ul>
+                    
+                    <li>Kotlin</li>
+                    
+                    <li>Android Jetpack</li>
+                    
+                    <li>Java</li>
+                    
+                    <li>MVVM</li>
+                    
+                    <li>Dart</li>
+                    
+                    <li>Material Design</li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Experience</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link active bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='Spark-Mar-2022---Present-tab'
+                                data-bs-target='#pills-Spark-Mar-2022---Present'
+                                aria-controls='Spark-Mar-2022---Present' 
+                            >
+                                Spark
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <div 
+                                class="nav-link bg-transparent" 
+                                aria-selected="true" 
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='MEGA-Jan-2021---Mar-2022-tab'
+                                data-bs-target='#pills-MEGA-Jan-2021---Mar-2022' 
+                                aria-controls='MEGA-Jan-2021---Mar-2022'
+                            >
+                                MEGA
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        
+                        
+                        <div 
+                            class="tab-pane fade show active bg-transparent" 
+                            role="tabpanel"
+                            id='pills-Spark-Mar-2022---Present'
+                            aria-labelledby='pills-Spark-Mar-2022---Present-tab'
+                        >
+                            <div>
+                                <span class="h4">Senior Android Developer</span>
+                                <small>-</small>
+                                <a href="https://www.spark.co.nz" target="_blank">Spark</a>
+                                <div class="pb-1">
+                                    <small>Mar 2022 - Present</small>
+                                    
+                                    <span class="p-2">
+                                        <span 
+                                            style="cursor: pointer;" 
+                                            data-bs-toggle="tooltip" 
+                                            data-bs-placement="top" 
+                                            data-bs-original-title=Working&#32;as&#32;a&#32;Senior&#32;Android&#32;Developer&#32;at&#32;Spark
+                                        >
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://play.google.com/store/apps/details?id&#61;nz.co.telecom.smartphone.android target="_blank">
+                                        View the App 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <p>&ldquo;I am currently working as a senior Android developer at <a href="https://www.spark.co.nz">Spark</a> in Auckland, New Zealand.&rdquo;</p>
+<ul>
+<li>Led the development of features of the Spark App &amp; Skinny Jump App, improving app performance.</li>
+<li>Migrated the Skinny Jump App to Jetpack Compose, reducing UI development time by optimizing widgets.</li>
+<li>Deployed the app to Google Play Store, ensuring compliance with store policies and optimizing release processes.</li>
+<li>Optimized app performance and resolved stability issues, enhancing code quality and efficiency.</li>
+<li>Upgraded apps to the latest Android version, ensuring compatibility and optimal performance.</li>
+</ul>
+                        </div>
+                        
+                        
+                        
+                        <div 
+                            class="tab-pane fade bg-transparent" 
+                            role="tabpanel"
+                            id='pills-MEGA-Jan-2021---Mar-2022'
+                            aria-labelledby='pills-MEGA-Jan-2021---Mar-2022-tab'
+                        >
+                            <div>
+                                <span class="h4">Senior Android Developer</span>
+                                <small>-</small>
+                                <a href="https://mega.nz" target="_blank">MEGA</a>
+                                
+                                <div class="pb-1">
+                                    <small>Jan 2021 - Mar 2022</small>
+                                    
+                                    <span class="p-2">
+                                        <span 
+                                            style="cursor: pointer;" 
+                                            data-bs-toggle="tooltip" 
+                                            data-bs-placement="top" 
+                                            data-bs-original-title=I&#32;worked&#32;as&#32;a&#32;senior&#32;Android&#32;developer&#32;for&#32;more&#32;than&#32;one&#32;year&#32;in&#32;MEGA&#32;The&#32;Privacy&#32;Company.
+                                        > 
+                                            <i class="fas fa-info-circle fa-xs"></i>
+                                        </span>
+                                    </span>
+                                    
+                                </div>
+                                
+                                
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://play.google.com/store/apps/details?id&#61;mega.privacy.android.app target="_blank">
+                                        View the App 
+                                    </a>
+                                </div>
+                                
+                            </div>
+
+                            <div class="pt-2">
+                                <ul>
+<li>Designed and developed new features of the Android App for MEGA, ensuring high performance and scalability.</li>
+<li>Architected the meeting project using MVVM and Kotlin, enhancing maintainability and modularity.</li>
+<li>Migrated the app to new Android SDK, ensuring full compatibility with the latest OS updates.</li>
+<li>Maintained and optimized app performance by leveraging performance analysis tools to identify and resolve resource inefficiencies, memory leaks, and response time issues.</li>
+<li>Collaborated effectively with design and QA teams, efficiently managing requirement changes and ensuring smooth project execution.</li>
+</ul>
+
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>July 2019</small>
+                                </div>
+                                <h5 class="card-title">PGD in Information Technology</h5>
+                                
+                                
+                                <a href="https://www.eit.ac.nz" target="_blank">
+                                    <h6>
+                                    Eastern Institute of Technology
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>July 2005</small>
+                                </div>
+                                <h5 class="card-title">M.S. in Communication and Information System</h5>
+                                
+                                
+                                <a href="http://www.jlu.edu.cn" target="_blank">
+                                    <h6>
+                                    Jilin University
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+  </div><footer>
+    
+ 
+ 
+<div class="container py-3" id="recent-posts">
     
     
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <div class="h3 text-center text-secondary py-3">
+        Recent Posts
+    </div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Android architecture">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Android architecture">Android architecture</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-8-android-architecture-07ca74eee000">🔗 Android Interview Series 2024 — Part 8 (Android architecture)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-can-you-explain-the-mvc-and-mvp-patterns-what-are-the-main-differences-and-why-are-they-not-used-in-android-development">1. Can you explain the MVC and MVP patterns? What are the main differences and why are they not used in …</h5></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Nov 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-8-android-architecture/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Jetpack Compose">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Jetpack Compose">Jetpack Compose</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-7-jetpack-compose-ff7d2ecd9018">🔗 Android Interview Series 2024 — Part 7 (Jetpack Compose)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-jetpack-compose">1. What is Jetpack Compose?</h5>
+<p>Jetpack Compose is Android’s recommended modern toolkit for building native UI. It …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Oct 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-7-jetpack-compose/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                
+                <div class="card-header">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/">
+                        <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/0*ovGMYgU7aA9In-oV.jpeg" class="card-img-top" alt="Kotlin Flows">
+                    </a>
+                </div>
+                
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Kotlin Flows">Kotlin Flows</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p><p>Here is the original article:</p>
+<p><a href="https://proandroiddev.com/android-interview-series-2024-part-6-kotlin-flows-730f6bf877df">🔗 Android Interview Series 2024 — Part 6 (Kotlin Flows)</a></p>
+<p>This article is published on ProAndroidDev and covers essential Android interview topics for 2024. 🚀</p>
+<h5 id="1-what-is-flow">1. What is Flow?</h5>
+<p>A stream of data that can be computed asynchronously is referred to as a Flow . It allows you to …</p></p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">Sep 3, 2024</span>
+                    <a href="/blogs/android-interview-series-2024-part-6-kotlin-flows/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
 
     
 
+    <div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+                <div class="pb-2">
+                    <a href="https://whywhom.github.io/" title="Andy&#39;s Blog">
+                        <img alt="Footer logo" src="/images/andy.jpeg"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All rights reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
 </body>
 
 </html>

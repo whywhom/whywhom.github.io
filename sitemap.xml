@@ -2,10 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:49843/categories/</loc>
+    <loc>https://whywhom.github.io/tags/android/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:49843/</loc>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-8-android-architecture/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:49843/tags/</loc>
+    <loc>https://whywhom.github.io/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/tags/interview/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/tags/</loc>
+    <lastmod>2024-11-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-7-jetpack-compose/</loc>
+    <lastmod>2024-10-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-6-kotlin-flows/</loc>
+    <lastmod>2024-09-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-5-kotlin-coroutines/</loc>
+    <lastmod>2024-08-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-4-kotlin-basics/</loc>
+    <lastmod>2024-07-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-3-java-basics/</loc>
+    <lastmod>2024-06-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-2-android-intermediate/</loc>
+    <lastmod>2024-05-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/blogs/android-interview-series-2024-part-1-android-basics/</loc>
+    <lastmod>2024-04-03T23:29:21+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/gallery/</loc>
+    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
+  </url><url>
+    <loc>https://whywhom.github.io/categories/</loc>
   </url>
 </urlset>
